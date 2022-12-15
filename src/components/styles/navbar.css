@@ -1,0 +1,62 @@
+/* primary-navbar */
+
+.container-navbar{
+    width:100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-wrapper{
+    width: 1216px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0 auto;
+    font-weight: 600;
+    font-size: 16px
+}
+
+.navbar-wrapper > img{
+    width: 135px;
+    height: 48px;
+}
+
+.left-navbar{
+    width: 579px;
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+}
+
+.right-navbar{
+    width: 312px;
+    display:flex;
+    font-weight: 600;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.right-navbar > .login-button{
+    width: 150px;
+    height: 44px;
+    color: #FFAF00;
+    border: 2px solid #FFAF00;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-navbar > .register-button{
+    width: 150px;
+    height: 44px;
+    background: #FFAF00;
+    color: #FFFFFF;
+    border: 2px solid #FFAF00;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
