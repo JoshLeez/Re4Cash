@@ -1,9 +1,9 @@
-import React from 'react'
+import "./styles/beranda.css"
 
 const Beranda = () => {
   return (
-    <div>
-        
+    <div className='container'>
+        <img className='hero-beranda' src='/hero-landing-page.png'/>
     </div>
   )
 }
