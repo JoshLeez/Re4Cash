@@ -1,5 +1,4 @@
 .hero-beranda-wrapper{
-  /* background-image: url("../../../public/hero-landing-page.png"); */
   width:100%;
   height: 722px;
   display: flex;
@@ -9,12 +8,12 @@
 
 .mySwiper{
     width:100%;
-    height:100%;
+    height:722px;
     position: absolute;
     z-index: -4;
 }
 
-img{
+ .landing-hero-bg{
     width:100%;
     height:100%;
 }
@@ -29,7 +28,7 @@ img{
 }
 
 .card-beranda-hero > h1{
-    font-weight: 800;
+    font-weight: bold;
     font-size: 64px;
     color: #F5F5F5;
     text-align: center;
@@ -65,15 +64,22 @@ img{
     display:flex;
     flex-direction: column;
     align-items: center;
+    gap:40px;
 }
 
 .judul-why-re4cash{
-    height: 169px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap:16px;
+}
+
+.judul-why-re4cash > h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
 }
 
 .bottom-line{
@@ -110,6 +116,7 @@ img{
     }
 
 .card-info-re4cash > img{
+    width:100%;
     height:232px;
 }
 
@@ -143,6 +150,8 @@ img{
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap:16px;
 }
 
 .list-informasi-pencapaian{
@@ -152,11 +161,21 @@ img{
 }
 
 .informasi-pencapaian{
+    max-width: 278px;
     height: 132px;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 3px solid white;
+    padding:20px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.informasi-pencapaian:hover{
+    border: 3px solid #FFAF00;
+    border-radius: 10px;
 }
 
 .informasi-pencapaian > h3{
@@ -170,4 +189,90 @@ img{
     font-weight: 700;
     font-size: 24px;
     line-height: 56px;
+}
+
+.mitra-kerjasama{
+    width:90%;
+    border:2px solid black;
+    margin:7em auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:45px;
+}
+
+.mitra-kerjasama > h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    color: #0D0E14;
+}
+
+.list-mitra-kerjasama{
+    height: 185px;
+    border:2px solid black;
+}
+
+.edukasi-landing-page{
+    background-image: url("/landing-edukasi.svg");
+    height: 720px;
+    display:flex;
+    flex-direction: column ;
+    padding:8.5em;
+    justify-content: space-between;
+    margin:10em 0;
+}
+
+.right-edukasi-landing{
+    text-align: right;
+    margin-left: auto;
+}
+
+.right-edukasi-landing > h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    color: #FFAF00;
+}
+
+.right-edukasi-landing > p{
+    width: 615px;
+    height: 210px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 70px;
+    color: #F5F5F5;
+}
+
+.right-edukasi-landing > .yellow-line{
+    width: 176px;
+    height: 5px;
+    background: #FFAF00;
+    border-radius: 5px;
+    margin-left:auto;
+}
+
+.left-edukasi-landing{
+    width: 710px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.left-edukasi-landing > p{
+    width: 585px;
+    height: 84px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #F5F5F5;
+}
+
+.left-edukasi-landing > a{
+    background: #FFAF00;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }

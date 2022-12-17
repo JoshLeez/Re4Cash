@@ -1,0 +1,75 @@
+/* button-150 */
+.btn-primary, .btn-secondary, .btn-primary-green, 
+.btn-secondary-green, .btn-tertiary{
+    width: 150px;
+    height: 44px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition:  .2s ease-in-out;
+}
+
+/* button-200 */
+.btn-primary-long,.btn-secondary-long {
+    width: 200px;
+    height: 44px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* button-white-text */
+.btn-primary, .btn-primary-long, 
+.btn-primary-green, .btn-secondary-green, .btn-tertiary{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+}
+
+/* button-color-gold */
+.btn-primary, .btn-primary-long{
+    background: #FFAF00;
+    border-radius: 5px;
+}
+
+.btn-primary:hover, .btn-primary-long:hover{
+    background: #D08F00;
+    border-radius: 5px; 
+}
+
+/* button-color-green */
+.btn-primary-green{
+    background: #0EA601;
+    border-radius: 5px;
+}
+
+.btn-primary-green:hover{
+    background: #0A8200;
+}
+
+/* button-color-white-to-bold */
+.btn-secondary, .btn-secondary-long{
+    border: 2px solid #FFAF00;
+    border-radius: 5px;
+    color: #FFAF00;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.btn-secondary:hover, .btn-secondary-long:hover{
+    background: #FFAF00;
+    color: #F5F5F5;
+}
+
+.btn-tertiary{
+    border: 3px solid #F5F5F5;
+    border-radius: 5px;
+}
+
+.btn-tertiary:hover{
+    color: #0EA601;
+    background: #F5F5F5;
+    border: 2px solid #F5F5F5;
+    border-radius: 5px;
+}

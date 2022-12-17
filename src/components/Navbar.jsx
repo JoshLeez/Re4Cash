@@ -1,3 +1,4 @@
+import { LinkButton } from "./Button"
 import "./styles/navbar.css"
  
 
@@ -14,8 +15,8 @@ const Navbar = () => {
                 <a>Marketplace</a>
             </div>
             <div className="right-navbar">
-                <a className="login-button">Masuk</a>
-                <a className="register-button">Daftar</a>
+                <LinkButton type="SECONDARY">Masuk</LinkButton>
+                <LinkButton type="PRIMARY">Daftar</LinkButton>
             </div>
         </nav>
     </header> 

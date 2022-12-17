@@ -1,5 +1,8 @@
 import Berandabanner from "../components/Berandabanner"
+import Berandawhy from "../components/Berandawhy"
+import { LinkButton } from "../components/Button"
 import "./styles/beranda.css"
+import { Link } from "react-router-dom"
 
 const Beranda = () => {
   return (
@@ -12,27 +15,21 @@ const Beranda = () => {
             <p>Sebagai marketplace yang peduli terhadap masalah pencemaran sampah, Re4Cash memiliki misi untuk mengembangkan bisnis yang berkelanjutan dengan memperhatikan keasrian alam dengan tujuan peningkatan ekonomi serta pemeliharaan lingkungan</p>
           </div>
           <div className="card-why-re4cash">
-            <div className="card-info-re4cash">
-              <img src="/safety-img.png"/>
-              <div className="word-card-re4cash">
-                  <h4>Safety</h4>
-                  <p>Mempriotitaskan keamanan data pengguna dan seluruh transaksi Re4Cash.</p>
-              </div>
-            </div>
-            <div className="card-info-re4cash">
-              <img src="/safety-img.png"/>
-              <div className="word-card-re4cash">
-                  <h4>Complete Solution</h4>
-                  <p>Memberikan berbagai solusi bagi lingkungan, edukasi, mitra bisnis, dan perseorangan yang terkait.</p>
-              </div>
-            </div>
-            <div className="card-info-re4cash">
-              <img src="/safety-img.png"/>
-              <div className="word-card-re4cash">
-                  <h4>Education</h4>
-                  <p>Menyediakan edukasi bagi masyarakat dengan memberikan konten pengelolaan sampah menggunakan metode 4R.</p>
-              </div>
-            </div>
+            <Berandawhy 
+            img="/safety-img.png"
+            title="Safety"
+            description="Mempriotitaskan keamanan data pengguna dan seluruh transaksi Re4Cash."
+            />
+            <Berandawhy
+            img="/complete-img.png" 
+            title="Complete Solution"
+            description="Memberikan berbagai solusi bagi lingkungan, edukasi, mitra bisnis, dan perseorangan yang terkait."
+            />
+            <Berandawhy 
+            img="/complete-img.png"
+            title="Education"
+            description="Menyediakan edukasi bagi masyarakat dengan memberikan konten pengelolaan sampah menggunakan metode 4R.."
+            />
           </div>
        </section>
        <section className="pencapaian-re4cash">
@@ -58,6 +55,29 @@ const Beranda = () => {
               <h5>Sampah Terbeli</h5>
             </div>
           </div>
+          <LinkButton type="PRIMARY_GREEN">Tentang Kami</LinkButton>
+       </section>
+       <section className="mitra-kerjasama">
+        <h2>Mitra Kerjasama</h2>
+        <div className="list-mitra-kerjasama">
+          
+        </div>
+       </section>
+       <section className="edukasi-landing-page">
+        <div className="right-edukasi-landing">
+          <h2>Edukasi</h2>
+          <p>Indonesia Kurang Kepedulian akan Sampah</p>
+          <div className="yellow-line"/>
+        </div>
+        <div className="left-edukasi-landing">
+          <p>
+          Indonesia menempati peringkat kedua di dunia sebagai penghasil sampah plastik terbesar ke laut. Hal ini diikuti oleh rendahnya kesadaran masyarakat serta kurangnya
+           edukasi terkait pengelolaan sampah agar tidak mencemari lingkungan. 
+          </p>
+          <Link>
+            Arrow
+          </Link>
+        </div>
        </section>
     </div>
   )

@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import {  Autoplay } from "swiper";
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import Button from './Button';
 
 const Berandabanner = () => {
   return (
@@ -12,17 +13,17 @@ const Berandabanner = () => {
 							spaceBetween={1}
 							slidesPerGroup={1}
 							loop={true}
-                            autoplay={true}
+              autoplay={true}
 							modules={[Autoplay]}
 							className="mySwiper">
-                <SwiperSlide>
-                  <img src="/hero-landing-page.png"/>
+                <SwiperSlide >
+                  <img src="/hero-landing-page.png" className='landing-hero-bg'/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/hero-landing-page2.png"/>
+                  <img src="/hero-landing-page2.png" className='landing-hero-bg'/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/hero-landing-page3.png"/>
+                  <img src="/hero-landing-page3.png" className='landing-hero-bg'/>
                 </SwiperSlide>
             </Swiper>
   
@@ -32,7 +33,7 @@ const Berandabanner = () => {
                 Ketahui bagaimana anda bisa menghasilkan produk inovatif sekaligus
                 mengurangi sampah di Indonesia
             </p>
-            <a>Belanja Sekarang</a>
+            <Button type="PRIMARY_LONG">Belanja Sekarang</Button>
             </div>
         </div>
      </>
