@@ -193,7 +193,6 @@
 
 .mitra-kerjasama{
     width:90%;
-    border:2px solid black;
     margin:7em auto;
     display:flex;
     flex-direction: column;
@@ -210,7 +209,6 @@
 
 .list-mitra-kerjasama{
     height: 185px;
-    border:2px solid black;
 }
 
 .edukasi-landing-page{
@@ -275,4 +273,187 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    color:black;
+}
+
+.menyiapkan-sampah{
+    width:80%;
+    margin:0 auto;
+    display:flex;
+    margin-bottom:10em;
+    justify-content: space-between;
+}
+
+.menyiapkan-sampah > img{
+    margin-top: auto;
+}
+
+.menyiapkan-sampah > .right-menyiapkan-sampah{
+    width: 719px;
+    height: 485px;
+    display:flex;
+    flex-direction: column;
+    text-align: right;
+    gap:20px;
+}
+
+
+.right-menyiapkan-title > h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    color: #FFAF00;
+}
+
+.right-menyiapkan-title > p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #131212;
+}
+
+.step-by-step-menyiapkan{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.content-menyiapkan-sampah{
+    width: 337px;
+    display:flex;
+    gap:10px;
+}
+
+.number-menyiapkan{
+    font-size:40px;
+    color: #FFAF00;
+}
+
+
+.word-menyiapkan-sampah > h5{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    text-align: left;
+}
+
+.word-menyiapkan-sampah > p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    letter-spacing: 0.02em;  
+    color: rgba(0, 0, 0, 0.6);  
+}
+
+.kontak-kami-landing{
+    background-image: url("/kontak-kami-hero.svg");
+    width: 887px;
+    height: 294px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:35px;
+    padding-bottom:3em;
+}
+
+.kontak-kami-landing > h5{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #F5F5F5;
+}
+
+
+.artikel-hero{
+    width:90%;
+    height: 522px;
+    margin:3em auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.artikel-hero > h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.artikel-green-line{
+    width: 100px;
+    height: 5px;
+    background: #0EA601;
+    border-radius: 5px;
+}
+
+.artikel-hero-list{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+}
+
+.card-artikel{
+    width: 280px;
+    height: 439px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:2em;
+}
+
+.card-artikel-bottom-judul{
+    width: 248px;
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+.card-artikel-bottom-judul > h5{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.card-artikel-bottom-judul > p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.artikel-jenis-tipe{
+    width: 100%;
+    height: 201px;
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.artikel-jenis-tipe > img{
+    width:100%;
+    height: 167px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+.judul-jenis-tipe{
+    display:flex;
+    justify-content:space-around;
+}
+
+.judul-jenis-tipe > h5{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
 }

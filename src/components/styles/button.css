@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     transition:  .2s ease-in-out;
+    text-decoration: none;
 }
 
 /* button-200 */
@@ -16,6 +17,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 /* button-white-text */

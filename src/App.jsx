@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Beranda from './pages/Beranda'
 import {Routes, Route} from 'react-router-dom'
+import Footer from './components/Footer'
 
 function App() {
  
@@ -12,7 +13,9 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Beranda/>}/>
         </Routes>
+        <Footer/>
     </div>
+    
   )
 }
 

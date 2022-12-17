@@ -3,6 +3,8 @@ import Berandawhy from "../components/Berandawhy"
 import { LinkButton } from "../components/Button"
 import "./styles/beranda.css"
 import { Link } from "react-router-dom"
+import Menyiapkansampah from "../components/Menyiapkansampah"
+import Artikelcard from "../components/Artikelcard";
 
 const Beranda = () => {
   return (
@@ -75,10 +77,57 @@ const Beranda = () => {
            edukasi terkait pengelolaan sampah agar tidak mencemari lingkungan. 
           </p>
           <Link>
-            Arrow
+              <iconify-icon icon="gridicons:arrow-right"/>
           </Link>
         </div>
        </section>
+       <section className="menyiapkan-sampah">
+        <img src="/sampah-senyum.svg"/>
+        <div className="right-menyiapkan-sampah">
+          <div className="right-menyiapkan-title">
+             <h2>Cara Menyiapkan Sampah</h2>
+             <p>Siapa bilang memilah sampah itu ribet? Sini ya biar aku kasih tau ya</p>
+          </div>
+          <div className="step-by-step-menyiapkan">
+              <Menyiapkansampah
+              icon="mdi:numeric-1-circle-outline"
+              title="Pisahkan sampah"
+              description="Sediakan 2 tempat sampah untuk organik
+               dan anorganik. Pisahkan juga sampah-sampah yang 
+               kering supaya nantinya bisa kamu daur ulang tanpa
+               terlihat kotor atau bau."/>
+              <Menyiapkansampah
+              icon="mdi:numeric-2-circle-outline"
+              title="Kelola Sampah"
+              description="Sampah organik seperti bekas 
+              makanan, sayur-sayuran atau dedaunan yang cepat 
+              terurai dapar dimanfaatkan menjadi pupuk kompos."/>
+              <Menyiapkansampah
+              icon="mdi:numeric-3-circle-outline"
+              title="Lakukan R3"
+              description="Praktikan langkah 3R(Reduce, Reuse, Recycle) 
+              yaitu mengurangi, menggunakan kembali, dan mendaur ulang."/>
+              <Menyiapkansampah
+              icon="mdi:numeric-4-circle-outline"
+              title="Kemas Rapi"
+              description="Kemas sampah menggunakan kardus atau kemasan lain."/>
+          </div>
+        </div>
+       </section>
+       <div className="kontak-kami-landing">
+          <h5>Informasi lebih lanjut hubungi kontak kami</h5>
+          <LinkButton type="BUTTON_TERTIARY">Kontak Kami</LinkButton>
+       </div>
+       <article className="artikel-hero">
+         <h2>Artikel Edukasi</h2>
+         <div className="artikel-green-line"/>
+         <div className="artikel-hero-list">
+            <Artikelcard/>
+            <Artikelcard/>
+            <Artikelcard/>
+            <Artikelcard/>
+         </div>
+       </article>
     </div>
   )
 }
