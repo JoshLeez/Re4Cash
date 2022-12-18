@@ -3,10 +3,11 @@ import Penjelasanr4card from "../components/Penjelasanr4card"
 import "./styles/edukasi.css"
 import { UilSearch } from '@iconscout/react-unicons'
 import Artikelcard from "../components/Artikelcard"
+import HOC from "../components/HOC"
 
 const Edukasi = () => {
   return (
-    <>
+    <HOC title="Re4Cash - Edukasi">
         <Edukasibanner/>
         <section className="penjelasan-r4">
           <img src="/what-is-r4-background.png"/>
@@ -79,7 +80,7 @@ const Edukasi = () => {
              <Artikelcard/>
             </div>
         </section>
-    </>
+    </HOC>
   )
 }
 

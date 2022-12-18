@@ -4,6 +4,7 @@ import Beranda from './pages/Beranda'
 import {Routes, Route} from 'react-router-dom'
 import Footer from './components/Footer'
 import Edukasi from './pages/Edukasi'
+import Tentangkami from './pages/Tentangkami'
 
 function App() {
  
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Beranda/>}/>
           <Route path="/edukasi" element={<Edukasi/>}/>
+          <Route path="/tentangkami" element={<Tentangkami/>}/>
         </Routes>
         <Footer/>
     </div>

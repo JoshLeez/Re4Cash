@@ -5,10 +5,11 @@ import "./styles/beranda.css"
 import { Link } from "react-router-dom"
 import Menyiapkansampah from "../components/Menyiapkansampah"
 import Artikelcard from "../components/Artikelcard";
+import HOC from "../components/HOC"
 
 const Beranda = () => {
   return (
-    <>
+    <HOC>
        <Berandabanner/>
        <section className="why-re4cash">
           <div className="judul-why-re4cash">
@@ -128,7 +129,7 @@ const Beranda = () => {
             <Artikelcard/>
          </div>
        </article>
-    </>
+    </HOC>
   )
 }
 
