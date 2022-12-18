@@ -59,7 +59,7 @@
 }
 
 .why-re4cash{
-    width:90%;
+    width:1280px;
     margin:5em auto;
     display:flex;
     flex-direction: column;
@@ -279,7 +279,7 @@
 }
 
 .menyiapkan-sampah{
-    width:80%;
+    width:1260px;
     margin:0 auto;
     display:flex;
     margin-bottom:10em;
@@ -372,7 +372,7 @@
 
 
 .artikel-hero{
-    width:90%;
+    width:1260px;
     height: 522px;
     margin:3em auto;
     display:flex;

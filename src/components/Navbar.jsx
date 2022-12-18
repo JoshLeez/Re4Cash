@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import { LinkButton } from "./Button"
 import "./styles/navbar.css"
  
@@ -8,11 +9,11 @@ const Navbar = () => {
         <nav className="navbar-wrapper">
             <img src="/Re4CashYW.svg"/>
             <div className="left-navbar">
-                <a>Home</a>
-                <a>Edukasi</a>
-                <a>Tentang Kami</a>
-                <a>Kontak</a>
-                <a>Marketplace</a>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/edukasi">Edukasi</NavLink>
+                <NavLink>Tentang Kami</NavLink>
+                <NavLink>Kontak</NavLink>
+                <NavLink>Marketplace</NavLink>
             </div>
             <div className="right-navbar">
                 <LinkButton type="SECONDARY">Masuk</LinkButton>

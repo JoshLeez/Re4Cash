@@ -8,7 +8,7 @@ import Artikelcard from "../components/Artikelcard";
 
 const Beranda = () => {
   return (
-    <div className='container'>
+    <>
        <Berandabanner/>
        <section className="why-re4cash">
           <div className="judul-why-re4cash">
@@ -128,7 +128,7 @@ const Beranda = () => {
             <Artikelcard/>
          </div>
        </article>
-    </div>
+    </>
   )
 }
 

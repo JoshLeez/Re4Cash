@@ -60,3 +60,10 @@
     align-items: center;
 }
 
+.left-navbar > a{
+    color:black;
+}
+
+a.active{
+    color:#FFAF00;
+}

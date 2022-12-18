@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import {  Autoplay } from "swiper";
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import Button from './Button';
+import { LinkButton } from './Button';
 
 const Berandabanner = () => {
   return (
@@ -33,7 +33,7 @@ const Berandabanner = () => {
                 Ketahui bagaimana anda bisa menghasilkan produk inovatif sekaligus
                 mengurangi sampah di Indonesia
             </p>
-            <Button type="PRIMARY_LONG">Belanja Sekarang</Button>
+            <LinkButton type="PRIMARY_LONG">Belanja Sekarang</LinkButton>
             </div>
         </div>
      </>

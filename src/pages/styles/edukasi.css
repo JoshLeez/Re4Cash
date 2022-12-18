@@ -1,0 +1,176 @@
+.edukasi-banner{
+    width: 1220px;
+    height:538px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 20px 20px;
+    margin:0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:3em;
+}
+
+.judul-edukasi-banner{
+    width: 611px;
+    height: 300px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom:5em;
+}
+
+.judul-edukasi-banner > h1{
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 61px;
+    color: #0D0E14;
+}
+
+.judul-edukasi-banner > h6{
+    width: 480px;
+    height: 66px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.judul-edukasi-banner > h1 > span{
+    color:#FFAF00;
+}
+
+.penjelasan-r4{
+    width:100%;
+    height: 560px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:5em 0;
+}
+
+.penjelasan-r4 > img{
+    position:absolute;
+    z-index:-4;
+    width: 100% ;
+    height:560px;    
+}
+
+.content-penjelasan-r4{
+    width: 1241px;
+    height: 380px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-penjelasan-r4{
+    width: 245px;
+    height: 332px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:12px;
+    padding:8px;
+}
+
+.card-penjelasan-r4 > h5{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+.card-penjelasan-r4 > p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    width: 225px;
+}
+
+.artikel-kategori-tombol{
+    width: 925px;
+    height: 239px;
+    border:2px solid black;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.artikel-kategori-tombol > h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    color: #000000;font-weight: 700;
+}
+
+.two-btn-kategori{
+    width: 700px;
+    height: 75px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.two-btn-kategori > .organik{
+    width: 325px;
+    height: 100%;
+    border: 2px solid #0EA601;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+
+.two-btn-kategori > .anorganik{
+    width: 325px;
+    height: 100%;
+    border: 2px solid #FFAF00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+
+.artikel-kategori-tombol > p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #606060;
+}
+
+.artikel-list-search{
+    width: 1280px;
+    margin:3em auto;
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.artikel-search-container{
+    width: 290px;
+    height: 56px;
+    background: #FAFAFA;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    padding:10px;
+    gap:10px;
+    align-self: flex-end;
+}
+
+.artikel-search-container > input{
+    outline:none;
+    border:none;
+    background: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.all-list-artikel{
+ display:grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ gap:3em;
+}
