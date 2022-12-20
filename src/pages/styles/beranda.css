@@ -1,6 +1,7 @@
 .hero-beranda-wrapper{
   width:100%;
   height: 722px;
+  padding-top:144px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +61,7 @@
 
 .why-re4cash{
     width:1280px;
-    margin:5em auto;
+    margin:10em auto 5em auto;
     display:flex;
     flex-direction: column;
     align-items: center;

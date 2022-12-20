@@ -1,6 +1,5 @@
-import React from 'react'
 
-const Menyiapkansampah = ({title, description, icon}) => {
+const MenyiapkanSampah = ({title, description, icon}) => {
   return (
     <div className='content-menyiapkan-sampah'>
         <span className='number-menyiapkan'>
@@ -14,4 +13,4 @@ const Menyiapkansampah = ({title, description, icon}) => {
   )
 }
 
-export default Menyiapkansampah
+export default MenyiapkanSampah

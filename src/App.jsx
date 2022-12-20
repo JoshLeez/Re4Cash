@@ -1,23 +1,21 @@
 import './App.css'
-import Navbar from './components/Navbar'
 import Beranda from './pages/Beranda'
 import {Routes, Route} from 'react-router-dom'
-import Footer from './components/Footer'
 import Edukasi from './pages/Edukasi'
-import Tentangkami from './pages/Tentangkami'
+import TentangKami from './pages/TentangKami'
+import MarketPlaceUtama from './pages/MarketPlaceUtama'
 
 function App() {
  
 
   return (
     <div className="App">
-      <Navbar/>
         <Routes>
           <Route exact path="/" element={<Beranda/>}/>
           <Route path="/edukasi" element={<Edukasi/>}/>
-          <Route path="/tentangkami" element={<Tentangkami/>}/>
+          <Route path="/tentangkami" element={<TentangKami/>}/>
+          <Route path="/marketplace" element={<MarketPlaceUtama/>}/>
         </Routes>
-        <Footer/>
     </div>
     
   )

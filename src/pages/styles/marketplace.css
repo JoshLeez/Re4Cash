@@ -1,0 +1,130 @@
+.hero-marketplace{
+    width: 1216px;
+    height: 350px;
+    margin:3em auto;
+    display:flex;
+    justify-content: space-between;
+}
+
+.left-hero-marketplace{
+    width: 904px;
+    height: 100%;
+}
+
+
+.right-hero-marketplace{
+    width: 280px;
+    height:100%;
+}
+
+.swiper-button-next { 
+    color: #f5f5f5;
+}
+
+.swiper-button-prev {
+     color: #f5f5f5; 
+}
+
+.swiper-pagination-bullet{
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+    background: #f5f5f5;
+}
+
+.swiper-pagination-bullet-active{
+    background: #FFAF00;
+}
+
+/* transform : scale(2), rorate(-15deg) */
+
+.kategori-sampah{
+    border:2px solid black; 
+    width: 1217px;
+    height: 410px;
+    margin:5em auto;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.kategori-sampah > h4{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+    color: #131212;
+}
+
+.kategori-sampah > .anorganik-kategori{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border:2px solid black;
+}
+
+.anorganik-kategori > .anorganik-item-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 158px;
+}
+
+.anorganik-item-wrapper> .anorganik-item{
+    width: 120px;
+    height: 120px;
+    background: #FFAF00;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    transition: .3 ease-in-out all;
+}
+
+.anorganik-item-wrapper > h5{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #131212;
+}
+
+.anorganik-item > img:hover {
+    transform : scale(1.2) rotate(20deg);
+    transition: .3 ease-in-out all;
+}
+
+
+.kategori-sampah > .organik-kategori{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border:2px solid black;
+}
+
+.organik-kategori > .organik-item-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 158px;
+}
+
+.organik-item-wrapper > h5{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #131212;
+}
+
+.organik-item-wrapper > .organik-item{
+    width: 120px;
+    height: 120px;
+    background: #0EA601;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
