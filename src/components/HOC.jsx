@@ -28,6 +28,7 @@ export const HOCmarketplace = ({title, children}) => {
        <Helmet>
           <title>{title}</title>
        </Helmet>
+       <div id="zeus-header"/>
        {children}
     <Footer/>
     </>

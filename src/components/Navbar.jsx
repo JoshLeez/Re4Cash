@@ -13,7 +13,7 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/edukasi">Edukasi</NavLink>
                 <NavLink to="/tentangkami">Tentang Kami</NavLink>
-                <NavLink>Kontak</NavLink>
+                <NavLink to="/kontak">Kontak</NavLink>
                 <NavLink to="/marketplace">Marketplace</NavLink>
             </div>
             <div className="right-navbar">
@@ -29,7 +29,7 @@ export default Navbar
 
 export const Navbarmarketplace = () => {
 
-  const [word, setWord] = useState("Semua")
+  const [word, setWord] = useState("Semua");
 
   return (
     <header className="container-navbar">

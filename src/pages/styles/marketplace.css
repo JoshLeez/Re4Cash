@@ -38,8 +38,7 @@
 
 /* transform : scale(2), rorate(-15deg) */
 
-.kategori-sampah{
-    border:2px solid black; 
+.kategori-sampah{ 
     width: 1217px;
     height: 410px;
     margin:5em auto;
@@ -60,7 +59,6 @@
     justify-content: space-between;
     align-items: center;
     height: 150px;
-    border:2px solid black;
 }
 
 .anorganik-kategori > .anorganik-item-wrapper{
@@ -79,9 +77,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 20px;
     transition: .3 ease-in-out all;
 }
+
 
 .anorganik-item-wrapper > h5{
     font-weight: 500;
@@ -101,7 +99,6 @@
     justify-content: space-between;
     align-items: center;
     height: 150px;
-    border:2px solid black;
 }
 
 .organik-kategori > .organik-item-wrapper{
@@ -127,4 +124,215 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.organik-item > img:hover {
+    transform : scale(1.2) rotate(20deg);
+    transition: .3 ease-in-out all;
+}
+
+
+.marketplace-utama-penjualan{
+    width: 1217px;
+    height: 872px;
+    margin:5em auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.marketplace-utama-penjualan > h4{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+    color: #131212;
+}
+
+.utama-list-penjualan{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border:2px solid black;
+    height: 826px;
+}
+
+.utama-produk-mentahan{
+    display:flex;
+    justify-content: space-between;
+    border:2px solid black;
+}
+
+
+.utama-produk-daur-ulang{
+    display:flex;
+
+    border:2px solid black;
+}
+
+/* card-for-seller */
+
+.wrapper-penjualan-card{
+    display:flex;
+}
+
+.penjualan-card{
+    width: 216px;
+    height: 393px;
+    background: #FFFFFF;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.penjualan-card:hover{
+    border-radius: 10px 0 0 10px;
+}
+
+.penjualan-card > img{
+    width: 184px;
+    height: 169px;
+    border-radius: 10px;
+}
+
+.bottom-detail-card{
+    width: 184px;
+    height: 106px;
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.bottom-detail-card > h6{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #131212;
+    height:40px;
+}
+
+.rating-produk{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+.rating-produk > p{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #0EA601;
+    width: 58px;
+    height: 30px;
+    border: 1px solid #0EA601;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-star{
+    width: 96px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: end;
+}
+
+.total-star{
+    display:flex;
+}
+
+.total-star > iconify-icon{
+    font-size: 18px;
+    color: #FFAF00;
+}
+
+.rating-star > p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #131212;
+}
+
+.rating-star > p > span{
+    color: #606060;
+}
+
+.bottom-detail-card > h4{
+    font-weight: 700;
+    font-size: 20px;
+    color: #131212;
+}
+
+.bottom-detail-card > h4 > span{
+    font-weight: 500;
+    font-size: 16px;
+    color: #606060;
+}
+
+
+.lokasi-bottom{
+    width: 184px;
+    height: 48px;
+    display:flex;
+    flex-direction: column;
+}
+
+.lokasi-place{
+    display:flex;
+    gap:4px;
+    align-items: center;
+}
+
+.lokasi-bottom > p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #0EA601;
+}
+
+.lokasi-place > p{
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #131212;
+}
+
+.penjualan-hover{
+    width:none;
+    height:393px;
+    display:none;
+}
+
+
+
+.wrapper-penjualan-card:hover .penjualan-hover{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:215px;
+    width: 220px;
+    height: 393px;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 0 10px 10px 0;
+    animation: box-animation .3s ease-in-out;
+    z-index:4;
+    position: absolute;
+}
+
+@keyframes box-animation{
+    0%{
+        width:0
+    }
+    50%{
+        width:(220px/2)
+    }
+    100%{
+        width:220px;
+    }
 }

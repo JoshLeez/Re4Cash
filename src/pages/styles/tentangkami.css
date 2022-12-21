@@ -115,6 +115,13 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    border:5px solid #F5F5F5;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+.content-our-service:hover{
+    border-top: 5px solid #FFAF00;
 }
 
 .content-our-service > iconify-icon{
