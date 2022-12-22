@@ -8,6 +8,7 @@ const Button = ({ type, children, ...props }) => {
     PRIMARY_GREEN: "btn-primary-green",
     SECONDARY_GREEN: "btn-secondary-green",
     PRIMARY_LONG : "btn-primary-long",
+    SECONDARY_LONG : "btn-secondary-long",
     BUTTON_TERTIARY : "btn-tertiary"
   };
 

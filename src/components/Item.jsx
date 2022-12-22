@@ -1,4 +1,6 @@
 import { UilLocationPoint } from '@iconscout/react-unicons'
+import { UilCheckCircle } from '@iconscout/react-unicons'
+import Button from "./Button"
 
 const Item = () => {
   return (
@@ -31,7 +33,26 @@ const Item = () => {
     </div>
   </div>
   <div className='penjualan-hover'>
-      <h4>CAPEK CUY</h4>
+      <h4>Jumlah Pembelian</h4>
+      <div className='card-input-nilai'>
+        <input type="text" placeholder='Masukan Nilai'/>
+        <h6>Kg</h6>
+      </div>
+      <div className='card-total-price'>
+        <h5>Total Pembelian</h5>
+        <h4>Rp. 10.000</h4>
+      </div>
+      <div className='card-button-buy-cart'>
+        <Button type="PRIMARY_LONG">Tambah ke Keranjang</Button>
+        <Button type="SECONDARY_LONG">Beli</Button>
+      </div>
+      <div className='card-profile-verifikasi'>
+        <img src="/profile-mitra.svg"/>
+        <div className='card-checklist-verifikasi'>
+          <UilCheckCircle color="#0EA601" size="16px"/>
+          <p>Terverifikasi</p>
+        </div>
+      </div>
   </div>
   </div>
   )

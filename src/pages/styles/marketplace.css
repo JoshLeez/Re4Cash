@@ -165,7 +165,6 @@
 
 .utama-produk-daur-ulang{
     display:flex;
-
     border:2px solid black;
 }
 
@@ -312,15 +311,15 @@
 
 .wrapper-penjualan-card:hover .penjualan-hover{
     display:flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     margin-left:215px;
     width: 220px;
     height: 393px;
     background: #FFFFFF;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
     border-radius: 0 10px 10px 0;
-    animation: box-animation .3s ease-in-out;
+    animation: box-animation .1s ease-in-out;
     z-index:4;
     position: absolute;
 }
@@ -335,4 +334,85 @@
     100%{
         width:220px;
     }
+}
+
+
+.card-input-nilai{
+    width: 178px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-input-nilai > input{
+    width: 150px;
+    height: 44px;
+    border: 1px solid #0EA601;
+    border-radius: 5px;
+    outline: none;
+    padding:5px;
+}
+
+.card-input-nilai > h6{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 12px;
+    color: #000000;
+}
+
+.card-total-price{
+    display:flex;
+    flex-direction: column;
+    height: 47px;
+    justify-content: space-between;
+}
+
+.card-total-price > h5{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.card-total-price > h4{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.card-button-buy-cart{
+    height: 96px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-profile-verifikasi{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 100px;
+}
+
+.card-profile-verifikasi > img{
+    width: 90px;
+    height: 72px;
+}
+
+.card-profile-verifikasi > .card-checklist-verifikasi{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 84px;
+    height: 16px;
+}
+
+.card-checklist-verifikasi > p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    color: #000000;
 }
