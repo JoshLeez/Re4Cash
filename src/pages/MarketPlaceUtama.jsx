@@ -3,7 +3,8 @@ import OrganikKategori from "../components/OrganikKategori"
 import CarouselMarket from "../components/CarouselMarket";
 import { HOCmarketplace } from "../components/HOC";
 import "./styles/marketplace.css";
-import Item from "../components/Item";
+import { UilAngleRightB } from '@iconscout/react-unicons'
+import ItemSell, {ItemBuy} from "../components/ItemSell";
 
 const MarketPlaceUtama = () => {
   const kategoriAnorganik = [
@@ -101,22 +102,54 @@ const MarketPlaceUtama = () => {
       
         </div>
       </div>
-      <div className="marketplace-utama-penjualan">
+      <section className="marketplace-utama-penjualan">
         <h4>Penjualan</h4>
         <div className="utama-list-penjualan">
           <div className="utama-produk-mentahan">
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-          </div>
-          <div className="utama-produk-daur-ulang">
-              <div className="card-penjualan">
+            <ItemSell/>
+            <ItemSell/>
+            <ItemSell/>
+            <ItemSell/>
+            <div className="marketplace-penjualan-button">
+            <div className="penjualan-button-title">
+                <h4>Mentahan</h4>
+                <UilAngleRightB size="32px"/>
               </div>
             </div>
+          </div>
         </div>       
-      </div>
+        <div className="utama-list-penjualan">
+          <div className="utama-produk-mentahan">
+            <ItemSell/>
+            <ItemSell/>
+            <ItemSell/>
+            <ItemSell/>
+            <div className="marketplace-penjualan-button">
+              <div className="penjualan-button-title">
+                <h4>Produk Daur Ulang</h4>
+                <UilAngleRightB size="42px"/>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </section>
+      <section className="marketplace-utama-pembelian">
+        <h4>Pembelian</h4>
+        <div className="utama-list-penjualan">
+          <div className="utama-produk-mentahan">
+            <ItemBuy/>
+            <ItemBuy/>
+            <ItemBuy/>
+            <ItemBuy/>
+            <div className="marketplace-pembelian-button">
+            <div className="penjualan-button-title">
+                <h4>Lapak Pencari Pembeli</h4>
+                <UilAngleRightB size="64px"/>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </section>
     </HOCmarketplace>
   );
 };

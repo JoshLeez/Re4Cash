@@ -9,7 +9,8 @@ const Button = ({ type, children, ...props }) => {
     SECONDARY_GREEN: "btn-secondary-green",
     PRIMARY_LONG : "btn-primary-long",
     SECONDARY_LONG : "btn-secondary-long",
-    BUTTON_TERTIARY : "btn-tertiary"
+    BUTTON_TERTIARY : "btn-tertiary",
+    BUTTON_MODEL : "btn-model-product"
   };
 
   return (

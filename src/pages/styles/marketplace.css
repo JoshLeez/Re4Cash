@@ -139,6 +139,7 @@
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    gap:1.5em;
 }
 
 .marketplace-utama-penjualan > h4{
@@ -152,26 +153,19 @@
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    border:2px solid black;
     height: 826px;
 }
 
 .utama-produk-mentahan{
     display:flex;
     justify-content: space-between;
-    border:2px solid black;
-}
-
-
-.utama-produk-daur-ulang{
-    display:flex;
-    border:2px solid black;
 }
 
 /* card-for-seller */
 
 .wrapper-penjualan-card{
     display:flex;
+    color:black;
 }
 
 .penjualan-card{
@@ -326,10 +320,10 @@
 
 @keyframes box-animation{
     0%{
-        width:0
+        width:0;
     }
     50%{
-        width:(220px/2)
+        width:calc(220px/2)
     }
     100%{
         width:220px;
@@ -416,3 +410,70 @@
     line-height: 13px;
     color: #000000;
 }
+
+
+.marketplace-penjualan-button, .marketplace-pembelian-button{
+    width: 209px;
+    height: 393px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.marketplace-penjualan-button{
+    background: #FFAF00;
+}
+
+.marketplace-pembelian-button{
+    background:#0EA601;
+}
+
+.penjualan-button-title{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 155px;
+    height: 52px;
+}
+
+/* marketplace-pembelian */
+.marketplace-utama-pembelian{
+    width: 1215px;
+    height: 439px;
+    margin:5em auto;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.marketplace-utama-pembelian > h4{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+    color: #131212;
+}
+
+.wrapper-penjualan-card:hover .penjualan-hover > h4, .card-input-nilai, .card-total-price, .card-button-buy-cart, .card-profile-verifikasi{
+    opacity:1;
+    animation: appear .5s ease-in-out;
+    width:none;
+}
+
+@keyframes appear{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+

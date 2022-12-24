@@ -77,3 +77,21 @@
     border: 2px solid #F5F5F5;
     border-radius: 5px;
 }
+
+/* product model button */
+.btn-model-product{
+    width: 75px;        
+    height: 32px;
+    border: 1px solid #606060;
+    border-radius: 5px;
+    background:none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #606060;;
+    transition: .3s ease-in-out;
+}
+
+.btn-model-product:hover{
+    background: #FFAF00;
+    color:#FFFFFF;
+}
