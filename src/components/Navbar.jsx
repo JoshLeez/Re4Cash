@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <header className="container-navbar">
         <nav className="navbar-wrapper">
-            <img src="/Re4CashYW.svg"/>
+          <Link to="/"><img src="/Re4CashYW.svg"/></Link>
             <div className="left-navbar">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/edukasi">Edukasi</NavLink>
@@ -34,7 +34,7 @@ export const Navbarmarketplace = () => {
   return (
     <header className="container-navbar">
       <nav className="navbar-wrapper">
-        <img src="/Re4CashYW.svg"/>
+      <Link to="/"><img src="/Re4CashYW.svg"/></Link>
         <Link>Edukasi</Link>
         <div className="navbar-search-filter">
           <input placeholder="Search"/>

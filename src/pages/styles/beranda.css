@@ -279,6 +279,23 @@
     color:black;
 }
 
+.iconify-hover:hover iconify-icon{
+    animation: going-left .5s ease-in-out;
+    transform: translateX(140%);
+    opacity:0;
+}
+
+@keyframes going-left {
+    0%{
+        transform: translateX(0%);
+        opacity:1;
+    }
+    100%{
+        transform: translateX(140%);
+        opacity:0.5;
+    }
+}
+
 .menyiapkan-sampah{
     width:1260px;
     margin:0 auto;

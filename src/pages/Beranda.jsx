@@ -77,7 +77,7 @@ const Beranda = () => {
           Indonesia menempati peringkat kedua di dunia sebagai penghasil sampah plastik terbesar ke laut. Hal ini diikuti oleh rendahnya kesadaran masyarakat serta kurangnya
            edukasi terkait pengelolaan sampah agar tidak mencemari lingkungan. 
           </p>
-          <Link>
+          <Link className="iconify-hover">
               <iconify-icon icon="gridicons:arrow-right"/>
           </Link>
         </div>
