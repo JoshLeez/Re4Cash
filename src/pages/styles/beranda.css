@@ -279,8 +279,23 @@
     color:black;
 }
 
+.iconify-hover > iconify-icon{
+    animation: going-back .3s ease-in-out;
+}
+
+@keyframes going-back {
+    0%{
+        transform: translateX(140%);
+        opacity:0.5;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity:1;
+    }
+}
+
 .iconify-hover:hover iconify-icon{
-    animation: going-left .5s ease-in-out;
+    animation: going-left .3s ease-in-out;
     transform: translateX(140%);
     opacity:0;
 }

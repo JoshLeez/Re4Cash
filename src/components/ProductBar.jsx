@@ -1,7 +1,28 @@
 import Button from "./Button"
 import { UilCheckCircle } from '@iconscout/react-unicons'
+import { useEffect, useState } from "react"
 
 export const ProductByNumber = () => {
+
+  const [item, setItem] = useState(1)
+  const [disabled, setDisabled] = useState(null)
+
+  const inputHandler = (e) =>{
+    setItem(parseInt(e.target.value))
+  }
+
+  const Increment = () =>{
+    setItem((prevState)=> prevState+1);
+  }
+  
+  const Decrement = () =>{
+    setItem((prevState)=> prevState-1);
+  }
+
+  useEffect(()=>{
+    item === 1 ? setDisabled(true) : setDisabled(false)
+  },[item])
+
   return (
     <sidebar className="detail-right-side">
       <div className="top-detail-right-side">
@@ -9,9 +30,9 @@ export const ProductByNumber = () => {
           <div className="input-jumlah-pembelian">
             <h6>Jumlah Pembelian</h6>
               <div className="card-incre-decre">
-                <button className="negev">-</button>
-                <input/>
-                <button>+</button>
+                <button  disabled={item===1} className={disabled ? "negev disabled" : "negev"} onClick={Decrement}>-</button>
+                <input type="text" value={item} onChange={inputHandler}/>
+                <button  className="posit" onClick={Increment}>+</button>
               </div>
             </div>
             <div className="detail-total-pembelian">

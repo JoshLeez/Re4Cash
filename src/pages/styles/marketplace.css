@@ -296,26 +296,34 @@
 }
 
 .penjualan-hover{
-    width:none;
-    height:393px;
-    display:none;
-}
-
-
-
-.wrapper-penjualan-card:hover .penjualan-hover{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
     margin-left:215px;
-    width: 220px;
-    height: 393px;
+    width:0;
+    height:393px;
+    position: absolute;
+    animation: opposite .1s ease-in-out;
     background: #FFFFFF;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
     border-radius: 0 10px 10px 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@keyframes opposite{
+    0%{
+        width:220px;
+    }
+    50%{
+        width:calc(220px/2)
+    }
+    100%{
+        width:0;
+    }
+}
+
+.wrapper-penjualan-card:hover .penjualan-hover{
+    width:220px;
     animation: box-animation .1s ease-in-out;
-    z-index:4;
-    position: absolute;
 }
 
 @keyframes box-animation{
@@ -458,10 +466,14 @@
     color: #131212;
 }
 
-.wrapper-penjualan-card:hover .penjualan-hover > h4, .card-input-nilai, .card-total-price, .card-button-buy-cart, .card-profile-verifikasi{
+.wrapper-penjualan-card:hover .penjualan-hover >*{
     opacity:1;
     animation: appear .5s ease-in-out;
     width:none;
+    display: inherit;
+}
+.penjualan-hover > *{
+    display: none;
 }
 
 @keyframes appear{

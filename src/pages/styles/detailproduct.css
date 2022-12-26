@@ -193,8 +193,6 @@
 .card-incre-decre > button{
     width: 42px;
     height: 44px;
-    background: #0EA601;
-    border-radius: 0px 4px 4px 0px;
     border:none;
     color:white;
     cursor:pointer;
@@ -203,6 +201,16 @@
 .card-incre-decre > .negev{
     background: #0EA601;
     border-radius: 4px 0px 0px 4px;
+}
+
+.card-incre-decre > .negev.disabled{
+    background:#696969;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.card-incre-decre > .posit{
+    background: #0EA601;
+    border-radius: 0px 4px 4px 0;
 }
 
 .card-incre-decre > input{
