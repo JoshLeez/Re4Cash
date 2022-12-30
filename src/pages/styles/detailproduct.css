@@ -1,5 +1,5 @@
 .detail-product-wrapper{
-    width:81%;
+    width: 1212px;
     height:569px;
     margin:2.5em auto;
     display:flex;
@@ -136,7 +136,7 @@
 
 .detail-right-side{
     width: 248px;
-    height: 640px;
+    height: 1925px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,6 +152,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    position: sticky;
+    top:20%;
 }
 
 .detail-right-side > p{
@@ -279,3 +281,13 @@
     display:flex;
     align-items: center;
 }
+
+.container-detail-comment{
+    width: 1216px;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    margin:5px auto 40px auto;
+    gap:32px;
+}
+

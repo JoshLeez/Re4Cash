@@ -5,8 +5,8 @@ import Button from "./Button"
 
 const ItemSell = () => {
   return (
-    <Link to="/detail-product" className='wrapper-penjualan-card'>
-    <div className="penjualan-card">
+    <div  className='wrapper-penjualan-card'>
+    <Link to="/detail-product" className="penjualan-card">
     <img src="/serabut-kelapa.svg"/>
     <div className="bottom-detail-card">
         <h6>Serabut Kelapa 1 Kg</h6>
@@ -27,12 +27,12 @@ const ItemSell = () => {
     </div>
     <div className="lokasi-bottom">
       <div className="lokasi-place">
-        <UilLocationPoint/>
+        <UilLocationPoint color="black"/>
         <p>Jakarta</p>
       </div>
       <p>Bank sampah aisyah</p>
     </div>
-  </div>
+  </Link>
   <div className='penjualan-hover'>
       <h4>Jumlah Pembelian</h4>
       <div className='card-input-nilai'>
@@ -55,7 +55,7 @@ const ItemSell = () => {
         </div>
       </div>
   </div>
-  </Link>
+  </div>
   )
 }
 

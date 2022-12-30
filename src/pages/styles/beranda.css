@@ -266,7 +266,7 @@
     color: #F5F5F5;
 }
 
-.left-edukasi-landing > a{
+.left-edukasi-landing > .iconify-hover{
     background: #FFAF00;
     border-radius: 50px;
     width: 55px;
@@ -277,6 +277,7 @@
     font-size: 32px;
     text-decoration: none;
     color:black;
+    cursor: pointer;
 }
 
 .iconify-hover > iconify-icon{

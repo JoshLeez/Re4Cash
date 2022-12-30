@@ -8,7 +8,9 @@ export const ProductByNumber = () => {
   const [disabled, setDisabled] = useState(null)
 
   const inputHandler = (e) =>{
-    setItem(parseInt(e.target.value))
+    e.preventDefault()
+    setItem(parseInt(e.target.value) || 1);
+  
   }
 
   const Increment = () =>{
@@ -21,18 +23,19 @@ export const ProductByNumber = () => {
 
   useEffect(()=>{
     item === 1 ? setDisabled(true) : setDisabled(false)
-  },[item])
+  },[item]) 
 
   return (
-    <sidebar className="detail-right-side">
+    <div>
+ <sidebar className="detail-right-side">
       <div className="top-detail-right-side">
         <div className="detail-jumlah-pembelian">
           <div className="input-jumlah-pembelian">
             <h6>Jumlah Pembelian</h6>
               <div className="card-incre-decre">
                 <button  disabled={item===1} className={disabled ? "negev disabled" : "negev"} onClick={Decrement}>-</button>
-                <input type="text" value={item} onChange={inputHandler}/>
-                <button  className="posit" onClick={Increment}>+</button>
+                <input  disable={item===1} type="text" value={item} defaultValue={0} onChange={inputHandler}/>
+                <button className="posit" onClick={Increment}>+</button>
               </div>
             </div>
             <div className="detail-total-pembelian">
@@ -58,8 +61,8 @@ export const ProductByNumber = () => {
           </div>
         </div>
       </div>
-      <p>Disarankan untuk memilih kota terdekat anda!</p>
     </sidebar>
+    </div>
   )
 }
 
