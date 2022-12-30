@@ -136,7 +136,7 @@
 
 .detail-right-side{
     width: 248px;
-    height: 1925px;
+    height: 1825px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -291,3 +291,35 @@
     gap:32px;
 }
 
+.produk-sejenis{
+    width: 1216px;
+    height: 431px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-produk-sejenis{
+    height: 22px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-produk-sejenis > h5{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.top-produk-sejenis > a{
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration-line: underline;
+    color: #F2A600;
+}
+
+.bottom-produk-sejenis{
+    height: 393px;
+    display:flex;
+    justify-content: space-between;
+}

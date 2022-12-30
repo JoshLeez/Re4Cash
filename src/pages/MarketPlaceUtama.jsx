@@ -4,7 +4,7 @@ import CarouselMarket from "../components/CarouselMarket";
 import { HOCmarketplace } from "../components/HOC";
 import "./styles/marketplace.css";
 import { UilAngleRightB } from '@iconscout/react-unicons'
-import ItemSell, {ItemBuy} from "../components/ItemSell";
+import ItemKg, {ItemNumber} from "../components/ItemKg";
 
 const MarketPlaceUtama = () => {
   const kategoriAnorganik = [
@@ -106,10 +106,10 @@ const MarketPlaceUtama = () => {
         <h4>Penjualan</h4>
         <div className="utama-list-penjualan">
           <div className="utama-produk-mentahan">
-            <ItemSell/>
-            <ItemSell/>
-            <ItemSell/>
-            <ItemSell/>
+            <ItemKg/>
+            <ItemKg/>
+            <ItemKg/>
+            <ItemKg/>
             <div className="marketplace-penjualan-button">
             <div className="penjualan-button-title">
                 <h4>Mentahan</h4>
@@ -120,10 +120,10 @@ const MarketPlaceUtama = () => {
         </div>       
         <div className="utama-list-penjualan">
           <div className="utama-produk-mentahan">
-            <ItemSell/>
-            <ItemSell/>
-            <ItemSell/>
-            <ItemSell/>
+            <ItemKg/>
+            <ItemKg/>
+            <ItemKg/>
+            <ItemKg/>
             <div className="marketplace-penjualan-button">
               <div className="penjualan-button-title">
                 <h4>Produk Daur Ulang</h4>
@@ -137,10 +137,10 @@ const MarketPlaceUtama = () => {
         <h4>Pembelian</h4>
         <div className="utama-list-penjualan">
           <div className="utama-produk-mentahan">
-            <ItemBuy/>
-            <ItemBuy/>
-            <ItemBuy/>
-            <ItemBuy/>
+            <ItemNumber/>
+            <ItemNumber/>
+            <ItemNumber/>
+            <ItemNumber/>
             <div className="marketplace-pembelian-button">
             <div className="penjualan-button-title">
                 <h4>Lapak Pencari Pembeli</h4>

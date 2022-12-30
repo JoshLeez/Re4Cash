@@ -31,7 +31,7 @@ export const ProductByNumber = () => {
       <div className="top-detail-right-side">
         <div className="detail-jumlah-pembelian">
           <div className="input-jumlah-pembelian">
-            <h6>Jumlah Pembelian</h6>
+            <h6>Jumlah Pembelian</h6> 
               <div className="card-incre-decre">
                 <button  disabled={item===1} className={disabled ? "negev disabled" : "negev"} onClick={Decrement}>-</button>
                 <input  disable={item===1} type="text" value={item} defaultValue={0} onChange={inputHandler}/>

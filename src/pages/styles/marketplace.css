@@ -466,6 +466,10 @@
     color: #131212;
 }
 
+.penjualan-hover > .card-incre-decre{
+    display:none;
+}
+
 .wrapper-penjualan-card:hover .penjualan-hover >*{
     opacity:1;
     animation: appear .5s ease-in-out;
