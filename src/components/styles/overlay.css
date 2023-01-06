@@ -1,0 +1,112 @@
+.backdrop{
+  position: fixed;
+  background: rgba(24, 24, 27, 0.5);
+  width:100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index:6;
+}
+
+.overlay-container {
+  position: absolute;
+  background: rgba(24, 24, 27, 0.5);
+  width:100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events:auto;
+}
+
+.form-login{
+  position: fixed;
+  width: 1000px;
+  height: 550px;
+  background: url("/login-bg.png"), #ffaf00;
+  border-radius: 16px;
+  z-index:10;
+}
+
+.login-container {
+  width: 698px;
+  height: 100%;
+  background: #f5f5f5;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px 0  0 16px;
+}
+
+.login-content {
+  width: 400px;
+  height: 511px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:16px;
+}
+.login-content > input {
+  width: 400px;
+  height: 44px;
+
+  background: #ffffff;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+}
+.login-content > p {
+  font-weight: 400;
+  font-size: 12px;
+}
+.login-content > p > span {
+  text-align: justify;
+  text-decoration-line: underline;
+  color: #335abd;
+}
+.garis-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.garis {
+  border: 2px solid #ffe19e;
+  width: 120px;
+  height: 0px;
+}
+.garis-content > p {
+  width: 145px;
+  margin: 0 10px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #606060;
+}
+.login-gf > button {
+  width: 196px;
+  height: 47px;
+
+  background: #ffffff;
+  border: 1px solid #0ea601;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.login-gf {
+  display: flex;
+  gap: 18px;
+}
+.login-content > h6 {
+  font-weight: 400;
+  font-size: 16px;
+}
+.login-content > h6 > span {
+  text-decoration-line: underline;
+
+  color: #335abd;
+}

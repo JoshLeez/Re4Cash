@@ -119,6 +119,7 @@
 .card-info-re4cash > img{
     width:100%;
     height:232px;
+    border-radius: 10px 10px 0 0;
 }
 
 .word-card-re4cash{

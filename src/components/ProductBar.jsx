@@ -1,4 +1,4 @@
-import Button from "./Button"
+import Button, { LinkButton } from "./Button"
 import { UilCheckCircle } from '@iconscout/react-unicons'
 import { useEffect, useState } from "react"
 
@@ -44,7 +44,7 @@ export const ProductByNumber = () => {
             </div>
             <div className='card-button-buy-cart'>
               <Button type="PRIMARY_LONG">Tambah ke Keranjang</Button>
-              <Button type="SECONDARY_LONG">Beli</Button>
+              <LinkButton to="/checkout" type="SECONDARY_LONG">Beli</LinkButton>
             </div>
         </div>
         <div className="detail-profile-pengelola">

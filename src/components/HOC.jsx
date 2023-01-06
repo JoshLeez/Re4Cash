@@ -34,3 +34,16 @@ export const HOCmarketplace = ({title, children}) => {
     </>
   )
 }
+
+export const HOCCheckout = ({title, children}) => {
+  return (
+   <>
+   <Navbarmarketplace/>
+      <Helmet>
+         <title>{title}</title>
+      </Helmet>
+      <div id="zeus-header"/>
+      {children}
+   </>
+  )
+}

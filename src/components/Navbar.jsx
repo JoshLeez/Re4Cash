@@ -1,27 +1,34 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom"
-import { LinkButton } from "./Button"
+import Button  from "./Button"
 import "./styles/navbar.css"
 import * as Unicons from '@iconscout/react-unicons';
+import { Login } from "./Overlay";
+import "./styles/overlay.css"
 
 const Navbar = () => {
+  const [layout, setLayout] = useState(false)
+
   return (
-    <header className="container-navbar">
-        <nav className="navbar-wrapper">
-          <Link to="/"><img src="/Re4CashYW.svg"/></Link>
-            <div className="left-navbar">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/edukasi">Edukasi</NavLink>
-                <NavLink to="/tentangkami">Tentang Kami</NavLink>
-                <NavLink to="/kontak">Kontak</NavLink>
-                <NavLink to="/marketplace">Marketplace</NavLink>
-            </div>
-            <div className="right-navbar">
-                <LinkButton type="SECONDARY">Masuk</LinkButton>
-                <LinkButton type="PRIMARY">Daftar</LinkButton>
-            </div>
-        </nav>
-    </header> 
+    <>
+      <header className="container-navbar">
+          <nav className="navbar-wrapper">
+            <Link to="/"><img src="/Re4CashYW.svg"/></Link>
+              <div className="left-navbar">
+                  <NavLink to="/">Home</NavLink>                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                  <NavLink to="/edukasi">Edukasi</NavLink>
+                  <NavLink to="/tentangkami">Tentang Kami</NavLink>
+                  <NavLink to="/kontak">Kontak</NavLink>
+                  <NavLink to="/marketplace">Marketplace</NavLink>
+              </div>
+              <div className="right-navbar">
+                  <Button type="SECONDARY" onClick={()=>setLayout(true)}>Masuk</Button>
+                  <Button type="PRIMARY">Daftar</Button>
+              </div>
+          </nav>
+      </header> 
+     {layout && <Login setLayout={setLayout} layout={layout}/>}
+    </>
   )
 }
 

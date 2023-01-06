@@ -5,6 +5,7 @@ import Edukasi from './pages/Edukasi'
 import TentangKami from './pages/TentangKami'
 import MarketPlaceUtama from './pages/MarketPlaceUtama'
 import DetailProduct from './pages/DetailProduct'
+import { Checkout } from './pages/Checkout'
 
 function App() {
  
@@ -17,6 +18,7 @@ function App() {
           <Route path="/tentangkami" element={<TentangKami/>}/>
           <Route path="/marketplace" element={<MarketPlaceUtama/>}/>
           <Route path="/detail-product" element={<DetailProduct/>}/>
+          <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
     </div>
     

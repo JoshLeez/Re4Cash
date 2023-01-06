@@ -22,12 +22,14 @@ const Button = ({ type, children, ...props }) => {
 
 export const LinkButton = ({type, children, ...props}) => {
     const BUTTON_TYPE = {
-        PRIMARY: "btn-primary",
-        SECONDARY: "btn-secondary",
-        PRIMARY_GREEN: "btn-primary-green",
-        SECONDARY_GREEN: "btn-secondary-green",
-        PRIMARY_LONG : "btn-primary-long",
-        BUTTON_TERTIARY : "btn-tertiary",
+      PRIMARY: "btn-primary",
+      SECONDARY: "btn-secondary",
+      PRIMARY_GREEN: "btn-primary-green",
+      SECONDARY_GREEN: "btn-secondary-green",
+      PRIMARY_LONG : "btn-primary-long",
+      SECONDARY_LONG : "btn-secondary-long",
+      BUTTON_TERTIARY : "btn-tertiary",
+      BUTTON_MODEL : "btn-model-product"
       };
     return (
     <Link className={BUTTON_TYPE[type || "PRIMARY"]} {...props}>

@@ -29,7 +29,7 @@ const Beranda = () => {
             description="Memberikan berbagai solusi bagi lingkungan, edukasi, mitra bisnis, dan perseorangan yang terkait."
             />
             <Berandawhy 
-            img="/complete-img.png"
+            img="/education.png"
             title="Education"
             description="Menyediakan edukasi bagi masyarakat dengan memberikan konten pengelolaan sampah menggunakan metode 4R.."
             />
@@ -77,7 +77,7 @@ const Beranda = () => {
           Indonesia menempati peringkat kedua di dunia sebagai penghasil sampah plastik terbesar ke laut. Hal ini diikuti oleh rendahnya kesadaran masyarakat serta kurangnya
            edukasi terkait pengelolaan sampah agar tidak mencemari lingkungan. 
           </p>
-          <Link className="iconify-hover">
+          <Link to="/edukasi" className="iconify-hover">
               <iconify-icon icon="gridicons:arrow-right"/>
           </Link>
         </div>
