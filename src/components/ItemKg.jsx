@@ -171,3 +171,17 @@ export const ItemNumber = () => {
     </div>
   );
 };
+
+
+
+
+export const Item = () => {
+  return (
+    <div className="wrapper-item">
+        <img src="/serabut-kelapa.svg"/>
+        <h6>Saya mencari minyak jelantah kiloan</h6>
+        <p>Minyak</p>
+        <h4>Rp. 15.000 <span>/ kilo</span></h4>
+    </div>
+  )
+}

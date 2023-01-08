@@ -493,3 +493,49 @@
 }
 
 
+/* Item without button */
+.wrapper-item{
+    width: 216px;
+    padding:16px;
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.wrapper-item > img{
+    width: 184px;
+    height: 167px;
+    border-radius: 10px;
+}
+
+.wrapper-item > h6{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.wrapper-item > p{
+    width: 59px;
+    height: 30px;
+    border: 1px solid #0EA601;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: #0EA601;
+}
+
+.wrapper-item > h4{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.wrapper-item > h4 > span{
+    font-weight: 500;
+    font-size: 16px;
+    color: #606060;
+}
