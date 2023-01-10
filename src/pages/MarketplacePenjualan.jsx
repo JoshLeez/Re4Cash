@@ -1,7 +1,9 @@
 
 const MarketplacePenjualan = () => {
   return (
-    <div>MarketplacePenjualan</div>
+    <HOC>
+
+    </HOC>
   )
 }
 
