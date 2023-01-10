@@ -1,3 +1,25 @@
 .container-akun-profile{
     display:flex;
+    margin:2em auto;
+    width:1216px;
+    gap:32px;
+}
+
+.wrapper-pesanan-saya{
+    width: 904px;
+    height: 508px;
+    border:2px solid black;
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.detail-pesanan-saya{
+    display:flex;
+    flex-direction: column;
+    gap:22px;
+}
+
+.pesanan-saya-navigation{
+    gap:60px;
 }

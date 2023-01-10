@@ -8,6 +8,7 @@ import DetailProduct from './pages/DetailProduct'
 import { Checkout } from './pages/Checkout'
 import ScrollToTop from './components/ScrollToTop'
 import AkunProfile from './pages/AkunProfile'
+import MarketplacePenjualan from './pages/MarketplacePenjualan'
 
 function App() {
  
@@ -23,6 +24,7 @@ function App() {
           <Route path="/detail-product" element={<DetailProduct/>}/>
           <Route path="/checkout" element={<Checkout/>}/>
           <Route path="/profile-user" element={<AkunProfile/>}/>
+          <Route path="/marketplace-penjualan" element={<MarketplacePenjualan/>}/>
         </Routes>
     </div>
     

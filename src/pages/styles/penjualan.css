@@ -1,0 +1,111 @@
+.hero-penjualan{
+    margin: 2em auto;
+    width: 1216px;
+}
+
+.wrapper-kategori-pilihan{
+    width: 1216px;
+    height: 230px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 24px 32px;
+    margin:0 auto 35px auto;
+    display:flex;
+    gap:80px;
+    align-items: center;
+}
+
+.kategori-pilihan-left{
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.kategori-pilihan-left > h1{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.kategori-pilihan-btn{
+    display:flex;
+    gap:30px;
+}
+
+.kategori-btn{
+    width: 146px;
+    display:flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #BCBCBC;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.kategori-btn > h5{
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+
+.kategori-pilihan-right{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.kategori-pilihan-right > h1{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.content-edukasi-umum{
+    border: 1px solid #BCBCBC;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+    padding: 10px 20px;
+}
+
+.content-edukasi-umum > h5{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.content-edukasi-umum > p{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.content-edukasi-umum > span{
+    font-weight: 400;
+    font-size: 16px;
+    color:#F2A600;
+}
+
+.kategori-list-item{
+    display:flex;
+    width: 1216px;
+    gap:43px;
+    margin:1em auto 5em auto;
+}
+
+.left-kategori-item{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 24px;
+    column-gap: 24px;
+}
+
+.right-kategori-item{
+    background: #FFFFFF;
+    border: 1px solid #606060;
+    border-radius: 10px;
+    width: 237px;  
+    height:fit-content;
+    padding: 16px 24px 24px;
+    display:flex;
+    flex-direction: column;
+    gap:24px;
+}

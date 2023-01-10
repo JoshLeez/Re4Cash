@@ -64,7 +64,7 @@ export const Navbarmarketplace = () => {
       <menu className="bottom-navbar">
         <div className="bottom-left-navbar">
          <Link onClick={()=>setWord("Semua")}>Semua</Link>
-         <Link onClick={()=>setWord("Penjualan")}>Penjualan</Link>
+         <Link to="/marketplace-penjualan" onClick={()=>setWord("Penjualan")}>Penjualan</Link>
          <Link onClick={()=>setWord("Pembelian")}>Pembelian</Link>
          <Link className="Link-with-menu">
             <Unicons.UilListUl />
