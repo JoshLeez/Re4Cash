@@ -202,11 +202,13 @@
 
 .card-incre-decre > .negev{
     background: #0EA601;
+    border: 1px solid #0EA601;
     border-radius: 4px 0px 0px 4px;
 }
 
 .card-incre-decre > .negev.disabled{
     background:#696969;
+    border: 1px solid #696969;
     border-radius: 4px 0px 0px 4px;
 }
 
@@ -218,7 +220,8 @@
 .card-incre-decre > input{
     width: 50px;
     height: 44px;
-    border:#0EA601 2px solid;
+    border-top:2px #0EA601 solid ;
+    border-bottom:2px #0EA601 solid ;
     text-align: center;
     outline: none;
     font-weight: 700;

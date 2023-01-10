@@ -5,6 +5,7 @@ import "./styles/navbar.css"
 import * as Unicons from '@iconscout/react-unicons';
 import { Login } from "./Overlay";
 import "./styles/overlay.css"
+import { OverlayUser } from "./OverlayUser";
 
 const Navbar = () => {
   const [layout, setLayout] = useState(false)
@@ -36,6 +37,7 @@ export default Navbar
 
 export const Navbarmarketplace = () => {
 
+  const [user, setUser] = useState(false)
   const [word, setWord] = useState("Semua");
 
   return (
@@ -51,10 +53,13 @@ export const Navbarmarketplace = () => {
         </div>
         <Unicons.UilShoppingCart color="#FFAF00" size="32px"/>
         <Unicons.UilStore color="#FFAF00" size="32px"/>
-        <div className="profile-navbar">
-          <Unicons.UilUserCircle color="#FFAF00" size="32px"/>
-          <h6>Hi, Udin</h6>
-        </div>
+        <div className="wrapper-profile-navbar">
+          <div className="profile-navbar"  onClick={()=>setUser(!user)}>
+            <Unicons.UilUserCircle color="#FFAF00" size="32px"/>
+            <h6>Hi, Udin</h6>
+          </div>
+          {user && <OverlayUser setUser={setUser} user={user}/>}
+        </div>  
       </nav>
       <menu className="bottom-navbar">
         <div className="bottom-left-navbar">

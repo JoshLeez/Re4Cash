@@ -2,6 +2,8 @@
     display:flex;
     gap:32px;
     justify-content: center;
+    margin-top:24px;
+    margin-bottom: 5em;
 }
 
 .left-checkout{
@@ -149,7 +151,7 @@
 }
 
 .jumlah-penjualan-dan-distribusi{
-    padding: 0 18.5px;
+    padding: 22.5px 0;
     display:flex;
     flex-direction: column;
     gap:32px;
@@ -158,7 +160,7 @@
 .input-jumlah-penjualan{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap:64px;
+    column-gap:32px;
     row-gap: 16px;
 }
 
@@ -194,11 +196,109 @@
 
 .jumlah-penjualan > p{
     font-weight: 500;
-    font-size: 16px;
+        font-size: 16px;
 }
 
 .right-checkout{
     width: 435px;
-    border: 2px solid black;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    height: fit-content;
+    padding: 24px 16px;
+    gap: 16px;
+    display:flex;
+    flex-direction: column;
 }
 
+.right-checkout > img{
+    width: 162px;
+    height: 66px;
+    align-self: center;
+}
+
+.wrapper-detail-pembelian{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.detail-pembelian{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-pembelian > h3{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.detail-pembelian > .checklist-point{
+    display:flex;
+    align-items: center;
+    gap:4px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.detail-pembelian > h6{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.detail-pembelian > h6 > span{
+    color: #606060;
+}
+
+.detail-pembelian > h4{
+    font-weight: 700;
+    font-size: 16px;
+    color: #F2A600;
+}
+
+.btn-checkout{
+    height: 44px;
+    background: #F2A600;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-checkout:hover{
+    background: #D08F00;
+}
+
+.wrapper-catatan{
+   display: flex;
+   flex-direction: column;
+   gap:4px;
+   padding:0 16px 16px 16px;
+}
+
+.wrapper-catatan > h3{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.wrapper-catatan > textarea{
+    width:100%;
+    height: 125px;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+}
+
+.wrapper-catatan > textarea:focus{
+    border:#131212 1px solid;
+}

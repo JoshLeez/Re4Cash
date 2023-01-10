@@ -1,17 +1,20 @@
 import './App.css'
 import Beranda from './pages/Beranda'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, ScrollRestoration} from 'react-router-dom'
 import Edukasi from './pages/Edukasi'
 import TentangKami from './pages/TentangKami'
 import MarketPlaceUtama from './pages/MarketPlaceUtama'
 import DetailProduct from './pages/DetailProduct'
 import { Checkout } from './pages/Checkout'
+import ScrollToTop from './components/ScrollToTop'
+import AkunProfile from './pages/AkunProfile'
 
 function App() {
  
 
   return (
     <div className="App">
+      {/* <ScrollToTop/> */}
         <Routes>
           <Route exact path="/" element={<Beranda/>}/>
           <Route path="/edukasi" element={<Edukasi/>}/>
@@ -19,6 +22,7 @@ function App() {
           <Route path="/marketplace" element={<MarketPlaceUtama/>}/>
           <Route path="/detail-product" element={<DetailProduct/>}/>
           <Route path="/checkout" element={<Checkout/>}/>
+          <Route path="/profile-user" element={<AkunProfile/>}/>
         </Routes>
     </div>
     

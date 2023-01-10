@@ -22,30 +22,52 @@
 
 .our-vision{
     width:100%;
-    height: 500px;
+    height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #FFAF00;
+    margin-bottom:40xp;
 }
 
 .our-vision > .content-our-vision{
     display:flex;
+    flex-direction: column;
+    gap:60px;
     width: 1201px;
     height: 264px;
+    align-items: center;
     justify-content: space-between;
 }
 
-.content-our-vision > h2{
+.title-content-vision{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:4px;
+}
+
+.title-content-vision > h2{
     font-weight: 700;
     font-size: 40px;
     line-height: 44px;
     color: #000000;
 }
 
+.title-content-vision > .garis{
+    width: 100px;
+    height: 5px;
+    border: 2px solid #F2A600;
+    background-color: #F2A600;
+    border-radius: 5px;
+}
+
 .content-our-vision > p{
-    width: 800px;
-    height: 264px;
+    width: 1026px;
+    height: 160px;
+    line-height: 32px;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
 }
 
 .our-mission{
@@ -58,13 +80,13 @@
 
 .our-mission > .content-our-mission{
     display:flex;
-    width: 1201px;
-    height: 264px;
+    width: 1216px;
+    height: 346px;
     justify-content: space-between;
 }
 
 .content-our-mission > h2{
-    font-weight: 700;
+    font-weight: 400;
     font-size: 40px;
     line-height: 44px;
     color: #F5F5F5;
@@ -77,11 +99,18 @@
     position:absolute;
 }
 
-.content-our-mission > p{
+.content-our-mission > ol{
     width: 800px;
-    height: 264px;
     color: #F5F5F5;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: justify;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
 }
+
 
 .our-service{
     width: 1216px;
@@ -150,7 +179,74 @@
 .our-social-media{
     width: 100%;
     height: 84px;
-    margin:7em 0;
+    margin:3em 0;
+    display:flex;
+    gap:48px;
+    justify-content: center;
+    align-items: center;
     background: #FFFFFF;
     box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.1);
+}
+
+.icon-nama-social{
+    display:flex;
+    gap:16px;
+    align-items: center;
+}
+
+.icon-nama-social > iconify-icon{
+    font-size: 30px;
+}
+
+.icon-nama-social > h3{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.team-kami{
+    width:fit-content;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:36px;
+    margin:0 auto 63px auto; 
+}
+
+.team-kami > h1{
+    font-weight: 500;
+    font-size: 40px;
+    color: #F2A600;
+}
+
+.profile-team-kami{
+    display:flex;
+    gap:32px;
+}
+
+.card-profile-team{
+    display:flex;
+    flex-direction: column;
+    gap:24px;
+    align-items: center;
+}
+
+.nama-role{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    align-items: center;
+}
+
+.nama-role > h3{
+    font-weight: 400;
+    font-size: 16px;
+    color: #F2A600;
+    width: 160px;
+    text-align: center;
+}
+
+.nama-role > h6{
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
 }

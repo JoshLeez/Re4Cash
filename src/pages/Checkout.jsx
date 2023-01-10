@@ -79,16 +79,77 @@ export const Checkout = () => {
                         <CustomDropDown/>
                     </div>
                     <div className="jumlah-penjualan">
-                        <h5>Sub Total Penjualan</h5>
+                        <h5>Sub Total Pembelian</h5>
                         <p>Rp. 60.000</p>
+                    </div>
+                  </div>
+                  <div className="input-jumlah-penjualan">
+                    <div className="jumlah-penjualan">
+                          <h5>Pilih Distribusi</h5>
+                          <CustomDropDown/>
+                      </div>
+                      <div className="jumlah-penjualan">
+                          <h5>Pilih Jasa Kurir</h5>
+                          <CustomDropDown/>
+                      </div>
+                      <div className="jumlah-penjualan">
+                        <h5>Biaya Distribusi</h5>
+                        <p>Rp. 0</p>
+                    </div>
+                    <div className="jumlah-penjualan">
+                        <h5>Estimasi Distribusi</h5>
+                        <p>0-2 hari (segera mungkin)</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="wrapper-catatan">
+              <h3>Catatan Untuk Pengelola</h3>
+              <textarea placeholder="Catatan tulis disini (opsional)"/>
+            </div>
           </div>
         </section>
-        <aside className="right-checkout"></aside>
+        <aside className="right-checkout">
+          <img src="Re4CashYW.svg"/>
+          <div className="wrapper-detail-pembelian">
+            <div className="detail-pembelian">
+              <h3>Detail Pembelian</h3>
+              <div className="checklist-point">
+                <input type="checkbox"/>
+                pakai point
+              </div>
+            </div>
+            <div className="detail-pembelian">
+              <h6>Total Pembelian</h6>
+              <h6>Rp. 30.000</h6>
+            </div>
+            <div className="detail-pembelian">
+              <h6>Biaya Distribusi</h6>
+              <h6>Rp. 15.000</h6>
+            </div>
+            <div className="detail-pembelian">
+              <h6>Biaya Admin</h6>
+              <h6>Rp. 0</h6>
+            </div>
+            <div className="detail-pembelian">
+              <h6>Point <span>(850.000)</span></h6>
+              <h6>- 65.000</h6>
+            </div>
+          </div>
+          <div style={{border: "1px solid #FFE19E"}}/>
+          <div className="wrapper-detail-pembelian">
+            <div className="detail-pembelian">
+              <h4>Total Harga</h4>
+              <h6>Rp. 0</h6>
+            </div>
+            <div className="detail-pembelian">
+              <h4>Bonus Point</h4>
+              <h6>1.800</h6>
+            </div>
+          </div>
+          <div className="btn-checkout">Beli Rp. 0</div>
+        </aside>
       </div>
     </HOCCheckout>
   );

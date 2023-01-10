@@ -11,35 +11,32 @@ const TentangKami = () => {
       </div>
       <section className="our-vision">
         <div className="content-our-vision">
-          <h2>Our Vision</h2>
+          <div className="title-content-vision"> 
+            <h2>Our Vision</h2>
+            <div className="garis"/>
+          </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
-            nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo
-            lacus at sodales sodales. Quisque sagittis orci ut diam condimentum,
-            vel euismod erat placerat. In iaculis arcu eros, eget tempus orci
-            facilisis id.
+          Menciptakan sebuah website yang yang dapat menjadi  
+          pelopor yang paling berharga di Indonesi dan Champion 
+          of financial  Income for society. Dan dapat membantu 
+          lingkungan kembali bersih , aman, dan nyaman. Tindakan
+           Ekologi mencantumkan Visi Daur Ulang. Kami juga mengajak 
+           masyarakat ke Vision Recycling. Mewujudkan Pengelolaan
+            Lingkungan Hidup Yang Berkualitas Menuju Masyarakat 
+          Yang Berwawasan Kreatif dan paduli terhadap Lingkungan.
           </p>
         </div>
       </section>
       <section className="our-mission">
         <img src="/our-mission.png" />
         <div className="content-our-mission">
-          <h2>Our Vision</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
-            nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo
-            lacus at sodales sodales. Quisque sagittis orci ut diam condimentum,
-            vel euismod erat placerat. In iaculis arcu eros, eget tempus orci
-            facilisis id.
-          </p>
+          <h2>Our Mission</h2>
+            <ol>
+              <li>Meningkatkan Kualitas Sumberdaya Manusia dan Data Serta Penyediaan Edukasi Untuk Pengelolaan Limbah Agar Bernilai Ekonomis</li>
+              <li>Meningkatkan Rasa Peduli Terhadap Pengendalian Pencemaran dan/ atau kerusakan Lingkungan Hidup dalam rangka pelestarian lingkungan hidup.</li>           
+              <li>Meningkatkan Pengelolaan Sumber Daya Manusia, Sumber Daya Alam dan Lingkungan Hidup yang terintegrasi</li>
+              <li>Mewujudkan Peningkatan Peran dan Partisipasi Masyarakat Untuk Berfikir Kreatif dan Inovatif.</li>
+            </ol>
         </div>
       </section>
       <section className="our-service">
@@ -73,7 +70,69 @@ const TentangKami = () => {
         </div>
       </section>
       <div className="our-social-media">
-
+        <div className="icon-nama-social">
+            <iconify-icon icon="ph:tiktok-logo-light"/>
+            <h3>@re4Cash</h3>
+        </div>
+        <div className="icon-nama-social">
+            <iconify-icon icon="radix-icons:twitter-logo"/>
+            <h3>@re4Cash</h3>
+        </div>
+        <div className="icon-nama-social">
+            <iconify-icon icon="radix-icons:twitter-logo"/>
+            <h3>re4cash</h3>
+        </div>
+        <div className="icon-nama-social">
+            <iconify-icon icon="ant-design:facebook-outlined"/>
+            <h3>@re4cash</h3>
+        </div>
+      </div>
+      <div className="team-kami">
+        <h1>Team</h1>
+        <div className="profile-team-kami">
+          <div className="card-profile-team">
+              <img src="/team-kami/zainuddin.svg"/>
+              <div className="nama-role">
+                <h3>Zainuddin</h3>
+                <h6>Project Manager</h6>
+              </div>
+          </div>
+          <div className="card-profile-team">
+              <img src="/team-kami/bintang.svg"/>
+              <div className="nama-role">
+                <h3>Muhammad Bintang S</h3>
+                <h6>Hipster</h6>
+              </div>
+          </div>
+          <div className="card-profile-team">
+              <img src="/team-kami/adelia.svg"/>
+              <div className="nama-role">
+                <h3>Adelia Hana Kuncoro</h3>
+                <h6>Hipster</h6>
+              </div>
+          </div>
+          <div className="card-profile-team">
+              <img src="/team-kami/mustika.svg"/>
+              <div className="nama-role">
+                <h3>Mustika Lutfiani Kodir</h3>
+                <h6>Hacker</h6>
+              </div>
+          </div>
+          <div className="card-profile-team">
+              <img src="/team-kami/rezal.svg"/>
+              <div className="nama-role">
+                <h3>Muhammad Rezal S</h3>
+                <h6>Hacker</h6>
+              </div>
+          </div>
+          <div className="card-profile-team">
+              <img src="/team-kami/josh.svg"/>
+              <div className="nama-role">
+                <h3>Josh Lee</h3>
+                <h6>Hacker</h6>
+              </div>
+          </div>
+        </div>
       </div>
     </HOC>
   );

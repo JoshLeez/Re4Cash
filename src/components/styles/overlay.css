@@ -110,3 +110,80 @@
 
   color: #335abd;
 }
+
+
+/* Overlay Dropdown User */
+.dd-user{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  display:flex;
+  flex-direction: column;
+  gap:32px;
+  position: absolute;
+  top:3.5em;
+  right:4px;
+  width: 236px;
+}
+
+.dd-profile-saya{
+  display:flex;
+  align-items: center;
+  gap:24px;
+}
+
+.dd-profile-saya > svg{
+  color: #ffaf00;
+  width: 72px;
+  height: 72px;
+}
+
+.nama-poin-user{
+  display:flex;
+  flex-direction: column;
+}
+
+.nama-poin-user > h2{
+  font-weight: 700;
+  font-size: 20px;
+  color: #131212;
+}
+
+.nama-poin-user > h4{
+  font-weight: 400;
+  font-size: 16px;
+  color: #F2A600;
+}
+
+.nama-poin-user > span{
+  font-weight: 400;
+  font-size: 16px;
+  color: #131212;
+}
+
+.dd-bot-user{
+ display:flex;
+ flex-direction: column;
+ gap:13px;
+}
+
+.option-bot-user{
+  display:flex;
+  gap:16px;
+  align-items: center;
+}
+
+.option-bot-user > iconify-icon{
+  color: #F2A600;
+  font-size: 24px;
+}
+
+.option-bot-user > h4{
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.option-bot-user.logout > *{
+  color: #E40101;
+}
