@@ -9,6 +9,7 @@ import { Checkout } from './pages/Checkout'
 import ScrollToTop from './components/ScrollToTop'
 import AkunProfile from './pages/AkunProfile'
 import MarketplacePenjualan from './pages/MarketplacePenjualan'
+import DashboardPengelola from './pages/DashboardPengelola'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/checkout" element={<Checkout/>}/>
           <Route path="/profile-user" element={<AkunProfile/>}/>
           <Route path="/marketplace-penjualan" element={<MarketplacePenjualan/>}/>
+          <Route path="/dashboard-pengelola" element={<DashboardPengelola/>}/>
         </Routes>
     </div>
   );

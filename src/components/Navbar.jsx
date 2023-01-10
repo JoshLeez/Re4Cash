@@ -68,17 +68,10 @@ export const Navbarmarketplace = () => {
       </nav>
       <menu className="bottom-navbar">
         <div className="bottom-left-navbar">
-<<<<<<< HEAD
          <Link onClick={()=>setWord("Semua")}>Semua</Link>
          <Link to="/marketplace-penjualan" onClick={()=>setWord("Penjualan")}>Penjualan</Link>
          <Link onClick={()=>setWord("Pembelian")}>Pembelian</Link>
          <Link className="Link-with-menu">
-=======
-          <Link onClick={() => setWord("Semua")}>Semua</Link>
-          <Link onClick={() => setWord("Penjualan")}>Penjualan</Link>
-          <Link onClick={() => setWord("Pembelian")}>Pembelian</Link>
-          <Link className="Link-with-menu">
->>>>>>> dc82905 (menambah halaman dashboard pengelola (awal))
             <Unicons.UilListUl />
             Kategori
           </Link>
