@@ -11,8 +11,6 @@ import AkunProfile from './pages/AkunProfile'
 import MarketplacePenjualan from './pages/MarketplacePenjualan'
 
 function App() {
- 
-
   return (
     <div className="App">
       {/* <ScrollToTop/> */}
@@ -27,8 +25,7 @@ function App() {
           <Route path="/marketplace-penjualan" element={<MarketplacePenjualan/>}/>
         </Routes>
     </div>
-    
-  )
+  );
 }
 
-export default App
+export default App;

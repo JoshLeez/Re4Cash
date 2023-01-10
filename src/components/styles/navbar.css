@@ -1,159 +1,159 @@
 /* primary-navbar */
 
-.container-navbar{
-    width:100%;
+.container-navbar {
+    width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     position: fixed;
-    z-index:5;
+    z-index: 5;
 }
 
-.navbar-wrapper{
+.navbar-wrapper {
     width: 1216px;
     height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin:0 auto;
+    margin: 0 auto;
     font-weight: 600;
     font-size: 16px;
     position: relative;
 }
 
-.navbar-wrapper > img{
+.navbar-wrapper>img {
     width: 135px;
     height: 48px;
 }
 
-.left-navbar{
+.left-navbar {
     width: 579px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    padding:10px;
+    padding: 10px;
 }
 
-.right-navbar{
+.right-navbar {
     width: 312px;
-    display:flex;
+    display: flex;
     font-weight: 600;
     font-size: 16px;
     justify-content: space-between;
 }
 
-.right-navbar > .login-button{
+.right-navbar>.login-button {
     width: 150px;
     height: 44px;
     color: #FFAF00;
     border: 2px solid #FFAF00;
     border-radius: 5px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.right-navbar > .register-button{
+.right-navbar>.register-button {
     width: 150px;
     height: 44px;
     background: #FFAF00;
     color: #FFFFFF;
     border: 2px solid #FFAF00;
     border-radius: 5px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.left-navbar > a{
-    color:black;
+.left-navbar>a {
+    color: black;
 }
 
-a.active{
-    color:#FFAF00;
+a.active {
+    color: #FFAF00;
 }
 
 /* Navbar - Marketplace */
 
-#zeus-header{
-    padding-top:8em;
+#zeus-header {
+    padding-top: 8em;
 }
 
-.navbar-search-filter{
-    display:flex;
+.navbar-search-filter {
+    display: flex;
     justify-content: center;
 }
 
-.navbar-search-filter > input{
+.navbar-search-filter>input {
     width: 646px;
     height: 44px;
     background: #F7FAFC;
     border: 1px solid #FFAF00;
     border-radius: 8px 0px 0px 8px;
-    padding:1em;
+    padding: 1em;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0.02em;   
+    letter-spacing: 0.02em;
     outline: none;
 }
 
-.navbar-search-filter > .search-button-navbar{
+.navbar-search-filter>.search-button-navbar {
     width: 69px;
     height: 44px;
     background: #FFAF00;
     border-radius: 0px 10px 10px 0px;
-    border:none;
+    border: none;
     cursor: pointer;
 }
 
-.wrapper-profile-navbar{
-    display:flex;
+.wrapper-profile-navbar {
+    display: flex;
     flex-direction: column;
 }
 
-.profile-navbar{
+.profile-navbar {
     width: 107px;
     height: 40px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }
 
-.profile-navbar > h6{
+.profile-navbar>h6 {
     font-weight: 700;
     font-size: 16px;
     line-height: 17px;
     color: #606060;
 }
 
-.bottom-navbar{
-    margin:0 auto;
+.bottom-navbar {
+    margin: 0 auto;
     background: #FFFFFF;
     width: 1216px;
     height: 48px;
-    display:flex;
+    display: flex;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
 
-.bottom-navbar > h5{
+.bottom-navbar>h5 {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    color:#606060;
+    color: #606060;
 }
 
-.bottom-left-navbar{
+.bottom-left-navbar {
     width: 485px;
-    height:100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-right: 2px solid #FFAF00;
 }
 
-.bottom-left-navbar > a{
-    color:black;
+.bottom-left-navbar>a {
+    color: black;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
@@ -161,9 +161,19 @@ a.active{
     color: #131212;
 }
 
-.bottom-left-navbar > .Link-with-menu{
-    display:flex;
+.bottom-left-navbar>.Link-with-menu {
+    display: flex;
     width: 100px;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbar-dashboard {
+    width: 100%;
+    height: 107px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    align-items: center;
+    border: 1px solid black;
 }

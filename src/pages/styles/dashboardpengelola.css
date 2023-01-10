@@ -1,0 +1,10 @@
+.dashboard-page {
+    display: flex;
+    height: 100vh;
+}
+
+.dashboard-page-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
