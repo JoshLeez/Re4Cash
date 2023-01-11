@@ -45,7 +45,7 @@ const AkunProfile = () => {
                     <span className="circle-notification">1</span>
                   </div>
                 </header>
-                <section className="content-nav-pesanan-saya">
+                <section style={style} className="content-nav-pesanan-saya">
                     <StatusTransaksi/>
                      <StatusTransaksi/>
                 </section>
