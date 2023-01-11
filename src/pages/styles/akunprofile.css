@@ -5,13 +5,19 @@
     gap:32px;
 }
 
+.akun-profile-right-content{
+    display:flex;
+    flex-direction: column;
+    gap:32px;
+}
+
 .wrapper-pesanan-saya{
     width: 904px;
     height: 508px;
-    border:2px solid black;
     display:flex;
     flex-direction: column;
     gap:16px;
+    overflow:hidden;
 }
 
 .detail-pesanan-saya{
@@ -21,5 +27,56 @@
 }
 
 .pesanan-saya-navigation{
+    display:flex;
     gap:60px;
+}
+
+.pesanan-saya-menu{
+    display:flex;
+    gap:10px;
+    padding:10px;
+    font-size:24px;
+    align-items: center;
+    color:#131212;
+    cursor: pointer;
+}
+
+.pesanan-saya-menu > h3{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.circle-notification{
+    background: #F2A600;
+    border-radius: 20px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    position: relative;
+    z-index:3;
+    top:-85%;
+    left:-5%;
+}
+
+.content-nav-pesanan-saya{
+    width: calc(100%*4);
+    display:flex;
+    transition: transform 300ms;
+}
+
+
+.pesanan-saya-menu.active{
+    color: #F2A600;
+    border-bottom: 2px solid #F2A600;
+}
+
+.profile-setting-wrapper{
+    display:flex;
+    flex-direction: column;
+    border:2px solid black;
 }
