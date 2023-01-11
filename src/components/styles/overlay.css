@@ -1,33 +1,33 @@
-.backdrop{
+.backdrop {
   position: fixed;
   background: rgba(24, 24, 27, 0.5);
-  width:100%;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index:6;
+  z-index: 6;
 }
 
 .overlay-container {
   position: absolute;
   background: rgba(24, 24, 27, 0.5);
-  width:100%;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events:auto;
+  pointer-events: auto;
 }
 
-.form-login{
+.form-login {
   position: fixed;
   width: 1000px;
   height: 550px;
   background: url("/login-bg.png"), #ffaf00;
   border-radius: 16px;
-  z-index:10;
+  z-index: 10;
 }
 
 .login-container {
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 16px 0  0 16px;
+  border-radius: 16px 0 0 16px;
 }
 
 .login-content {
@@ -47,9 +47,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:16px;
+  gap: 16px;
 }
-.login-content > input {
+
+.login-content>input {
   width: 400px;
   height: 44px;
 
@@ -59,33 +60,39 @@
   outline: none;
   padding: 10px;
 }
-.login-content > p {
+
+.login-content>p {
   font-weight: 400;
   font-size: 12px;
 }
-.login-content > p > span {
+
+.login-content>p>span {
   text-align: justify;
   text-decoration-line: underline;
   color: #335abd;
 }
+
 .garis-content {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+
 .garis {
   border: 2px solid #ffe19e;
   width: 120px;
   height: 0px;
 }
-.garis-content > p {
+
+.garis-content>p {
   width: 145px;
   margin: 0 10px;
   font-weight: 400;
   font-size: 16px;
   color: #606060;
 }
-.login-gf > button {
+
+.login-gf>button {
   width: 196px;
   height: 47px;
 
@@ -97,15 +104,18 @@
   gap: 10px;
   justify-content: center;
 }
+
 .login-gf {
   display: flex;
   gap: 18px;
 }
-.login-content > h6 {
+
+.login-content>h6 {
   font-weight: 400;
   font-size: 16px;
 }
-.login-content > h6 > span {
+
+.login-content>h6>span {
   text-decoration-line: underline;
 
   color: #335abd;
@@ -113,77 +123,92 @@
 
 
 /* Overlay Dropdown User */
-.dd-user{
+.dd-user {
   background: #FFFFFF;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 20px;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:32px;
+  gap: 32px;
   position: absolute;
-  top:3.5em;
-  right:4px;
+  top: 3.5em;
+  right: 4px;
   width: 236px;
 }
 
-.dd-profile-saya{
-  display:flex;
+.dd-profile-saya {
+  display: flex;
   align-items: center;
-  gap:24px;
+  gap: 24px;
 }
 
-.dd-profile-saya > svg{
+.dd-profile-saya>svg {
   color: #ffaf00;
   width: 72px;
   height: 72px;
 }
 
-.nama-poin-user{
-  display:flex;
+.nama-poin-user {
+  display: flex;
   flex-direction: column;
 }
 
-.nama-poin-user > h2{
+.nama-poin-user>h2 {
   font-weight: 700;
   font-size: 20px;
   color: #131212;
 }
 
-.nama-poin-user > h4{
+.nama-poin-user>h4 {
   font-weight: 400;
   font-size: 16px;
   color: #F2A600;
 }
 
-.nama-poin-user > span{
+.nama-poin-user>span {
   font-weight: 400;
   font-size: 16px;
   color: #131212;
 }
 
-.dd-bot-user{
- display:flex;
- flex-direction: column;
- gap:13px;
+.dd-bot-user {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
 }
 
-.option-bot-user{
-  display:flex;
-  gap:16px;
+.option-bot-user {
+  display: flex;
+  gap: 16px;
   align-items: center;
 }
 
-.option-bot-user > iconify-icon{
+.option-bot-user>iconify-icon {
   color: #F2A600;
   font-size: 24px;
 }
 
-.option-bot-user > h4{
+.option-bot-user>h4 {
   font-weight: 400;
   font-size: 14px;
 }
 
-.option-bot-user.logout > *{
+.option-bot-user.logout>* {
   color: #E40101;
+}
+
+.dd-pengelola {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: absolute;
+  top: 5rem;
+  right: 45px;
+  width: 236px;
+  z-index: 2;
 }

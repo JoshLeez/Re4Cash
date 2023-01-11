@@ -173,7 +173,28 @@ a.active {
     height: 107px;
     display: flex;
     justify-content: space-between;
-    padding: 0 2em;
+    padding: 25px 45px 25px 33px;
     align-items: center;
-    border: 1px solid black;
+    border-bottom: 1px solid #A8A8A8;
+}
+
+.navbar-dashboard-search {
+    width: 290px;
+    height: 56px;
+    background: #FAFAFA;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    align-self: flex-end;
+}
+
+.navbar-dashboard-search>input {
+    outline: none;
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
 }

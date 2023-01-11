@@ -6,6 +6,8 @@ import * as Unicons from "@iconscout/react-unicons";
 import { Login } from "./Overlay";
 import "./styles/overlay.css";
 import { OverlayUser } from "./OverlayUser";
+import { UilSearch } from '@iconscout/react-unicons'
+import { OverlayPengelola } from "./OverlayPengelola";
 
 const Navbar = () => {
   const [layout, setLayout] = useState(false);
@@ -83,10 +85,24 @@ export const Navbarmarketplace = () => {
 };
 
 export const Navbardashboardpengelola = () => {
+  const [pengelola, setPengelola] = useState(false);
+
   return (
     <header className="navbar-dashboard">
-      <div>test</div>
-      <div>test</div>
+      <label className="navbar-dashboard-search">
+        <UilSearch size="24px" color="#FFAF00"/>
+        <input placeholder="Search"/>
+      </label>
+      
+      <div>
+        <div className="wrapper-profile-navbar">
+          <div className="profile-navbar" onClick={() => setPengelola(!pengelola)}>
+              <h6>Hi, Udin</h6>
+              <Unicons.UilUserCircle color="#FFAF00" size="32px" />
+            </div>
+            {pengelola && <OverlayPengelola setPengelola={setPengelola} pengelola={pengelola} />}
+        </div>
+      </div>
     </header>
   );
 };

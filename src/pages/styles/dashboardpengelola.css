@@ -8,3 +8,86 @@
     flex-direction: column;
     width: 100%;
 }
+
+.wrapper-dashboard-utama {
+    padding: 18px 0px 0px 33px;
+    overflow: hidden;
+}
+
+.wrapper-section-dashboard-utama {
+    display: flex;
+    width: fit-content;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.card-profil-dashboard-utama {
+    display: flex;
+    width: 459px;
+    height: 240px;
+    padding: 14px 20px;
+    gap: 20px;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-profil-dashboard-utama.edit>iconify-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 6px 0px 0px;
+    color: #F2A600;
+}
+
+.profile-picture-dashboard-utama {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.profile-picture-dashboard-utama>p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #F2A600;
+}
+
+.profile-picture-dashboard-utama>h1 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.profile-desc-dashboard-utama {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+
+    width: 179px;
+    height: 176px;
+}
+
+.profile-desc-dashboard-utama-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+
+.profile-desc-dashboard-utama-detail>h4 {
+    font-weight: 400;
+    font-size: 12px;
+    margin: auto;
+}
+
+.profile-desc-dashboard-utama-detail>iconify-icon {
+    font-size: 24px;
+    color: #F2A600;
+}
