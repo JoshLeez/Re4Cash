@@ -31,6 +31,10 @@
     gap:30px;
 }
 
+.kategori-btn.active{
+    background-color: #F2A600;
+}
+
 .kategori-btn{
     width: 146px;
     display:flex;
@@ -40,6 +44,7 @@
     border: 1px solid #BCBCBC;
     border-radius: 5px;
     justify-content: center;
+    cursor: pointer;
 }
 
 .kategori-btn > h5{

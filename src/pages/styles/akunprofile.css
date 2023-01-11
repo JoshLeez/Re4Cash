@@ -69,11 +69,11 @@
     transition: transform 300ms;
 }
 
-
+/* 
 .pesanan-saya-menu.active{
     color: #F2A600;
     border-bottom: 2px solid #F2A600;
-}
+} */
 
 .profile-setting-wrapper{
     display:flex;

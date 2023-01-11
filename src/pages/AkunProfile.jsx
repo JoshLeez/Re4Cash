@@ -47,7 +47,9 @@ const AkunProfile = () => {
                 </header>
                 <section style={style} className="content-nav-pesanan-saya">
                     <StatusTransaksi/>
-                     <StatusTransaksi/>
+                    <StatusTransaksi/>
+                    <StatusTransaksi/>
+                    <StatusTransaksi/>  
                 </section>
               </section>
               </div>

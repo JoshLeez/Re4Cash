@@ -2,8 +2,23 @@ import { CarouselMarketPenjual } from "../components/CarouselMarket"
 import { HOCmarketplace } from "../components/HOC"
 import "./styles/penjualan.css"
 import ItemKg from "../components/ItemKg";
+import { useState } from "react";
 
 const MarketplacePenjualan = () => {
+
+  const [daurUlang, setDaurUlang] = useState(false)
+  const [mentahan, setMentahan] = useState(false)
+
+  const mentahanHandler = () =>{
+    setMentahan(!mentahan)
+    setDaurUlang(false)
+  }
+
+  const daurUlangHandler = () =>{
+    setDaurUlang(!daurUlang)
+    setMentahan(false)
+  }
+
   return (
     <HOCmarketplace title="Marketplace Penjualan Utama | Re4Cash">
       <section className="hero-penjualan">
@@ -13,11 +28,11 @@ const MarketplacePenjualan = () => {
         <div className="kategori-pilihan-left">
           <h1>Kategori Pilihan</h1>
           <div className="kategori-pilihan-btn">
-            <div className="kategori-btn">
+            <div onClick={daurUlangHandler} className={daurUlang ? "kategori-btn active" : "kategori-btn"}>
               <img src="/kategori-daur-ulang.png"/>
               <h5>Produk Daur Ulang</h5>
             </div>
-            <div className="kategori-btn">
+            <div onClick={mentahanHandler} className={mentahan ? "kategori-btn active" : "kategori-btn"}>
               <img src="/kategori-mentahan.png"/>
               <h5>Mentahan</h5>
             </div>
