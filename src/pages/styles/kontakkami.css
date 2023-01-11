@@ -1,0 +1,216 @@
+.kontakkami-banner {
+    width:100%;
+    height: 571px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.kontakkami-banner > img{
+    width:100%;
+    height:422px;
+    position: absolute;
+    z-index:-4;
+}
+
+.kontakkami-banner-content {
+    color: #fff;
+    text-align: center;
+
+}
+
+.kontakkami-banner-content > h1{
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 100px;
+
+}
+
+.kontakkami-banner-content > p{
+    width: 578px;
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+
+/* Konten */
+
+.kontakkami-content-container{
+    margin: 0 auto;
+    width: 1216px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.kontakkami-content-getintouch{
+    width: 591px;
+    margin-bottom: 48px;
+}
+
+.kontakkami-content-getintouch > h1{
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.kontakkami-content-getintouch > p{
+    font-size: 14px;
+    font-weight: 300;
+    padding-bottom: 39px;
+    line-height: 20px;
+}
+
+
+
+.kontakkami-input > input{
+    width: 580px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.kontakkami-input > input:focus{
+    outline: none;
+}
+
+.kontakkami-input > textarea{
+    resize: none;
+    width: 580px;
+    height: 237px;
+    background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    padding-left: 20px;
+    margin-bottom: 16px;
+    padding-top: 16px;
+}
+
+.kontakkami-input > textarea:focus{
+    outline: none;
+}
+
+.kontakkami-content-hubungikami{
+    width: 591px;
+}
+
+.kontakkami-content-hubungikami > h1{
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.kontakkami-content-hubungikami > p{
+    font-size: 14px;
+    font-weight: 300;
+    padding-bottom: 39px;
+    line-height: 20px;
+}
+
+.container-content-hubungikami{
+    width: 592px;
+    height: 416px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+.kantor-re4cash {
+    width: 525px;
+    padding-top: 35px;
+    margin: 0 auto;
+    
+}
+
+.kantor-re4cash > h3{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.detail-kantor {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.detail-kantor > iconify-icon {
+    font-size: 32px;
+    color: black;
+}
+
+.social-media {
+    width: 525px;
+    padding-top: 30px;
+    margin: 0 auto;
+    
+}
+
+.social-media > h3{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.socialmedia-content{
+    display: flex;
+}
+
+.detail-socialmedia {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    align-items: center;
+
+}
+
+.detail-socialmedia > p{
+    width: 205px;
+}
+
+.detail-socialmedia > iconify-icon {
+    font-size: 32px;
+    color: black;
+}
+
+.cari-kami-container{
+    width: 100%;
+    height: 600px;
+    background: #FFFFFF;
+}
+
+.cari-kami-container{
+    width: 100%;
+    height: 600px;
+    background: #FFFFFF;
+}
+
+.cari-kami-container > iframe{
+    display: flex;
+    margin: 0 auto;
+}
+
+.cari-kami-container > h1 {
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 24px;
+}
+
+
+
+
