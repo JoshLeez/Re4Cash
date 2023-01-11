@@ -11,6 +11,7 @@ import AkunProfile from './pages/AkunProfile'
 import MarketplacePenjualan from './pages/MarketplacePenjualan'
 import DashboardPengelola from './pages/DashboardPengelola'
 import KontakKami from './pages/KontakKami'
+import EdukasiArticle from '.pages/EdukasiArticle'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/marketplace-penjualan" element={<MarketplacePenjualan/>}/>
           <Route path="/dashboard-pengelola" element={<DashboardPengelola/>}/>
           <Route path="/kontak" element={<KontakKami/>}/>
+          <Route path="/article" element={<EdukasiArticle/>}/>
         </Routes>
     </div>
   );
