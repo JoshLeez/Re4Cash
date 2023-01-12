@@ -79,8 +79,34 @@ const DashboardPengelola = () => {
                   </table>
                 </div>
               </div>
-              <div>
-                table 2
+              
+              <div className="prevtabel-dashutama">
+                <div className="judul-tabel-dashutama">
+                  <h3>Lapak Penjualan</h3>
+                  <iconify-icon icon="material-symbols:edit" />
+                </div>
+                <div className="wrapper-table-data">
+                  <table className="table-data-children">
+                    <thead>
+                      <tr className="table-title table-title-data-children">
+                        <th>No</th>
+                        <th>Jenis</th>
+                        <th>Foto Barang</th>
+                        <th>Nama Barang</th>
+                        <th>Harga</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="row row-1">
+                        <td>1</td>
+                        <td>Daur Ulang</td>
+                        <td><img src="prevtabel-dashuatama-potbunga.png" /></td>
+                        <td>Pot dari bahan daur ulang</td>
+                        <td>Rp. 20.000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </section>
           </div>
