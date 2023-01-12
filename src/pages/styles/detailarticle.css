@@ -1,0 +1,148 @@
+.detailarticle-hero {
+    overflow: hidden;
+}
+
+.detailarticle-hero > img{
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.detail-article-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    width: 1216px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-article-container > .detail-article-kategori > h1{
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.detail-article-card{
+    width: 216px;
+    margin-bottom: 24px;
+}
+
+.article-back{
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.article-back > h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: #F2A600;
+}
+
+.article-back > iconify-icon{
+    font-size: 18px;
+    color: #F2A600;
+}
+
+.detail-article-card-title > h2{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.detail-article-card-title > p{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #F2A600;
+    text-decoration: underline;
+    margin-bottom: 24px;
+}
+
+.detail-article-card-content {
+    margin-bottom: 32px;
+}
+
+.detail-article-content {
+    width: 968px;
+    background-color: #fff;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-bottom: 24px;
+
+}
+
+.detail-article-content > h1 {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 32px;
+}
+
+.detail-article-content > .article-garis {
+    width: 100px;
+    height: 5px;
+    background: #0EA601;
+    border-radius: 5px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+
+}
+
+.detail-article-content-paragraf{
+    width: 904px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+.detail-article-content-paragraf > .article-date{
+    display: flex;
+    align-items: center;
+}
+.detail-article-content-paragraf > .article-date > iconify-icon{
+    font-size: 32px;
+    color: #F2A600;
+    margin-right: 12px;
+
+}
+
+.detail-article-content-paragraf > .article-date > p{
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+.detail-article-content-paragraf > .article-text > p{
+    font-weight: 300;
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 12px;
+
+}
+
+.detail-article-content-paragraf > .article-text{
+    margin-top: 24px;
+
+}
+
+.detail-article-content-paragraf > .article-text > ul{
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.detail-article-content-paragraf > .article-text > h3{
+    margin-top: 24px;
+}
+.detail-article-content-paragraf > .article-text > h4{
+    margin-bottom: 4px;
+}
+
+
+

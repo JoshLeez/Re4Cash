@@ -17,7 +17,7 @@ const Artikelcard = () => {
           industry. Lorem Ipsum has text...
         </p>
       </div>
-      <LinkButton type="SECONDARY">Baca Artikel</LinkButton>
+      <LinkButton type="SECONDARY" to="/detailarticle">Baca Artikel</LinkButton>
     </div>
   );
 };

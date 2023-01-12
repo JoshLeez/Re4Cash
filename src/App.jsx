@@ -12,6 +12,7 @@ import MarketplacePenjualan from './pages/MarketplacePenjualan'
 import DashboardPengelola from './pages/DashboardPengelola'
 import KontakKami from './pages/KontakKami'
 import MarketplacePembelian from './pages/MarketplacePembelian'
+import DetailArticle from './pages/DetailArticle'
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/dashboard-pengelola" element={<DashboardPengelola/>}/>
           <Route path="/kontak" element={<KontakKami/>}/>
           <Route path="/marketplace-pembelian" element={<MarketplacePembelian/>}/>
+          <Route path='/detailarticle' element={<DetailArticle />}/>
         </Routes>
     </div>
   );
