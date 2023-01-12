@@ -38,3 +38,106 @@
     font-size: 24px;
 
 }
+
+
+.prevtabel-dashutama {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.judul-tabel-dashutama {
+    border: 1px solid black;
+    display: flex;
+    gap: 350px;
+}
+
+/* .judul-tabel-dashutama>iconify-icon {
+    
+} */
+
+/* .wrapper-prevtabel-dashutama {
+    border: 1px solid black;
+}
+
+.prevtabel-dashutama {
+    width: 100%;
+    border: 10px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.16);
+} */
+
+/* table {
+    background-color: #F2A600;
+} */
+
+/* table th {
+    padding: 10px;
+    width: 130px;
+    height: 63px;
+    font-weight: 400;
+    font-size: 16px;
+
+    border: 1px solid black;
+}
+
+table thead th {
+    background-color: #F2A600;
+}
+
+table td {
+    padding: 10px;
+    width: 130px;
+    height: 120px;
+    background-color: #FFFFFF;
+}
+
+.prevtabel-dashutama-trjudul {
+    text-align: center;
+} */
+
+/* .prevtabel-dashutama-trjudul>th {
+    border: 1px solid black;
+    font-weight: 400;
+    font-size: 16px;
+} */
+
+/* .prevtabel-dashutama-trisi {
+    text-align: left;
+} */
+
+.wrapper-table-data {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+}
+
+/* .table-file-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+ } */
+
+
+table tr th {
+    background-color: #F2A600;
+    padding: 10px;
+}
+
+table tr td {
+    overflow: hidden;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+    width: 40px;
+}
+
+.table-data-children tr td:last-child,
+.table-data-caretaker tr td:last-child,
+.table-data-financial tr td:last-child {
+    width: 89px;
+}
