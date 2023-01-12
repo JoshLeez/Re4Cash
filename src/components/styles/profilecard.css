@@ -55,6 +55,7 @@
     display:flex;
     gap:32px;
     align-items: center;
+    color:#131212;
 }
 
 .profile-left-navigation > h4{
@@ -77,4 +78,11 @@
 
 .profile-left-navigation.logout > iconify-icon{
     color:#E40101;
+}
+
+.profile-user-menu > a.active{
+    border: 1px solid #F2A600;
+    border-radius: 5px;
+    color: #131212;
+
 }

@@ -17,14 +17,14 @@ const ProfileCard = () => {
         </div>
       </div>
       <div className="profile-user-menu">
-        <div className="profile-left-navigation">
+        <NavLink to="/profile-user" className="profile-left-navigation">
           <UilUserCircle />
-          <h4>Menjadi Pengelola</h4>
-        </div>
-        <div className="profile-left-navigation">
+          <h4>Profile Saya</h4>
+        </NavLink>
+        <NavLink to="/tabungan" className="profile-left-navigation">
           <iconify-icon icon="mdi:piggy-bank-outline" />
           <h4>Tabungan</h4>
-        </div>
+        </NavLink>
         <div className="profile-left-navigation">
           <iconify-icon icon="mdi:clipboard-text-clock-outline" />
           <h4>Histori</h4>

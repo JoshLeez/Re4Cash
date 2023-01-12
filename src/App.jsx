@@ -13,13 +13,14 @@ import DashboardPengelola from './pages/DashboardPengelola'
 import KontakKami from './pages/KontakKami'
 import MarketplacePembelian from './pages/MarketplacePembelian'
 import DetailArticle from './pages/DetailArticle'
+import Tabungan from './pages/Tabungan'
 
 
 
 function App() {
   return (
     <div className="App">
-      <ScrollToTop/>
+      {/* <ScrollToTop/> */}
         <Routes>
           <Route exact path="/" element={<Beranda/>}/>
           <Route path="/edukasi" element={<Edukasi/>}/>
@@ -33,6 +34,7 @@ function App() {
           <Route path="/kontak" element={<KontakKami/>}/>
           <Route path="/marketplace-pembelian" element={<MarketplacePembelian/>}/>
           <Route path='/detailarticle' element={<DetailArticle />}/>
+          <Route path="/tabungan" element={<Tabungan/>}/>
         </Routes>
     </div>
   );
