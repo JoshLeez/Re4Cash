@@ -39,6 +39,7 @@
     align-items: center;
     color:#131212;
     cursor: pointer;
+    border-bottom: 2px solid #f3f3f3;
 }
 
 .pesanan-saya-menu > h3{
@@ -69,14 +70,201 @@
     transition: transform 300ms;
 }
 
-/* 
+
 .pesanan-saya-menu.active{
     color: #F2A600;
     border-bottom: 2px solid #F2A600;
-} */
+}
 
 .profile-setting-wrapper{
     display:flex;
     flex-direction: column;
-    border:2px solid black;
+    gap:8px;
+}
+
+.profile-setting-wrapper > h1{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.content-profile-setting{
+    display:flex;
+    flex-direction: column;
+    gap:40px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 0px 0px 16px;
+}
+
+.wrapper-personal-data{
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.top-personal-data{
+    display:flex;
+    height: 44px;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 32px;
+    border-bottom: 1px solid #F2A600;
+}
+
+.top-personal-data > *{
+    color:#F2A600;
+}
+
+.top-personal-data > h1{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.edit-personal-data{
+    display:flex;
+    align-items: center;
+    gap:8px;
+    background:none;
+    border:none;
+    cursor: pointer;
+}
+
+.edit-personal-data > iconify-icon{
+    font-size: 24px;
+}
+
+.personal-data-detail{
+    display:flex;
+    padding: 0px 0px 0px 32px;
+    gap: 40px;
+}
+
+.personal-detail{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.personal-detail > h1{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.personal-detail > span{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.personal-profile-alamat{
+   display:flex;
+   flex-direction: column;
+   gap:23px;
+}
+
+.top-profile-alamat{
+    display:flex;
+    align-items: center;
+    height: 44px;
+    padding: 0px 32px;
+    justify-content: space-between;
+    border-bottom: #F2A600 1px solid;
+}
+
+.top-profile-alamat > h1{
+    font-weight: 700;
+    font-size: 20px;
+    color:#F2A600;
+}
+
+.profile-tambah-alamat{
+    display: flex;
+    gap:13px;
+    align-items: center;
+    color:#0EA601;
+    background:none;
+    border:none;
+    cursor: pointer;
+}
+
+.profile-tambah-alamat > h1{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.profile-tambah-alamat > iconify-icon{
+    font-size:24px;
+}
+
+.bottom-profile-alamat{
+    padding: 0px 32px;
+    display:flex;
+    gap:20px;
+}
+
+.bottom-profile-alamat > h1{
+    font-weight: 700;
+    font-size: 16px;
+    width: 140px;
+}
+
+.data-alamat-utama{
+    display:flex;
+    width:100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.data-alamat-utama > p{
+    width: 432px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.aksi-btn-alamat{
+    display:flex;
+    gap:8px;
+    font-size: 24px;
+}
+
+.aksi-btn-alamat > #edit{
+    color:#F2A600;
+}
+
+.aksi-btn-alamat > #delete{
+    color:#E40101;
+}
+
+.bottom-data-rekening{
+    padding: 0px 32px;
+    display:flex;
+    gap:16px;
+    align-items: center;
+}
+
+.bottom-data-rekening > iconify-icon{
+    color: #0EA601;
+    font-size: 32px;
+}
+
+.wrapper-data-rekening-info{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+.data-rekening-info{
+    display:flex;
+    gap:64px;
+}
+
+.detail-data-rekening{
+    display:flex;
+    gap:24px;
+    align-items: center;
+}
+
+.wrapper-data-rekening-info > #delete{
+    font-size: 24px;
+    color:#E40101;
 }

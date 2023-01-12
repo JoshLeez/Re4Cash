@@ -11,6 +11,20 @@
     overflow-y:scroll;
 } 
 
+.content-pagination-pesanan-saya::-webkit-scrollbar{
+    width:10px;
+}
+
+.content-pagination-pesanan-saya::-webkit-scrollbar-track{
+    background: #D9D9D9;
+    border-radius: 5px;
+}
+
+.content-pagination-pesanan-saya::-webkit-scrollbar-thumb{
+    background: #F2A600;
+    border-radius: 5px;
+}
+
 .pesanan-progress{
     padding: 10px 32px;
     border: 1px solid #C8C8C8;

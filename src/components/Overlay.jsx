@@ -1,11 +1,23 @@
+import { useRef, useEffect } from "react";
 import Button from "./Button";
 
-export const Login = ({ setLayout, layout }) => {
+export const Login = ({ setLayout}) => {
+
+  const menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setLayout(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+  }, []);
+
   return (
-    <>
-    <div className="backdrop" onClick={() => setLayout(!layout)} />
       <div className="overlay-container" >
-        <div className="form-login">
+        <div ref={menuRef} className="form-login">
           <div className="login-container">
             <div className="login-content">
               <h3>Daftar Akun Re4Cash</h3>
@@ -41,6 +53,5 @@ export const Login = ({ setLayout, layout }) => {
           </div>
         </div>
       </div>
-    </>
   );
 };

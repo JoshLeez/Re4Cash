@@ -1,15 +1,5 @@
-.backdrop {
-  position: fixed;
-  background: rgba(24, 24, 27, 0.5);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 6;
-}
-
 .overlay-container {
-  position: absolute;
+  position: fixed;
   background: rgba(24, 24, 27, 0.5);
   width: 100%;
   height: 100%;
@@ -19,6 +9,7 @@
   justify-content: center;
   align-items: center;
   pointer-events: auto;
+  z-index:10;
 }
 
 .form-login {
@@ -213,4 +204,159 @@
   right: 45px;
   width: 236px;
   z-index: 2;
+}
+
+/* Edit Profile */
+.container-edit-profile{
+  width: 452px;
+  height: 446px;
+  background: #FFFFFF;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  padding:24px 0;
+  align-items: center;
+  gap:24px;
+}
+
+.container-edit-profile > h1{
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.container-edit-profile > iconify-icon{
+  position: absolute;
+  font-size: 24px;
+  top:22.5%;
+  left: 62%;
+  cursor:pointer
+}
+
+.container-edit-profile > iconify-icon:hover{
+  color:#E40101;
+}
+
+.input-edit-profile{
+  width: 382px;
+  height: 336px;
+  border: 1px solid #F2A600;
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  padding:0 16px;
+  justify-content: space-around;
+}
+
+.input-edit-profile > input{
+  background: #FFFFFF;
+  border: 1px solid #D6D6D6;
+  box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  width: 350px;
+  height: 44px;
+  padding: 13px 20px;
+  outline:none;
+}
+
+.input-edit-profile > button{
+  align-self: center;
+}
+
+/* Overlay Alamat */
+.container-modal-alamat{
+  width: 814px;
+  height: 420px;
+  background: #FFFFFF;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container-modal-alamat > h1{
+  font-weight: 700;
+  font-size: 28px;
+  color: #131212;
+}
+
+.input-tambah-alamat{
+  width: 740px;
+  height: 314px;
+  border: 1px solid #F2A600;
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding:16px;
+}
+
+.checkbox-set-alamat{
+  display:flex;
+  align-items: center;
+  gap:8px;
+}
+
+.checkbox-set-alamat > span{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.tambah-alamat-top{
+  display:flex;
+  flex-direction: column;
+  gap:8px;
+}
+
+.tambah-alamat-top > textarea{
+  width: 708px;
+  height: 93px;
+  background: #FFFFFF;
+  border: 1px solid #D6D6D6;
+  box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 13px 20px;
+}
+
+
+.alamat-input-2d{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
+.alamat-input-2d > input{
+  width: 350px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid #D6D6D6;
+  box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  padding: 13px 20px;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px
+}
+
+.tambah-alamat-top > button{
+  align-self:center;
+}
+
+.container-modal-alamat > iconify-icon{
+  position: absolute;
+  top:23%;
+  font-size: 24px;
+  left:74.5%;
+  cursor: pointer;
+}
+
+.container-modal-alamat > iconify-icon:hover{
+  color:#E40101;
 }
