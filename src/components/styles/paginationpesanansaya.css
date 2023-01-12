@@ -61,7 +61,7 @@
     display:flex;
     flex-direction: column;
     align-items: end;
-    gap:6px;
+    justify-content: space-between;
 }
 
 .right-pesanan-progress > p{
@@ -96,4 +96,72 @@
 
 .batalkan-transaksi > iconify-icon{
     font-size: 24px;
+}
+
+.right-pesanan-progress > h6{
+    font-weight: 700;
+    font-size: 16px;
+    color:#F2A600;
+}
+
+.pesanan-progress-estimasi > h6{
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+}
+
+.content-pagination-pesanan-saya.kosong{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pesanan-kosong{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+.pesanan-kosong > iconify-icon{
+    font-size: 80px;
+    color: #F2A600;
+}
+
+.pesanan-kosong > h2{
+    font-weight: 500;
+    font-size: 18px;
+    color: #606060;
+}
+
+.pesanan-sukses{
+    display:flex;
+    align-items: center;
+    color:#0EA601;
+    gap:10px;
+}
+
+.pesanan-rating{
+    display:flex;
+    gap:10px;
+    align-items: center ;
+}
+
+.pesanan-rating > iconify-icon{
+    font-size: 24px;
+}
+
+.pesanan-rating > h6{
+    font-weight: 500;
+    font-size: 16px;
+    color: #131212;
+}
+
+.pesanan-sukses > h6{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.pesanan-sukses > iconify-icon{
+    font-size:20px;
 }

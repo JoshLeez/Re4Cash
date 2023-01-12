@@ -18,7 +18,7 @@ import MarketplacePembelian from './pages/MarketplacePembelian'
 function App() {
   return (
     <div className="App">
-      {/* <ScrollToTop/> */}
+      <ScrollToTop/>
         <Routes>
           <Route exact path="/" element={<Beranda/>}/>
           <Route path="/edukasi" element={<Edukasi/>}/>

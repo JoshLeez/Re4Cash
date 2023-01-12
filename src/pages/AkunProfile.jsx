@@ -4,6 +4,9 @@ import StatusTransaksi from "../components/StatusTransaksi"
 import "./styles/akunprofile.css"
 import { NavLink } from "react-router-dom"
 import { useState} from "react"
+import Dikemas from "../components/Dikemas"
+import Dikirim from "../components/Dikirim"
+import PesananSelesai from "../components/PesananSelesai"
 
 const AkunProfile = () => {
 
@@ -28,7 +31,7 @@ const AkunProfile = () => {
                   <div onClick={()=>{setPagination(0), setActive(false)}}  className={className1}>
                     <iconify-icon icon="material-symbols:payments-outline-rounded"/>
                     <h3>Status Transaksi</h3>
-                    <span className="circle-notification">1</span>
+                    <span className="circle-notification">4</span>
                   </div>
                   <div onClick={()=>setPagination(-904)} className={active ? "pesanan-saya-menu" : "pesanan-saya-menu active"}>
                     <iconify-icon icon="lucide:package-open"/>
@@ -42,14 +45,14 @@ const AkunProfile = () => {
                   <div  onClick={()=>setPagination(-2712)} className="pesanan-saya-menu">
                   <iconify-icon icon="lucide:package-check"/>
                     <h3>Pesanan Selesai</h3>
-                    <span className="circle-notification">1</span>
+                    <span className="circle-notification">2</span>
                   </div>
                 </header>
                 <section style={style} className="content-nav-pesanan-saya">
                     <StatusTransaksi/>
-                    <StatusTransaksi/>
-                    <StatusTransaksi/>
-                    <StatusTransaksi/>  
+                    <Dikemas/>
+                    <Dikirim/>
+                    <PesananSelesai/>  
                 </section>
               </section>
               </div>
