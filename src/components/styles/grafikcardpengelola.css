@@ -41,14 +41,12 @@
 
 
 .prevtabel-dashutama {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
 .judul-tabel-dashutama {
-    border: 1px solid black;
     display: flex;
     gap: 350px;
 }
@@ -110,7 +108,6 @@ table td {
     display: flex;
     flex-direction: column;
 
-    border: 1px solid black;
 }
 
 /* .table-file-content {
