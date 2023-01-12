@@ -57,7 +57,7 @@ const DashboardPengelola = () => {
                   <iconify-icon icon="material-symbols:edit" />
                 </div>
                 <div className="wrapper-table-data">
-                  <table className="table-data-children">
+                  <table cellSpacing="0"  cellPadding="0" className="table-data-children">
                     <thead>
                       <tr className="table-title table-title-data-children">
                         <th>No</th>
@@ -86,7 +86,7 @@ const DashboardPengelola = () => {
                   <iconify-icon icon="material-symbols:edit" />
                 </div>
                 <div className="wrapper-table-data">
-                  <table className="table-data-children">
+                  <table cellSpacing="0"  cellPadding="0" className="table-data-children">
                     <thead>
                       <tr className="table-title table-title-data-children">
                         <th>No</th>
