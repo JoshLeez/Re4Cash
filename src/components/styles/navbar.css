@@ -20,8 +20,8 @@
     position: relative;
 }
 
-.navbar-wrapper > a{
-    color:#131212;
+.navbar-wrapper>a {
+    color: #131212;
 }
 
 .navbar-wrapper>img {
@@ -80,6 +80,7 @@ a.active {
 #zeus-header {
     padding-top: 8em;
 }
+
 
 .navbar-search-filter {
     display: flex;
@@ -165,8 +166,8 @@ a.active {
     color: #131212;
 }
 
-.bottom-left-navbar > a.active{
-    color:#F2A600;
+.bottom-left-navbar>a.active {
+    color: #F2A600;
 }
 
 .bottom-left-navbar>.Link-with-menu {
@@ -196,6 +197,7 @@ a.active {
     padding: 10px;
     gap: 10px;
     align-self: flex-end;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.16);
 }
 
 .navbar-dashboard-search>input {
