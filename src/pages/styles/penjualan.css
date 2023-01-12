@@ -22,6 +22,7 @@
 }
 
 .kategori-pilihan-left > h1{
+    width: 211px;
     font-weight: 700;
     font-size: 28px;
 }
@@ -103,6 +104,12 @@
     column-gap: 24px;
 }
 
+.container-right-kategori-item{
+    display:flex;
+    flex-direction: column;
+    gap:24px;
+}
+
 .right-kategori-item{
     background: #FFFFFF;
     border: 1px solid #606060;
@@ -113,4 +120,105 @@
     display:flex;
     flex-direction: column;
     gap:24px;
+}
+
+.filter-title{
+    display:flex;
+    gap:4px;
+    font-weight: 700;
+    font-size: 20px;
+    align-self: center;
+}
+
+.filter-checkbox{
+    display:flex;
+    align-items: center;
+    gap:8px;
+    cursor: pointer;
+}
+
+.filter-checkbox > h5{
+    font-weight: 500;
+font-size: 16px;
+}
+
+.wrapper-kisaran-harga{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.wrapper-kisaran-harga > h5{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.kisaran-harga-radiobtn{
+    display:flex;
+    gap:8px;
+    font-weight: 500;
+    font-size: 16px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter-input-lokasi{
+    width: 189px;
+    height: 44px;
+    border: 1px solid #F2A600;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.filter-input-lokasi > input{
+    width:80%;
+    outline:none;
+    border:none;
+}
+
+.lokasi-radiobtn-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    height: 152px;
+    overflow-y: scroll;
+}
+
+.lokasi-radiobtn{
+    display:flex;
+    align-items: center;
+    gap:8px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.right-kategori-item > button{
+    align-self: center;
+}
+
+.container-right-kategori-item > h4{
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.kategori-btn-pembelian{
+    background: #0EA601;
+    border: 1px solid #BCBCBC;
+    border-radius: 5px;
+    width: 146px;
+    height: 136px;
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kategori-btn-pembelian > h5{
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 500;
 }

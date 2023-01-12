@@ -20,6 +20,10 @@
     position: relative;
 }
 
+.navbar-wrapper > a{
+    color:#131212;
+}
+
 .navbar-wrapper>img {
     width: 135px;
     height: 48px;
@@ -159,6 +163,10 @@ a.active {
     line-height: 20px;
     letter-spacing: 0.02em;
     color: #131212;
+}
+
+.bottom-left-navbar > a.active{
+    color:#F2A600;
 }
 
 .bottom-left-navbar>.Link-with-menu {

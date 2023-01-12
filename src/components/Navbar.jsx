@@ -51,7 +51,7 @@ export const Navbarmarketplace = () => {
         <Link to="/">
           <img src="/Re4CashYW.svg" />
         </Link>
-        <Link>Edukasi</Link>
+        <Link to="/edukasi">Edukasi</Link>
         <div className="navbar-search-filter">
           <input placeholder="Search" />
           <button className="search-button-navbar">
@@ -70,9 +70,9 @@ export const Navbarmarketplace = () => {
       </nav>
       <menu className="bottom-navbar">
         <div className="bottom-left-navbar">
-         <Link onClick={()=>setWord("Semua")}>Semua</Link>
-         <Link to="/marketplace-penjualan" onClick={()=>setWord("Penjualan")}>Penjualan</Link>
-         <Link onClick={()=>setWord("Pembelian")}>Pembelian</Link>
+         <NavLink to="/marketplace" onClick={()=>setWord("Semua")}>Semua</NavLink>
+         <NavLink to="/marketplace-penjualan" onClick={()=>setWord("Penjualan")}>Penjualan</NavLink>
+         <NavLink to="/marketplace-pembelian" onClick={()=>setWord("Pembelian")}>Pembelian</NavLink>
          <Link className="Link-with-menu">
             <Unicons.UilListUl />
             Kategori

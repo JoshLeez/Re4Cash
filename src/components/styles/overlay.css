@@ -178,6 +178,7 @@
   gap: 13px;
 }
 
+
 .option-bot-user {
   display: flex;
   gap: 16px;
@@ -192,6 +193,7 @@
 .option-bot-user>h4 {
   font-weight: 400;
   font-size: 14px;
+  color: #131212;
 }
 
 .option-bot-user.logout>* {
