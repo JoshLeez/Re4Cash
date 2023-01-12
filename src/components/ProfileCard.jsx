@@ -25,10 +25,10 @@ const ProfileCard = () => {
           <iconify-icon icon="mdi:piggy-bank-outline" />
           <h4>Tabungan</h4>
         </NavLink>
-        <div className="profile-left-navigation">
+        <NavLink to="/history" className="profile-left-navigation">
           <iconify-icon icon="mdi:clipboard-text-clock-outline" />
           <h4>Histori</h4>
-        </div>
+        </NavLink>
         <div className="profile-left-navigation">
           <iconify-icon icon="mdi:bell-outline" />
           <h4>Notifikasi</h4>
