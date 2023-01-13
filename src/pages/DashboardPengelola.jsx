@@ -38,9 +38,9 @@ const DashboardPengelola = () => {
                 </div>
                 <iconify-icon icon="material-symbols:edit" />
               </div>
-              <GrafikCardPengelola nilai="Rp. 12.9120210" title="Total income penjualan" />
-              <GrafikCardPengelola nilai="Rp. 12.9120210" title="Total income penjualan" />
-              <GrafikCardPengelola nilai="Rp. 12.9120210" title="Total income penjualan" />
+              <GrafikCardPengelola title="Total income penjualan" nilai="Rp12.900.000" />
+              <GrafikCardPengelola title="Data Pencarian" nilai="3 Barang Terbeli" />
+              <GrafikCardPengelola title="Total Tagihan Tabungan" nilai="-Rp900.000" />
             </section>
             <section className="wrapper-section-dashboard-utama">
               <JmlDataCardPengelola jumlah="128" data="Data Penjualan"/>
@@ -57,7 +57,7 @@ const DashboardPengelola = () => {
                   <iconify-icon icon="material-symbols:edit" />
                 </div>
                 <div className="wrapper-table-data">
-                  <table cellSpacing="0"  cellPadding="0" className="table-data-children">
+                  <table cellSpacing="0"  cellPadding="0" id="tabel-tabungan" className="table-data-children">
                     <thead>
                       <tr className="table-title table-title-data-children">
                         <th>No</th>
@@ -82,27 +82,27 @@ const DashboardPengelola = () => {
               
               <div className="prevtabel-dashutama">
                 <div className="judul-tabel-dashutama">
-                  <h3>Lapak Penjualan</h3>
+                  <h3>Lapak Pencarian</h3>
                   <iconify-icon icon="material-symbols:edit" />
                 </div>
                 <div className="wrapper-table-data">
-                  <table cellSpacing="0"  cellPadding="0" className="table-data-children">
+                  <table cellSpacing="0"  cellPadding="0" id="tabel-tabungan" className="table-data-children">
                     <thead>
                       <tr className="table-title table-title-data-children">
                         <th>No</th>
                         <th>Jenis</th>
                         <th>Foto Barang</th>
-                        <th>Nama Barang</th>
+                        <th>Judul Pencarian</th>
                         <th>Harga</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr className="row row-1">
                         <td>1</td>
-                        <td>Daur Ulang</td>
-                        <td><img src="prevtabel-dashuatama-potbunga.png" /></td>
-                        <td>Pot dari bahan daur ulang</td>
-                        <td>Rp. 20.000</td>
+                        <td>Mentahan</td>
+                        <td><img src="prevtabel-dashuatama-minyakjelantah.png" /></td>
+                        <td>Saya Mencari Minyak Jelantah Kiloan</td>
+                        <td>Rp15.000</td>
                       </tr>
                     </tbody>
                   </table>

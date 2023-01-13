@@ -15,7 +15,7 @@ import MarketplacePembelian from './pages/MarketplacePembelian'
 import DetailArticle from './pages/DetailArticle'
 import Tabungan from './pages/Tabungan'
 import History from './pages/History'
-
+import PengelolaProfilAkun from './pages/PengelolaProfilAkun'
 
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
           <Route path='/detailarticle' element={<DetailArticle />}/>
           <Route path="/tabungan" element={<Tabungan/>}/>
           <Route path="/history" element={<History/>}/>
+          <Route path="/profil-akun-pengelola" element={<PengelolaProfilAkun/>}/>
         </Routes>
     </div>
   );

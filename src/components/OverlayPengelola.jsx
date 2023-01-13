@@ -26,7 +26,7 @@ export const OverlayPengelola = ({ setPengelola, pengelola }) => {
             </Link>
         </div>
         <div className='dd-bot-user'>
-            <Link to=""  className='option-bot-user'>
+        <Link to="/profile-user"  className='option-bot-user'>
                 <iconify-icon icon="mdi:clipboard-user-outline"/>
                 <h4>Menjadi Customer</h4>
             </Link>

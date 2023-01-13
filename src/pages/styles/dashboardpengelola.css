@@ -16,9 +16,14 @@
 
 .wrapper-section-dashboard-utama {
     display: flex;
+    align-items: center;
     width: fit-content;
     gap: 18px;
     margin-bottom: 35px;
+}
+
+.judul-tabel-dashutama>h3 {
+    width: 150px;
 }
 
 .card-profil-dashboard-utama {

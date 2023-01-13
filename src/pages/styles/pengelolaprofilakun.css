@@ -1,0 +1,190 @@
+.wrapper-section-dashboard-profilakun {
+    display: flex;
+    width: fit-content;
+    align-items: flex-start;
+    gap: 20px;
+
+    border: 1px solid black;
+}
+
+.card-profil-dashboard-profilakun {
+    display: flex;
+    flex-direction: column;
+    width: 282px;
+    height: 380px;
+    padding: 27px 32px;
+    gap: 18px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    align-items: center;
+
+    border: 1px solid black;
+}
+
+.profile-picture-dashboard-profilakun {
+    border: 1px solid black;
+
+}
+
+.profile-detail-dashboard-profilakun {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+}
+
+.profile-nama-dashboard-profilakun {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-nama-dashboard-profilakun>h1 {
+    font-weight: 700;
+    font-size: 19.3px;
+}
+
+.profile-nama-dashboard-profilakun>p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #F2A600;
+}
+
+.profile-verif-dashboard-profilakun {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.profile-verif-dashboard-profilakun>iconify-icon {
+    font-size: 1.8rem;
+    color: #0EA601;
+}
+
+.profile-verif-dashboard-profilakun>h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #0EA601;
+}
+
+/* form update profile */
+
+.sectionkanan-dashboard-profilakun {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-formupload-dashpengelola-profilakun {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card-form-dashpengelola-profilakun {
+    border: 1px solid black;
+    width: 795px;
+    height: 557px;
+    background-color: #FFFFFF;
+}
+
+.grup-form-dashpengelola-profilakun {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 32px;
+}
+
+.baris-form-dashpengelola-profilakun {
+    border: 1px solid black;
+    display: flex;
+    gap: 22px;
+}
+
+.baris-form-dashpengelola-profilakun>label {
+    border: 1px solid black;
+    display: flex;
+    width: 207px;
+    height: 44px;
+    justify-content: end;
+    align-items: center;
+    font-weight: 500;
+    font-size: 17.8px;
+    padding: 10px;
+}
+
+.baris-form-dashpengelola-profilakun>input {
+    border: 1px solid black;
+    display: flex;
+    width: 520px;
+    height: 44px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+
+    border: 1px solid #9C9C9C;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.button-form-dashpengelola-profilakun {
+    border: 1px solid black;
+    display: flex;
+    justify-content: end;
+}
+
+/* Verifikasi KTP dan NPWP */
+
+.verfikasi-dashboard-profilakun {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.verfikasi-dashboard-profilakun>h3 {
+    border: 1px solid black;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.verifikasi-isi-dashboard-profilakun {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.verifikasi-upload-dashboard-profilakun {
+    border: 1px solid black;
+    display: flex;
+    gap: 9px;
+}
+
+
+.verifikasi-uploadtitle-dashboard-profilakun {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.verifikasi-uploadtitle-dashboard-profilakun>h4 {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.verifikasi-uploadcard-dashboard-profilakun {
+    border: 1px solid black;
+    background-color: #FFFFFF;
+    width: 393px;
+    height: 236px;
+    border: 1px dashed #0EA601;
+    border-radius: 5px;
+}

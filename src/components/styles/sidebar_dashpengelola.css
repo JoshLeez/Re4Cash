@@ -32,6 +32,11 @@
     color: black;
 }
 
+.nav-sidebar>a.active {
+    background-color: #F2A600;
+    border-radius: 5px;
+}
+
 .nav-sidebar-isi>span {
     font-weight: 400;
     font-size: 16px;
@@ -41,6 +46,7 @@
 
 .nav-sidebar-isi>iconify-icon {
     font-size: 24px;
+    color: #131212;
 }
 
 .nav-sidebar-isi>span {
