@@ -16,6 +16,7 @@ import DetailArticle from './pages/DetailArticle'
 import Tabungan from './pages/Tabungan'
 import History from './pages/History'
 import PengelolaProfilAkun from './pages/PengelolaProfilAkun'
+import KebijakanPrivasi from './pages/KebijakanPrivasi'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/tabungan" element={<Tabungan/>}/>
           <Route path="/history" element={<History/>}/>
           <Route path="/profil-akun-pengelola" element={<PengelolaProfilAkun/>}/>
+          <Route path="/kebijakanprivasi" element={<KebijakanPrivasi/>}/>
         </Routes>
     </div>
   );

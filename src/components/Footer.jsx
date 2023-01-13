@@ -1,6 +1,8 @@
 import "./styles/footer.css";
 import * as Unicons from "@iconscout/react-unicons";
 
+import { Link, NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer>
@@ -12,7 +14,9 @@ const Footer = () => {
           <p>Tentang Kami</p>
           <p>Kontak</p>
           <p>Marketplace</p>
+          <NavLink to="/kebijakanprivasi">
           <p>Kebijakan Privasi</p>
+          </NavLink>
         </div>
         <div className="list-footer">
           <h6>Bantuan</h6>
