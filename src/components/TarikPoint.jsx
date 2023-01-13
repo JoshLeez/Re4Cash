@@ -2,7 +2,9 @@
 
 const TarikPoint = () => {
   return (
-    <div>TarikPoint</div>
+    <section>
+
+    </section>
   )
 }
 

@@ -100,7 +100,6 @@
 
 .container-table-tabungan{
     width: 808px;
-    height: 433px;
     border: 1px solid #F2A600;
     border-radius: 10px;
 }
@@ -143,12 +142,16 @@
 .bot-table-tabungan{
     display:flex;
     align-items: center;
+    gap:32px;
+    padding: 24px 16px;
 }
 
 .wrapper-detail-tabungan{
     display:flex;
     flex-direction: column;
     gap:16px;
+    width: 528px;
+    height: 336px;
 }
 
 .top-detail-tabungan{
@@ -190,14 +193,18 @@
 }
 
 
-#tabel-tabungan tr > * {
+#tabel-tabungan tr th {
     font-weight: 400;
     font-size: 16px;
     padding: 10px;
 }
 
+
 #tabel-tabungan tr td{
     text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 #tabel-tabungan tr th{

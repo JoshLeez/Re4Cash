@@ -39,7 +39,10 @@ const [nav, setNav] = useState(true)
                         </div>
                     </div>
                     {nav ?
-                    <TableTabungan/>
+                    <> 
+                        <TableTabungan/>
+                        <TableTabungan/>
+                    </>
                     : 
                     <TarikPoint/>
                     }
