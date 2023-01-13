@@ -16,14 +16,14 @@ const PengelolaProfilAkun = () => {
           <div className="wrapper-dashboard-utama">
             <section className="wrapper-section-dashboard-profilakun">
                 <div className="card-profil-dashboard-profilakun">
-                    <img src="/profile-picture-pengelola.png" className="profile-picture-dashboard-profilakun"/>
+                    <img src="/profile-picture-pengelola.png" />
                     <div className="profile-detail-dashboard-profilakun">
                         <div className="profile-nama-dashboard-profilakun">
                             <h1>Zain Pengepul Sampah</h1>
                             <p>Nama Toko</p>
                         </div>
                         <div className="profile-verif-dashboard-profilakun">
-                            <iconify-icon icon="gg:profile" />
+                            <iconify-icon icon="zondicons:checkmark-outline" />
                             <h3>Terverifikasi</h3>
                         </div>
                     </div>
@@ -65,18 +65,27 @@ const PengelolaProfilAkun = () => {
                         <div className="verifikasi-isi-dashboard-profilakun">
                             <div className="verifikasi-upload-dashboard-profilakun">
                                 <div className="verifikasi-uploadtitle-dashboard-profilakun">
-                                    <h4>Masukan Foto KTP Anda</h4>
+                                    <h5>Masukan Foto KTP Anda</h5>
                                     <div className="verifikasi-uploadcard-dashboard-profilakun">
-                                        <h6>File Upload</h6>
+                                        <h4>File Upload</h4>
+                                        <div className="verifikasi-uploadcard-isi-dashboard-profilakun">
+                                            <img src="/icon-fileupload-dashboard-pengelola-profilakun.png" />
+                                            <h4>Select a File Upload</h4>
+                                            <p>Or Drag and Drop It here</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="verifikasi-uploadtitle-dashboard-profilakun">
-                                    <h6>Masukan Foto KTP Anda</h6>
+                                    <h5>Masukan File NPWP Anda</h5>
                                     <div className="verifikasi-uploadcard-dashboard-profilakun">
-                                        <h6>File Upload</h6>
+                                        <h4>File Upload</h4>
+                                        <div className="verifikasi-uploadcard-isi-dashboard-profilakun">
+                                            <img src="/icon-fileupload-dashboard-pengelola-profilakun.png" />
+                                            <h4>Select a File Upload</h4>
+                                            <p>Or Drag and Drop It here</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                </div>                            </div>
                             <Button type="PRIMARY">Kirim</Button>
                         </div>
                     </section>

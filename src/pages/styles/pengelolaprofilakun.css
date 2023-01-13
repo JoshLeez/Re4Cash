@@ -3,43 +3,34 @@
     width: fit-content;
     align-items: flex-start;
     gap: 20px;
-
-    border: 1px solid black;
 }
 
 .card-profil-dashboard-profilakun {
     display: flex;
     flex-direction: column;
     width: 282px;
-    height: 380px;
+    height: 368px;
     padding: 27px 32px;
     gap: 18px;
     background: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.16);
     border-radius: 8px;
     align-items: center;
-
-    border: 1px solid black;
-}
-
-.profile-picture-dashboard-profilakun {
-    border: 1px solid black;
-
 }
 
 .profile-detail-dashboard-profilakun {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 80px;
     align-items: center;
+    justify-content: center;
 }
 
 .profile-nama-dashboard-profilakun {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .profile-nama-dashboard-profilakun>h1 {
@@ -54,9 +45,9 @@
 }
 
 .profile-verif-dashboard-profilakun {
-    border: 1px solid black;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 4px;
 }
 
@@ -67,34 +58,32 @@
 
 .profile-verif-dashboard-profilakun>h3 {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 21px;
     color: #0EA601;
 }
 
 /* form update profile */
 
 .sectionkanan-dashboard-profilakun {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
 }
 
 .card-formupload-dashpengelola-profilakun {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
 .card-form-dashpengelola-profilakun {
-    border: 1px solid black;
-    width: 795px;
+    width: 724px;
     height: 557px;
     background-color: #FFFFFF;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
 }
 
 .grup-form-dashpengelola-profilakun {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -102,31 +91,28 @@
 }
 
 .baris-form-dashpengelola-profilakun {
-    border: 1px solid black;
     display: flex;
     gap: 22px;
 }
 
 .baris-form-dashpengelola-profilakun>label {
-    border: 1px solid black;
     display: flex;
     width: 207px;
     height: 44px;
     justify-content: end;
     align-items: center;
     font-weight: 500;
-    font-size: 17.8px;
+    font-size: 16px;
     padding: 10px;
 }
 
 .baris-form-dashpengelola-profilakun>input {
-    border: 1px solid black;
     display: flex;
     width: 520px;
     height: 44px;
     align-items: center;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
 
     border: 1px solid #9C9C9C;
     border-radius: 3px;
@@ -134,7 +120,6 @@
 }
 
 .button-form-dashpengelola-profilakun {
-    border: 1px solid black;
     display: flex;
     justify-content: end;
 }
@@ -142,49 +127,77 @@
 /* Verifikasi KTP dan NPWP */
 
 .verfikasi-dashboard-profilakun {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
 .verfikasi-dashboard-profilakun>h3 {
-    border: 1px solid black;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 21px;
     padding: 10px;
 }
 
 .verifikasi-isi-dashboard-profilakun {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
 .verifikasi-upload-dashboard-profilakun {
-    border: 1px solid black;
     display: flex;
     gap: 9px;
 }
 
-
 .verifikasi-uploadtitle-dashboard-profilakun {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
 }
 
-.verifikasi-uploadtitle-dashboard-profilakun>h4 {
-    border: 1px solid black;
+.verifikasi-uploadtitle-dashboard-profilakun>h5 {
     padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .verifikasi-uploadcard-dashboard-profilakun {
-    border: 1px solid black;
     background-color: #FFFFFF;
-    width: 393px;
+    width: 357px;
     height: 236px;
     border: 1px dashed #0EA601;
     border-radius: 5px;
+}
+
+.verifikasi-uploadcard-dashboard-profilakun>h4 {
+    font-weight: 500;
+    font-size: 19px;
+    padding: 16px;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.verifikasi-uploadcard-isi-dashboard-profilakun {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.verifikasi-uploadcard-isi-dashboard-profilakun>img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 28px;
+}
+
+.verifikasi-uploadcard-isi-dashboard-profilakun>h4 {
+    font-weight: 500;
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: #0EA601;
+}
+
+.verifikasi-uploadcard-isi-dashboard-profilakun>p {
+    font-weight: 400;
+    font-size: 12px;
+    color: #BEBEBE;
 }
