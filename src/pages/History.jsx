@@ -9,15 +9,9 @@ const History = () => {
     <HOCmarketplace title="Profile | History">
         <div className="container-akun-profile">
             <ProfileCard />
-
             <section className="akun-profile-right-content">
                 <h1>History</h1>
                 <HistoryPesanan/>
-                {/* <div className="container-halaman-tabungan">
-                    <div className="">
-                        
-                    </div>
-                </div> */}
             </section>
 
         </div>

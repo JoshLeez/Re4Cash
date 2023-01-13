@@ -269,6 +269,11 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border:none;
+}
+
+.btn-checkout:active{
+    box-shadow: 1px 1px 1px 1px #F2A600;
 }
 
 .btn-checkout:hover{

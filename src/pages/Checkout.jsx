@@ -148,7 +148,7 @@ export const Checkout = () => {
               <h6>1.800</h6>
             </div>
           </div>
-          <div className="btn-checkout">Beli Rp. 0</div>
+          <button className="btn-checkout">Beli Rp. 0</button>
         </aside>
       </div>
     </HOCCheckout>

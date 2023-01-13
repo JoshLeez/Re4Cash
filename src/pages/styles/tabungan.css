@@ -10,5 +10,212 @@
     border-radius: 10px;
     display:flex;
     flex-direction: column;
+    gap:40px;
+    width: 903px;
     padding:32px 41px 40px 18px;
+}
+
+.nav-tabungan-point{
+    display:flex;
+    gap:80px;
+    align-self: center;
+}
+
+.nav-total-tabungan{
+    padding: 24px;
+    gap: 12px;
+    width: 300px;
+    height: 250px;
+    background: #FFFFFF;
+    border: 1px solid #A3A3A3;
+    border-radius: 5px;  
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:12px;
+}
+
+.nav-total-tabungan > h6{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.nav-total-tabungan > h1{
+    font-weight: 700;
+    font-size: 24px;
+    color: #F2A600;
+}
+
+.tabungan-aktif{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    align-items: center;
+}
+
+.tabungan-aktif > h6{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nama-no-bank{
+    display: grid;
+    font-size: 16px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+    column-gap: 15px ;
+}
+
+.nama-no-bank > h5{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.nama-no-bank > span{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nav-total-tabungan > h2{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-tabungan-point > h6{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nav-total-tabungan.active{
+    border: 2px solid #F2A600;
+}
+
+/* Tabel Tabungan */
+.checkbox-tabel-tabungan{
+    display:flex;
+    align-items: center;
+    gap:16px;
+}
+
+.container-table-tabungan{
+    width: 808px;
+    height: 433px;
+    border: 1px solid #F2A600;
+    border-radius: 10px;
+}
+
+.top-table-tabungan{
+    border-bottom: 1px solid #F2A600;
+    height: 44px;
+    display:flex;
+    align-items: center;
+    padding:16px;
+    justify-content: space-between;
+}
+
+.tabungan-bank-dan-lokasi{
+    display: flex;
+    gap:40px;
+    align-items: center;
+}
+
+.tabungan-bank-dan-lokasi > h1{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.tabungan-lokasi-bank{
+    display:flex;
+    gap:4px;
+    align-items: center;
+}
+
+.tabungan-lokasi-bank > iconify-icon{
+    font-size: 24px;
+}
+
+.tabungan-lokasi-bank > h5{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.bot-table-tabungan{
+    display:flex;
+    align-items: center;
+}
+
+.wrapper-detail-tabungan{
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.top-detail-tabungan{
+    display:flex;
+    gap:13px;
+    align-items: center;
+}
+
+.top-detail-tabungan > iconify-icon{
+    font-size: 24px;
+    color:#F2A600;
+}
+
+.metode-tanggal-tabungan{
+    display:grid;
+    align-items: center;
+    grid-template-columns: 32% 40%;
+    row-gap:4px;
+    column-gap: 9px;
+}
+
+.metode-tanggal-tabungan > h3{
+    font-weight: 700;
+    font-size: 16px;
+    width: 160px;
+}
+
+.metode-tabungan-dd{
+    display:flex;
+    align-items: center;
+    gap:24px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+#tabel-tabungan{
+    border-collapse: collapse;
+}
+
+
+#tabel-tabungan tr > * {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#tabel-tabungan tr td{
+    text-align: center;
+}
+
+#tabel-tabungan tr th{
+    background-color: none;
+}
+
+table tr:nth-child(odd){
+    background-color: #F1F1F1;
+}
+
+#tabel-tabungan th:first-child {
+    border-radius: 6px 0 0 0;
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+}
+
+#tabel-tabungan th:last-child {
+    border-radius: 0 6px 0 0;
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
 }

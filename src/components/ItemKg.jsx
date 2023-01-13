@@ -185,3 +185,32 @@ export const Item = () => {
     </div>
   )
 }
+
+export const ItemTabung = () => {
+  return (
+    <div className="wrapper-item">
+        <img src="/serabut-kelapa.svg"/>
+        <h6>Butuh sampah kantong plastik dalam kiloan</h6>
+        <div className="rating-produk">
+            <p>Kelapa</p>
+            <div className="rating-star">
+              <div className="total-star">
+                <iconify-icon icon="typcn:star" />
+                <iconify-icon icon="typcn:star" />
+                <iconify-icon icon="typcn:star" />
+                <iconify-icon icon="typcn:star" />
+                <iconify-icon icon="typcn:star" />
+              </div>
+              <p>
+                5,0 <span>(65)</span>
+              </p>
+            </div>
+          </div>
+        <h4>Rp. 15.000 <span>/ kilo</span></h4>
+        <div className="bisa-menabung-status">
+          <iconify-icon icon="material-symbols:check-small-rounded"/>
+          <span>Bisa Menabung</span>
+        </div>
+    </div>
+  )
+}

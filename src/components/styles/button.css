@@ -8,6 +8,7 @@
     align-items: center;
     transition:  .2s ease-in-out;
     text-decoration: none;
+    cursor:pointer;
 }
 
 /* button-200 */
@@ -18,6 +19,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-sign{
@@ -62,6 +64,7 @@
 .btn-primary-green{
     background: #0EA601;
     border-radius: 5px;
+    border:none;
 }
 
 .btn-primary-green:hover{
@@ -111,4 +114,14 @@
 .btn-model-product:hover{
     background: #FFAF00;
     color:#FFFFFF;
+}
+
+/* button active */
+
+.btn-model-product:active, .btn-primary:active, 
+.btn-primary-green:active, .btn-primary-long:active, 
+.btn-secondary:active, .btn-secondary-green:active,
+.btn-secondary-long:active, .btn-sign:active
+ , .btn-tertiary:active{
+    border:2px solid #D08F00;
 }

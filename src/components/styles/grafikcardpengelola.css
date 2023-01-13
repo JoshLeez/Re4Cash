@@ -125,13 +125,9 @@ table tr th {
 table tr td {
     overflow: hidden;
     position: relative;
-    background-color: #FFFFFF;
 }
 
-table tr td:first-child,
-table tr th:first-child {
-    width: 40px;
-}
+
 
 .table-data-children tr td:last-child,
 .table-data-caretaker tr td:last-child,

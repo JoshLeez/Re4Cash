@@ -78,7 +78,7 @@ const MarketPlaceUtama = () => {
   ]
 
   return (
-    <HOCmarketplace title="Re4Cash - Marketplace">
+    <HOCmarketplace title="Marketplace | Re4Cash">
       <CarouselMarket />
       <div className="kategori-sampah">
         <h4>Kategori Sampah</h4>
