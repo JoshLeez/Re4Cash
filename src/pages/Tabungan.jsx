@@ -15,7 +15,7 @@ const [nav, setNav] = useState(true)
         <div className="container-akun-profile">
             <ProfileCard/>
             <section className="tabungan-right-content">
-                <h1>Tabungan</h1>
+                {nav ? <h1>Tabungan</h1> : <h1>Tarik Point</h1>}
                 <div className="container-halaman-tabungan">
                     <div  className="nav-tabungan-point">
                         <div onClick={()=>setNav(true)} className={nav ? "nav-total-tabungan active" : "nav-total-tabungan"  }>
@@ -46,6 +46,7 @@ const [nav, setNav] = useState(true)
                     : 
                     <TarikPoint/>
                     }
+                    {nav ? <button className="menabung-lagi">Menabung Lagi</button> : <button className="menabung-lagi">Tarik Point</button>}
                 </div>
             </section>
         </div>

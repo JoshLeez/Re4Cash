@@ -226,3 +226,20 @@ table tr:nth-child(odd){
     -moz-border-radius: 0 6px 0 0;
     -webkit-border-radius: 0 6px 0 0;
 }
+
+.menabung-lagi{
+    background: #0EA601;
+    border-radius: 5px;
+    width: 400px;
+    height: 44px;
+    font-weight: 500;
+    font-size: 16px;
+    color:#FFFFFF;
+    align-self: center;
+    border:none;
+    cursor: pointer;
+}
+
+.menabung-lagi:hover{
+    background: #0A8200;
+}

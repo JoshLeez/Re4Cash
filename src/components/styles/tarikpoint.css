@@ -1,0 +1,154 @@
+.tarik-point-container{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.top-tarik-point{
+    display:flex;
+    gap:32px;
+}
+
+.wrapper-detail-isi-nominal{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 408px;
+    height: 321px;
+}
+
+.detail-isi-nominal{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.detail-isi-nominal > h1{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.detail-isi-nominal > p{
+    font-weight: 400;
+    font-size: 14px;
+    color: #606060;
+}
+
+.option-isi-nominal{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 8px;;
+}
+
+.option-isi-nominal > button{
+    width: 200px;
+    height: 44px;
+    border: 2px solid #D6D6D6;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;;
+    background: none;
+    cursor:pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.option-isi-nominal > button:focus{
+    border:2px solid #F2A600;
+}
+
+.input-jumlah-tarik{
+    width: 408px;
+    height: 67px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.input-jumlah-tarik > h2{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input-jumlah-tarik > input{
+    padding: 0px 10px;
+    height: 44px;
+    gap:8px;
+    border: 1px solid #D6D6D6;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    outline:none;
+}
+
+.tarik-point-container > p{
+    font-weight: 400;
+    font-size: 14px;
+    color: #606060;
+}
+
+.tarik-point-catatan{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    height: 307px;
+    gap:23px;
+    align-self: flex-end;
+}
+
+.input-catatan-tarik-point{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.input-catatan-tarik-point > h1{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.input-catatan-tarik-point > textarea{
+    border: 1px solid #D6D6D6;
+    border-radius: 5px;
+    height: 215px;
+    resize: none;;
+    outline: none;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.metode-transaksi-tarik-point{
+    width: 400px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 8px;
+    display:flex;
+    align-items:center;
+    padding: 0 16px;
+    justify-content: space-between;
+}
+
+.jenis-bank-tarik-point{
+    display:flex;
+    align-items: center;
+    gap:16px;
+}
+
+.jenis-bank-tarik-point > iconify-icon{
+    font-size: 32px;
+}
+
+.metode-transaksi-tarik-point > button{
+    font-weight: 600;
+    font-size: 16px;
+    color: #F2A600;
+    border:none;
+    background: none;
+    cursor: pointer;
+}
