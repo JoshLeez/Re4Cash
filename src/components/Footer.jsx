@@ -14,7 +14,7 @@ const Footer = () => {
           <p>Tentang Kami</p>
           <p>Kontak</p>
           <p>Marketplace</p>
-          <NavLink to="/kebijakanprivasi">
+          <NavLink style={{textDecoration: 'none', color: 'black', fontSize: '16px', fontWeight: '500'}} to="/kebijakanprivasi">
           <p>Kebijakan Privasi</p>
           </NavLink>
         </div>
