@@ -1,0 +1,108 @@
+.container-notifikasi{
+    width: 903px;
+    display:flex;
+    flex-direction: column;
+    gap:12px;
+}
+
+.header-notifikasi{
+    display:flex;
+    justify-content: space-between;
+}
+
+.header-notifikasi > h2{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.btn-mark-read{
+    display:flex;
+    gap:4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:#0EA601;
+    align-items:center;
+}
+
+.btn-mark-read > h4{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.btn-mark-read div iconify-icon:first-child{
+    position: relative;
+    left:13px;
+}
+
+.btn-mark-read div iconify-icon{
+    font-size: 24px;
+}
+
+.detail-notification{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 903px;
+    height: 995px;
+    background: #FFFFFF;
+    border: 5px solid #FFFFFF;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+.list-notification{
+    display:flex;
+    flex-direction: column;
+    gap:33px;
+}
+
+.wrapper-notification{
+    display:flex;
+    justify-content: space-between;
+    width: 836px;
+    padding: 0px 8px;
+    align-items: center;
+    background: #F2F2F2;
+    border-bottom: 1px solid #F2A600;
+    cursor: pointer;
+}
+
+.wrapper-notification > img{
+    width: 75px;
+    height: 75px;
+}
+
+.notification-date-text{
+    display:flex;
+    flex-direction: column;
+    gap:13px;
+}
+
+.notification-date-text > p{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.notification-date-text> span{
+    font-weight: 400;
+    font-size: 16px;
+    color: #606060;
+}
+
+.wrapper-notification:hover{
+    background: #FFDF99;
+}
+
+.detail-notification > button{
+    font-weight: 700;
+    font-size: 16px;
+    color: #F2A600;
+    align-self: flex-start;
+    margin-left:29px;
+    text-decoration: underline;
+    background: none;
+    border:none;
+    cursor: pointer;
+}

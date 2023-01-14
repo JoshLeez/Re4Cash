@@ -2,8 +2,7 @@ import { HOCmarketplace } from "../components/HOC"
 import ProfileCard from "../components/ProfileCard"
 import StatusTransaksi from "../components/StatusTransaksi"
 import "./styles/akunprofile.css"
-import { NavLink } from "react-router-dom"
-import { useEffect, useState} from "react"
+import { useState} from "react"
 import Dikemas from "../components/Dikemas"
 import Dikirim from "../components/Dikirim"
 import PesananSelesai from "../components/PesananSelesai"
@@ -59,7 +58,7 @@ const AkunProfile = () => {
   const className4 = active.active4 ? "pesanan-saya-menu active" : "pesanan-saya-menu" 
 
   return (
-    <HOCmarketplace>
+    <HOCmarketplace title="Profile | Profile Saya">
         <div className="container-akun-profile">
             <ProfileCard/>
             <section className="akun-profile-right-content">

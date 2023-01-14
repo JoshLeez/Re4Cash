@@ -29,14 +29,14 @@ const ProfileCard = () => {
           <iconify-icon icon="mdi:clipboard-text-clock-outline" />
           <h4>Histori</h4>
         </NavLink>
-        <div className="profile-left-navigation">
+        <NavLink to="/notifikasi" className="profile-left-navigation">
           <iconify-icon icon="mdi:bell-outline" />
           <h4>Notifikasi</h4>
-        </div>
-        <div className="profile-left-navigation logout">
+        </NavLink>
+        <NavLink to="/marketplace" className="profile-left-navigation logout">
           <iconify-icon icon="mi:log-out" />
           <h4>Logout</h4>
-        </div>
+        </NavLink>
       </div>
     </div>
   );

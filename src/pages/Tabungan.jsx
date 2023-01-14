@@ -11,7 +11,7 @@ const Tabungan = () => {
 const [nav, setNav] = useState(true)
 
   return (
-    <HOCmarketplace title="">
+    <HOCmarketplace title="Profile | Tabungan">
         <div className="container-akun-profile">
             <ProfileCard/>
             <section className="tabungan-right-content">
