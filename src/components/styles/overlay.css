@@ -360,3 +360,48 @@
 .container-modal-alamat > iconify-icon:hover{
   color:#E40101;
 }
+
+/* Overlay Metode Transaksi Tarik Point */
+.model-tarik-point{
+  width: 864px;
+  height: 557px;
+  background: #FFFFFF;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.model-tarik-point > h1{
+  font-weight: 700;
+  font-size: 28px;
+  color: #131212;
+}
+
+.option-metode-tarik-point{
+  display:flex;
+  flex-direction: column;
+  gap:16px;
+  width: 720px;
+  height: 410px;
+  align-items: center;
+  padding:16px 20px 22px 33px;
+  overflow-y:scroll;
+}
+
+.option-metode-tarik-point::-webkit-scrollbar {
+  width: 12px;
+}
+
+.option-metode-tarik-point::-webkit-scrollbar-track {
+  background: #D9D9D9;
+  border-radius: 2px;
+}
+ 
+
+.option-metode-tarik-point::-webkit-scrollbar-thumb {
+  background: #F2A600;
+  border-radius: 2px;
+}

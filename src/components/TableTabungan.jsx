@@ -41,6 +41,7 @@ const TableTabungan = () => {
               </div>
             </div>
             <table id="tabel-tabungan">
+            <tbody>
               <tr>
                 <th>No</th>
                 <th>Tanggal</th>
@@ -77,6 +78,7 @@ const TableTabungan = () => {
                 <td>2 kilo</td>
                 <td>Rp 10.000</td>
               </tr>
+              </tbody>
             </table>
           </div>
         </div>

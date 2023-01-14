@@ -23,6 +23,7 @@
 
 .nav-total-tabungan{
     padding: 24px;
+    cursor: pointer;
     gap: 12px;
     width: 300px;
     height: 250px;
@@ -142,7 +143,7 @@
 .bot-table-tabungan{
     display:flex;
     align-items: center;
-    gap:32px;
+    gap:24px;
     padding: 24px 16px;
 }
 

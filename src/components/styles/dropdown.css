@@ -87,3 +87,160 @@
     background: #FFDF99;
     border-radius: 15px;
 }
+
+
+/* Drop Down Tarik Point */
+.custom-dd-tarik-point{
+    display:flex;
+    flex-direction: column;
+    width: 649px; 
+    height:auto;
+}
+
+.tarik-point-dropdown{
+    height: 44px;
+    background: #F2A600;
+    border-radius: 10px;
+    cursor: pointer;
+    display:flex;
+    padding:0 16px;
+    align-items: center;
+    justify-content: space-between;
+    color:#FFFFFF;
+}
+
+
+.tarik-point-dropdown > h3{
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.tarik-point-dropdown.active{
+    border-radius: 10px 10px 0px 0px;
+    animation: border-animation .3s ease-in-out;
+}
+
+@keyframes border-animation {
+    0%{
+        border-radius: 10px
+    }
+    100%{
+        border-radius: 10px 10px 0px 0px;
+    }
+}
+
+.list-option-tarikpoint{
+    display:flex;
+    flex-direction: column;
+    animation: dropdown .3s ease-in-out;
+    height: 208px;
+}
+
+@keyframes dropdown{
+    0%{
+        height:0;
+    }
+    100%{
+        height:208px;
+    }
+}
+
+.list-option-tarikpoint > *{
+    opacity:1;
+    animation: gone .3s ease-in-out;
+    visibility: visible;
+}
+@keyframes gone {
+    0%{
+        visibility: hidden;
+        opacity:0;
+    }
+    100%{
+        visibility: visible;
+        opacity:1;
+    }
+    
+}
+
+.wrapper-radio-btn-tarikpoint{
+    padding: 10px 16px;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper-radio-btn-tarikpoint > span{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.radio-btn-tarikpoint{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.radio-btn-tarikpoint > span{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.wrapper-radio-btn-tarikpoint > *{
+    user-select: none;
+}
+
+
+.custom-dd-tarik-point-sec{
+    display:flex;
+    flex-direction: column;
+    width: 649px; 
+    height:auto;
+    border: 1px solid #F2A600;
+    border-radius: 10px;
+}
+
+.tarik-point-dropdown-sec{
+    height: 44px;
+    border-radius: 10px;
+    cursor: pointer;
+    display:flex;
+    padding:0 16px;
+    align-items: center;
+    justify-content: space-between;
+    color: #131212;
+}
+
+.list-option-tarikpoint-sec{
+    display:flex;
+    flex-direction: column;
+    animation: dropdown-sec .3s ease-in-out;
+    height: 104px;
+}
+
+@keyframes dropdown-sec{
+    0%{
+        height:0;
+    }
+    100%{
+        height: 104px;
+    }
+}
+
+
+.list-option-tarikpoint-third{
+    display:flex;
+    flex-direction: column;
+    animation: dropdown-third .3s ease-in-out;
+    height: 156px;
+}
+
+@keyframes dropdown-third{
+    0%{
+        height:0;
+    }
+    100%{
+        height: 156px;
+    }
+}

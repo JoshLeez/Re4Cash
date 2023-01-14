@@ -1,6 +1,11 @@
+import { useState } from "react"
+import { MetodeTarik } from "./OverlayUser"
 import "./styles/tarikpoint.css"
 
 const TarikPoint = () => {
+
+  const [model, setModel] = useState(false)
+
   return (
     <section className="tarik-point-container">
         <div className="top-tarik-point">
@@ -33,7 +38,8 @@ const TarikPoint = () => {
                  <iconify-icon icon="fluent:building-bank-16-regular"/>
                  <img src="/bri.svg"/>
               </div>
-              <button>Pilih Metode Transaksi</button>
+              <button onClick={()=>setModel(true)}>Pilih Metode Transaksi</button>
+              {model && <MetodeTarik  setModel={setModel}/>}            
             </div>
           </div>
         </div>

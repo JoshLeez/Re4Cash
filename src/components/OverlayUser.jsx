@@ -2,7 +2,7 @@ import {UilUserCircle } from '@iconscout/react-unicons';
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
-import CustomDropDown from './CustomDropDown';
+import CustomDropDown, { DDTarikPoint, SecTarikPoint, ThirdTarikPoint } from './CustomDropDown';
 
 export const OverlayUser = ({ setUser }) => {
   const menuRef = useRef();
@@ -122,6 +122,35 @@ export const TambahAlamat = ({setAlamat}) => {
             </div>
           </div>
       </div>
+    </div>
+  )
+}
+
+export const MetodeTarik = ({setModel}) => {
+
+  const menuRef = useRef()
+
+  useEffect(()=>{
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setModel(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+  }
+  ,[])
+
+  return (
+    <div  className='overlay-container'>
+        <div ref={menuRef}  className='model-tarik-point'>
+          <h1>Pilih Metode Transaksi</h1>
+          <div className='option-metode-tarik-point'>
+            <DDTarikPoint />
+            <SecTarikPoint/>
+            <ThirdTarikPoint/>
+          </div>
+        </div>
     </div>
   )
 }
