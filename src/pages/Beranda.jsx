@@ -58,7 +58,7 @@ const Beranda = () => {
               <h5>Sampah Terbeli</h5>
             </div>
           </div>
-          <LinkButton type="PRIMARY_GREEN">Tentang Kami</LinkButton>
+          <LinkButton to="/tentangkami" type="PRIMARY_GREEN">Tentang Kami</LinkButton>
        </section>
        <section className="mitra-kerjasama">
         <h2>Mitra Kerjasama</h2>
@@ -117,7 +117,7 @@ const Beranda = () => {
        </section>
        <div className="kontak-kami-landing">
           <h5>Informasi lebih lanjut hubungi kontak kami</h5>
-          <LinkButton type="BUTTON_TERTIARY">Kontak Kami</LinkButton>
+          <LinkButton to="/kontak" type="BUTTON_TERTIARY">Kontak Kami</LinkButton>
        </div>
        <article className="artikel-hero">
          <h2>Artikel Edukasi</h2>

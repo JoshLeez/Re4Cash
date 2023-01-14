@@ -33,7 +33,7 @@ const Berandabanner = () => {
                 Ketahui bagaimana anda bisa menghasilkan produk inovatif sekaligus
                 mengurangi sampah di Indonesia
             </p>
-            <LinkButton type="PRIMARY_LONG">Belanja Sekarang</LinkButton>
+            <LinkButton to="/marketplace" type="PRIMARY_LONG">Belanja Sekarang</LinkButton>
             </div>
         </div>
      </>
