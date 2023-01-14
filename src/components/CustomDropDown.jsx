@@ -155,7 +155,7 @@ export const ThirdTarikPoint = () => {
     return (
     <div className="custom-dd-tarik-point-sec">
         <div className="tarik-point-dropdown-sec" onClick={()=>setToggle(!toggle)}>
-            <h3>Gerai</h3>
+            <h3>Dompet Online</h3>
             <UilAngleDown className="arrow-rotation" style={{transform: toggle && "rotate(-180deg)"}} size="32px"/>
         </div>
     {toggle &&

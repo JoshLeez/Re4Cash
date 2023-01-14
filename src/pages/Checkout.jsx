@@ -8,8 +8,12 @@ import {
 } from "@iconscout/react-unicons";
 import { Item } from "../components/ItemKg";
 import CustomDropDown from "../components/CustomDropDown";
+import { useState } from "react";
+import { MetodeTarik } from "../components/OverlayUser";
 
 export const Checkout = () => {
+  
+  const [model, setModel] = useState(false)
   return (
     <HOCCheckout title="Checkout Penjualan | Re4Cash">
       <div className="checkout-page">
@@ -48,7 +52,7 @@ export const Checkout = () => {
                 <UilUniversity size="32px" />
                 <img src="/bri.svg" />
               </div>
-              <h4>Pilih Metode Transaksi</h4>
+              <h4 onClick={()=>setModel(!model)}>Pilih Metode Transaksi</h4>
             </div>
           </div>
           <div className="checkout-form-menabung">
@@ -151,6 +155,7 @@ export const Checkout = () => {
           <button className="btn-checkout">Beli Rp. 0</button>
         </aside>
       </div>
+      {model && <MetodeTarik setModel={setModel}/>}
     </HOCCheckout>
   );
 };

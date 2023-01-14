@@ -41,7 +41,7 @@ const PengelolaDataPenjualan = () => {
                         <td>Dikemas</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola-edit">
+                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
                                 <Button type="AKSI_HAPUS">
@@ -62,7 +62,7 @@ const PengelolaDataPenjualan = () => {
                         <td>Dikemas</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola-edit">
+                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
                                 <Button type="AKSI_HAPUS">
@@ -83,7 +83,7 @@ const PengelolaDataPenjualan = () => {
                         <td>Dikirim</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola-edit">
+                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
                                 <Button type="AKSI_HAPUS">
@@ -104,7 +104,7 @@ const PengelolaDataPenjualan = () => {
                         <td>Selesai</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola-edit">
+                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
                                 <Button type="AKSI_HAPUS">
@@ -125,7 +125,7 @@ const PengelolaDataPenjualan = () => {
                         <td>Selesai</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola-edit">
+                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
                                 <Button type="AKSI_HAPUS">

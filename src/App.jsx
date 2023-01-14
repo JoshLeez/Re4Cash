@@ -44,7 +44,7 @@ function App() {
           <Route path="/kebijakanprivasi" element={<KebijakanPrivasi/>}/>
           <Route path="/notifikasi" element={<Notifikasi/>}/>
           <Route path="/data-penjualan-pengelola" element={<PengelolaDataPenjualan/>}/>
-          <Route path="/data-penjualan-pengelola-edit" element={<PengelolaDataPenjualanEdit/>}/>
+          <Route path="/data-penjualan-pengelola/edit" element={<PengelolaDataPenjualanEdit/>}/>
         </Routes>
     </div>
   );
