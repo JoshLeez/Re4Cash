@@ -418,11 +418,9 @@
   align-items: center;
   gap: 11px;
 
-  border: 2px solid red;
 }
 
 .button-ubah-tulisan {
-  border: 2px solid black;
   padding: 17px 21.5px 0px 21.5px;
   display: flex;
   flex-direction: column;
@@ -437,52 +435,32 @@
   color: #0ea601;
 }
 
-/* .container-button-ubah>iconify-icon {
-  position: absolute;
-  font-size: 24px;
-  top: 22.5%;
-  left: 62%;
-  cursor: pointer
-}
-
-.container-button-ubah>iconify-icon:hover {
-  color: #E40101;
-} */
-
-.input-button-ubah {
-  border: 1px solid blue;
+.wrapped-overlay-button-ubah {
   display: flex;
 }
 
-/* .input-button-ubah>button {
-  align-self: center;
-  width: 166px;
-  height: 52px;
-} */
-
 .tiru-overlay-button-batal {
-  border: 1px solid red;
   background-color: #D0D0D0;
-  width: 170px;
-  height: 57px;
+  width: 172px;
+  height: 67px;
   border-radius: 0px 0px 0px 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  cursor: pointer;
 }
 
 .tiru-overlay-button-batal>h4 {
-  border: 1px solid black;
   color: #131212;
   font-weight: 400;
   font-size: 18px;
 }
 
 .tiru-overlay-button-ubah {
-  border: 1px solid red;
   background-color: #0EA601;
-  width: 170px;
-  height: 57px;
+  width: 172px;
+  height: 67px;
   border-radius: 0px 0px 12px 0px;
   display: flex;
   align-items: center;
@@ -491,7 +469,6 @@
 
 .tiru-overlay-button-ubah>h4 {
   color: #FFFFFF;
-  border: 1px solid black;
   font-weight: 400;
   font-size: 18px;
 }

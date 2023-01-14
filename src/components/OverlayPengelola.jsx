@@ -1,6 +1,7 @@
 import {UilUserCircle } from '@iconscout/react-unicons';
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
 export const OverlayPengelola = ({ setPengelola, pengelola }) => {
   const menuRef = useRef();
@@ -46,6 +47,40 @@ export const OverlayPengelola = ({ setPengelola, pengelola }) => {
                 <iconify-icon icon="mi:log-out"/>
                 <h4>Logout</h4>
             </div>
+      </div>
+    </div>
+  );
+};
+
+
+export const ButtonUbah = ({setButtonUbah, link}) => {
+  const menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setButtonUbah(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+  }, []);
+
+  return (
+    <div className='overlay-container'>
+      <div ref={menuRef} className='container-button-ubah'>
+        <div className='button-ubah-tulisan'>
+          <img src='/icon-overlay-button-ubah.png' />
+          <h1>Apakah Anda Yakin Ingin Mengubah?</h1>
+        </div>
+        <div className='wrapped-overlay-button-ubah'>
+          <Button onClick={()=>setButtonUbah(false)} className='tiru-overlay-button-batal'>
+            <h4>Batal</h4>
+          </Button>
+          <Link to={link} className='tiru-overlay-button-ubah'>
+            <h4>Ubah</h4>
+          </Link>
+        </div>
       </div>
     </div>
   );

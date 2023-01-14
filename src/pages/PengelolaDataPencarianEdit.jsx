@@ -8,7 +8,7 @@ import "./styles/pengeloladatapenjualanedit.css";
 import { useState } from "react";
 import { ButtonUbah } from "../components/OverlayPengelola";
 
-const PengelolaDataPenjualanEdit = () => {
+const PengelolaDataPencarianEdit = () => {
 
   const [buttonubah, setButtonUbah] = useState(false)
 
@@ -20,7 +20,7 @@ const PengelolaDataPenjualanEdit = () => {
           <Navbardashboardpengelola />
           <div className="wrapper-dashboard-utama">
             <section className="wrapper-form-dashboard-datapenjualan-edit">
-              <h4>Data Penjualan</h4>
+              <h4>Data Pencarian</h4>
               <form className="card-formedit-dashpengelola-datapenjualan">
                 <div className="grup-formedit-dashpengelola-datapenjualan">
                   <div className="baris-formedit-dashpengelola-datapenjualan">
@@ -28,15 +28,15 @@ const PengelolaDataPenjualanEdit = () => {
                     <input type="text" placeholder="Serabut Kelapa 1 kilo"/>
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
-                    <label>Nama Pembeli</label>
+                    <label>Nama Penjual</label>
                     <input type="text" placeholder="Muhammad Lee"/>
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
-                    <label>Nomor Hp Pembeli</label>
+                    <label>Nomor Hp Penjual</label>
                     <input type="text" placeholder="081123453912"/>
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
-                    <label>Tanggal Order</label>
+                    <label>Tanggal Jual</label>
                     <input type="date" placeholder="22/12/2022"/>
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
@@ -54,15 +54,15 @@ const PengelolaDataPenjualanEdit = () => {
                   <div className="baris-formedit-dashpengelola-datapenjualan">
                     <label>Status</label>
                     <select>
-                      <option value="dikemas">Dikemas</option>
-                      <option value="dikirim">Dikirim</option>
-                      <option value="selesai">Selesai</option>
+                      <option value="dikemas">Diproses</option>
+                      <option value="dikirim">Ditabung</option>
+                      <option value="selesai">Dibayar</option>
                     </select>
                   </div>
                 </div>
               </form>                
               <div className="button-formedit-dashpengelola-datapenjualan">
-                <LinkButton type="BUTTON_BATAL" to="/data-penjualan-pengelola">Batal</LinkButton>
+                <LinkButton type="BUTTON_BATAL" to="/data-pencarian-pengelola">Batal</LinkButton>
                 <Button onClick={()=>setButtonUbah(!buttonubah)} type="BUTTON_UBAH">Ubah</Button>
               </div>
             </section>
@@ -70,9 +70,9 @@ const PengelolaDataPenjualanEdit = () => {
           <Footerdashboardpengelola/>
         </div>
       </div>
-      {buttonubah && <ButtonUbah link='/data-penjualan-pengelola' setButtonUbah={setButtonUbah}/>}
+      {buttonubah && <ButtonUbah link='/data-pencarian-pengelola' setButtonUbah={setButtonUbah}/>}
     </HOCdashboardpengelola>
   );
 };
 
-export default PengelolaDataPenjualanEdit;
+export default PengelolaDataPencarianEdit;

@@ -20,6 +20,8 @@ import KebijakanPrivasi from './pages/KebijakanPrivasi'
 import Notifikasi from './pages/Notifikasi'
 import PengelolaDataPenjualan from './pages/PengelolaDataPenjualan'
 import PengelolaDataPenjualanEdit from './pages/PengelolaDataPenjualanEdit'
+import PengelolaDataPencarian from './pages/PengelolaDataPencarian'
+import PengelolaDataPencarianEdit from './pages/PengelolaDataPencarianEdit'
 
 function App() {
   return (
@@ -45,6 +47,8 @@ function App() {
           <Route path="/notifikasi" element={<Notifikasi/>}/>
           <Route path="/data-penjualan-pengelola" element={<PengelolaDataPenjualan/>}/>
           <Route path="/data-penjualan-pengelola/edit" element={<PengelolaDataPenjualanEdit/>}/>
+          <Route path="/data-pencarian-pengelola" element={<PengelolaDataPencarian/>}/>
+          <Route path="/data-pencarian-pengelola/edit" element={<PengelolaDataPencarianEdit/>}/>
         </Routes>
     </div>
   );
