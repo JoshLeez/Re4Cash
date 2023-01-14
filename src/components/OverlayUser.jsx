@@ -1,7 +1,7 @@
 import {UilUserCircle } from '@iconscout/react-unicons';
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Button from './Button';
+import Button, { LinkButton } from './Button';
 import CustomDropDown, { DDTarikPoint, SecTarikPoint, ThirdTarikPoint } from './CustomDropDown';
 
 export const OverlayUser = ({ setUser }) => {
@@ -152,6 +152,42 @@ export const MetodeTarik = ({setModel}) => {
           </div>
           <Button>Pilih</Button>
         </div>
+    </div>
+  )
+}
+
+export const ButtonUbah = ({setButtonUbah}) => {
+  const menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setButtonUbah(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+  }, []);
+
+  return (
+    <div className='overlay-container'>
+      <div ref={menuRef} className='container-button-ubah'>
+        <div className='button-ubah-tulisan'>
+          <img src='/icon-overlay-button-ubah.png' />
+          <h1>Apakah Anda Yakin Ingin Mengubah?</h1>
+        </div>
+        <div className='input-button-ubah'>
+          <Button onClick={()=>setButtonUbah(false)} className='tiru-overlay-button-batal'>
+            <h4>Batal</h4>
+          </Button>
+          <Link to='/data-penjualan-pengelola' className='tiru-overlay-button-ubah'>
+            <h4>Ubah</h4>
+          </Link>
+
+          {/* <Button type="BUTTON_UBAH">Ubah</Button>
+          <Button type="BUTTON_UBAH">Ubah</Button> */}
+        </div>
+      </div>
     </div>
   )
 }

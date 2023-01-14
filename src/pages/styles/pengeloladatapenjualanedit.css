@@ -1,3 +1,67 @@
 .wrapper-form-dashboard-datapenjualan-edit {
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-formedit-dashpengelola-datapenjualan {
+    background: #DEDEDE;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 16px;
+
     border: 1px solid black;
+}
+
+.grup-formedit-dashpengelola-datapenjualan {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.baris-formedit-dashpengelola-datapenjualan {
+    display: flex;
+    gap: 24px;
+}
+
+.baris-formedit-dashpengelola-datapenjualan>label {
+    display: flex;
+    width: 215px;
+    height: 37px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+
+    border: 1px solid black;
+}
+
+.baris-formedit-dashpengelola-datapenjualan>input,
+select {
+    display: flex;
+    width: 745px;
+    height: 37px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+
+    border: 1px solid #9C9C9C;
+    border-radius: 3px;
+    padding: 10px;
+
+    border: 1px solid red;
+}
+
+.button-formedit-dashpengelola-datapenjualan {
+    display: flex;
+    gap: 10px;
+    padding: 10px 10px 10px 255px;
+
+    border: 1px solid black;
+}
+
+.button-formedit-dashpengelola-datapenjualan>Button {
+    font-weight: 400;
+    font-size: 16px;
 }

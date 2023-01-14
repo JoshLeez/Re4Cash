@@ -13,7 +13,9 @@ const Button = ({ type, children, ...props }) => {
     BUTTON_MODEL : "btn-model-product",
 
     AKSI_EDIT : "btn-aksi-edit",
-    AKSI_HAPUS : "btn-aksi-hapus"
+    AKSI_HAPUS : "btn-aksi-hapus",
+    BUTTON_BATAL : "btn-batal",
+    BUTTON_UBAH : "btn-ubah"
   };
 
   return (
@@ -35,7 +37,9 @@ export const LinkButton = ({type, children, ...props}) => {
       BUTTON_MODEL : "btn-model-product",
 
       AKSI_EDIT : "btn-aksi-edit",
-      AKSI_HAPUS : "btn-aksi-hapus"
+      AKSI_HAPUS : "btn-aksi-hapus",
+      BUTTON_BATAL : "btn-batal",
+      BUTTON_UBAH : "btn-ubah"
         };
     return (
     <Link className={BUTTON_TYPE[type || "PRIMARY"]} {...props}>
