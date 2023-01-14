@@ -38,16 +38,16 @@ const DashboardPengelola = () => {
                 </div>
                 <iconify-icon icon="material-symbols:edit" />
               </div>
-              <GrafikCardPengelola title="Total income penjualan" nilai="Rp12.900.000" />
-              <GrafikCardPengelola title="Data Pencarian" nilai="3 Barang Terbeli" />
-              <GrafikCardPengelola title="Total Tagihan Tabungan" nilai="-Rp900.000" />
+              <GrafikCardPengelola icon="icons8:buy" title="Total income penjualan" nilai="Rp12.900.000" />
+              <GrafikCardPengelola icon="material-symbols:content-paste-search" title="Data Pencarian" nilai="3 Barang Terbeli" />
+              <GrafikCardPengelola icon="ic:outline-savings" title="Total Tagihan Tabungan" nilai="-Rp900.000" />
             </section>
             <section className="wrapper-section-dashboard-utama">
-              <JmlDataCardPengelola jumlah="128" data="Data Penjualan"/>
-              <JmlDataCardPengelola jumlah="37" data="Data Pencarian"/>
-              <JmlDataCardPengelola jumlah="84" data="Data Penabung"/>
-              <JmlDataCardPengelola jumlah="4" data="Lapak Penjualan"/>
-              <JmlDataCardPengelola jumlah="1" data="Lapak Pencarian"/>
+              <JmlDataCardPengelola icon="icons8:buy" jumlah="128" data="Data Penjualan"/>
+              <JmlDataCardPengelola icon="material-symbols:content-paste-search" jumlah="37" data="Data Pencarian"/>
+              <JmlDataCardPengelola icon="ic:outline-savings" jumlah="84" data="Data Penabung"/>
+              <JmlDataCardPengelola icon="mdi:shop-find-outline" jumlah="4" data="Lapak Penjualan"/>
+              <JmlDataCardPengelola icon="mdi:shop-edit-outline" jumlah="1" data="Lapak Pencarian"/>
             </section>
             
             <section className="wrapper-section-dashboard-utama">

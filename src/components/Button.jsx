@@ -10,7 +10,10 @@ const Button = ({ type, children, ...props }) => {
     PRIMARY_LONG : "btn-primary-long",
     SECONDARY_LONG : "btn-secondary-long",
     BUTTON_TERTIARY : "btn-tertiary",
-    BUTTON_MODEL : "btn-model-product"
+    BUTTON_MODEL : "btn-model-product",
+
+    AKSI_EDIT : "btn-aksi-edit",
+    AKSI_HAPUS : "btn-aksi-hapus"
   };
 
   return (
@@ -29,8 +32,11 @@ export const LinkButton = ({type, children, ...props}) => {
       PRIMARY_LONG : "btn-primary-long",
       SECONDARY_LONG : "btn-secondary-long",
       BUTTON_TERTIARY : "btn-tertiary",
-      BUTTON_MODEL : "btn-model-product"
-      };
+      BUTTON_MODEL : "btn-model-product",
+
+      AKSI_EDIT : "btn-aksi-edit",
+      AKSI_HAPUS : "btn-aksi-hapus"
+        };
     return (
     <Link className={BUTTON_TYPE[type || "PRIMARY"]} {...props}>
       {children}

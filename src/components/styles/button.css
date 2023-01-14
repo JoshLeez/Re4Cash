@@ -1,47 +1,54 @@
 /* button-150 */
-.btn-primary, .btn-secondary, .btn-primary-green, 
-.btn-secondary-green, .btn-tertiary{
+.btn-primary,
+.btn-secondary,
+.btn-primary-green,
+.btn-secondary-green,
+.btn-tertiary {
     width: 150px;
     height: 44px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    transition:  .2s ease-in-out;
+    transition: .2s ease-in-out;
     text-decoration: none;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /* button-200 */
-.btn-primary-long,.btn-secondary-long {
+.btn-primary-long,
+.btn-secondary-long {
     width: 200px;
     height: 44px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     cursor: pointer;
 }
 
-.btn-sign{
+.btn-sign {
     width: 100%;
     height: 44px;
     background: #FFAF00;
     border-radius: 5px;
-    border:none;
+    border: none;
     font-weight: 500;
     font-size: 16px;
     color: #FFFFFF;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.btn-sign:hover{
+.btn-sign:hover {
     background: #D08F00;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 /* button-white-text */
-.btn-primary, .btn-primary-long, 
-.btn-primary-green, .btn-secondary-green, .btn-tertiary{
+.btn-primary,
+.btn-primary-long,
+.btn-primary-green,
+.btn-secondary-green,
+.btn-tertiary {
     color: #FFFFFF;
     font-weight: 500;
     font-size: 16px;
@@ -49,30 +56,33 @@
 }
 
 /* button-color-gold */
-.btn-primary, .btn-primary-long{
+.btn-primary,
+.btn-primary-long {
     background: #FFAF00;
     border-radius: 5px;
-    border:none;
+    border: none;
 }
 
-.btn-primary:hover, .btn-primary-long:hover{
+.btn-primary:hover,
+.btn-primary-long:hover {
     background: #D08F00;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 /* button-color-green */
-.btn-primary-green{
+.btn-primary-green {
     background: #0EA601;
     border-radius: 5px;
-    border:none;
+    border: none;
 }
 
-.btn-primary-green:hover{
+.btn-primary-green:hover {
     background: #0A8200;
 }
 
 /* button-color-white-to-bold */
-.btn-secondary, .btn-secondary-long{
+.btn-secondary,
+.btn-secondary-long {
     border: 2px solid #FFAF00;
     border-radius: 5px;
     color: #FFAF00;
@@ -81,17 +91,18 @@
     font-size: 16px;
 }
 
-.btn-secondary:hover, .btn-secondary-long:hover{
+.btn-secondary:hover,
+.btn-secondary-long:hover {
     background: #FFAF00;
     color: #F5F5F5;
 }
 
-.btn-tertiary{
+.btn-tertiary {
     border: 3px solid #F5F5F5;
     border-radius: 5px;
 }
 
-.btn-tertiary:hover{
+.btn-tertiary:hover {
     color: #0EA601;
     background: #F5F5F5;
     border: 2px solid #F5F5F5;
@@ -99,29 +110,84 @@
 }
 
 /* product model button */
-.btn-model-product{
-    width: 75px;        
+.btn-model-product {
+    width: 75px;
     height: 32px;
     border: 1px solid #606060;
     border-radius: 5px;
-    background:none;
+    background: none;
     font-weight: 400;
     font-size: 16px;
-    color: #606060;;
+    color: #606060;
+    ;
     transition: .3s ease-in-out;
 }
 
-.btn-model-product:hover{
+.btn-model-product:hover {
     background: #FFAF00;
-    color:#FFFFFF;
+    color: #FFFFFF;
 }
 
 /* button active */
 
-.btn-model-product:active, .btn-primary:active, 
-.btn-primary-green:active, .btn-primary-long:active, 
-.btn-secondary:active, .btn-secondary-green:active,
-.btn-secondary-long:active, .btn-sign:active
- , .btn-tertiary:active{
-    border:2px solid #D08F00;
+.btn-model-product:active,
+.btn-primary:active,
+.btn-primary-green:active,
+.btn-primary-long:active,
+.btn-secondary:active,
+.btn-secondary-green:active,
+.btn-secondary-long:active,
+.btn-sign:active,
+.btn-tertiary:active,
+.btn-aksi-edit,
+.btn-aksi-hapus {
+    border: 2px solid #D08F00;
+}
+
+
+/* button aksi tabel dashboard */
+
+.btn-aksi-edit,
+.btn-aksi-hapus {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* button-aksi-white-text */
+.btn-aksi-edit,
+.btn-aksi-hapus {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+}
+
+/* button-aksi-color-gold */
+.btn-aksi-edit {
+    background: #F2A600;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-aksi-edit:hover {
+    background: #D08F00;
+    border-radius: 5px;
+}
+
+/* button-aksi-color-red */
+.btn-aksi-hapus {
+    background: #E40101;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-aksi-hapus:hover {
+    background: #C10200;
+    border-radius: 5px;
 }

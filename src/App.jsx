@@ -18,7 +18,8 @@ import History from './pages/History'
 import PengelolaProfilAkun from './pages/PengelolaProfilAkun'
 import KebijakanPrivasi from './pages/KebijakanPrivasi'
 import Notifikasi from './pages/Notifikasi'
-
+import PengelolaDataPenjualan from './pages/PengelolaDataPenjualan'
+import PengelolaDataPenjualanEdit from './pages/PengelolaDataPenjualanEdit'
 
 function App() {
   return (
@@ -42,6 +43,8 @@ function App() {
           <Route path="/profil-akun-pengelola" element={<PengelolaProfilAkun/>}/>
           <Route path="/kebijakanprivasi" element={<KebijakanPrivasi/>}/>
           <Route path="/notifikasi" element={<Notifikasi/>}/>
+          <Route path="/data-penjualan-pengelola" element={<PengelolaDataPenjualan/>}/>
+          <Route path="/data-penjualan-pengelola-edit" element={<PengelolaDataPenjualanEdit/>}/>
         </Routes>
     </div>
   );

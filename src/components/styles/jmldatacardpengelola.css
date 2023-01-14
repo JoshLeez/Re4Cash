@@ -24,7 +24,7 @@
 }
 
 .konten-jmldata-dashutama>iconify-icon {
-    font-size: 37px;
+    font-size: 30px;
     color: #F5F5F5;
     width: 55px;
     height: 55px;
@@ -44,10 +44,11 @@
 }
 
 .kontenisi-jmldata-dashutama>h3 {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .kontenisi-jmldata-dashutama>p {
+    font-weight: 400;
     font-size: 13px;
 }
 
@@ -64,10 +65,10 @@
 
     background: #0EA601;
     border-radius: 0px 0px 8px 8px;
+    color: #F5F5F5;
 }
 
-.icon-grafik-dashboard-utama>iconify-icon {
-    color: #F2A600;
-    font-size: 24px;
-
+.konten-bawah-jmlhdata-dashutama>h5 {
+    font-weight: 400;
+    font-size: 14px;
 }

@@ -4,7 +4,7 @@ const GrafikCardPengelola = (props) => {
   return (
     <div className="card-grafik-dashboard-utama">
         <div className="icon-grafik-dashboard-utama">
-            <iconify-icon icon="icons8:buy" />
+          <iconify-icon icon={props.icon} />
         </div>
         <div className="content-grafik">
             <p>{props.title}</p>
