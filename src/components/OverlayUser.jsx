@@ -150,6 +150,7 @@ export const MetodeTarik = ({setModel}) => {
             <SecTarikPoint/>
             <ThirdTarikPoint/>
           </div>
+          <Button>Pilih</Button>
         </div>
     </div>
   )

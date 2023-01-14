@@ -17,6 +17,7 @@ import Tabungan from './pages/Tabungan'
 import History from './pages/History'
 import PengelolaProfilAkun from './pages/PengelolaProfilAkun'
 import KebijakanPrivasi from './pages/KebijakanPrivasi'
+import Notifikasi from './pages/Notifikasi'
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/history" element={<History/>}/>
           <Route path="/profil-akun-pengelola" element={<PengelolaProfilAkun/>}/>
           <Route path="/kebijakanprivasi" element={<KebijakanPrivasi/>}/>
+          <Route path="/notifikasi" element={<Notifikasi/>}/>
         </Routes>
     </div>
   );
