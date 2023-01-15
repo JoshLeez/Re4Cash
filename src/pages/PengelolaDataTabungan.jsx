@@ -1,4 +1,6 @@
-import Button, { LinkButton } from "../components/Button";
+import { useState } from "react";
+import Button from "../components/Button";
+import DataPenabung from "../components/DataPenabung";
 import { Footerdashboardpengelola } from "../components/Footer";
 import { HOCdashboardpengelola } from "../components/HOC";
 import { Navbardashboardpengelola } from "../components/Navbar";
@@ -7,6 +9,9 @@ import SideBarDashPengelola from "../components/SideBarDashPengelola";
 import "./styles/pengeloladatatabungan.css";
 
 const PengelolaDataTabungan = () => {
+
+    const [aksi, setAksi] = useState(true);
+
   return (
     <HOCdashboardpengelola title="Dashboard Pengelola">
       <div className="dashboard-page">
@@ -41,9 +46,9 @@ const PengelolaDataTabungan = () => {
                                 <td>Ditabung</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button onClick={()=>setAksi(!aksi)} type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
@@ -56,9 +61,9 @@ const PengelolaDataTabungan = () => {
                                 <td>Ditabung</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
@@ -71,9 +76,9 @@ const PengelolaDataTabungan = () => {
                                 <td>Dibayar</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
@@ -86,9 +91,9 @@ const PengelolaDataTabungan = () => {
                                 <td>Dibayar</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
@@ -101,20 +106,23 @@ const PengelolaDataTabungan = () => {
                                 <td>Dibayar</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
                         </table> 
                     </div>
-                    <div className="wrapper-konten-isikanan-dashboard-datatabungan">
+                    <div className={aksi ? "wrapper-konten-isikanan-dashboard-datatabungan" : "wrapper-konten-isikanan-dashboard-datatabungan active"}>
                         <h5>Detail Penabung</h5>
+                        {aksi ?  
                         <div className="card-konten-isikanan-dashboard-datatabungan">
                             <iconify-icon icon="tabler:pig-off"/>
                             <p>Belum Ada Detail Data Penabung</p>
                         </div>
+                        : <DataPenabung setAksi={setAksi}/>
+                        }
                     </div>
                 </div>
                 <div className="wrapper-konten-isi-dashboard-datatabungan">
@@ -142,9 +150,9 @@ const PengelolaDataTabungan = () => {
                                 <td>Ditabung</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
@@ -157,9 +165,9 @@ const PengelolaDataTabungan = () => {
                                 <td>Ditabung</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
@@ -172,9 +180,9 @@ const PengelolaDataTabungan = () => {
                                 <td>Ditabung</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
@@ -187,9 +195,9 @@ const PengelolaDataTabungan = () => {
                                 <td>Ditabung</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
@@ -202,20 +210,23 @@ const PengelolaDataTabungan = () => {
                                 <td>Ditabung</td>
                                 <td>
                                     <div className="tabel-kolom-aksibutton-detail">
-                                        <LinkButton type="AKSI_DETAIL" to="">
+                                        <Button type="AKSI_DETAIL" to="">
                                             <iconify-icon icon="healthicons:eye" />
-                                        </LinkButton>
+                                        </Button>
                                     </div>
                                 </td>
                             </tr>
                         </table> 
                     </div>
-                    <div className="wrapper-konten-isikanan-dashboard-datatabungan">
+                    <div className={aksi ? "wrapper-konten-isikanan-dashboard-datatabungan" : "wrapper-konten-isikanan-dashboard-datatabungan active"}>
                         <h5>Detail Penabung</h5>
+                        {aksi ?  
                         <div className="card-konten-isikanan-dashboard-datatabungan">
                             <iconify-icon icon="tabler:pig-off"/>
                             <p>Belum Ada Detail Data Penabung</p>
                         </div>
+                        : <DataPenabung setAksi={setAksi}/>
+                        }
                     </div>
                 </div>
             </section>         
