@@ -15,7 +15,9 @@ const Button = ({ type, children, ...props }) => {
     AKSI_EDIT : "btn-aksi-edit",
     AKSI_HAPUS : "btn-aksi-hapus",
     BUTTON_BATAL : "btn-batal",
-    BUTTON_UBAH : "btn-ubah"
+    BUTTON_UBAH : "btn-ubah",
+
+    AKSI_DETAIL : "btn-aksi-detail"
   };
 
   return (
@@ -39,8 +41,10 @@ export const LinkButton = ({type, children, ...props}) => {
       AKSI_EDIT : "btn-aksi-edit",
       AKSI_HAPUS : "btn-aksi-hapus",
       BUTTON_BATAL : "btn-batal",
-      BUTTON_UBAH : "btn-ubah"
-        };
+      BUTTON_UBAH : "btn-ubah",
+
+      AKSI_DETAIL : "btn-aksi-detail"
+    };
     return (
     <Link className={BUTTON_TYPE[type || "PRIMARY"]} {...props}>
       {children}

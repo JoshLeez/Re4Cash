@@ -147,7 +147,8 @@
 .btn-tertiary:active,
 .btn-aksi-edit,
 .btn-aksi-hapus,
-.btn-batal {
+.btn-batal,
+.btn-aksi-detail {
     border: 2px solid #D08F00;
 }
 
@@ -155,7 +156,8 @@
 /* button aksi tabel dashboard */
 
 .btn-aksi-edit,
-.btn-aksi-hapus {
+.btn-aksi-hapus,
+.btn-aksi-detail {
     width: 24px;
     height: 24px;
     display: flex;
@@ -168,14 +170,15 @@
 
 /* button-aksi-white-text */
 .btn-aksi-edit,
-.btn-aksi-hapus {
+.btn-aksi-hapus,
+.btn-aksi-detail {
     color: #FFFFFF;
     font-weight: 500;
     font-size: 16px;
     transition: .3s ease-in-out;
 }
 
-/* button-aksi-color-gold */
+/* button-aksi-edit-color-gold */
 .btn-aksi-edit {
     background: #F2A600;
     border-radius: 5px;
@@ -187,7 +190,7 @@
     border-radius: 5px;
 }
 
-/* button-aksi-color-red */
+/* button-aksi-hapus-color-red */
 .btn-aksi-hapus {
     background: #E40101;
     border-radius: 5px;
@@ -208,5 +211,18 @@
 
 .btn-batal:hover {
     background: #C10200;
+    border-radius: 5px;
+}
+
+/* button-aksi-detail-color-blue */
+.btn-aksi-detail {
+    background: #335ABD;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.btn-aksi-detail:hover {
+    background: #112B6B;
     border-radius: 5px;
 }

@@ -1,0 +1,135 @@
+.wrapper-konten-dashboard-datatabungan {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.wrapper-konten-dashboard-datatabungan>h4 {
+    font-weight: 500;
+    font-size: 18px;
+
+    border: 1px solid black;
+}
+
+.wrapper-konten-isi-dashboard-datatabungan {
+    border: 1px solid black;
+    display: flex;
+    gap: 28px;
+}
+
+.wrapper-konten-isikiri-dashboard-datatabungan {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    width: 638px;
+}
+
+.namatabel-dashpengelola-datatabungan {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: 1px solid black;
+}
+
+.namatabel-dashpengelola-datatabungan>input {
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid #F2A600;
+    border-radius: 4px;
+}
+
+.namatabel-dashpengelola-datatabungan>label {
+    font-weight: 500;
+    font-size: 18px;
+    color: #131212;
+}
+
+#tabel-pengelola-datatabungan {
+    border-collapse: collapse;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+#tabel-pengelola-datatabungan tr th {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+}
+
+
+#tabel-pengelola-datatabungan tr td {
+    /* text-align: center; */
+    padding: 10px;
+    font-weight: 400;
+    font-size: 13.5px;
+}
+
+#tabel-pengelola-datatabungan tr th {
+    background-color: none;
+}
+
+table tr:nth-child(odd) {
+    background-color: #F1F1F1;
+}
+
+#tabel-pengelola-datatabungan th:first-child {
+    border-radius: 6px 0 0 0;
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+}
+
+#tabel-pengelola-datatabungan th:last-child {
+    border-radius: 0 6px 0 0;
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+}
+
+.tabel-kolom-aksibutton-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-konten-isikanan-dashboard-datatabungan {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+
+    width: 371px;
+}
+
+.wrapper-konten-isikanan-dashboard-datatabungan>h5 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #131212;
+
+    border: 1px solid black;
+}
+
+.card-konten-isikanan-dashboard-datatabungan {
+    height: 207px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-konten-isikanan-dashboard-datatabungan>iconify-icon {
+    color: #606060;
+    font-size: 65px;
+}
+
+.card-konten-isikanan-dashboard-datatabungan>p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #606060;
+}
