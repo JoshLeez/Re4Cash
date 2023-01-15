@@ -6,15 +6,18 @@ import Button from './Button';
 export const OverlayPengelola = ({ setPengelola, pengelola }) => {
   const menuRef = useRef();
 
-  useEffect(() => {
-    let handler = (e) => {
+  useEffect(()=>{
+    let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
         setPengelola(false);
       }
     };
-
+  
     document.addEventListener("mousedown", handler);
-  }, []);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+  }
+  })
 
   return (
     <div ref={menuRef} className="dd-pengelola">

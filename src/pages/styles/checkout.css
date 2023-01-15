@@ -74,11 +74,14 @@
     font-size: 16px;
 }
 
-.bottom-alamat-checkout > h4{
+.bottom-alamat-checkout > button{
     font-weight: 600;
     font-size: 16px;
-    width:115px;
     color: #F2A600;
+    cursor: pointer;
+    background:none;
+    border:none;
+    width:111px;
 }
 
 .metode-transaksi{
@@ -96,12 +99,13 @@
     align-items: center;
     justify-content: space-between;
 }
-
-.metode-transaksi-bot > h4{
+.metode-transaksi-bot > button{
     font-weight: 600;
     font-size: 16px;
     color: #F2A600;
     cursor: pointer;
+    background:none;
+    border:none;
 }
 
 .left-bank-metode{

@@ -374,6 +374,18 @@
   justify-content: space-evenly;
 }
 
+.model-tarik-point>iconify-icon {
+  position: absolute;
+  font-size: 24px;
+  top: 14.5%;
+  left: 75%;
+  cursor: pointer
+}
+
+.model-tarik-point>iconify-icon:hover {
+  color: #E40101;
+}
+
 .model-tarik-point>h1 {
   font-weight: 700;
   font-size: 28px;
@@ -471,4 +483,133 @@
   color: #FFFFFF;
   font-weight: 400;
   font-size: 18px;
+}
+
+/* Overlay Ganti Alamat pada Checkout */
+.pilih-alamat-container{
+  border: 1px solid #F2A600;
+  border-radius: 10px;
+  width: 740px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pilih-alamat-container > h2{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.option-pilih-alamat{
+  padding:8px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option-pilih-left{
+  display:flex;
+  gap:8px;
+  align-items: center;
+}
+
+.option-pilih-left > iconify-icon{
+  font-size: 32px;
+}
+
+.option-pilih-left > span{
+  width: 399px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.option-alamat{
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.option-pilih-right{
+  height: 50px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.option-pilih-right > button{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+  color: #F2A600;
+  border:none;
+  background: none;
+  width:fit-content;
+  cursor: pointer;
+}
+
+.set-alamat{
+  display: flex;
+  gap:8px;
+  align-items: center;
+}
+
+.set-alamat > input{
+  width:16px;
+  height:16px;
+}
+
+.set-alamat > span{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.form-tambah-alamat{
+  border: 1px solid #F2A600;
+  border-radius: 10px;
+  width: 740px;
+  padding: 16px;
+  height:auto;
+  display:flex;
+  flex-direction: column;
+  gap:8px;
+}
+
+.form-tambah-alamat > h2{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.form-tambah-alamat > textarea{
+  padding: 13px 20px;
+  height: 93px;
+  resize: none;
+  border: 1px solid #D6D6D6;
+  box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  outline: none;
+}
+
+.tambah-alamat{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 8px;
+  padding-bottom:8px;
+}
+
+.tambah-alamat > input{
+  background: #FFFFFF;
+  border: 1px solid #D6D6D6;
+  box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  padding: 13px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  outline:none;
+}
+
+.form-tambah-alamat > button{
+  align-self: center;
 }

@@ -9,11 +9,13 @@ import {
 import { Item } from "../components/ItemKg";
 import CustomDropDown from "../components/CustomDropDown";
 import { useState } from "react";
-import { MetodeTarik } from "../components/OverlayUser";
+import { GantiAlamat, MetodeTarik } from "../components/OverlayUser";
 
 export const Checkout = () => {
   
-  const [model, setModel] = useState(false)
+  const [model, setModel] = useState(false);
+  const [modelAlamat, setModelAlamat] = useState(false)
+
   return (
     <HOCCheckout title="Checkout Penjualan | Re4Cash">
       <div className="checkout-page">
@@ -34,7 +36,7 @@ export const Checkout = () => {
                   Jl. Pembangunan 1, Selat Panjang Kota, Kec. Tebing Tinggi,
                   Kabupaten Kepulauan Meranti, Riau, 213094
                 </p>
-                <h4>Ganti Alamat</h4>
+                <button onClick={()=>setModelAlamat(!modelAlamat)}>Ganti Alamat</button>
               </div>
             </div>
             <p>
@@ -52,7 +54,7 @@ export const Checkout = () => {
                 <UilUniversity size="32px" />
                 <img src="/bri.svg" />
               </div>
-              <h4 onClick={()=>setModel(!model)}>Pilih Metode Transaksi</h4>
+              <button onClick={()=>setModel(!model)}>Pilih Metode Transaksi</button>
             </div>
           </div>
           <div className="checkout-form-menabung">
@@ -156,6 +158,7 @@ export const Checkout = () => {
         </aside>
       </div>
       {model && <MetodeTarik setModel={setModel}/>}
+      {modelAlamat && <GantiAlamat setModelAlamat={setModelAlamat}/>}
     </HOCCheckout>
   );
 };

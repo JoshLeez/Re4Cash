@@ -7,15 +7,18 @@ import CustomDropDown, { DDTarikPoint, SecTarikPoint, ThirdTarikPoint } from './
 export const OverlayUser = ({ setUser }) => {
   const menuRef = useRef();
 
-  useEffect(() => {
+  useEffect(()=>{
     let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
         setUser(false);
       }
     };
-
+  
     document.addEventListener("mousedown", handler);
-  }, []);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+  }
+  })
 
   return (
     <div ref={menuRef} className="dd-user">
@@ -57,15 +60,18 @@ export const OverlayUser = ({ setUser }) => {
 export const EditProfile = ({setEdit}) => {
   const menuRef = useRef();
 
-  useEffect(() => {
+  useEffect(()=>{
     let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
         setEdit(false);
       }
     };
-
+  
     document.addEventListener("mousedown", handler);
-  }, []);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+  }
+  })
 
   return (
     <div className='overlay-container'>
@@ -90,15 +96,18 @@ export const TambahAlamat = ({setAlamat}) => {
 
   const menuRef = useRef();
 
-  useEffect(() => {
+  useEffect(()=>{
     let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
         setAlamat(false);
       }
     };
-
+  
     document.addEventListener("mousedown", handler);
-  }, []);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+  }
+  })
 
   return (
     <div  className='overlay-container'>
@@ -136,14 +145,17 @@ export const MetodeTarik = ({setModel}) => {
         setModel(false);
       }
     };
-
+  
     document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
   }
-  ,[])
+  })
 
   return (
     <div  className='overlay-container'>
         <div ref={menuRef}  className='model-tarik-point'>
+          <iconify-icon onClick={()=>setModel(false)} icon="maki:cross"/>
           <h1>Pilih Metode Transaksi</h1>
           <div className='option-metode-tarik-point'>
             <DDTarikPoint />
@@ -151,6 +163,65 @@ export const MetodeTarik = ({setModel}) => {
             <ThirdTarikPoint/>
           </div>
           <Button>Pilih</Button>
+        </div>
+    </div>
+  )
+}
+
+export const GantiAlamat = ({setModelAlamat}) => {
+  
+  const menuRef = useRef()
+
+useEffect(()=>{
+  let handler = (event) => {
+    if (!menuRef.current.contains(event.target)) {
+      setModelAlamat(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handler);
+  return () => {
+    document.removeEventListener("mousedown", handler);
+}
+})
+  
+
+  return (
+    <div className='overlay-container'>
+        <div ref={menuRef}  className='model-tarik-point'>
+        <iconify-icon onClick={()=>setModelAlamat(false)} icon="maki:cross"/>
+          <h1>Ganti Alamat</h1>
+          <div className='pilih-alamat-container'>
+            <h2>Alamat</h2>
+            <div className='option-pilih-alamat'>
+              <div className='option-pilih-left'>
+                <iconify-icon icon="mi:location"/>
+                <span>
+                  Jl. Pembangunan 1, Selat Panjang Kota, Kec. 
+                  Tebing Tinggi, Kabupaten Kepulauan Meranti, Riau, 
+                  213094
+                </span>
+              </div>
+              <div className='option-pilih-right'>
+                <button>Pilih Alamat</button>
+                <label className='set-alamat'>
+                  <input type="checkbox"/>
+                  <span>Set Jadi Alamat Utama</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <form className='form-tambah-alamat'>
+            <h2>Tambah Alamat</h2>
+            <textarea placeholder='Alamat Lengkap (nama jalan dan patokan)'/>
+            <div className='tambah-alamat'>
+              <input type="text" placeholder='Kecamatan'/>
+              <input type="text" placeholder='Kabupaten/Kota'/>
+              <input type="text" placeholder='Provinsi'/>
+              <input type="text" placeholder='Kode Pos'/>
+            </div>
+            <Button>Tambah</Button>
+          </form>
         </div>
     </div>
   )
