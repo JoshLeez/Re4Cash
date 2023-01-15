@@ -59,7 +59,7 @@ export const Navbarmarketplace = () => {
             <Unicons.UilSearchAlt color="#f5f5f5" />
           </button>
         </div>
-        <Unicons.UilShoppingCart color="#FFAF00" size="32px" />
+        <Link to="/keranjang"><Unicons.UilShoppingCart color="#FFAF00" size="32px" /></Link>
         <Unicons.UilStore color="#FFAF00" size="32px" />
         <div className="wrapper-profile-navbar">
           <div className="profile-navbar" onClick={() => setUser(!user)}>
@@ -104,7 +104,7 @@ export const NavbarAkunProfile = () => {
               <Unicons.UilSearchAlt color="#f5f5f5" />
             </button>
           </div>
-          <Unicons.UilShoppingCart color="#FFAF00" size="32px" />
+          <Link to="/keranjang"><Unicons.UilShoppingCart color="#FFAF00" size="32px" /></Link>
           <Unicons.UilStore color="#FFAF00" size="32px" />
           <div className="wrapper-profile-navbar">
             <div className="profile-navbar" onClick={() => setUser(!user)}>

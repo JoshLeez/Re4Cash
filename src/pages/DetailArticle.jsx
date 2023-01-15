@@ -10,7 +10,7 @@ const DetailArticle = () => {
         <div className="detailarticle-hero">
           <img src="article-hero.png" alt="img" />
         </div>
-        <div className="detail-article-container">
+        <article className="detail-article-container">
           <div className="detail-article-card">
             
             <Link to="/edukasi">
@@ -112,7 +112,7 @@ const DetailArticle = () => {
             </div>
           </div>
           </div>
-        </div>
+        </article>
     </HOC>
   )
 }

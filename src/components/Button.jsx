@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./styles/button.css";
+import {useState, useEffect} from 'react';
 
 const Button = ({ type, children, ...props }) => {
   const BUTTON_TYPE = {
@@ -55,3 +56,47 @@ export const LinkButton = ({type, children, ...props}) => {
 };
 
 export default Button;
+
+
+export const ButtonNumber = () => {
+  const [item, setItem] = useState(1);
+  const [disabled, setDisabled] = useState(null);
+
+  const inputHandler = (e) => {
+    e.preventDefault();
+    setItem(parseInt(e.target.value) || 1);
+  };
+
+  const Increment = () => {
+    setItem((prevState) => prevState + 1);
+  };
+
+  const Decrement = () => {
+    setItem((prevState) => prevState - 1);
+  };
+
+  useEffect(() => {
+    item === 1 ? setDisabled(true) : setDisabled(false);
+  }, [item]);
+
+  return (
+    <div className="card-incre-decre">
+      <button
+        disabled={item === 1}
+        className={disabled ? "negev disabled" : "negev"}
+        onClick={Decrement}
+      >
+        -
+      </button>
+      <input
+        disable={item === 1}
+        type="text"
+        value={item}
+        onChange={inputHandler}
+      />
+      <button className="posit" onClick={Increment}>
+        +
+      </button>
+    </div>
+  );
+};

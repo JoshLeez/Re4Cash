@@ -1,8 +1,8 @@
 import { UilLocationPoint } from "@iconscout/react-unicons";
 import { UilCheckCircle } from "@iconscout/react-unicons";
 import { Link } from "react-router-dom";
-import Button from "./Button";
-import { useState, useEffect } from "react";
+import Button, { ButtonNumber } from "./Button";
+import { useState } from "react";
 
 const ItemKg = () => {
 
@@ -79,25 +79,6 @@ export default ItemKg;
 
 
 export const ItemNumber = () => {
-  const [item, setItem] = useState(1);
-  const [disabled, setDisabled] = useState(null);
-
-  const inputHandler = (e) => {
-    e.preventDefault();
-    setItem(parseInt(e.target.value) || 1);
-  };
-
-  const Increment = () => {
-    setItem((prevState) => prevState + 1);
-  };
-
-  const Decrement = () => {
-    setItem((prevState) => prevState - 1);
-  };
-
-  useEffect(() => {
-    item === 1 ? setDisabled(true) : setDisabled(false);
-  }, [item]);
 
   return (
     <div className="wrapper-penjualan-card">
@@ -134,24 +115,7 @@ export const ItemNumber = () => {
       </div>
       <div className="penjualan-hover">
         <h4>Jumlah Pembelian</h4>
-        <div className="card-incre-decre">
-          <button
-            disabled={item === 1}
-            className={disabled ? "negev disabled" : "negev"}
-            onClick={Decrement}
-          >
-            -
-          </button>
-          <input
-            disable={item === 1}
-            type="text"
-            value={item}
-            onChange={inputHandler}
-          />
-          <button className="posit" onClick={Increment}>
-            +
-          </button>
-        </div>
+        <ButtonNumber/>
         <div className="card-total-price">
           <h5>Total Pembelian</h5>
           <h4>Rp. 10.000</h4>

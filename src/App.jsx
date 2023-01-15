@@ -1,4 +1,3 @@
-import './App.css'
 import Beranda from './pages/Beranda'
 import {Routes, Route, ScrollRestoration} from 'react-router-dom'
 import Edukasi from './pages/Edukasi'
@@ -24,10 +23,11 @@ import PengelolaDataPencarian from './pages/PengelolaDataPencarian'
 import PengelolaDataPencarianEdit from './pages/PengelolaDataPencarianEdit'
 import PengelolaDataTabungan from './pages/PengelolaDataTabungan'
 import PengelolaKelolaLapakPenjualan from './pages/PengelolaKelolaLapakPenjualan'
+import Keranjang from './pages/Keranjang'
 
 function App() {
   return (
-    <div className="App">
+    <>
       {/* <ScrollToTop/> */}
         <Routes>
           <Route exact path="/" element={<Beranda/>}/>
@@ -53,8 +53,9 @@ function App() {
           <Route path="/data-pencarian-pengelola/edit" element={<PengelolaDataPencarianEdit/>}/>
           <Route path="/data-tabungan-pengelola" element={<PengelolaDataTabungan/>}/>
           <Route path="/kelola-lapak-penjualan-pengelola" element={<PengelolaKelolaLapakPenjualan/>}/>
+          <Route path="/keranjang" element={<Keranjang/>}/>
         </Routes>
-    </div>
+    </>
   );
 }
 

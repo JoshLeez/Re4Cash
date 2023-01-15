@@ -8,6 +8,10 @@
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
 }
 
+.navbar-wrapper > a{
+    cursor: pointer;
+}
+
 .container-navbar.marketplace{
     border-bottom: 1px solid #F2A600;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);

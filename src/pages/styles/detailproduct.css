@@ -226,6 +226,8 @@
     outline: none;
     font-weight: 700;
     font-size: 12px;
+    border-left: none;
+    border-right: none;
     color: #0EA601;
 }
 

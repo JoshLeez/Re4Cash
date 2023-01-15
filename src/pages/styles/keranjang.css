@@ -1,0 +1,181 @@
+.keranjang-page{
+    margin:24px auto;
+    width: 1216px;
+    display:flex;
+    gap:32px;
+}
+
+.left-keranjang{
+    display:flex;
+    width: 848px;
+    flex-direction: column;
+    gap:24px;
+}
+
+.left-keranjang > h1{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.checkbox-keranjang{
+    display:flex;
+    align-items: center;
+    gap:8px;
+}
+
+.keranjang-produk{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.top-keranjang-produk{
+    height: 40px;
+    padding: 0px 24px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #FFE19E;
+}
+
+.left-header-keranjang{
+    display:flex;
+    gap:40px;
+}
+
+.bot-keranjang-produk{
+    padding:16px 24px;
+    display:flex;
+    gap:24px;
+}
+
+.keranjang-nama-produk{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.cart-img-nama-produk{
+    display:flex;
+    gap:8px;
+    align-items: center;
+}
+
+.cart-img-nama-produk > img{
+    width: 100px;
+    height: 90.76px;
+}
+
+.cart-img-nama-produk > span{
+    font-weight: 400;
+    font-size: 14px;
+    width: 133px;
+    line-height: 24px;
+}
+
+.checkbox-keranjang > input{
+    width: 20px;
+    height:20px;
+}
+
+.keranjang-nama-produk > h3{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.keranjang-nama-produk h3 span{
+    font-weight: 500;
+    font-size: 16px;
+    color: #606060;
+}
+
+.keranjang-nama-produk > h2{
+    font-weight: 700;
+    font-size: 20px;
+    max-width: 103px;
+}
+
+.right-keranjang{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 336px;
+    height:fit-content;
+    gap:16px;
+    padding: 24px 16px;
+}
+
+.right-keranjang > img{
+    width: 162px;
+    height: 66px;
+    align-self: center;
+}
+
+.keranjang-detail-pembelian{
+    display:flex;
+    justify-content: space-between;
+    width:auto;
+}
+
+.keranjang-detail-pembelian > h1{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.checkbox-pakai-point{
+    display:flex;
+    gap:4px;
+    align-items: center;
+    width:auto;
+}
+
+.checkbox-pakai-point > input{
+    width:16px;
+    height:16px;
+}
+
+.checkbox-pakai-point > span{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.keranjang-total-pembelian{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    width:auto;
+}
+
+.harga-total-pembelian{
+    display:flex;
+    justify-content: space-between;
+}
+
+.harga-total-pembelian >h6{
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 150px;
+}
+
+.harga-total-pembelian h6 span{
+    color: #606060;
+}
+
+#keranjang-garis{
+    border: 1px solid #FFE19E;
+}
+
+.harga-total-pembelian > h5{
+    font-weight: 700;
+    font-size: 16px;
+    color: #F2A600;
+}
+
+.right-keranjang > a{
+    align-self: center;
+}
