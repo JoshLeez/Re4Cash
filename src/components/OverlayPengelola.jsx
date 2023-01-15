@@ -88,3 +88,36 @@ export const ButtonUbah = ({setButtonUbah, link}) => {
     </div>
   );
 };
+
+export const ButtonTambah = ({setButtonTambah, link}) => {
+  const menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setButtonTambah(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+  }, []);
+
+  return (
+    <div className='overlay-container'>
+      <div ref={menuRef} className='container-button-ubah'>
+        <div className='button-ubah-tulisan'>
+          <img src='/icon-overlay-button-ubah.png' />
+          <h1>Apakah Anda Yakin Ingin Menambah?</h1>
+        </div>
+        <div className='wrapped-overlay-button-ubah'>
+          <Button onClick={()=>setButtonTambah(false)} className='tiru-overlay-button-batal'>
+            <h4>Batal</h4>
+          </Button>
+          <Link to={link} className='tiru-overlay-button-ubah'>
+            <h4>Tambah</h4>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -19,7 +19,8 @@ const Button = ({ type, children, ...props }) => {
     BUTTON_UBAH : "btn-ubah",
 
     AKSI_DETAIL : "btn-aksi-detail",
-    PRIMARY_LONG_GREEN : "btn-primary-long-green"
+    PRIMARY_LONG_GREEN : "btn-primary-long-green",
+    BUTTON_TAMBAH : "btn-tambah"
   };
 
   return (
@@ -46,7 +47,8 @@ export const LinkButton = ({type, children, ...props}) => {
       BUTTON_UBAH : "btn-ubah",
 
       AKSI_DETAIL : "btn-aksi-detail",
-      PRIMARY_LONG_GREEN : "btn-primary-long-green"
+      PRIMARY_LONG_GREEN : "btn-primary-long-green",
+      BUTTON_TAMBAH : "btn-tambah"
     };
     return (
     <Link className={BUTTON_TYPE[type || "PRIMARY"]} {...props}>

@@ -5,7 +5,8 @@
 .btn-secondary-green,
 .btn-tertiary,
 .btn-batal,
-.btn-ubah {
+.btn-ubah,
+.btn-tambah {
     width: 150px;
     height: 44px;
     display: flex;
@@ -54,7 +55,8 @@
 .btn-tertiary,
 .btn-batal,
 .btn-ubah,
-.btn-primary-long-green {
+.btn-primary-long-green,
+.btn-tambah {
     color: #FFFFFF;
     font-weight: 500;
     font-size: 16px;
@@ -78,7 +80,8 @@
 /* button-color-green */
 .btn-primary-green,
 .btn-ubah,
-.btn-primary-long-green {
+.btn-primary-long-green,
+.btn-tambah {
     background: #0EA601;
     border-radius: 5px;
     border: none;
@@ -86,7 +89,8 @@
 
 .btn-primary-green:hover,
 .btn-ubah:hover,
-.btn-primary-long-green {
+.btn-primary-long-green,
+.btn-tambah {
     background: #0A8200;
 }
 

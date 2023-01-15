@@ -17,12 +17,12 @@ const PengelolaKelolaLapakPenjualan = () => {
             <section className="wrapper-tabel-dashboard-kelolalapakpenjualan">
                 <div className="judul-tabel-dashboard-kelolalapakpenjualan">
                     <h4>Data Lapak Penjualan</h4>
-                    <Button type="PRIMARY_LONG_GREEN">
+                    <LinkButton type="PRIMARY_LONG_GREEN" to="/kelola-lapak-penjualan-pengelola/tambah">
                         <div className="icon-button-tambahproduk">
                             <iconify-icon icon="ic:outline-plus" />
                         </div>
                         <span>Tambah Produk</span>
-                    </Button>
+                    </LinkButton>
                 </div>
                 <table id="tabel-pengelola-kelolalapakpenjualan">
                     <tr>

@@ -1,0 +1,173 @@
+.wrapper-form-dashboard-kelolalapakpenjualan-tambah {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.card-formtambah-dashpengelola-kelolalapakpenjualan {
+    background: #FFFFFF;
+    /* height: 1019px; */
+    border: 1px solid #C9C9C9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.grup-formtambah-dashpengelola-kelolalapakpenjualan {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.baris-formtambah-dashpengelola-kelolalapakpenjualan {
+    display: flex;
+    gap: 32px;
+}
+
+.baris-formtambah-dashpengelola-kelolalapakpenjualan>label {
+    display: flex;
+    width: 150px;
+    height: 37px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.tanda-required {
+    color: #E40101;
+}
+
+.baris-formtambah-dashpengelola-kelolalapakpenjualan>.formtambah-radio {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 10px;
+}
+
+.formtambah-radio-pilihan {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.baris-formtambah-dashpengelola-kelolalapakpenjualan>input,
+select {
+    display: flex;
+    width: 800px;
+    height: 37px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+
+    border: 1px solid #BABABA;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.baris-formtambah-dashpengelola-kelolalapakpenjualan>.formtambah-number {
+    display: flex;
+    width: 90px;
+    height: 37px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+
+    border: 1px solid #BABABA;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.baris-formtambah-dashpengelola-kelolalapakpenjualan>textarea {
+    resize: none;
+    display: flex;
+    width: 800px;
+    height: 240px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+
+    border: 1px solid #BABABA;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.form-uploadpicture {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 7px 17px 7px;
+    gap: 4px;
+
+    border: 1px dashed #F2A600;
+    border-radius: 4px;
+}
+
+.form-uploadpicture>iconify-icon {
+    font-size: 2rem;
+    color: #F2A600;
+}
+
+.form-uploadpicture>p {
+    border: 1px solid red;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #F2A600;
+}
+
+.form-inputharga {
+    display: flex;
+}
+
+.form-inputharga-text {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.form-inputharga>input {
+    display: flex;
+    width: 759px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+
+    border: 1px solid #BABABA;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.form-inputmodel {
+    display: flex;
+    gap: 19px;
+}
+
+.form-inputmodel-pilihan {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+
+    border: 1px solid #BABABA;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.button-formtambah-dashpengelola-kelolalapakpenjualan {
+    display: flex;
+    gap: 10px;
+}
+
+.button-formtambah-dashpengelola-kelolalapakpenjualan>Button {
+    font-weight: 400;
+    font-size: 16px;
+}
