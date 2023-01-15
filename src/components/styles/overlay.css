@@ -364,14 +364,15 @@
 /* Overlay Metode Transaksi Tarik Point */
 .model-tarik-point {
   width: 864px;
-  height: 557px;
+  height: auto;
+  padding:24px 37px 28px 37px;
   background: #FFFFFF;
   box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  gap:24px;
 }
 
 .model-tarik-point>iconify-icon {
@@ -704,4 +705,71 @@
   color: #FFFFFF;
   border:none;
   cursor: pointer;
+}
+
+.payment-success-container{
+  width: 762px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 50px;
+  display:flex;
+  flex-direction:column;
+  gap:90px;
+}
+
+.top-payment-success{
+  display:flex;
+  flex-direction: column;
+  gap:24px;
+  align-self: center;
+  align-items: center;
+}
+
+.no-pembayaran-success > h1{
+  font-weight: 700;
+  font-size: 40px;
+  color: #0EA601;
+}
+
+.no-pembayaran-success{
+  display:flex;
+  flex-direction: column;
+  gap:4px;
+  align-items: center;
+}
+
+.top-payment-success > iconify-icon{
+  color: #0EA601;
+  font-size: 125px;
+}
+
+.no-pembayaran-success > span{
+  font-weight: 400;
+  font-size: 16px;
+  color: #606060;
+}
+
+.wrapper-bot-payment-success{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.bot-payment-success{
+  display:flex;
+  flex-direction: column;
+  gap:15px;
+}
+
+.detail-payment-success{
+  display:flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 28px;
+  color: #000000;
+}
+
+.wrapper-bot-payment-success > a{
+  align-self: center;
 }

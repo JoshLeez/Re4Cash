@@ -1,8 +1,9 @@
 import {UilUserCircle } from '@iconscout/react-unicons';
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Button from './Button';
+import Button, { LinkButton } from './Button';
 import CustomDropDown, { DDTarikPoint, SecTarikPoint, ThirdTarikPoint } from './CustomDropDown';
+import { UilAngleDown } from '@iconscout/react-unicons'
 
 export const OverlayUser = ({ setUser }) => {
   const menuRef = useRef();
@@ -228,9 +229,10 @@ useEffect(()=>{
 }
 
 
-export const LengkapDataDiri = ({setLengkapData}) => {
+export const LengkapDataDiri = ({setLengkapData, setPaymentSuccess}) => {
 
   const menuRef = useRef()
+ 
 
   useEffect(()=>{
     let handler = (event) => {
@@ -245,7 +247,13 @@ export const LengkapDataDiri = ({setLengkapData}) => {
   }
   })
 
+  const beliHandler = () =>{
+    setPaymentSuccess(true)
+    setLengkapData(false)
+  }
+
   return (
+  <>
     <div className='overlay-container'>
        <div ref={menuRef}  className='model-tarik-point'>
        <iconify-icon onClick={()=>setLengkapData(false)} icon="maki:cross"/>
@@ -278,10 +286,127 @@ export const LengkapDataDiri = ({setLengkapData}) => {
                   <input type="text" placeholder='No. Rekening/Akun E-Wallet'/>
                   <input type="text" placeholder='Nama Rekening Tujuan'/>
                 </div>
-                <button className=''>Lanjutkan Beli Rp. 35.000</button>
+                <button onClick={beliHandler}>Lanjutkan Beli Rp. 35.000</button>
               </div>
             </form>
         </div>
+    </div>
+  </>
+  )
+}
+
+
+export const PaymentSuccess = () => {
+  return (
+    <div className='overlay-container'>
+      <div className='payment-success-container'>
+        <div className='top-payment-success'>
+          <iconify-icon icon="mdi:checkbox-marked-circle"/>
+          <div className='no-pembayaran-success'>
+            <h1>Payment Success</h1>
+            <span>Nomor Pembayaran INVRE4CASH_0012351</span>
+          </div>
+        </div>
+        <div className='wrapper-bot-payment-success'>
+          <div className='bot-payment-success'>
+            <div className='detail-payment-success'>
+                <span>Total Pembayaran</span>
+                <span>Rp70.000</span>
+            </div>
+            <div className='detail-payment-success'>
+                <span>Metode</span>
+                <span>Bank</span>
+            </div>
+            <div className='detail-payment-success'>
+                <span>Nama Bank</span>
+                <span>BCA</span>
+            </div>
+          </div>
+          <LinkButton type="PRIMARY_LONG">Lihat Invoice</LinkButton>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+export const JasaKurir = ({setKurir}) => {
+
+  const menuRef = useRef()
+ 
+
+  useEffect(()=>{
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setKurir(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+  }
+  })
+
+  return (
+    <div className='overlay-container'>
+      <div className='model-tarik-point' ref={menuRef}>
+        <iconify-icon onClick={()=>setKurir(false)} icon="maki:cross"/>
+        <div className='top-jasa-kurir'>
+          <h2>Pilih Jasa Kurir</h2>
+          <span>
+            Pilih jasa kurir anda serta dengan 
+            service yang disediakan
+          </span>
+        </div>
+        <div className='list-option-jasa-kurir'>
+          <label className='option-jasa-kurir'>
+            <input type="radio" name="kurir"/>
+            <div className='detail-jasa-kurir'>
+              <img src="/kurir/jnt.svg"/>
+              <div className='detail-estimasi-kurir'>
+                <span>Reg(1-2Hari)</span>
+                <span>Rp. 15.000</span>
+                <UilAngleDown className="arrow-rotation"  size="32px"/>
+              </div>
+            </div>
+          </label>
+          <label className='option-jasa-kurir'>
+            <input type="radio" name="kurir"/>
+            <div className='detail-jasa-kurir'>
+              <img src="/kurir/jne.svg"/>
+              <div className='detail-estimasi-kurir'>
+                <span>Reg(3-5Hari)</span>
+                <span>Rp. 10.000</span>
+                <UilAngleDown className="arrow-rotation"  size="32px"/>
+              </div>
+            </div>
+          </label>
+          <label className='option-jasa-kurir'>
+            <input type="radio" name="kurir"/>
+            <div className='detail-jasa-kurir'>
+              <img src="/kurir/sicepat.svg"/>
+              <div className='detail-estimasi-kurir'>
+                <span>Reg(0-1Hari)</span>
+                <span>Rp. 25.000</span>
+                <UilAngleDown className="arrow-rotation"  size="32px"/>
+              </div>
+            </div>
+          </label>
+          <label className='option-jasa-kurir'>
+            <input type="radio" name="kurir"/>
+            <div className='detail-jasa-kurir'>
+              <img src="/kurir/gosend.svg"/>
+              <div className='detail-estimasi-kurir'>
+                <span>Reg(1-2Hari)</span>
+                <span>Rp. 17.000</span>
+                <UilAngleDown className="arrow-rotation"  size="32px"/>
+              </div>
+            </div>
+          </label>
+        </div>
+        <Button>Pilih</Button>
+      </div>
     </div>
   )
 }

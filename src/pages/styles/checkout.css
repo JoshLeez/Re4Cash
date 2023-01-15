@@ -312,3 +312,78 @@
 .wrapper-catatan > textarea:focus{
     border:#131212 1px solid;
 }
+
+.pilih-jasa-kurir{
+    width: 269px;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    height: 44px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding:0 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.top-jasa-kurir{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    text-align: center;
+}
+
+.top-jasa-kurir > h2{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.top-jasa-kurir > span{
+    font-weight: 400;
+    font-size: 12px;
+    color: #606060;
+}
+
+.list-option-jasa-kurir{
+    display:flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.option-jasa-kurir{
+    display:flex;
+    gap:18px;
+}
+
+.detail-jasa-kurir{
+    display:flex;
+    border: 1px solid #F2A600;
+    border-radius: 10px;
+    padding: 10px 16px;
+    gap:113px;
+    width:auto;
+    align-items: center;
+}
+
+.detail-jasa-kurir > img{
+    width: 145.1px;
+    height: 32px;
+}
+
+.detail-estimasi-kurir{
+    display:flex;
+    padding: 13px 20px;
+    align-items: center;
+    border: 1px solid #D6D6D6;
+    border-radius: 8px;
+    padding: 8px 20px;
+    gap:30.5px;
+}
+
+.detail-estimasi-kurir > span{
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 96px;
+}

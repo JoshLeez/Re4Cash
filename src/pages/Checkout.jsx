@@ -7,15 +7,17 @@ import {
   UilArrowLeft,
 } from "@iconscout/react-unicons";
 import { Item } from "../components/ItemKg";
-import CustomDropDown from "../components/CustomDropDown";
+import CustomDropDown, { LongDropDown } from "../components/CustomDropDown";
 import { useState } from "react";
-import { GantiAlamat, LengkapDataDiri, MetodeTarik } from "../components/OverlayUser";
+import { GantiAlamat, JasaKurir, LengkapDataDiri, MetodeTarik, PaymentSuccess } from "../components/OverlayUser";
 
 export const Checkout = () => {
   
   const [model, setModel] = useState(false);
   const [modelAlamat, setModelAlamat] = useState(false)
   const [lengkapData, setLengkapData] = useState(false)
+  const [paymentSuccess, setPaymentSuccess] = useState(false)
+  const [kurir ,setKurir] = useState(false)
 
   return (
     <HOCCheckout title="Checkout Penjualan | Re4Cash">
@@ -83,7 +85,7 @@ export const Checkout = () => {
                     </div>
                     <div className="jumlah-penjualan">
                         <h5>Model</h5>
-                        <CustomDropDown/>
+                        <LongDropDown/>
                     </div>
                     <div className="jumlah-penjualan">
                         <h5>Sub Total Pembelian</h5>
@@ -97,7 +99,9 @@ export const Checkout = () => {
                       </div>
                       <div className="jumlah-penjualan">
                           <h5>Pilih Jasa Kurir</h5>
-                          <CustomDropDown/>
+                          <button onClick={()=>setKurir(!kurir)} className="pilih-jasa-kurir">
+                            <img src="/kurir/jnt.svg"/>
+                          </button>
                       </div>
                       <div className="jumlah-penjualan">
                         <h5>Biaya Distribusi</h5>
@@ -160,7 +164,9 @@ export const Checkout = () => {
       </div>
       {model && <MetodeTarik setModel={setModel}/>}
       {modelAlamat && <GantiAlamat setModelAlamat={setModelAlamat}/>}
-      {lengkapData && <LengkapDataDiri setLengkapData={setLengkapData}/>}
+      {lengkapData && <LengkapDataDiri setLengkapData={setLengkapData} setPaymentSuccess={setPaymentSuccess}/>}
+      {paymentSuccess && <PaymentSuccess/>}
+      {kurir && <JasaKurir setKurir={setKurir}/>}
     </HOCCheckout>
   );
 };
