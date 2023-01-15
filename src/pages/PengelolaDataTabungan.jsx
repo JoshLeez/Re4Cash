@@ -15,7 +15,7 @@ const PengelolaDataTabungan = () => {
           <Navbardashboardpengelola />
           <div className="wrapper-dashboard-utama">
             <section className="wrapper-konten-dashboard-datatabungan">
-                <h4>Data Pencarian</h4>
+                <h4>Data Tabungan</h4>
                 <div className="wrapper-konten-isi-dashboard-datatabungan">
                     <div className="wrapper-konten-isikiri-dashboard-datatabungan">
                         <div className="namatabel-dashpengelola-datatabungan">

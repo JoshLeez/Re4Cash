@@ -23,6 +23,7 @@ import PengelolaDataPenjualanEdit from './pages/PengelolaDataPenjualanEdit'
 import PengelolaDataPencarian from './pages/PengelolaDataPencarian'
 import PengelolaDataPencarianEdit from './pages/PengelolaDataPencarianEdit'
 import PengelolaDataTabungan from './pages/PengelolaDataTabungan'
+import PengelolaKelolaLapakPenjualan from './pages/PengelolaKelolaLapakPenjualan'
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="/data-pencarian-pengelola" element={<PengelolaDataPencarian/>}/>
           <Route path="/data-pencarian-pengelola/edit" element={<PengelolaDataPencarianEdit/>}/>
           <Route path="/data-tabungan-pengelola" element={<PengelolaDataTabungan/>}/>
+          <Route path="/kelola-lapak-penjualan-pengelola" element={<PengelolaKelolaLapakPenjualan/>}/>
         </Routes>
     </div>
   );

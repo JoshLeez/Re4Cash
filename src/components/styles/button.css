@@ -18,7 +18,8 @@
 
 /* button-200 */
 .btn-primary-long,
-.btn-secondary-long {
+.btn-secondary-long,
+.btn-primary-long-green {
     width: 200px;
     height: 44px;
     display: flex;
@@ -52,7 +53,8 @@
 .btn-secondary-green,
 .btn-tertiary,
 .btn-batal,
-.btn-ubah {
+.btn-ubah,
+.btn-primary-long-green {
     color: #FFFFFF;
     font-weight: 500;
     font-size: 16px;
@@ -75,14 +77,16 @@
 
 /* button-color-green */
 .btn-primary-green,
-.btn-ubah {
+.btn-ubah,
+.btn-primary-long-green {
     background: #0EA601;
     border-radius: 5px;
     border: none;
 }
 
 .btn-primary-green:hover,
-.btn-ubah:hover {
+.btn-ubah:hover,
+.btn-primary-long-green {
     background: #0A8200;
 }
 

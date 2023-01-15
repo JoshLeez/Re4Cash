@@ -49,19 +49,6 @@ table tr:nth-child(odd) {
     -webkit-border-radius: 0 6px 0 0;
 }
 
-/* #tabel-pengelola-datapenjualan td:first-child {
-    border-radius: 0 0 6px 0;
-    -moz-border-radius: 0 0 6px 0;
-    -webkit-border-radius: 0 0 6px 0;
-}
-
-#tabel-pengelola-datapenjualan td:last-child {
-    border-radius: 0 0 0 6px;
-    -moz-border-radius: 0 0 0 6px;
-    -webkit-border-radius: 0 0 0 6px;
-} */
-
-
 .tabel-kolom-aksibutton-edithapus {
     display: flex;
     gap: 4px;
