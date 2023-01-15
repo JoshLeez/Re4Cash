@@ -1,10 +1,10 @@
-import { HOCmarketplace } from "../components/HOC"
+import { HOCAkunProfile} from "../components/HOC"
 import ProfileCard from "../components/ProfileCard"
 import "./styles/notifikasi.css"
 
 const Notifikasi = () => {
   return (
-    <HOCmarketplace title="Profile | Notifikasi">
+    <HOCAkunProfile title="Profile | Notifikasi">
         <div className="container-akun-profile">
             <ProfileCard/>
             <div className="container-notifikasi">
@@ -81,7 +81,7 @@ const Notifikasi = () => {
                 </section>
             </div>
         </div>
-    </HOCmarketplace>
+    </HOCAkunProfile>
   
   )
 }

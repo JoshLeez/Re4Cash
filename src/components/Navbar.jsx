@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       <header className="container-navbar">
-        <nav className="navbar-wrapper">
+        <nav className="navbar-wrapper ">
           <Link to="/">
             <img src="/Re4CashYW.svg" />
           </Link>
@@ -46,8 +46,9 @@ export const Navbarmarketplace = () => {
   const [word, setWord] = useState("Semua");
 
   return (
-    <header className="container-navbar">
-      <nav className="navbar-wrapper">
+    <header className="container-navbar marketplace">
+      <nav className="navbar-outside">
+        <div className="navbar-wrapper menu">
         <Link to="/">
           <img src="/Re4CashYW.svg" />
         </Link>
@@ -67,6 +68,7 @@ export const Navbarmarketplace = () => {
           </div>
           {user && <OverlayUser setUser={setUser} user={user} />}
         </div>
+        </div>
       </nav>
       <menu className="bottom-navbar">
         <div className="bottom-left-navbar">
@@ -84,6 +86,39 @@ export const Navbarmarketplace = () => {
   );
 };
 
+
+export const NavbarAkunProfile = () => {
+
+  const [user, setUser] = useState(false);
+
+  return (
+      <header className="container-navbar">
+     <nav className="navbar-wrapper ">
+          <Link to="/">
+            <img src="/Re4CashYW.svg" />
+          </Link>
+          <Link to="/edukasi">Edukasi</Link>
+          <div className="navbar-search-filter">
+            <input placeholder="Search" />
+            <button className="search-button-navbar">
+              <Unicons.UilSearchAlt color="#f5f5f5" />
+            </button>
+          </div>
+          <Unicons.UilShoppingCart color="#FFAF00" size="32px" />
+          <Unicons.UilStore color="#FFAF00" size="32px" />
+          <div className="wrapper-profile-navbar">
+            <div className="profile-navbar" onClick={() => setUser(!user)}>
+              <Unicons.UilUserCircle color="#FFAF00" size="32px" />
+              <h6>Hi, Udin</h6>
+            </div>
+            {user && <OverlayUser setUser={setUser} user={user} />}
+          </div>
+        </nav> 
+      </header>
+  )
+}
+
+
 export const Navbardashboardpengelola = () => {
   const [pengelola, setPengelola] = useState(false);
 
@@ -93,7 +128,6 @@ export const Navbardashboardpengelola = () => {
         <UilSearch size="24px" color="#FFAF00"/>
         <input placeholder="Search"/>
       </label>
-      
       <div>
         <div className="wrapper-profile-navbar">
           <div className="profile-navbar" onClick={() => setPengelola(!pengelola)}>

@@ -1,12 +1,12 @@
 import React from 'react'
 import HistoryPesanan from '../components/HistoryPesanan'
-import { HOCmarketplace } from '../components/HOC'
+import { HOCAkunProfile} from '../components/HOC'
 import ProfileCard from '../components/ProfileCard'
 import "./styles/history.css"
 
 const History = () => {
   return (
-    <HOCmarketplace title="Profile | History">
+    <HOCAkunProfile title="Profile | History">
         <div className="container-akun-profile">
             <ProfileCard />
             <section className="akun-profile-right-content">
@@ -16,7 +16,7 @@ const History = () => {
 
         </div>
 
-    </HOCmarketplace>
+    </HOCAkunProfile>
   )
 }
 

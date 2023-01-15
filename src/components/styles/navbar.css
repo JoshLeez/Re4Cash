@@ -3,9 +3,20 @@
 .container-navbar {
     width: 100%;
     background: #FFFFFF;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     position: fixed;
     z-index: 5;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container-navbar.marketplace{
+    border-bottom: 1px solid #F2A600;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.container-navbar > .navbar-outside{
+    background: #FFFFFF;
+    width: 100%;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-wrapper {
@@ -18,6 +29,10 @@
     font-weight: 600;
     font-size: 16px;
     position: relative;
+}
+
+.navbar-wrapper.menu{
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-wrapper>a {
@@ -81,6 +96,9 @@ a.active {
     padding-top: 8em;
 }
 
+#zeus-header-akun{
+    padding-top: 4.2em;
+}
 
 .navbar-search-filter {
     display: flex;

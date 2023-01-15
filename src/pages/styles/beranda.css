@@ -279,6 +279,7 @@
     text-decoration: none;
     color:black;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .iconify-hover > iconify-icon{
@@ -288,28 +289,23 @@
 @keyframes going-back {
     0%{
         transform: translateX(140%);
-        opacity:0.5;
     }
     100%{
         transform: translateX(0%);
-        opacity:1;
     }
 }
 
 .iconify-hover:hover iconify-icon{
     animation: going-left .3s ease-in-out;
     transform: translateX(140%);
-    opacity:0;
 }
 
 @keyframes going-left {
     0%{
         transform: translateX(0%);
-        opacity:1;
     }
     100%{
         transform: translateX(140%);
-        opacity:0.5;
     }
 }
 

@@ -1,4 +1,4 @@
-import { HOCmarketplace } from "../components/HOC"
+import { HOCAkunProfile } from "../components/HOC"
 import ProfileCard from "../components/ProfileCard"
 import StatusTransaksi from "../components/StatusTransaksi"
 import "./styles/akunprofile.css"
@@ -58,7 +58,7 @@ const AkunProfile = () => {
   const className4 = active.active4 ? "pesanan-saya-menu active" : "pesanan-saya-menu" 
 
   return (
-    <HOCmarketplace title="Profile | Profile Saya">
+    <HOCAkunProfile title="Profile | Profile Saya">
         <div className="container-akun-profile">
             <ProfileCard/>
             <section className="akun-profile-right-content">
@@ -97,7 +97,7 @@ const AkunProfile = () => {
               <ProfileSetting/>
             </section>
         </div>
-    </HOCmarketplace>
+    </HOCAkunProfile>
   )
 }
 

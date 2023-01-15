@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import { HOCmarketplace } from "../components/HOC"
+import { HOCAkunProfile} from "../components/HOC"
 import ProfileCard from "../components/ProfileCard"
 import "./styles/tabungan.css";
 import { useState } from "react";
@@ -11,7 +11,7 @@ const Tabungan = () => {
 const [nav, setNav] = useState(true)
 
   return (
-    <HOCmarketplace title="Profile | Tabungan">
+    <HOCAkunProfile title="Profile | Tabungan">
         <div className="container-akun-profile">
             <ProfileCard/>
             <section className="tabungan-right-content">
@@ -50,7 +50,7 @@ const [nav, setNav] = useState(true)
                 </div>
             </section>
         </div>
-    </HOCmarketplace>
+    </HOCAkunProfile>
   )
 }
 
