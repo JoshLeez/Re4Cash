@@ -9,12 +9,13 @@ import {
 import { Item } from "../components/ItemKg";
 import CustomDropDown from "../components/CustomDropDown";
 import { useState } from "react";
-import { GantiAlamat, MetodeTarik } from "../components/OverlayUser";
+import { GantiAlamat, LengkapDataDiri, MetodeTarik } from "../components/OverlayUser";
 
 export const Checkout = () => {
   
   const [model, setModel] = useState(false);
   const [modelAlamat, setModelAlamat] = useState(false)
+  const [lengkapData, setLengkapData] = useState(false)
 
   return (
     <HOCCheckout title="Checkout Penjualan | Re4Cash">
@@ -154,11 +155,12 @@ export const Checkout = () => {
               <h6>1.800</h6>
             </div>
           </div>
-          <button className="btn-checkout">Beli Rp. 0</button>
+          <button onClick={()=>setLengkapData(!lengkapData)} className="btn-checkout">Beli Rp. 0</button>
         </aside>
       </div>
       {model && <MetodeTarik setModel={setModel}/>}
       {modelAlamat && <GantiAlamat setModelAlamat={setModelAlamat}/>}
+      {lengkapData && <LengkapDataDiri setLengkapData={setLengkapData}/>}
     </HOCCheckout>
   );
 };

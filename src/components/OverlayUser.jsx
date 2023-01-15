@@ -226,3 +226,62 @@ useEffect(()=>{
     </div>
   )
 }
+
+
+export const LengkapDataDiri = ({setLengkapData}) => {
+
+  const menuRef = useRef()
+
+  useEffect(()=>{
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setLengkapData(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+  }
+  })
+
+  return (
+    <div className='overlay-container'>
+       <div ref={menuRef}  className='model-tarik-point'>
+       <iconify-icon onClick={()=>setLengkapData(false)} icon="maki:cross"/>
+          <h2>Lengkapi Data Diri</h2>
+          <div className='overlay-total-pembelian'>
+            <h6>Total Pembelian</h6>
+            <div className="overlay-total-bonus">
+              <div className='detail-total-bonus'>
+                <h6>Total Harga</h6>
+                <span>Rp. 35.000</span>
+              </div>
+              <div className='detail-total-bonus'>
+                <h6>Bonus Point</h6>
+                <span>600</span>
+              </div>
+            </div>
+          </div>
+          <form>
+              <div className='form-lengkap-data'>
+                <p>
+                  Jika anda belum masuk di Re4Cash, segera isi data diri
+                   anda dibawah ini untuk keperluan distribusi atau 
+                   <Link>masuk disini!</Link>
+                </p>
+                <div className='input-lengkap-data'>
+                  <input type="text" placeholder='Nama Lengkap'/>
+                  <input type="text" placeholder='Jenis Kelamin'/>
+                  <input type="text" placeholder='Email'/>
+                  <input type="text" placeholder='No Handphone'/>
+                  <input type="text" placeholder='No. Rekening/Akun E-Wallet'/>
+                  <input type="text" placeholder='Nama Rekening Tujuan'/>
+                </div>
+                <button className=''>Lanjutkan Beli Rp. 35.000</button>
+              </div>
+            </form>
+        </div>
+    </div>
+  )
+}
