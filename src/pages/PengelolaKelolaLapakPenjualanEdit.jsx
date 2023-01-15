@@ -8,7 +8,7 @@ import "./styles/pengelolakelolalapakpenjualantambah.css";
 import { useState } from "react";
 import { ButtonTambah } from "../components/OverlayPengelola";
 
-const PengelolaKelolaLapakPenjualanTambah = () => {
+const PengelolaKelolaLapakPenjualanEdit = () => {
 
   const [buttontambah, setButtonTambah] = useState(false)
 
@@ -20,14 +20,14 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
           <Navbardashboardpengelola />
           <div className="wrapper-dashboard-utama">
             <section className="wrapper-form-dashboard-kelolalapakpenjualan-tambah">
-              <h4>Tambah Data Penjualan</h4>
+              <h4>Ubah Detail Produk</h4>
               <form className="card-formtambah-dashpengelola-kelolalapakpenjualan">
                 <div className="grup-formtambah-dashpengelola-kelolalapakpenjualan">
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Jenis Produk</label>
                     <div className="formtambah-radio">
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio"/>
+                        <input type="radio" checked/>
                         <label>Daur Ulang</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
@@ -39,24 +39,33 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Foto Produk</label>
                     {/* <input type="file"/> */}
-                    <div className="form-uploadpicture">
-                      <iconify-icon icon="mdi:file-image-plus-outline" />
-                      <p>Tambahkan foto (1/5)</p>
-                    </div>
+                    {/* <div className="wrapper-form-uploadpicture"> */}
+                        <img src="prevtabel-dashuatama-potbunga.png" />
+                        <div className="form-uploadpicture">
+                        <iconify-icon icon="mdi:file-image-plus-outline" />
+                        <p>Tambahkan foto (1/5)</p>
+                        </div>
+                    {/* </div> */}
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Nama Produk</label>
-                    <input type="text"/>
+                    <input type="text" placeholder="Pot dari bahan daur ulang"/>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Deskripsi</label>
-                    <textarea></textarea>
+                    <textarea placeholder="“Pot Bunga Ramah Lingkungan  merupakan Pot yang memiliki fungsi Menanam Bunga  mini yang pas untuk hiasan kamar anda menjadi lebih estetik.  
+
+“Pot Bunga Ramah Lingkungan tersedia dalam berbagai ukuran dari kecil hingga besar  dengan warna hitam, merah marun, cokelat, dan abu dan masih banyak varian warna lain. Warna yang terlihat pada foto sesuai dengan warna aslinya. Apabila terdapat perbedaan warna, disebabkan oleh pengaturan monitor dan efek cahaya pada layar monitor Anda.”
+
+“Setiap pembelian Pot Bunga Ramah Lingkungan sebanyak 5 pcs, Anda akan mendapatkan potongan harga sebesar 25%. Dapatkan tambahan gratis biaya kirim dengan pembelian minimal 7 pcs.”
+
+“Dapatkan jaminan 100% uang kembali jika produk yang Anda terima tidak sesuai foto dan deskripsi kami.”"></textarea>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Harga</label>
                     <div className="form-inputharga">
                       <span className="form-inputharga-text">Rp</span>
-                      <input type="text" className="form-inputharga-kolom"/>
+                      <input type="text" placeholder="20.000" className="form-inputharga-kolom"/>
                     </div>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
@@ -67,7 +76,7 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
                         <label>Kg</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio"/>
+                        <input type="radio" checked/>
                         <label>Pcs</label>
                       </div>
                     </div>
@@ -80,7 +89,7 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
                         <label>Organik</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio"/>
+                        <input type="radio" checked/>
                         <label>Anorganik</label>
                       </div>
                     </div>
@@ -88,7 +97,6 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Sub Kategori</label>
                     <select>
-                      <option value="dikemas"></option>
                       <option value="dikemas">Plastik</option>
                       <option value="dikirim">Botol Plastik</option>
                       <option value="selesai">Botol Kaca</option>
@@ -99,12 +107,17 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Stok Barang</label>
-                    <input type="number" className="formtambah-number"/>
+                    <input type="number" placeholder="20" className="formtambah-number"/>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label>Model</label>
                     {/* <input type="text" placeholder="Rp 20,000.00"/> */}
                     <div className="form-inputmodel">
+                      <span className="form-inputmodel-pilihan">Biru Dove</span>
+                      <span className="form-inputmodel-pilihan">Oren</span>
+                      <span className="form-inputmodel-pilihan">Hitam</span>
+                      <span className="form-inputmodel-pilihan">Coklat</span>
+                      <span className="form-inputmodel-pilihan">Biru</span>
                       <span className="form-inputmodel-pilihan">+</span>
                     </div>
                   </div>
@@ -116,11 +129,11 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
                         <label>Kami Antar</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="checkbox"/>
+                        <input type="checkbox" checked/>
                         <label>Ambil Sendiri</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="checkbox"/>
+                        <input type="checkbox" checked/>
                         <label>Kurir</label>
                       </div>
                     </div>
@@ -141,4 +154,4 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
   );
 };
 
-export default PengelolaKelolaLapakPenjualanTambah;
+export default PengelolaKelolaLapakPenjualanEdit;

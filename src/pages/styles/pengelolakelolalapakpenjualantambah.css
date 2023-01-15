@@ -97,6 +97,12 @@ select {
     padding: 10px;
 }
 
+.wrapper-form-uploadpicture {
+    border: 1px solid black;
+    display: flex;
+    gap: 19px;
+}
+
 .form-uploadpicture {
     width: 100px;
     height: 100px;
@@ -117,7 +123,6 @@ select {
 }
 
 .form-uploadpicture>p {
-    border: 1px solid red;
     font-weight: 400;
     font-size: 14px;
     text-align: center;
