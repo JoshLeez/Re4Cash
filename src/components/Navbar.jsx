@@ -28,10 +28,10 @@ const Navbar = () => {
             <NavLink to="/marketplace">Marketplace</NavLink>
           </div>
           <div className="right-navbar">
-            <Button onClick={()=>setLogin(true)} type="SECONDARY" >
+            <Button onClick={()=>setLogin(true)} tipe="SECONDARY" type="submit">
               Masuk
             </Button>
-            <Button tipe="PRIMARY" onClick={() => setRegister(true)}>Daftar</Button>
+            <Button tipe="PRIMARY" onClick={() => setRegister(true)} type="button">Daftar</Button>
           </div>
         </nav>
       </header>

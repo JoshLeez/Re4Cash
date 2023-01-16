@@ -121,8 +121,8 @@ export const ItemNumber = () => {
           <h4>Rp. 10.000</h4>
         </div>
         <div className="card-button-buy-cart">
-          <Button type="PRIMARY_LONG">Menabung</Button>
-          <Button type="SECONDARY_LONG">Jual</Button>
+          <Button tipe="PRIMARY_LONG">Menabung</Button>
+          <Button tipe="SECONDARY_LONG">Jual</Button>
         </div>
         <div className="card-profile-verifikasi">
           <img src="/profile-mitra.svg" />

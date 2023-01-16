@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 
+
 export const Register = ({ setRegister }) => {
   const menuRef = useRef();
 
