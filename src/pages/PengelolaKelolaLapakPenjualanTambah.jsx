@@ -128,7 +128,7 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
                 </div>
                 <div className="button-formtambah-dashpengelola-kelolalapakpenjualan">
                   <LinkButton type="BUTTON_BATAL" to="/kelola-lapak-penjualan-pengelola">Batal</LinkButton>
-                  <Button onClick={()=>setButtonTambah(!buttontambah)} type="BUTTON_TAMBAH">Tambah</Button>
+                  <Button onClick={()=>setButtonTambah(!buttontambah)} tipe="BUTTON_TAMBAH">Tambah</Button>
                 </div>
               </form>                
             </section>

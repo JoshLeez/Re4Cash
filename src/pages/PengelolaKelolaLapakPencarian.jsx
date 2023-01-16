@@ -59,7 +59,7 @@ const PengelolaKelolaLapakPencarian = () => {
                                 <LinkButton type="AKSI_EDIT" to="/kelola-lapak-pencarian-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
-                                <Button type="AKSI_HAPUS">
+                                <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
                             </div>

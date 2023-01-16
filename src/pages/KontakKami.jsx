@@ -28,7 +28,7 @@ const KontakKami = () => {
                     <textarea placeholder='Pesan Anda'/>
 
                 </div>
-                <Button type="PRIMARY">Kirim</Button>
+                <Button tipe="PRIMARY">Kirim</Button>
             </div>
             <div className="kontakkami-content-hubungikami">
                 <h1>Hubungi Kami</h1>

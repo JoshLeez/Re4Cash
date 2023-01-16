@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./styles/button.css";
 import {useState, useEffect} from 'react';
 
-const Button = ({ type, children, ...props }) => {
+const Button = ({ tipe, children, ...props }) => {
   const BUTTON_TYPE = {
     PRIMARY: "btn-primary",
     SECONDARY: "btn-secondary",
@@ -24,7 +24,7 @@ const Button = ({ type, children, ...props }) => {
   };
 
   return (
-    <button className={BUTTON_TYPE[type || "PRIMARY"]} {...props}>
+    <button className={BUTTON_TYPE[tipe || "PRIMARY"]} {...props}>
       {children}
     </button>
   );

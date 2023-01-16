@@ -56,7 +56,7 @@ const PengelolaProfilAkun = () => {
                                 <input type="text" placeholder="6751 3341 9863 12 1"/>
                             </div>
                             <div className="button-form-dashpengelola-profilakun">
-                                <Button type="PRIMARY">Update Profile</Button>
+                                <Button tipe="PRIMARY">Update Profile</Button>
                             </div>
                         </div>
                     </form>
@@ -86,7 +86,7 @@ const PengelolaProfilAkun = () => {
                                         </div>
                                     </div>
                                 </div>                            </div>
-                            <Button type="PRIMARY">Kirim</Button>
+                            <Button tipe="PRIMARY">Kirim</Button>
                         </div>
                     </section>
                 </div>

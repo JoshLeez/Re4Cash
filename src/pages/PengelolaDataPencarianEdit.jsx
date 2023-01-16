@@ -63,7 +63,7 @@ const PengelolaDataPencarianEdit = () => {
               </form>                
               <div className="button-formedit-dashpengelola-datapenjualan">
                 <LinkButton type="BUTTON_BATAL" to="/data-pencarian-pengelola">Batal</LinkButton>
-                <Button onClick={()=>setButtonUbah(!buttonubah)} type="BUTTON_UBAH">Ubah</Button>
+                <Button onClick={()=>setButtonUbah(!buttonubah)} tipe="BUTTON_UBAH">Ubah</Button>
               </div>
             </section>
           </div>

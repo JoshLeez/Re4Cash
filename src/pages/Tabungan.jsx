@@ -34,7 +34,7 @@ const [nav, setNav] = useState(true)
                         <div onClick={()=>setNav(false)}  className={nav ? "nav-total-tabungan" : "nav-total-tabungan active" }>
                             <h2>Total Point</h2>
                             <h1>850.000</h1>
-                            <Button type="PRIMARY_GREEN">Tarik Point</Button>
+                            <Button tipe="PRIMARY_GREEN">Tarik Point</Button>
                             <span>1 Point = 1 Rupiah</span>
                         </div>
                     </div>

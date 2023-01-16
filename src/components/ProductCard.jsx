@@ -41,11 +41,11 @@ export const ProductNumber = () => {
             {/* baris keempat */}
             <h4>Model</h4>
             <div className="product-model">
-              <Button type="BUTTON_MODEL">Biru Dove</Button>
-              <Button type="BUTTON_MODEL">Oren</Button>
-              <Button type="BUTTON_MODEL">Hitam</Button>
-              <Button type="BUTTON_MODEL">Coklat</Button>
-              <Button type="BUTTON_MODEL">Biru</Button>
+              <Button tipe="BUTTON_MODEL">Biru Dove</Button>
+              <Button tipe="BUTTON_MODEL">Oren</Button>
+              <Button tipe="BUTTON_MODEL">Hitam</Button>
+              <Button tipe="BUTTON_MODEL">Coklat</Button>
+              <Button tipe="BUTTON_MODEL">Biru</Button>
             </div>
           </div>
           <div className="product-share">
@@ -103,11 +103,11 @@ export const ProductKg = () => {
           {/* baris keempat */}
           <h4>Model</h4>
           <div className="product-model">
-            <Button type="BUTTON_MODEL">Biru Dove</Button>
-            <Button type="BUTTON_MODEL">Oren</Button>
-            <Button type="BUTTON_MODEL">Hitam</Button>
-            <Button type="BUTTON_MODEL">Coklat</Button>
-            <Button type="BUTTON_MODEL">Biru</Button>
+            <Button tipe="BUTTON_MODEL">Biru Dove</Button>
+            <Button tipe="BUTTON_MODEL">Oren</Button>
+            <Button tipe="BUTTON_MODEL">Hitam</Button>
+            <Button tipe="BUTTON_MODEL">Coklat</Button>
+            <Button tipe="BUTTON_MODEL">Biru</Button>
           </div>
         </div>
         <div className="product-share">

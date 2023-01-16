@@ -60,8 +60,8 @@ const ItemKg = () => {
           <h4>Rp. 10.000</h4>
         </div>
         <div className="card-button-buy-cart">
-          <Button type="PRIMARY_LONG">Tambah ke Keranjang</Button>
-          <Button type="SECONDARY_LONG">Beli</Button>
+          <Button tipe="PRIMARY_LONG">Tambah ke Keranjang</Button>
+          <Button tipe="SECONDARY_LONG">Beli</Button>
         </div>
         <div className="card-profile-verifikasi">
           <img src="/profile-mitra.svg" />

@@ -44,7 +44,7 @@ const PengelolaDataPencarian = () => {
                                 <LinkButton type="AKSI_EDIT" to="/data-pencarian-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
-                                <Button type="AKSI_HAPUS">
+                                <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
                             </div>
@@ -65,7 +65,7 @@ const PengelolaDataPencarian = () => {
                                 <LinkButton type="AKSI_EDIT" to="/data-pencarian-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
-                                <Button type="AKSI_HAPUS">
+                                <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
                             </div>
@@ -86,7 +86,7 @@ const PengelolaDataPencarian = () => {
                                 <LinkButton type="AKSI_EDIT" to="/data-pencarian-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
-                                <Button type="AKSI_HAPUS">
+                                <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
                             </div>
@@ -107,7 +107,7 @@ const PengelolaDataPencarian = () => {
                                 <LinkButton type="AKSI_EDIT" to="/data-pencarian-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
-                                <Button type="AKSI_HAPUS">
+                                <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
                             </div>
@@ -128,7 +128,7 @@ const PengelolaDataPencarian = () => {
                                 <LinkButton type="AKSI_EDIT" to="/data-pencarian-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
                                 </LinkButton>
-                                <Button type="AKSI_HAPUS">
+                                <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
                             </div>

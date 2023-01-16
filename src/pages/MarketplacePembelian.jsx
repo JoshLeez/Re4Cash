@@ -126,7 +126,7 @@ const MarketplacePembelian = () => {
                 </label>
               </div>
             </div>
-            <Button type="SECONDARY">Reset</Button>
+            <Button tipe="SECONDARY">Reset</Button>
           </div>
           <h4>Disarankan untuk memilih kota terdekat anda!</h4>
         </aside>

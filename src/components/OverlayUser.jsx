@@ -85,7 +85,7 @@ export const EditProfile = ({setEdit}) => {
           <input type="datetime-local"/>
           <input type="text"/>
           <input type="text"/>
-          <Button type="PRIMARY">Simpan</Button>
+          <Button tipe="PRIMARY">Simpan</Button>
         </div>
       </div>
     </div>
@@ -128,7 +128,7 @@ export const TambahAlamat = ({setAlamat}) => {
                 <input type="text" placeholder='Provinsi'/>
                 <input type="text" placeholder='Kode Pos'/>
               </div>
-              <Button type="PRIMARY">Tambah</Button>
+              <Button tipe="PRIMARY">Tambah</Button>
             </div>
           </div>
       </div>

@@ -31,7 +31,7 @@ const Navbar = () => {
             <Button onClick={()=>setLogin(true)} type="SECONDARY" >
               Masuk
             </Button>
-            <Button type="PRIMARY" onClick={() => setRegister(true)}>Daftar</Button>
+            <Button tipe="PRIMARY" onClick={() => setRegister(true)}>Daftar</Button>
           </div>
         </nav>
       </header>
