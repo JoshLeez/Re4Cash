@@ -7,18 +7,14 @@
 .wrapper-konten-dashboard-datatabungan>h4 {
     font-weight: 500;
     font-size: 18px;
-
-    border: 1px solid black;
 }
 
 .wrapper-konten-isi-dashboard-datatabungan {
-    border: 1px solid black;
     display: flex;
     gap: 28px;
 }
 
 .wrapper-konten-isikiri-dashboard-datatabungan {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -30,8 +26,6 @@
     display: flex;
     align-items: center;
     gap: 12px;
-
-    border: 1px solid black;
 }
 
 .namatabel-dashpengelola-datatabungan>input {
@@ -95,7 +89,6 @@ table tr:nth-child(odd) {
 }
 
 .wrapper-konten-isikanan-dashboard-datatabungan {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 43px;
@@ -103,16 +96,14 @@ table tr:nth-child(odd) {
     width: 371px;
 }
 
-.wrapper-konten-isikanan-dashboard-datatabungan.active{
-    gap:20px;
+.wrapper-konten-isikanan-dashboard-datatabungan.active {
+    gap: 20px;
 }
 
 .wrapper-konten-isikanan-dashboard-datatabungan>h5 {
     font-weight: 500;
     font-size: 18px;
     color: #131212;
-
-    border: 1px solid black;
 }
 
 .card-konten-isikanan-dashboard-datatabungan {
@@ -139,30 +130,30 @@ table tr:nth-child(odd) {
 }
 
 /* Data Penabung */
-.container-data-penabung{
-    width:auto;
-    display:flex;
+.container-data-penabung {
+    width: auto;
+    display: flex;
     flex-direction: column;
-    gap:6px;
+    gap: 6px;
 }
 
-.top-data-tabungan{
-    display:flex;
+.top-data-tabungan {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right:55px;
+    margin-right: 55px;
 }
 
-.top-data-tabungan > iconify-icon{
+.top-data-tabungan>iconify-icon {
     cursor: pointer;
 }
 
-.top-data-tabungan > h6{
+.top-data-tabungan>h6 {
     font-weight: 700;
     font-size: 16px;
 }
 
-.container-table-data-penabung{
+.container-table-data-penabung {
     width: 335px;
     max-height: 217.6px;
     overflow-y: scroll;
@@ -170,21 +161,21 @@ table tr:nth-child(odd) {
     border-radius: 10px;
 }
 
-.container-table-data-penabung::-webkit-scrollbar{
+.container-table-data-penabung::-webkit-scrollbar {
     width: 10px;
 }
 
-.container-table-data-penabung::-webkit-scrollbar-track{
+.container-table-data-penabung::-webkit-scrollbar-track {
     background: #D9D9D9;
     border-radius: 5px;
 }
 
-.container-table-data-penabung::-webkit-scrollbar-thumb{
+.container-table-data-penabung::-webkit-scrollbar-thumb {
     background: #0EA601;
     border-radius: 5px;
 }
 
-#tabel-data-penabung{
+#tabel-data-penabung {
     border-collapse: collapse;
 }
 
@@ -197,23 +188,23 @@ table tr:nth-child(odd) {
 }
 
 
-#tabel-data-penabung tr td{
+#tabel-data-penabung tr td {
     text-align: center;
     padding: 10px;
     font-weight: 400;
     font-size: 14px;
 }
 
-#tabel-data-penabung tr th{
+#tabel-data-penabung tr th {
     background-color: none;
-    
+
 }
 
-table tr:nth-child(odd){
+table tr:nth-child(odd) {
     background-color: #F1F1F1;
 }
 
-table tr:nth-child(even){
+table tr:nth-child(even) {
     background: #FFFFFF
 }
 

@@ -6,11 +6,11 @@ import SideBarDashPengelola from "../components/SideBarDashPengelola";
 import "./styles/dashboardpengelola.css";
 import "./styles/pengelolakelolalapaktambahedit.css";
 import { useState } from "react";
-import { ButtonUbah } from "../components/OverlayPengelola";
+import { ButtonTambah } from "../components/OverlayPengelola";
 
-const PengelolaKelolaLapakPenjualanEdit = () => {
+const PengelolaKelolaLapakPencarianTambah = () => {
 
-  const [buttonubah, setButtonUbah] = useState(false)
+  const [buttontambah, setButtonTambah] = useState(false)
 
   return (
     <HOCdashboardpengelola title="Dashboard Pengelola">
@@ -20,14 +20,14 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
           <Navbardashboardpengelola />
           <div className="wrapper-dashboard-utama">
             <section className="wrapper-form-dashboard-kelolalapakpenjualan-tambah">
-              <h4>Ubah Detail Produk Lapak Penjualan</h4>
+              <h4>Tambah Data Lapak Pencarian</h4>
               <form className="card-formtambah-dashpengelola-kelolalapakpenjualan">
                 <div className="grup-formtambah-dashpengelola-kelolalapakpenjualan">
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Jenis Produk</label>
                     <div className="formtambah-radio">
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio" checked/>
+                        <input type="radio"/>
                         <label>Daur Ulang</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
@@ -39,33 +39,24 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Foto Produk</label>
                     {/* <input type="file"/> */}
-                    {/* <div className="wrapper-form-uploadpicture"> */}
-                        <img src="prevtabel-dashuatama-potbunga.png" />
-                        <div className="form-uploadpicture">
-                        <iconify-icon icon="mdi:file-image-plus-outline" />
-                        <p>Tambahkan foto (1/5)</p>
-                        </div>
-                    {/* </div> */}
+                    <div className="form-uploadpicture">
+                      <iconify-icon icon="mdi:file-image-plus-outline" />
+                      <p>Tambahkan foto (1/5)</p>
+                    </div>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
-                    <label><p className="tanda-required">*</p>Nama Produk</label>
-                    <input type="text" placeholder="Pot dari bahan daur ulang"/>
+                    <label><p className="tanda-required">*</p>Judul Pencarian</label>
+                    <input type="text"/>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Deskripsi</label>
-                    <textarea placeholder="“Pot Bunga Ramah Lingkungan  merupakan Pot yang memiliki fungsi Menanam Bunga  mini yang pas untuk hiasan kamar anda menjadi lebih estetik.  
-
-“Pot Bunga Ramah Lingkungan tersedia dalam berbagai ukuran dari kecil hingga besar  dengan warna hitam, merah marun, cokelat, dan abu dan masih banyak varian warna lain. Warna yang terlihat pada foto sesuai dengan warna aslinya. Apabila terdapat perbedaan warna, disebabkan oleh pengaturan monitor dan efek cahaya pada layar monitor Anda.”
-
-“Setiap pembelian Pot Bunga Ramah Lingkungan sebanyak 5 pcs, Anda akan mendapatkan potongan harga sebesar 25%. Dapatkan tambahan gratis biaya kirim dengan pembelian minimal 7 pcs.”
-
-“Dapatkan jaminan 100% uang kembali jika produk yang Anda terima tidak sesuai foto dan deskripsi kami.”"></textarea>
+                    <textarea></textarea>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Harga</label>
                     <div className="form-inputharga">
                       <span className="form-inputharga-text">Rp</span>
-                      <input type="text" placeholder="20.000" className="form-inputharga-kolom"/>
+                      <input type="text" className="form-inputharga-kolom"/>
                     </div>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
@@ -76,7 +67,7 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                         <label>Kg</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio" checked/>
+                        <input type="radio"/>
                         <label>Pcs</label>
                       </div>
                     </div>
@@ -89,7 +80,7 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                         <label>Organik</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio" checked/>
+                        <input type="radio"/>
                         <label>Anorganik</label>
                       </div>
                     </div>
@@ -97,6 +88,8 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Sub Kategori</label>
                     <select>
+                      <option value=""></option>
+                      <option value="minyak">Minyak</option>
                       <option value="plastik">Plastik</option>
                       <option value="botol plastik">Botol Plastik</option>
                       <option value="botol kaca">Botol Kaca</option>
@@ -106,19 +99,16 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                     </select>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
-                    <label><p className="tanda-required">*</p>Stok Barang</label>
-                    <input type="number" placeholder="20" className="formtambah-number"/>
-                  </div>
-                  <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
-                    <label>Model</label>
-                    {/* <input type="text" placeholder="Rp 20,000.00"/> */}
-                    <div className="form-inputmodel">
-                      <span className="form-inputmodel-pilihan">Biru Dove</span>
-                      <span className="form-inputmodel-pilihan">Oren</span>
-                      <span className="form-inputmodel-pilihan">Hitam</span>
-                      <span className="form-inputmodel-pilihan">Coklat</span>
-                      <span className="form-inputmodel-pilihan">Biru</span>
-                      <span className="form-inputmodel-pilihan">+</span>
+                    <label><span className="tanda-required">*</span>Menabung</label>
+                    <div className="formtambah-radio">
+                      <div className="formtambah-radio-pilihan">
+                        <input type="radio"/>
+                        <label>Tersedia</label>
+                      </div>
+                      <div className="formtambah-radio-pilihan">
+                        <input type="radio"/>
+                        <label>Tidak Tersedia</label>
+                      </div>
                     </div>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
@@ -129,19 +119,19 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                         <label>Kami Antar</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="checkbox" checked/>
+                        <input type="checkbox"/>
                         <label>Ambil Sendiri</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="checkbox" checked/>
+                        <input type="checkbox"/>
                         <label>Kurir</label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="button-formtambah-dashpengelola-kelolalapakpenjualan">
-                  <LinkButton type="BUTTON_BATAL" to="/kelola-lapak-penjualan-pengelola">Batal</LinkButton>
-                  <Button onClick={()=>setButtonUbah(!buttonubah)} type="BUTTON_UBAH">Ubah</Button>
+                  <LinkButton type="BUTTON_BATAL" to="/kelola-lapak-pencarian-pengelola">Batal</LinkButton>
+                  <Button onClick={()=>setButtonTambah(!buttontambah)} type="BUTTON_TAMBAH">Tambah</Button>
                 </div>
               </form>                
             </section>
@@ -149,9 +139,9 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
           <Footerdashboardpengelola/>
         </div>
       </div>
-      {buttonubah && <ButtonUbah link='/kelola-lapak-penjualan-pengelola' setButtonUbah={setButtonUbah}/>}
+      {buttontambah && <ButtonTambah link='/kelola-lapak-penjualan-pengelola' setButtonTambah={setButtonTambah}/>}
     </HOCdashboardpengelola>
   );
 };
 
-export default PengelolaKelolaLapakPenjualanEdit;
+export default PengelolaKelolaLapakPencarianTambah;

@@ -4,7 +4,7 @@ import { HOCdashboardpengelola } from "../components/HOC";
 import { Navbardashboardpengelola } from "../components/Navbar";
 import SideBarDashPengelola from "../components/SideBarDashPengelola";
 import "./styles/dashboardpengelola.css";
-import "./styles/pengeloladatapenjualan.css";
+import "./styles/pengeloladatapenjualanpencarian.css";
 
 const PengelolaDataPenjualan = () => {
   return (

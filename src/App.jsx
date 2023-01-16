@@ -26,6 +26,9 @@ import PengelolaKelolaLapakPenjualan from './pages/PengelolaKelolaLapakPenjualan
 import Keranjang from './pages/Keranjang'
 import PengelolaKelolaLapakPenjualanTambah from './pages/PengelolaKelolaLapakPenjualanTambah'
 import PengelolaKelolaLapakPenjualanEdit from './pages/PengelolaKelolaLapakPenjualanEdit'
+import PengelolaKelolaLapakPencarian from './pages/PengelolaKelolaLapakPencarian'
+import PengelolaKelolaLapakPencarianTambah from './pages/PengelolaKelolaLapakPencarianTambah'
+import PengelolaKelolaLapakPencarianEdit from './pages/PengelolaKelolaLapakPencarianEdit'
 
 function App() {
   return (
@@ -58,6 +61,9 @@ function App() {
           <Route path="/keranjang" element={<Keranjang/>}/>
           <Route path="/kelola-lapak-penjualan-pengelola/tambah" element={<PengelolaKelolaLapakPenjualanTambah/>}/>
           <Route path="/kelola-lapak-penjualan-pengelola/edit" element={<PengelolaKelolaLapakPenjualanEdit/>}/>
+          <Route path="/kelola-lapak-pencarian-pengelola" element={<PengelolaKelolaLapakPencarian/>}/>
+          <Route path="/kelola-lapak-pencarian-pengelola/tambah" element={<PengelolaKelolaLapakPencarianTambah/>}/>
+          <Route path="/kelola-lapak-pencarian-pengelola/edit" element={<PengelolaKelolaLapakPencarianEdit/>}/>
         </Routes>
     </>
   );

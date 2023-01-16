@@ -4,7 +4,7 @@ import { HOCdashboardpengelola } from "../components/HOC";
 import { Navbardashboardpengelola } from "../components/Navbar";
 import SideBarDashPengelola from "../components/SideBarDashPengelola";
 import "./styles/dashboardpengelola.css";
-import "./styles/pengelolakelolalapakpenjualantambah.css";
+import "./styles/pengelolakelolalapaktambahedit.css";
 import { useState } from "react";
 import { ButtonTambah } from "../components/OverlayPengelola";
 
@@ -20,7 +20,7 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
           <Navbardashboardpengelola />
           <div className="wrapper-dashboard-utama">
             <section className="wrapper-form-dashboard-kelolalapakpenjualan-tambah">
-              <h4>Tambah Data Penjualan</h4>
+              <h4>Tambah Data Lapak Penjualan</h4>
               <form className="card-formtambah-dashpengelola-kelolalapakpenjualan">
                 <div className="grup-formtambah-dashpengelola-kelolalapakpenjualan">
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
@@ -88,13 +88,13 @@ const PengelolaKelolaLapakPenjualanTambah = () => {
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Sub Kategori</label>
                     <select>
-                      <option value="dikemas"></option>
-                      <option value="dikemas">Plastik</option>
-                      <option value="dikirim">Botol Plastik</option>
-                      <option value="selesai">Botol Kaca</option>
-                      <option value="selesai">Aluminium</option>
-                      <option value="selesai">Kaleng</option>
-                      <option value="selesai">...</option>
+                      <option value=""></option>
+                      <option value="plastik">Plastik</option>
+                      <option value="botol plastik">Botol Plastik</option>
+                      <option value="botol kaca">Botol Kaca</option>
+                      <option value="aluminium">Aluminium</option>
+                      <option value="kaleng">Kaleng</option>
+                      <option value="...">...</option>
                     </select>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">

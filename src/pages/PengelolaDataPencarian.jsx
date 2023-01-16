@@ -4,7 +4,7 @@ import { HOCdashboardpengelola } from "../components/HOC";
 import { Navbardashboardpengelola } from "../components/Navbar";
 import SideBarDashPengelola from "../components/SideBarDashPengelola";
 import "./styles/dashboardpengelola.css";
-import "./styles/pengeloladatapencarian.css";
+import "./styles/pengeloladatapenjualanpencarian.css";
 
 const PengelolaDataPencarian = () => {
   return (
@@ -14,9 +14,9 @@ const PengelolaDataPencarian = () => {
         <div className="dashboard-page-right">
           <Navbardashboardpengelola />
           <div className="wrapper-dashboard-utama">
-            <section className="wrapper-tabel-dashboard-datapencarian">
+            <section className="wrapper-tabel-dashboard-datapenjualan">
                 <h4>Data Pencarian</h4>
-                <table id="tabel-pengelola-datapencarian">
+                <table id="tabel-pengelola-datapenjualan">
                     <tr>
                         <th>No</th>
                         <th>Nama Barang</th>

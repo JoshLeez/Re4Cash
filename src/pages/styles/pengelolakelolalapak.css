@@ -4,14 +4,14 @@
     gap: 24px;
 }
 
-.wrapper-tabel-dashboard-kelolalapakpenjualan>h4 {
-    font-weight: 500;
-    font-size: 18px;
-}
-
 .judul-tabel-dashboard-kelolalapakpenjualan {
     display: flex;
     justify-content: space-between;
+}
+
+.judul-tabel-dashboard-kelolalapakpenjualan>h4 {
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .judul-tabel-dashboard-kelolalapakpenjualan>Button {

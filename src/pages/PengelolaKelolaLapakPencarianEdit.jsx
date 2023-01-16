@@ -8,7 +8,7 @@ import "./styles/pengelolakelolalapaktambahedit.css";
 import { useState } from "react";
 import { ButtonUbah } from "../components/OverlayPengelola";
 
-const PengelolaKelolaLapakPenjualanEdit = () => {
+const PengelolaKelolaLapakPencarianEdit = () => {
 
   const [buttonubah, setButtonUbah] = useState(false)
 
@@ -20,18 +20,18 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
           <Navbardashboardpengelola />
           <div className="wrapper-dashboard-utama">
             <section className="wrapper-form-dashboard-kelolalapakpenjualan-tambah">
-              <h4>Ubah Detail Produk Lapak Penjualan</h4>
+              <h4>Ubah Detail Produk Lapak Pencarian</h4>
               <form className="card-formtambah-dashpengelola-kelolalapakpenjualan">
                 <div className="grup-formtambah-dashpengelola-kelolalapakpenjualan">
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Jenis Produk</label>
                     <div className="formtambah-radio">
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio" checked/>
+                        <input type="radio"/>
                         <label>Daur Ulang</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio"/>
+                        <input type="radio" checked/>
                         <label>Mentahan</label>
                       </div>
                     </div>
@@ -40,7 +40,7 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                     <label><p className="tanda-required">*</p>Foto Produk</label>
                     {/* <input type="file"/> */}
                     {/* <div className="wrapper-form-uploadpicture"> */}
-                        <img src="prevtabel-dashuatama-potbunga.png" />
+                        <img src="prevtabel-dashuatama-minyakjelantah.png" />
                         <div className="form-uploadpicture">
                         <iconify-icon icon="mdi:file-image-plus-outline" />
                         <p>Tambahkan foto (1/5)</p>
@@ -48,35 +48,35 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                     {/* </div> */}
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
-                    <label><p className="tanda-required">*</p>Nama Produk</label>
-                    <input type="text" placeholder="Pot dari bahan daur ulang"/>
+                    <label><p className="tanda-required">*</p>Judul Pencarian</label>
+                    <input type="text" placeholder="Saya Mencari Minyak Jelantah Kiloan"/>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Deskripsi</label>
-                    <textarea placeholder="“Pot Bunga Ramah Lingkungan  merupakan Pot yang memiliki fungsi Menanam Bunga  mini yang pas untuk hiasan kamar anda menjadi lebih estetik.  
+                    <textarea placeholder="Minyak jelantah adalah minyak bekas pemakaian, bisa dalam kebutuhan rumah tangga, kebutuhan restoran dan lain lain. Minyak ini meliputi minyak sawit dan segala minyak goreng lainnya.
 
-“Pot Bunga Ramah Lingkungan tersedia dalam berbagai ukuran dari kecil hingga besar  dengan warna hitam, merah marun, cokelat, dan abu dan masih banyak varian warna lain. Warna yang terlihat pada foto sesuai dengan warna aslinya. Apabila terdapat perbedaan warna, disebabkan oleh pengaturan monitor dan efek cahaya pada layar monitor Anda.”
+Bagi kalian yang kerja in every weekdays (senin hingga jumat), mungkin iseng bikin donuts kentang di hari libur (weekend). Setelah bikin donuts, tentu akan banyak minyak jelantah yang kalian hasilkan. Jangan khawatir, jadikan sabun cuci baju aja. Lumayan bisa lebih hemat dan lebih ramah lingkungan.
 
-“Setiap pembelian Pot Bunga Ramah Lingkungan sebanyak 5 pcs, Anda akan mendapatkan potongan harga sebesar 25%. Dapatkan tambahan gratis biaya kirim dengan pembelian minimal 7 pcs.”
+Dikarenakan minyak jelantah telah mengalami beberapa reaksi akibat penggorengan berulang, reaksi tersebut menghasilkan asam lemak jenuh yang sangat tinggi. Asam lemak tersebut dapat membantu pertumbuhan tanaman.
 
-“Dapatkan jaminan 100% uang kembali jika produk yang Anda terima tidak sesuai foto dan deskripsi kami.”"></textarea>
+Semua Orderan yang masuk sampai jam 5 sore, akan kami proses di hari yang sama. Selebihnya akan kami proses di hari berikutnya."></textarea>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Harga</label>
                     <div className="form-inputharga">
                       <span className="form-inputharga-text">Rp</span>
-                      <input type="text" placeholder="20.000" className="form-inputharga-kolom"/>
+                      <input type="text" placeholder="15.000" className="form-inputharga-kolom"/>
                     </div>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Satuan</label>
                     <div className="formtambah-radio">
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio"/>
+                        <input type="radio" checked/>
                         <label>Kg</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio" checked/>
+                        <input type="radio"/>
                         <label>Pcs</label>
                       </div>
                     </div>
@@ -85,11 +85,11 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                     <label><span className="tanda-required">*</span>Kategori</label>
                     <div className="formtambah-radio">
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio"/>
+                        <input type="radio" checked/>
                         <label>Organik</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
-                        <input type="radio" checked/>
+                        <input type="radio"/>
                         <label>Anorganik</label>
                       </div>
                     </div>
@@ -97,6 +97,7 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Sub Kategori</label>
                     <select>
+                      <option value="minyak">Minyak</option>
                       <option value="plastik">Plastik</option>
                       <option value="botol plastik">Botol Plastik</option>
                       <option value="botol kaca">Botol Kaca</option>
@@ -106,26 +107,23 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                     </select>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
-                    <label><p className="tanda-required">*</p>Stok Barang</label>
-                    <input type="number" placeholder="20" className="formtambah-number"/>
-                  </div>
-                  <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
-                    <label>Model</label>
-                    {/* <input type="text" placeholder="Rp 20,000.00"/> */}
-                    <div className="form-inputmodel">
-                      <span className="form-inputmodel-pilihan">Biru Dove</span>
-                      <span className="form-inputmodel-pilihan">Oren</span>
-                      <span className="form-inputmodel-pilihan">Hitam</span>
-                      <span className="form-inputmodel-pilihan">Coklat</span>
-                      <span className="form-inputmodel-pilihan">Biru</span>
-                      <span className="form-inputmodel-pilihan">+</span>
+                    <label><span className="tanda-required">*</span>Menabung</label>
+                    <div className="formtambah-radio">
+                      <div className="formtambah-radio-pilihan">
+                        <input type="radio" checked/>
+                        <label>Tersedia</label>
+                      </div>
+                      <div className="formtambah-radio-pilihan">
+                        <input type="radio"/>
+                        <label>Tidak Tersedia</label>
+                      </div>
                     </div>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Distribusi</label>
                     <div className="formtambah-radio">
                       <div className="formtambah-radio-pilihan">
-                        <input type="checkbox"/>
+                        <input type="checkbox" checked/>
                         <label>Kami Antar</label>
                       </div>
                       <div className="formtambah-radio-pilihan">
@@ -140,7 +138,7 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
                   </div>
                 </div>
                 <div className="button-formtambah-dashpengelola-kelolalapakpenjualan">
-                  <LinkButton type="BUTTON_BATAL" to="/kelola-lapak-penjualan-pengelola">Batal</LinkButton>
+                  <LinkButton type="BUTTON_BATAL" to="/kelola-lapak-pencarian-pengelola">Batal</LinkButton>
                   <Button onClick={()=>setButtonUbah(!buttonubah)} type="BUTTON_UBAH">Ubah</Button>
                 </div>
               </form>                
@@ -149,9 +147,9 @@ const PengelolaKelolaLapakPenjualanEdit = () => {
           <Footerdashboardpengelola/>
         </div>
       </div>
-      {buttonubah && <ButtonUbah link='/kelola-lapak-penjualan-pengelola' setButtonUbah={setButtonUbah}/>}
+      {buttonubah && <ButtonUbah link='/kelola-lapak-pencarian-pengelola' setButtonUbah={setButtonUbah}/>}
     </HOCdashboardpengelola>
   );
 };
 
-export default PengelolaKelolaLapakPenjualanEdit;
+export default PengelolaKelolaLapakPencarianEdit;

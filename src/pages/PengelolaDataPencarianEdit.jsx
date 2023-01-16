@@ -4,7 +4,7 @@ import { HOCdashboardpengelola } from "../components/HOC";
 import { Navbardashboardpengelola } from "../components/Navbar";
 import SideBarDashPengelola from "../components/SideBarDashPengelola";
 import "./styles/dashboardpengelola.css";
-import "./styles/pengeloladatapenjualanedit.css";
+import "./styles/pengeloladatapenjualanpencarianedit.css";
 import { useState } from "react";
 import { ButtonUbah } from "../components/OverlayPengelola";
 
@@ -20,7 +20,7 @@ const PengelolaDataPencarianEdit = () => {
           <Navbardashboardpengelola />
           <div className="wrapper-dashboard-utama">
             <section className="wrapper-form-dashboard-datapenjualan-edit">
-              <h4>Data Pencarian</h4>
+              <h4>Ubah Detail Data Pencarian</h4>
               <form className="card-formedit-dashpengelola-datapenjualan">
                 <div className="grup-formedit-dashpengelola-datapenjualan">
                   <div className="baris-formedit-dashpengelola-datapenjualan">
