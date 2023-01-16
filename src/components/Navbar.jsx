@@ -3,14 +3,15 @@ import { Link, NavLink } from "react-router-dom";
 import Button from "./Button";
 import "./styles/navbar.css";
 import * as Unicons from "@iconscout/react-unicons";
-import { Login } from "./Overlay";
+import { Login, Register } from "./Overlay";
 import "./styles/overlay.css";
 import { OverlayUser } from "./OverlayUser";
 import { UilSearch } from '@iconscout/react-unicons'
 import { OverlayPengelola } from "./OverlayPengelola";
 
 const Navbar = () => {
-  const [layout, setLayout] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [register, setRegister] = useState(false)
 
   return (
     <>
@@ -27,14 +28,15 @@ const Navbar = () => {
             <NavLink to="/marketplace">Marketplace</NavLink>
           </div>
           <div className="right-navbar">
-            <Button type="SECONDARY" onClick={() => setLayout(true)}>
+            <Button onClick={()=>setLogin(true)} type="SECONDARY" >
               Masuk
             </Button>
-            <Button type="PRIMARY">Daftar</Button>
+            <Button type="PRIMARY" onClick={() => setRegister(true)}>Daftar</Button>
           </div>
         </nav>
       </header>
-      {layout && <Login setLayout={setLayout} layout={layout} />}
+      {login && <Login setLogin={setLogin}  />}
+      {register && <Register setRegister={setRegister}/>}
     </>
   );
 };

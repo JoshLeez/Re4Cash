@@ -12,27 +12,42 @@
   z-index: 10;
 }
 
-.form-login {
+.form-login-register {
   position: fixed;
   width: 1000px;
   height: 550px;
   background: url("/login-bg.png"), #ffaf00;
   border-radius: 16px;
   z-index: 10;
+  display:flex;
 }
 
-.login-container {
+.form-login-register-img{
+  width: 302px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login-register-img > img{
+  width: 230px;
+  height: 108px;
+  align-self: center;
+}
+
+.register-container {
   width: 698px;
   height: 100%;
   background: #f5f5f5;
-  border-radius: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 16px 0 0 16px;
+  justify-self: flex-end;
 }
 
-.login-content {
+.register-content {
   width: 400px;
   height: 511px;
   display: flex;
@@ -41,23 +56,36 @@
   gap: 16px;
 }
 
-.login-content>input {
-  width: 400px;
+.input-login-register{
+  width:100%;
   height: 44px;
-
-  background: #ffffff;
-  border: 1px solid #aaaaaa;
+  background: #FFFFFF;
+  border: 1px solid #AAAAAA;
   border-radius: 10px;
-  outline: none;
-  padding: 10px;
+  padding:0 16px;
+  display:flex;
+  align-items: center;
+  gap:16px;
 }
 
-.login-content>p {
+.input-login-register > iconify-icon{
+  font-size: 24px;
+}
+
+.input-login-register > input{
+  font-weight: 400;
+  font-size: 16px;
+  width:100%;
+  outline:none;
+  border:none;
+}
+
+.register-content>p {
   font-weight: 400;
   font-size: 12px;
 }
 
-.login-content>p>span {
+.register-content>p>span {
   text-align: justify;
   text-decoration-line: underline;
   color: #335abd;
@@ -83,10 +111,9 @@
   color: #606060;
 }
 
-.login-gf>button {
+.register-gf>button {
   width: 196px;
   height: 47px;
-
   background: #ffffff;
   border: 1px solid #0ea601;
   border-radius: 6px;
@@ -94,24 +121,117 @@
   align-items: center;
   gap: 10px;
   justify-content: center;
-}
-
-.login-gf {
-  display: flex;
-  gap: 18px;
-}
-
-.login-content>h6 {
   font-weight: 400;
   font-size: 16px;
 }
 
-.login-content>h6>span {
-  text-decoration-line: underline;
+.register-gf {
+  display: flex;
+  gap: 18px;
+}
 
+.register-content>h6 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.register-content h6 a {
+  text-decoration-line: underline;
   color: #335abd;
 }
 
+/* Login Sebagai User */
+.login-container{
+  width: 698px;
+  height: auto;
+  background: #F5F5F5;
+  border-radius: 0 16px 16px 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:24px;
+}
+
+.login-container > h2{
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.input-login-user{
+  gap: 21px;
+  width: 400px;
+  display:flex;
+  flex-direction: column;
+}
+
+.remember-me-forgot-password{
+  display:flex;
+  justify-content:space-between;
+}
+
+.checkbox-remember-me{
+  display:flex;
+  gap:6px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-remember-me > input{
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.checkbox-remember-me > span{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.remember-me-forgot-password > button{
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration-line: underline;
+  background:none;
+  border:none;
+  cursor: pointer;
+}
+
+.bot-masuk-dengan{
+  display:flex;
+  flex-direction: column;
+  gap:12px
+}
+
+.login-btn-masuk{
+  height: 44px;
+  background: #F2A600;
+  border-radius: 10px;
+  border:none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.login-btn-masuk:hover{
+  background-color: #D08F00;
+}
+
+.login-container > span{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.login-container span button{
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #335ABD;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 /* Overlay Dropdown User */
 .dd-user {
