@@ -26,23 +26,25 @@ const PengelolaKelolaLapakPencarianTambah = () => {
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Jenis Produk</label>
                     <div className="formtambah-radio">
-                      <div className="formtambah-radio-pilihan">
+                      <label className="formtambah-radio-pilihan">
                         <input type="radio"/>
-                        <label>Daur Ulang</label>
-                      </div>
-                      <div className="formtambah-radio-pilihan">
+                        Daur Ulang
+                      </label>
+                      <label className="formtambah-radio-pilihan">
                         <input type="radio"/>
-                        <label>Mentahan</label>
-                      </div>
+                        Mentahan
+                      </label>
                     </div>
                   </div>
-                  <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
+                  <div className="baris-formtambah-upimg-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Foto Produk</label>
-                    {/* <input type="file"/> */}
-                    <div className="form-uploadpicture">
-                      <iconify-icon icon="mdi:file-image-plus-outline" />
-                      <p>Tambahkan foto (1/5)</p>
-                    </div>
+                    {/* <div className="wrapper-form-uploadpicture"> */}
+                      <div className="form-uploadpicture">
+                        <iconify-icon icon="mdi:file-image-plus-outline" />
+                        <p>Tambahkan foto (1/5)</p>
+                      </div>
+                    {/* </div> */}
+                    {/* <input type="file" accept="image/png, image/jpg, image/jpeg" multiple/> */}
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Judul Pencarian</label>
@@ -62,27 +64,27 @@ const PengelolaKelolaLapakPencarianTambah = () => {
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Satuan</label>
                     <div className="formtambah-radio">
-                      <div className="formtambah-radio-pilihan">
+                      <label className="formtambah-radio-pilihan">
                         <input type="radio"/>
-                        <label>Kg</label>
-                      </div>
-                      <div className="formtambah-radio-pilihan">
+                        Kg
+                      </label>
+                      <label className="formtambah-radio-pilihan">
                         <input type="radio"/>
-                        <label>Pcs</label>
-                      </div>
+                        Pcs
+                      </label>
                     </div>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Kategori</label>
                     <div className="formtambah-radio">
-                      <div className="formtambah-radio-pilihan">
+                      <label className="formtambah-radio-pilihan">
                         <input type="radio"/>
-                        <label>Organik</label>
-                      </div>
-                      <div className="formtambah-radio-pilihan">
+                        Organik
+                      </label>
+                      <label className="formtambah-radio-pilihan">
                         <input type="radio"/>
-                        <label>Anorganik</label>
-                      </div>
+                        Anorganik
+                      </label>
                     </div>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
@@ -101,31 +103,31 @@ const PengelolaKelolaLapakPencarianTambah = () => {
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Menabung</label>
                     <div className="formtambah-radio">
-                      <div className="formtambah-radio-pilihan">
+                      <label className="formtambah-radio-pilihan">
                         <input type="radio"/>
-                        <label>Tersedia</label>
-                      </div>
-                      <div className="formtambah-radio-pilihan">
+                        Tersedia
+                      </label>
+                      <label className="formtambah-radio-pilihan">
                         <input type="radio"/>
-                        <label>Tidak Tersedia</label>
-                      </div>
+                        Tidak Tersedia
+                      </label>
                     </div>
                   </div>
                   <div className="baris-formtambah-dashpengelola-kelolalapakpenjualan">
                     <label><span className="tanda-required">*</span>Distribusi</label>
                     <div className="formtambah-radio">
-                      <div className="formtambah-radio-pilihan">
+                      <label className="formtambah-radio-pilihan">
                         <input type="checkbox"/>
-                        <label>Kami Antar</label>
-                      </div>
-                      <div className="formtambah-radio-pilihan">
+                        Kami Antar
+                      </label>
+                      <label className="formtambah-radio-pilihan">
                         <input type="checkbox"/>
-                        <label>Ambil Sendiri</label>
-                      </div>
-                      <div className="formtambah-radio-pilihan">
+                        Ambil Sendiri
+                      </label>
+                      <label className="formtambah-radio-pilihan">
                         <input type="checkbox"/>
-                        <label>Kurir</label>
-                      </div>
+                        Kurir
+                      </label>
                     </div>
                   </div>
                 </div>

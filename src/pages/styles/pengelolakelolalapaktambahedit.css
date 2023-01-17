@@ -56,6 +56,10 @@
     align-items: center;
 }
 
+/* .formtambah-radio-pilihan>input {
+    outline: 1px solid #F2A600;
+} */
+
 .baris-formtambah-dashpengelola-kelolalapakpenjualan>input,
 select {
     display: flex;
@@ -97,6 +101,39 @@ select {
     padding: 10px;
 }
 
+.baris-formtambah-upimg-dashpengelola-kelolalapakpenjualan {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.baris-formtambah-upimg-dashpengelola-kelolalapakpenjualan>label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 150px;
+    height: 37px;
+    object-fit: cover;
+
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.baris-formtambah-upimg-dashpengelola-kelolalapakpenjualan>img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #8A8A8A;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* .wrapper-form-uploadpicture {
+    border: 1px solid black;
+    display: flex;
+    gap: 19px;
+} */
+
 .wrapper-form-uploadpicture {
     border: 1px solid black;
     display: flex;
@@ -115,6 +152,8 @@ select {
 
     border: 1px dashed #F2A600;
     border-radius: 4px;
+    cursor: pointer;
+    object-fit: cover;
 }
 
 .form-uploadpicture>iconify-icon {
