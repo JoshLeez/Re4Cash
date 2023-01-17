@@ -1,7 +1,8 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
-
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 export const Register = ({ setRegister }) => {
   const menuRef = useRef();
@@ -73,33 +74,68 @@ export const Register = ({ setRegister }) => {
 };
 
 export const Login = ({ setLogin }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const menuRef = useRef();
+  const [errorMessage,setErrorMessage] = useState('')
+
 
   useEffect(() => {
     let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
-        setLogin(false);
-      }
+        setLogin(false);}
     };
 
     document.addEventListener("mousedown", handler);
   }, []);
+
+  const onSubmit = async (value) =>{
+    try{
+      console.log(value)
+      await axios.post(`${import.meta.env.VITE_REACT_APP_API}/login`, value);
+      setLogin(false)
+    }catch(error){
+      if(error.response){
+      setErrorMessage(error.response.data.message)
+      }
+    }
+  }
+
   return (
     <div className="overlay-container">
       <div ref={menuRef} className="form-login-register login">
         <div className="form-login-register-img">
           <img src="Re4CashWhite.svg" />
         </div>
-        <form className="login-container">
+        <form onSubmit={handleSubmit(onSubmit)} className="login-container">
           <h2>Masuk Akun Re4Cash</h2>
           <div className="input-login-user">
-            <div className="input-login-register">
-              <iconify-icon icon="carbon:email" />
-              <input type="text" placeholder="Email" />
+          <div className="container-input-login-register">
+              <div className="input-login-register">
+                <iconify-icon icon="carbon:email" />
+                <input
+                  type="text"
+                  {...register("email", {
+                    required: true,
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "invalid email address",
+                    },
+                  })}
+                  placeholder="Email"
+                />
+              </div>
+              {errors.email && <span className="error-message">Format Email Salah</span>}
             </div>
-            <div className="input-login-register">
-              <iconify-icon icon="codicon:lock" />
-              <input type="text" placeholder="Password" />
+            <div className="container-input-login-register">
+              <div className="input-login-register">
+                <iconify-icon icon="codicon:lock" />
+                <input type="password" {...register("password", {required : true})}  placeholder="Password" />
+              </div>
+              {errors.password && <span className="error-message">Password tidak boleh kosong</span> || <span className="error-message">{errorMessage}</span>}
             </div>
             <div className="remember-me-forgot-password">
               <label className="checkbox-remember-me">
@@ -125,11 +161,11 @@ export const Login = ({ setLogin }) => {
                 Facebook
               </button>
             </div>
-            <button className="login-btn-masuk">
-              Masuk
-            </button>
+            <button className="login-btn-masuk" type="submit">Masuk</button>
           </div>
-          <span>Belum punya akun? <button>Daftar</button></span>
+          <span>
+            Belum punya akun? <button>Daftar</button>
+          </span>
         </form>
       </div>
     </div>

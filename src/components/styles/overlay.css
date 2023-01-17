@@ -159,10 +159,19 @@
 }
 
 .input-login-user{
-  gap: 21px;
+  gap: 4px;
   width: 400px;
   display:flex;
   flex-direction: column;
+}
+
+.container-input-login-register{
+  height:65.6px;
+}
+
+.container-input-login-register > span{
+  font-size: 12px;
+  color:#E40101;
 }
 
 .remember-me-forgot-password{

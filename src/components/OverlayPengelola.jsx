@@ -1,7 +1,8 @@
 import {UilUserCircle } from '@iconscout/react-unicons';
 import { useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from './Button';
+
 
 export const OverlayPengelola = ({ setPengelola, pengelola }) => {
   const menuRef = useRef();
@@ -58,7 +59,8 @@ export const OverlayPengelola = ({ setPengelola, pengelola }) => {
 
 export const ButtonUbah = ({setButtonUbah, link}) => {
   const menuRef = useRef();
-
+  const navigate = useNavigate()
+  
   useEffect(() => {
     let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
@@ -80,9 +82,9 @@ export const ButtonUbah = ({setButtonUbah, link}) => {
           <Button onClick={()=>setButtonUbah(false)} className='tiru-overlay-button-batal'>
             <h4>Batal</h4>
           </Button>
-          <Link to={link} className='tiru-overlay-button-ubah'>
+          <Button to={link} className='tiru-overlay-button-ubah'>
             <h4>Ubah</h4>
-          </Link>
+          </Button>
         </div>
       </div>
     </div>

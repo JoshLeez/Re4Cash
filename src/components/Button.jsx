@@ -81,7 +81,7 @@ export const ButtonNumber = () => {
     item === 1 ? setDisabled(true) : setDisabled(false);
   }, [item]);
 
-  return (
+  return (  
     <div className="card-incre-decre">
       <button
         disabled={item === 1}
