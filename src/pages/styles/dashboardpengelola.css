@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    gap: 18px;
+    gap: 10px;
     margin-bottom: 35px;
 }
 
@@ -86,7 +86,6 @@
     gap: 8px;
 }
 
-
 .profile-desc-dashboard-utama-detail>h4 {
     font-weight: 400;
     font-size: 12px;
@@ -99,39 +98,66 @@
 }
 
 .prevtabel-dashutama {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
 .judul-tabel-dashutama {
-    /* border: 1px solid black; */
     display: flex;
-    gap: 341px;
+    gap: 339px;
 }
 
 .judul-tabel-dashutama>iconify-icon {
     color: #F2A600;
 }
 
-.wrapper-table-data {
+.wrapper-table-data-dashutama {
     display: flex;
     flex-direction: column;
-
-    /* border: 1px solid black; */
+    gap: 10px;
 }
 
-/* .table-file-content {
+#tabel-pengelola-dashutama {
+    border-collapse: collapse;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+    width: 504px;
+}
+
+#tabel-pengelola-dashutama tr th {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#tabel-pengelola-dashutama tr td {
+    /* text-align: center; */
+    padding: 10px;
+    font-weight: 400;
+    font-size: 13.5px;
+}
+
+#tabel-pengelola-dashutama tr th {
+    background-color: none;
+}
+
+table tr:nth-child(odd) {
+    background-color: #F1F1F1;
+}
+
+#tabel-pengelola-dashutama th:first-child {
+    border-radius: 6px 0 0 0;
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+}
+
+#tabel-pengelola-dashutama th:last-child {
+    border-radius: 0 6px 0 0;
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+}
+
+.tabel-kolom-aksibutton-edithapus {
     display: flex;
-    align-items: center;
     gap: 4px;
- } */
-
-
-
-.table-data-children tr td:last-child,
-.table-data-caretaker tr td:last-child,
-.table-data-financial tr td:last-child {
-    width: 89px;
 }
