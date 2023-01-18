@@ -39,7 +39,7 @@ const PengelolaKelolaLapakPencarianEdit = () => {
                   <div className="baris-formtambah-upimg-dashpengelola-kelolalapakpenjualan">
                     <label><p className="tanda-required">*</p>Foto Produk</label>
                     {/* <div className="wrapper-form-uploadpicture"> */}
-                      <img src="prevtabel-dashuatama-minyakjelantah.png" />
+                      <img src="/prevtabel-dashuatama-minyakjelantah.png" />
                       <div className="form-uploadpicture">
                         <iconify-icon icon="mdi:file-image-plus-outline" />
                         <p>Tambahkan foto (1/5)</p>
