@@ -5,6 +5,7 @@
 .detailarticle-hero > img{
     overflow: hidden;
     margin-top: 50px;
+    width:100%;
 }
 
 .detail-article-container{

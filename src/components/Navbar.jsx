@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Button from "./Button";
 import "./styles/navbar.css";
@@ -8,43 +8,22 @@ import "./styles/overlay.css";
 import { OverlayUser } from "./OverlayUser";
 import { UilSearch } from "@iconscout/react-unicons";
 import { OverlayPengelola } from "./OverlayPengelola";
-import jwt_decode from "jwt-decode";
-import axios from "axios";
+import jwtDecode from "jwt-decode";
 
 const Navbar = () => {
   const [login, setLogin] = useState(false);
   const [register, setRegister] = useState(false);
-  const { name, setName } = useState("");
-  const [token, setToken] = useState("");
-  const [expire, setExpire] = useState("");
+  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const [user, setUser] = useState(false);
+
   
-  useEffect(() => {
-    refreshToken();
-  }, []);
-
-  const refreshToken = async () => {
-    try {
-      const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API}/token`);
-      console.log(response)
-      setToken(response.data.accessToken);
-      const decoded = jwt_decode(response.data.accessToken);
-      setName(decoded.fullname)
-      console.log(decoded)
-    } catch (error) {
-      if (error.response) {
-          console.log(error.message)
-      }
-    }
-  };
-
-  console.log(name)
+  
   const displayButton =
-    name !== undefined  ? (
+    undefined !== undefined  ? (
       <div className="wrapper-profile-navbar">
       <div className="profile-navbar" onClick={() => setUser(!user)}>
         <Unicons.UilUserCircle color="#FFAF00" size="32px" />
-        <h6>Hi, {name}</h6>
+        <h6>Hi,  </h6>
       </div>
       {user && <OverlayUser setUser={setUser} user={user} />}
     </div> )

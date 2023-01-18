@@ -324,6 +324,12 @@
   color: #E40101;
 }
 
+.option-bot-user.logout > button{
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
 .dd-pengelola {
   background: #FFFFFF;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);

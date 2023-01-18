@@ -26,8 +26,11 @@ export const Register = ({ setRegister }) => {
 
   const onSubmit = async (value) => {
     try {
-      console.log(value);
-      await axios.post(`${import.meta.env.VITE_REACT_APP_API}/users`, value);
+      const {data} = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/users`, value);
+      if(data.Authorization){
+        localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);
+        console.log(import.meta.env.VITE_REACT_APP_AUTH)
+      }
       setRegister(false)
     } catch (error) {
       if (error.response) {
@@ -167,7 +170,10 @@ export const Login = ({ setLogin }) => {
   const onSubmit = async (value) => {
     try {
       console.log(value);
-      await axios.post(`${import.meta.env.VITE_REACT_APP_API}/login`, value);
+      const { data } = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/login`, value)
+      if(data.Authorization) {
+        localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);
+      }
       setLogin(false);
     } catch (error) {
       if (error.response) {

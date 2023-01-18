@@ -5,6 +5,7 @@ import Button, { LinkButton } from './Button';
 import CustomDropDown, { DDTarikPoint, LongDropDown, SecTarikPoint, ThirdTarikPoint } from './CustomDropDown';
 import { UilAngleDown } from '@iconscout/react-unicons'
 import axios from 'axios';
+import jwtDecode from 'jwt-decode';
 
 export const OverlayUser = ({ setUser }) => {
   const menuRef = useRef();
@@ -21,6 +22,25 @@ export const OverlayUser = ({ setUser }) => {
       document.removeEventListener("mousedown", handler);
   }
   })
+
+  const logout = async () =>{
+    try{
+      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+      // const split = token.split(" ")[1];
+      console.log(token)
+      const response =  await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`,
+      token);
+      localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH)
+      console.log(response)}
+      catch(error){
+          console.log(error.message)
+      }
+    }
+
+  useEffect(()=>{
+  
+    logout()
+  },[])
 
   return (
     <div ref={menuRef} className="dd-user">
@@ -51,7 +71,7 @@ export const OverlayUser = ({ setUser }) => {
             </div>
             <div className='option-bot-user logout'>
                 <iconify-icon icon="mi:log-out"/>
-                <h4>Logout</h4>
+                <button onClick={()=>logout()}>Logout</button>
             </div>
       </div>
     </div>
