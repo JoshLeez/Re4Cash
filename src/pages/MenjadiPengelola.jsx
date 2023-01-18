@@ -58,7 +58,7 @@ const MenjadiPengelola = () => {
           </div>
           <div className="detail-content">
             <div className="subtitle">
-              <iconify-icon icon="ion:location-outline" />
+            <iconify-icon icon="mi:location" />
               <h4>Alamat Perusahaan/Toko/Perorangan</h4>
             </div>
             <textarea placeholder="Alamat Lengkap (nama jalan dan patokan)" />
@@ -66,21 +66,21 @@ const MenjadiPengelola = () => {
               <div className="input-content">
                 <input
                   type="text"
-                  placeholder="Nama Perusahaan/Toko/Perorangan"
+                  placeholder="Kecamatan"
                 />
                 <input
                   type="text"
-                  placeholder="Nama Perusahaan/Toko/Perorangan"
+                  placeholder="Kabupaten/Kota"
                 />
               </div>
               <div className="input-content">
                 <input
                   type="text"
-                  placeholder="Nama Perusahaan/Toko/Perorangan"
+                  placeholder="Provinsi"
                 />
                 <input
                   type="text"
-                  placeholder="Nama Perusahaan/Toko/Perorangan"
+                  placeholder="Kode Pos"
                 />
               </div>
             </div>

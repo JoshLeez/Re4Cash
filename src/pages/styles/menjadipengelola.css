@@ -1,5 +1,11 @@
 .menjadi-pengelola-page{
     display: flex;
+    
+}
+
+.menjadi-pengelola-page > * {
+    overflow: hidden;
+    
 }
 
 .left-side > .img-bg {
