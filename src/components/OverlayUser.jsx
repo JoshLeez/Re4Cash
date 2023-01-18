@@ -32,7 +32,7 @@ export const OverlayUser = ({ setUser }) => {
             </Link>
         </div>
         <div className='dd-bot-user'>
-            <Link to="/dashboard-pengelola"  className='option-bot-user'>
+            <Link to="/menjadi-pengelola"  className='option-bot-user'>
                 <iconify-icon icon="mdi:clipboard-user-outline"/>
                 <h4>Menjadi Pengelola</h4>
             </Link>
