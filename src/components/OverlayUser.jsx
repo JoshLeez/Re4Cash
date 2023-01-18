@@ -27,7 +27,7 @@ export const OverlayUser = ({ setUser }) => {
     try{
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       // const split = token.split(" ")[1];
-      console.log(token)
+      console.log(token0)
       const response =  await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`,
       token);
       localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH)
