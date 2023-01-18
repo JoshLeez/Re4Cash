@@ -29,6 +29,7 @@ import PengelolaKelolaLapakPenjualanEdit from './pages/PengelolaKelolaLapakPenju
 import PengelolaKelolaLapakPencarian from './pages/PengelolaKelolaLapakPencarian'
 import PengelolaKelolaLapakPencarianTambah from './pages/PengelolaKelolaLapakPencarianTambah'
 import PengelolaKelolaLapakPencarianEdit from './pages/PengelolaKelolaLapakPencarianEdit'
+import MenjadiPengelola from './pages/MenjadiPengelola'
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
           <Route path="/kelola-lapak-pencarian-pengelola" element={<PengelolaKelolaLapakPencarian/>}/>
           <Route path="/kelola-lapak-pencarian-pengelola/tambah" element={<PengelolaKelolaLapakPencarianTambah/>}/>
           <Route path="/kelola-lapak-pencarian-pengelola/edit" element={<PengelolaKelolaLapakPencarianEdit/>}/>
+          <Route path="/menjadi-pengelola" element={<MenjadiPengelola/>}/>
         </Routes>
     </>
   );

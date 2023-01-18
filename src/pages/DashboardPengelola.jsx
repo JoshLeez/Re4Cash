@@ -56,26 +56,22 @@ const DashboardPengelola = () => {
                   <h3>Lapak Penjualan</h3>
                   <iconify-icon icon="material-symbols:edit" />
                 </div>
-                <div className="wrapper-table-data">
-                  <table cellSpacing="0"  cellPadding="0" id="tabel-tabungan" className="table-data-children">
-                    <thead>
-                      <tr className="table-title table-title-data-children">
+                <div className="wrapper-table-data-dashutama">
+                  <table id="tabel-pengelola-dashutama">
+                      <tr>
                         <th>No</th>
                         <th>Jenis</th>
                         <th>Foto Barang</th>
                         <th>Nama Barang</th>
                         <th>Harga</th>
                       </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="row row-1">
+                      <tr>
                         <td>1</td>
                         <td>Daur Ulang</td>
                         <td><img src="prevtabel-dashuatama-potbunga.png" /></td>
                         <td>Pot dari bahan daur ulang</td>
                         <td>Rp. 20.000</td>
                       </tr>
-                    </tbody>
                   </table>
                 </div>
               </div>
@@ -85,10 +81,10 @@ const DashboardPengelola = () => {
                   <h3>Lapak Pencarian</h3>
                   <iconify-icon icon="material-symbols:edit" />
                 </div>
-                <div className="wrapper-table-data">
-                  <table cellSpacing="0"  cellPadding="0" id="tabel-tabungan" className="table-data-children">
+                <div className="wrapper-table-data-dashutama">
+                  <table id="tabel-pengelola-dashutama">
                     <thead>
-                      <tr className="table-title table-title-data-children">
+                      <tr>
                         <th>No</th>
                         <th>Jenis</th>
                         <th>Foto Barang</th>
@@ -97,7 +93,7 @@ const DashboardPengelola = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="row row-1">
+                      <tr>
                         <td>1</td>
                         <td>Mentahan</td>
                         <td><img src="prevtabel-dashuatama-minyakjelantah.png" /></td>

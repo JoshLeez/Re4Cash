@@ -1,0 +1,155 @@
+.menjadi-pengelola-page{
+    display: flex;
+    
+}
+
+.menjadi-pengelola-page > * {
+    overflow: hidden;
+    
+}
+
+.left-side > .img-bg {
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+
+.left-side > .img-logo > .navigasi-back {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.left-side > .img-logo > .navigasi-back > .back-arrow {
+    font-size: 32px;
+    color: white;
+    display: flex;
+
+}
+
+.left-side > .img-logo > .navigasi-back > .back-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.left-side > .img-bg > img {
+    height: 100vh;
+    width: 500px;
+    
+}
+
+.left-side > .img-logo-logo > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-200%, -50%);
+}
+
+.right-side {
+    width: 940px;
+}
+
+.content-right-side {
+    width: 708px;
+    margin: auto;
+    margin-top: 24px;
+}
+
+.content-right-side > h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.detail-content > .subtitle {
+    display: flex;
+    align-items: center;
+}
+
+.detail-content > .subtitle > Iconify-icon {
+    font-size: 24px;
+}
+
+.detail-content > .subtitle > h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 16px;
+}
+
+.wrapper-input{
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.wrapper-input > .input-content > input {
+    width: 350px;
+    height: 44px;
+    padding: 20px ;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.detail-content > textarea {
+    width: 707px;
+    height: 93px;
+    padding-left: 20px ;
+    padding-top: 16px;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 8px;
+    resize: none;
+    margin-top: 16px;
+    margin-bottom: -12px;
+}
+
+.detail-content > textarea:focus {
+    outline: none;
+
+}
+
+.wrapper-input > .input-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-input > .input-content > input:focus {
+    outline: none;
+}
+
+.content-right-side > p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.content-right-side > p > span{
+    font-weight: 400;
+    font-size: 14px;
+    color: #335ABD;
+    text-decoration: underline;
+}
+
+.content-right-side > a{
+    width: 400px;
+    height: 44px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 32px;
+ 
+}
+

@@ -37,7 +37,7 @@ const SideBarDashPengelola = (props) => {
           <span>Kelola Lapak Penjualan</span>
         </NavLink>
         <NavLink to="/kelola-lapak-pencarian-pengelola" className="nav-sidebar-isi">
-          <iconify-icon icon="material-symbols:space-dashboard-outline"/>
+          <iconify-icon icon="mdi:shop-find-outline"/>
           <span>Kelola Lapak Pencarian</span>
         </NavLink>
       </nav>
