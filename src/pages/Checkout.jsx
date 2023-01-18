@@ -85,7 +85,7 @@ export const Checkout = () => {
                     </div>
                     <div className="jumlah-penjualan">
                         <h5>Model</h5>
-                        <LongDropDown/>
+                        <LongDropDown width="227.5" disable={true} title="Pilih Model"/>
                     </div>
                     <div className="jumlah-penjualan">
                         <h5>Sub Total Pembelian</h5>

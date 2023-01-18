@@ -35,10 +35,10 @@ const DdValue = (e) =>{
 export default CustomDropDown
 
 
-export const LongDropDown = () => {
+export const LongDropDown = (props) => {
 
     const [toggle,setToggle] = useState(false)
-    const [value, setValue] = useState("Kami Jemput")
+    const [value, setValue] = useState(props.title)
 
     const toggleHandler = () =>{
         setToggle(!toggle);
@@ -50,15 +50,14 @@ export const LongDropDown = () => {
     }
 
   return (
-        <div className="custom-dd-container">
-            <div role="select"  defaultValue={"Kami Jemput"} aria-expanded={toggle} onClick={toggleHandler} className={toggle ? "long-dropdown-custom actived" : "long-dropdown-custom"}>
+        <div className={props.disable ?  "custom-dd-container unactive" : "custom-dd-container"}>
+            <div role="select"  defaultValue={props.title} aria-expanded={toggle} onClick={toggleHandler} className={toggle ? "long-dropdown-custom actived" : "long-dropdown-custom"}>
                 {value}
                 <UilAngleDown className="arrow-rotation" style={{transform: toggle && "rotate(-180deg)"}} size="24px"/>
             </div>
-            {toggle && <div className="long-dd-option-custom">
-                <div data-value="Kami Jemput" onClick={(e)=>DdValue(e)}>Kami Jemput</div>
-                <div data-value="Antar Sendiri" onClick={(e)=>DdValue(e)}>Antar Sendiri</div>
-                <div data-value="Kurir" onClick={(e)=>DdValue(e)}>Kurir</div>
+            {toggle && <div  style={{width: `${props.width}px` }} className="long-dd-option-custom">
+               {props.title && <div  data-value={props.title} onClick={(e)=>DdValue(e)}>{props.title}</div>}
+               {props.title2 && <div  data-value={props.title2} onClick={(e)=>DdValue(e)}>{props.title2}</div>}
             </div>}
         </div>
   )

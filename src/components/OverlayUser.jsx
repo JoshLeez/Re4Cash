@@ -2,8 +2,9 @@ import {UilUserCircle } from '@iconscout/react-unicons';
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button, { LinkButton } from './Button';
-import CustomDropDown, { DDTarikPoint, SecTarikPoint, ThirdTarikPoint } from './CustomDropDown';
+import CustomDropDown, { DDTarikPoint, LongDropDown, SecTarikPoint, ThirdTarikPoint } from './CustomDropDown';
 import { UilAngleDown } from '@iconscout/react-unicons'
+import axios from 'axios';
 
 export const OverlayUser = ({ setUser }) => {
   const menuRef = useRef();
@@ -60,6 +61,7 @@ export const OverlayUser = ({ setUser }) => {
 
 export const EditProfile = ({setEdit}) => {
   const menuRef = useRef();
+  const {register, handleSubmit, formState:{errors}} = useForm()
 
   useEffect(()=>{
     let handler = (event) => {
@@ -74,20 +76,29 @@ export const EditProfile = ({setEdit}) => {
   }
   })
 
+  const updataUser = async () =>{
+    try{
+      await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users/6`, value);
+      setEdit(false)
+    }catch(error){
+      console.log(error.message)
+    }
+  }
+
   return (
     <div className='overlay-container'>
-      <div ref={menuRef} className='container-edit-profile'>
+      <form ref={menuRef} className='container-edit-profile'>
         <iconify-icon onClick={()=>setEdit(false)} icon="maki:cross"/>
         <h1>Edit Profile</h1>
         <div className='input-edit-profile'>
           <input type="text"/>
-          <CustomDropDown/>
+          <LongDropDown title="Laki-Laki" title2="Perempuan" width="348"/>
           <input type="datetime-local"/>
           <input type="text"/>
           <input type="text"/>
           <Button tipe="PRIMARY">Simpan</Button>
         </div>
-      </div>
+      </form>
     </div>
   )
 }

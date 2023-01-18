@@ -5,7 +5,14 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 export const Register = ({ setRegister }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    watch,
+  } = useForm();
   const menuRef = useRef();
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     let handler = (event) => {
@@ -17,34 +24,99 @@ export const Register = ({ setRegister }) => {
     document.addEventListener("mousedown", handler);
   }, []);
 
+  const onSubmit = async (value) => {
+    try {
+      console.log(value);
+      await axios.post(`${import.meta.env.VITE_REACT_APP_API}/users`, value);
+      setRegister(false)
+    } catch (error) {
+      if (error.response) {
+        setErrorMessage(error.response.data.message);
+      }
+    }
+  };
+
   return (
     <div className="overlay-container">
       <div ref={menuRef} className="form-login-register">
         <div className="register-container">
-          <form className="register-content">
+          <form onSubmit={handleSubmit(onSubmit)} className="register-content">
             <h3>Daftar Akun Re4Cash</h3>
-            <div className="input-login-register">
-              <iconify-icon icon="ph:user" />
-              <input type="text" placeholder="Nama Lengkap" />
+            <div className="container-input-login-register">
+              <div className="input-login-register">
+                <iconify-icon icon="ph:user" />
+                <input
+                  type="text"
+                  {...register("fullname", { required: true })}
+                  placeholder="Nama Lengkap"
+                />
+              </div>
+              {(errors.fullname && (
+                <span className="error-message">Nama tidak boleh kosong</span>
+              )) || <span className="error-message">{errorMessage}</span>}
             </div>
-            <div className="input-login-register">
-              <iconify-icon icon="carbon:email" />
-              <input type="text" placeholder="Email" />
+            <div className="container-input-login-register">
+              <div className="input-login-register">
+                <iconify-icon icon="carbon:email" />
+                <input
+                  type="text"
+                  {...register("email", {
+                    required: true,
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "invalid email address",
+                    },
+                  })}
+                  placeholder="Email"
+                />
+              </div>
+              {errors.email && (
+                <span className="error-message">Format Email Salah</span>
+              )}
             </div>
-            <div className="input-login-register">
-              <iconify-icon icon="codicon:lock" />
-              <input type="text" placeholder="Password" />
+            <div className="container-input-login-register">
+              <div className="input-login-register">
+                <iconify-icon icon="codicon:lock" />
+                <input
+                  type="password"
+                  {...register("password", { required: true })}
+                  placeholder="Password"
+                />
+              </div>
+              {(errors.password && (
+                <span className="error-message">
+                  Password tidak boleh kosong
+                </span>
+              )) || <span className="error-message">{errorMessage}</span>}
             </div>
-            <div className="input-login-register">
-              <iconify-icon icon="codicon:lock" />
-              <input type="text" placeholder="Confirm Password" />
+            <div className="container-input-login-register">
+              <div className="input-login-register">
+                <iconify-icon icon="codicon:lock" />
+                <input
+                  type="password"
+                  {...register("confirm_password", {
+                    required: true,
+                    validate: (val) => {
+                      if (watch("password") != val) {
+                        return "Your passwords do no match";
+                      }
+                    },
+                  })}
+                  placeholder="Password"
+                />
+              </div>
+              {(errors.confirm_password && (
+                <span className="error-message">Password tidak cocok</span>
+              )) || <span className="error-message">{errorMessage}</span>}
             </div>
             <p>
               Dengan mendaftar menjadi pengelola, Anda bertanggung jawab atas
               akun tersebut sesuai dengan <span>Ketentuan</span> &{" "}
               <span>Kebijakan Privasi.</span>
             </p>
-            <Button className="btn-sign">Daftar</Button>
+            <button className="btn-sign" type="submit">
+              Daftar
+            </button>
             <div className="garis-content">
               <div className="garis" />
               <p>atau daftar dengan</p>
@@ -80,29 +152,29 @@ export const Login = ({ setLogin }) => {
     formState: { errors },
   } = useForm();
   const menuRef = useRef();
-  const [errorMessage,setErrorMessage] = useState('')
-
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
-        setLogin(false);}
+        setLogin(false);
+      }
     };
 
     document.addEventListener("mousedown", handler);
   }, []);
 
-  const onSubmit = async (value) =>{
-    try{
-      console.log(value)
+  const onSubmit = async (value) => {
+    try {
+      console.log(value);
       await axios.post(`${import.meta.env.VITE_REACT_APP_API}/login`, value);
-      setLogin(false)
-    }catch(error){
-      if(error.response){
-      setErrorMessage(error.response.data.message)
+      setLogin(false);
+    } catch (error) {
+      if (error.response) {
+        setErrorMessage(error.response.data.message);
       }
     }
-  }
+  };
 
   return (
     <div className="overlay-container">
@@ -113,7 +185,7 @@ export const Login = ({ setLogin }) => {
         <form onSubmit={handleSubmit(onSubmit)} className="login-container">
           <h2>Masuk Akun Re4Cash</h2>
           <div className="input-login-user">
-          <div className="container-input-login-register">
+            <div className="container-input-login-register">
               <div className="input-login-register">
                 <iconify-icon icon="carbon:email" />
                 <input
@@ -128,21 +200,31 @@ export const Login = ({ setLogin }) => {
                   placeholder="Email"
                 />
               </div>
-              {errors.email && <span className="error-message">Format Email Salah</span>}
+              {errors.email && (
+                <span className="error-message">Format Email Salah</span>
+              )}
             </div>
             <div className="container-input-login-register">
               <div className="input-login-register">
                 <iconify-icon icon="codicon:lock" />
-                <input type="password" {...register("password", {required : true})}  placeholder="Password" />
+                <input
+                  type="password"
+                  {...register("password", { required: true })}
+                  placeholder="Password"
+                />
               </div>
-              {errors.password && <span className="error-message">Password tidak boleh kosong</span> || <span className="error-message">{errorMessage}</span>}
+              {(errors.password && (
+                <span className="error-message">
+                  Password tidak boleh kosong
+                </span>
+              )) || <span className="error-message">{errorMessage}</span>}
             </div>
             <div className="remember-me-forgot-password">
               <label className="checkbox-remember-me">
                 <input type="checkbox" />
                 <span>Keep me logged in</span>
               </label>
-              <button>Forgot Password</button>
+              <button type="button">Forgot Password</button>
             </div>
           </div>
           <div className="bot-masuk-dengan">
@@ -161,7 +243,9 @@ export const Login = ({ setLogin }) => {
                 Facebook
               </button>
             </div>
-            <button className="login-btn-masuk" type="submit">Masuk</button>
+            <button className="login-btn-masuk" type="submit">
+              Masuk
+            </button>
           </div>
           <span>
             Belum punya akun? <button>Daftar</button>

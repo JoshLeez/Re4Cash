@@ -52,8 +52,7 @@
   height: 511px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 .input-login-register{
@@ -130,9 +129,14 @@
   gap: 18px;
 }
 
+.register-content > h3{
+  text-align: center;
+}
+
 .register-content>h6 {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
 }
 
 .register-content h6 a {

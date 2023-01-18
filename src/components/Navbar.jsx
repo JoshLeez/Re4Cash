@@ -8,7 +8,7 @@ import "./styles/overlay.css";
 import { OverlayUser } from "./OverlayUser";
 import { UilSearch } from "@iconscout/react-unicons";
 import { OverlayPengelola } from "./OverlayPengelola";
-import jwtDecode from "jwt-decode";
+import jwt_decode from "jwt-decode";
 import axios from "axios";
 
 const Navbar = () => {
@@ -24,13 +24,13 @@ const Navbar = () => {
   }, []);
 
   const refreshToken = async () => {
-    console.log( `${import.meta.env.VITE_REACT_APP_API}/token`)
     try {
       const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API}/token`);
+      console.log(response)
       setToken(response.data.accessToken);
-      const decoded = jwtDecode(response.data.accessToken);
-      setName(decoded.email)
-      console.log(decoded.email)
+      const decoded = jwt_decode(response.data.accessToken);
+      setName(decoded.fullname)
+      console.log(decoded)
     } catch (error) {
       if (error.response) {
           console.log(error.message)

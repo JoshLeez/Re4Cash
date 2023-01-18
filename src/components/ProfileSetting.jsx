@@ -1,10 +1,26 @@
-import { useState } from "react"
+import axios from "axios"
+import { useEffect, useState } from "react"
 import { EditProfile, TambahAlamat } from "./OverlayUser"
-
 const ProfileSetting = () => {
 
     const [edit, setEdit] = useState(false)
     const [alamat, setAlamat] = useState(false)
+    const [data, setData] = useState([])
+
+    const AlamatUser = async()=>{
+        try{
+        console.log("test")
+        response = await axios.get(`${import.meta.env.VITE_REACT_APP_API}/alamat-user`)
+        setData(response)
+        console.log(response)
+        }catch(error){
+            console.log(error.message)
+        }
+    }       
+
+    useEffect(()=>{
+        AlamatUser()
+    },[])
 
   return (
     <section className="profile-setting-wrapper">

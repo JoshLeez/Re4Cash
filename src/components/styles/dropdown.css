@@ -1,5 +1,10 @@
 .custom-dd-container{
     user-select: none;
+    z-index: 50;
+}
+
+.custom-dd-container.unactive{
+    pointer-events:none;
 }
 
 .dropdown-custom{
@@ -13,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+
 }
 
 
@@ -29,9 +35,9 @@
     filter: drop-shadow(0px 4px 29px rgba(0, 0, 0, 0.15));
     border-radius: 8px;
     background: #FFFFFF;
-    overflow: hidden;
     position: absolute;    
     width: 186px;
+    z-index: 30;
 }
 
 .db-option-custom > *{
@@ -40,6 +46,7 @@
     justify-content: center;
     align-items:center;
     cursor: pointer;
+    position: relative;
 }
 
 .db-option-custom > *:hover{
@@ -53,7 +60,6 @@
     background: #FFFFFF;
     border: 1px solid #D6D6D6;
     border-radius: 8px;
-    width: 268px;
     height: 44px;
     display:flex;
     justify-content: space-between;
