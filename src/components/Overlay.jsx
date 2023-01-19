@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -24,16 +24,14 @@ export const Register = ({ setRegister }) => {
     document.addEventListener("mousedown", handler);
   }, []);
 
+
   const onSubmit = async (value) => {
     try {
-      const {data} = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/users`, value);
-      if(data.Authorization){
-        localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);
-        console.log(import.meta.env.VITE_REACT_APP_AUTH)
-      }
       setRegister(false)
+      await axios.post(`${import.meta.env.VITE_REACT_APP_API}/users`, value);
     } catch (error) {
       if (error.response) {
+        console.log(error)
         setErrorMessage(error.response.data.message);
       }
     }
@@ -169,7 +167,6 @@ export const Login = ({ setLogin }) => {
 
   const onSubmit = async (value) => {
     try {
-      console.log(value);
       const { data } = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/login`, value)
       if(data.Authorization) {
         localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);

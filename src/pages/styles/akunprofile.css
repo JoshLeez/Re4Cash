@@ -227,12 +227,15 @@
     font-size: 24px;
 }
 
+
 .aksi-btn-alamat > #edit{
     color:#F2A600;
+    cursor: pointer;
 }
 
 .aksi-btn-alamat > #delete{
     color:#E40101;
+    cursor: pointer;
 }
 
 .bottom-data-rekening{

@@ -2,11 +2,13 @@ import { HOCAkunProfile } from "../components/HOC"
 import ProfileCard from "../components/ProfileCard"
 import StatusTransaksi from "../components/StatusTransaksi"
 import "./styles/akunprofile.css"
-import { useState} from "react"
+import { useEffect, useState} from "react"
 import Dikemas from "../components/Dikemas"
 import Dikirim from "../components/Dikirim"
 import PesananSelesai from "../components/PesananSelesai"
 import ProfileSetting from "../components/ProfileSetting"
+import { useParams } from "react-router-dom"
+import axios from "axios"
 
 const AkunProfile = () => {
 

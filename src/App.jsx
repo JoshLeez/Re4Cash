@@ -42,7 +42,7 @@ function App() {
           <Route path="/marketplace" element={<MarketPlaceUtama/>}/>
           <Route path="/detail-product" element={<DetailProduct/>}/>
           <Route path="/checkout" element={<Checkout/>}/>
-          <Route path="/profile-user" element={<AkunProfile/>}/>
+          <Route path="/profile-user/:id" element={<AkunProfile/>}/>
           <Route path="/marketplace-penjualan" element={<MarketplacePenjualan/>}/>
           <Route path="/dashboard-pengelola" element={<DashboardPengelola/>}/>
           <Route path="/kontak" element={<KontakKami/>}/>

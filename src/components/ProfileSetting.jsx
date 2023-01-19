@@ -1,26 +1,59 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { EditProfile, TambahAlamat } from "./OverlayUser"
+import { useParams } from "react-router-dom"
+import { EditProfile, TambahAlamat, EditAlamat } from "./OverlayUser"
+
 const ProfileSetting = () => {
 
     const [edit, setEdit] = useState(false)
     const [alamat, setAlamat] = useState(false)
     const [data, setData] = useState([])
+    const [editAlamat, setEditAlamat] = useState(false)
 
     const AlamatUser = async()=>{
         try{
-        console.log("test")
-        response = await axios.get(`${import.meta.env.VITE_REACT_APP_API}/alamat-user`)
-        setData(response)
-        console.log(response)
-        }catch(error){
-            console.log(error.message)
-        }
-    }       
+       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+       const config = {
+         headers: {
+           Authorization: `${token}`
+         }
+       };
+       const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API}/alamat-user`, config);
+       setData(response.data.data)
+     }
+     catch(error){
+       console.log(error.message)
+     }
+   }
 
     useEffect(()=>{
         AlamatUser()
     },[])
+
+    // const [data, setData] = useState([]);
+
+    // const loadData = async() =>{
+    //   try{
+    //     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+    //     const config = {
+    //       headers: {
+    //         Authorization: `${token}`
+    //       }
+    //     };
+    //     const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API}/users`, config);
+    //     setData(response.data.data)
+    //   }
+    //   catch(error){
+    //     console.log(error.message)
+    //   }
+    // }
+  
+    // useEffect(()=>{
+    //     loadData()
+    // },[])
+  
+   let {id} = useParams();
+  
 
   return (
     <section className="profile-setting-wrapper">
@@ -62,12 +95,14 @@ const ProfileSetting = () => {
                 <div className="bottom-profile-alamat">
                     <h1>Alamat Utama</h1>
                     <div className="data-alamat-utama">
-                        <p>
-                        Jl. Pembangunan 1, Selat Panjang Kota, Kec. 
-                        Tebing Tinggi, Kabupaten Kepulauan Meranti, Riau, 213094
-                        </p>
+                        {data.map((datas, index)=>(
+                             <p key={index}>
+                             {datas.alamat_lengkap}, {datas.kabupaten_kota}, Kec. 
+                             {datas.kecamatan}, {datas.provinsi}, {datas.kode_pos}
+                             </p>
+                        ))}
                         <div className="aksi-btn-alamat">
-                            <iconify-icon id="edit" icon="material-symbols:edit"/>
+                            <iconify-icon onClick={()=>setEditAlamat(!editAlamat)} id="edit" icon="material-symbols:edit"/>
                             <iconify-icon id="delete" icon="entypo:squared-cross"/>
                         </div>
                     </div>
@@ -101,6 +136,7 @@ const ProfileSetting = () => {
         </div>
         {edit && <EditProfile setEdit={setEdit}/>}
         {alamat && <TambahAlamat setAlamat={setAlamat}/>}
+        {editAlamat && <EditAlamat data={data}  setEditAlamat={setEditAlamat}/>}
     </section>
   )
 }

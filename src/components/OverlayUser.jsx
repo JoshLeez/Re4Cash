@@ -1,11 +1,12 @@
 import {UilUserCircle } from '@iconscout/react-unicons';
 import { useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button, { LinkButton } from './Button';
 import CustomDropDown, { DDTarikPoint, LongDropDown, SecTarikPoint, ThirdTarikPoint } from './CustomDropDown';
 import { UilAngleDown } from '@iconscout/react-unicons'
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
+import { useForm } from 'react-hook-form';
 
 export const OverlayUser = ({ setUser }) => {
   const menuRef = useRef();
@@ -22,24 +23,30 @@ export const OverlayUser = ({ setUser }) => {
       document.removeEventListener("mousedown", handler);
   }
   })
+  const data = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const split = data.split(" ")[1];
+  const { userId } = jwtDecode(split);
 
+  const navigate = useNavigate()
   const logout = async () =>{
     try{
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common['Authorization'] = `${token}`
-      const response =  await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
+      await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
       localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH)
-      console.log(response)}
+      navigate(0)
+    }
       catch(error){
           console.log(error.message)
       }
     }
 
+
   return (
     <div ref={menuRef} className="dd-user">
         <div className='dd-profile-saya'>       
             <UilUserCircle  />
-            <Link to="/profile-user" className='nama-poin-user'>
+            <Link to={`/profile-user/${userId}`} className='nama-poin-user'>
                 <h2>Udin</h2>
                 <h4>Profile Saya</h4>
                 <span>0 Poin</span>
@@ -89,14 +96,17 @@ export const EditProfile = ({setEdit}) => {
   }
   })
 
-  const updataUser = async () =>{
-    try{
-      await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users/6`, value);
-      setEdit(false)
-    }catch(error){
-      console.log(error.message)
-    }
-  }
+  // const updataUser = async (value) =>{
+  //   try{
+  //     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  //     axios.defaults.headers.common['Authorization'] = `${token}`
+  //     await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users`, value);
+      
+  //     setEdit(false)
+  //   }catch(error){
+  //     console.log(error.message)
+  //   }
+  // }
 
   return (
     <div className='overlay-container'>
@@ -134,6 +144,7 @@ export const TambahAlamat = ({setAlamat}) => {
   }
   })
 
+
   return (
     <div  className='overlay-container'>
       <div ref={menuRef} className='container-modal-alamat'>
@@ -156,6 +167,79 @@ export const TambahAlamat = ({setAlamat}) => {
             </div>
           </div>
       </div>
+    </div>
+  )
+}
+
+export const EditAlamat = ({setEditAlamat, data}) => {
+
+  const menuRef = useRef();
+  const initialValues = {
+    alamat_lengkap : data[0].alamat_lengkap,
+    kabupaten_kota : data[0].kabupaten_kota,
+    kecamatan : data[0].kecamatan,
+    kode_pos : data[0].kode_pos,
+    provinsi : data[0].provinsi
+  }
+
+
+  const {
+    register,
+    handleSubmit
+  } = useForm({
+    defaultValues: initialValues
+  });
+
+
+  useEffect(()=>{
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setEditAlamat(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+  }
+  })
+
+  const navigate = useNavigate()
+
+  const onSubmit = async (value) =>{
+    try{
+        const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+        axios.defaults.headers.common['Authorization'] = `${token}`
+        const response = await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/alamat-user/${data[0].id_alamat_user}`, value)
+        setEditAlamat(false)
+        navigate(0)
+      }catch(error){
+      console.log(error.message)
+    }
+  }
+  
+  return (
+    <div  className='overlay-container'>
+      <form onSubmit={handleSubmit(onSubmit)} ref={menuRef} className='container-modal-alamat'>
+      <iconify-icon onClick={()=>setEditAlamat(false)} icon="maki:cross"/>
+          <h1>Edit Alamat</h1>
+          <div className='input-tambah-alamat'>
+            <div className='tambah-alamat-top'>
+              <div className="checkbox-set-alamat">
+                <input type="checkbox"/>
+                <span>Set Jadi Alamat Utama</span>       
+              </div>
+              <textarea {...register("alamat_lengkap")} placeholder='Alamat Lengkap (nama jalan dan patokan)'/>
+              <div className='alamat-input-2d'>
+                <input {...register("kecamatan")} type="text" placeholder='Kecamatan'/>
+                <input {...register("kabupaten_kota")} type="text" placeholder='Kabupaten/Kota'/>
+                <input {...register("provinsi")} type="text" placeholder='Provinsi'/>
+                <input {...register("kode_pos")} type="text" placeholder='Kode Pos'/>
+              </div>
+              <Button tipe="PRIMARY" type="submit">Simpan</Button>
+            </div>
+          </div>
+      </form>
     </div>
   )
 }

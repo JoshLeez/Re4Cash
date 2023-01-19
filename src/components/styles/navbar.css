@@ -37,6 +37,7 @@
 
 .navbar-wrapper.menu{
     box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.15);
+    gap:10px;
 }
 
 .navbar-wrapper>a {
@@ -56,7 +57,7 @@
 }
 
 .right-navbar {
-    width: 312px;
+    gap:20px;
     display: flex;
     font-weight: 600;
     font-size: 16px;
@@ -151,7 +152,10 @@ a.active {
     font-size: 16px;
     line-height: 17px;
     color: #606060;
+    width: 60px;
+    height: 17px;
 }
+
 
 .bottom-navbar {
     margin: 0 auto;

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useNavigate, NavLink, Navigate } from "react-router-dom";
 import Button from "./Button";
 import "./styles/navbar.css";
 import * as Unicons from "@iconscout/react-unicons";
@@ -16,15 +16,24 @@ const Navbar = () => {
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const [user, setUser] = useState(false);
   const [fullname, setFullname] = useState("")
-  
+ 
 
+
+  useEffect(()=>{
+    if(token !== null){
+      const split = token.split(" ")[1];
+      const {email} = jwtDecode(split);
+      setFullname(email)
+    }
+ })
+ 
   
   const displayButton =
-   undefined !== undefined  ? (
+   fullname !== ""  ? (
       <div className="wrapper-profile-navbar">
       <div className="profile-navbar" onClick={() => setUser(!user)}>
         <Unicons.UilUserCircle color="#FFAF00" size="32px" />
-        <h6>Hi,  </h6>
+        <h6>Hi, <span>{fullname}</span> </h6>
       </div>
       {user && <OverlayUser setUser={setUser} user={user} />}
     </div> )
@@ -68,8 +77,41 @@ export default Navbar;
 export const Navbarmarketplace = () => {
   const [user, setUser] = useState(false);
   const [word, setWord] = useState("Semua");
+  const [login, setLogin] = useState(false);
+  const [register, setRegister] = useState(false);
+  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const [fullname, setFullname] = useState("")
+
+  useEffect(()=>{
+    if(token !== null){
+      const split = token.split(" ")[1];
+      const {email} = jwtDecode(split);
+      setFullname(email)
+    }
+ })
+ 
+ const displayButton =
+ fullname !== ""  ? (
+    <div className="wrapper-profile-navbar">
+    <div className="profile-navbar" onClick={() => setUser(!user)}>
+      <Unicons.UilUserCircle color="#FFAF00" size="32px" />
+      <h6>Hi, {fullname} </h6>
+    </div>
+    {user && <OverlayUser setUser={setUser} user={user} />}
+  </div> )
+  : (
+    <div className="right-navbar">
+      <Button onClick={() => setLogin(true)} tipe="SECONDARY" type="submit">
+        Masuk
+      </Button>
+      <Button tipe="PRIMARY" onClick={() => setRegister(true)} type="button">
+        Daftar
+      </Button>
+    </div>
+  );
 
   return (
+  <>
     <header className="container-navbar marketplace">
       <nav className="navbar-outside">
         <div className="navbar-wrapper menu">
@@ -87,13 +129,7 @@ export const Navbarmarketplace = () => {
             <Unicons.UilShoppingCart color="#FFAF00" size="32px" />
           </Link>
           <Unicons.UilStore color="#FFAF00" size="32px" />
-          <div className="wrapper-profile-navbar">
-            <div className="profile-navbar" onClick={() => setUser(!user)}>
-              <Unicons.UilUserCircle color="#FFAF00" size="32px" />
-              <h6>Hi, Udin</h6>
-            </div>
-            {user && <OverlayUser setUser={setUser} user={user} />}
-          </div>
+          {displayButton}
         </div>
       </nav>
       <menu className="bottom-navbar">
@@ -121,11 +157,24 @@ export const Navbarmarketplace = () => {
         <h5>{word}</h5>
       </menu>
     </header>
+    {login && <Login setLogin={setLogin} />}
+    {register && <Register setRegister={setRegister} />}
+    </>
   );
 };
 
 export const NavbarAkunProfile = () => {
   const [user, setUser] = useState(false);
+  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const [fullname, setFullname] = useState("")
+
+  useEffect(()=>{
+    if(token !== null){
+      const split = token.split(" ")[1];
+      const {email} = jwtDecode(split);
+      setFullname(email)
+    }
+ })
 
   return (
     <header className="container-navbar">
@@ -147,7 +196,7 @@ export const NavbarAkunProfile = () => {
         <div className="wrapper-profile-navbar">
           <div className="profile-navbar" onClick={() => setUser(!user)}>
             <Unicons.UilUserCircle color="#FFAF00" size="32px" />
-            <h6>Hi, Udin</h6>
+            <h6>Hi, {fullname} </h6>
           </div>
           {user && <OverlayUser setUser={setUser} user={user} />}
         </div>
