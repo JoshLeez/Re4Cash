@@ -41,9 +41,9 @@ const PengelolaDataPenjualan = () => {
                         <td>Dikemas</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
+                                {/* <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
-                                </LinkButton>
+                                </LinkButton> */}
                                 <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
@@ -62,9 +62,9 @@ const PengelolaDataPenjualan = () => {
                         <td>Dikemas</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
+                                {/* <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
-                                </LinkButton>
+                                </LinkButton> */}
                                 <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
@@ -83,9 +83,9 @@ const PengelolaDataPenjualan = () => {
                         <td>Dikirim</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
+                                {/* <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
-                                </LinkButton>
+                                </LinkButton> */}
                                 <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
@@ -104,9 +104,9 @@ const PengelolaDataPenjualan = () => {
                         <td>Selesai</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
+                                {/* <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
-                                </LinkButton>
+                                </LinkButton> */}
                                 <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>
@@ -125,9 +125,9 @@ const PengelolaDataPenjualan = () => {
                         <td>Selesai</td>
                         <td>
                             <div className="tabel-kolom-aksibutton-edithapus">
-                                <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
+                                {/* <LinkButton type="AKSI_EDIT" to="/data-penjualan-pengelola/edit">
                                     <iconify-icon icon="clarity:edit-solid" />
-                                </LinkButton>
+                                </LinkButton> */}
                                 <Button tipe="AKSI_HAPUS">
                                     <iconify-icon icon="icomoon-free:cross" />
                                 </Button>

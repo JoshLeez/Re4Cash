@@ -68,12 +68,12 @@ const PengelolaKelolaLapakPenjualan = () => {
                         </td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>Daur Ulang</td>
+                        <td>2</td>
+                        <td>Mentahan</td>
                         <td><img src="prevtabel-dashuatama-potbunga.png" /></td>
-                        <td>Pot dari bahan daur ulang</td>
+                        <td>Serabut Kelapa 1 Kiloan</td>
                         <td>Pot Bunga Ramah Lingkungan  merupakan Pot yang memiliki fungsi Menanam Bunga  mini yang pas untuk hiasan kamar anda menjadi lebih estetik.</td>
-                        <td>Rp20.000</td>
+                        <td>Rp10.000</td>
                         <td>Pcs</td>
                         <td>Anorganik</td>
                         <td>Plastik</td>

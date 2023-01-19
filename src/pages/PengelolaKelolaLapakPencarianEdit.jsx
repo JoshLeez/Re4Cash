@@ -139,7 +139,7 @@ Semua Orderan yang masuk sampai jam 5 sore, akan kami proses di hari yang sama. 
                 </div>
                 <div className="button-formtambah-dashpengelola-kelolalapakpenjualan">
                   <LinkButton type="BUTTON_BATAL" to="/kelola-lapak-pencarian-pengelola">Batal</LinkButton>
-                  <Button onClick={()=>setButtonUbah(!buttonubah)} tipe="BUTTON_UBAH">Ubah</Button>
+                  <Button onClick={()=>setButtonUbah(!buttonubah)} tipe="BUTTON_UBAH" type="button">Ubah</Button>
                 </div>
               </form>                
             </section>

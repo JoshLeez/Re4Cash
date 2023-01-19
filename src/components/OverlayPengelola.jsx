@@ -82,9 +82,9 @@ export const ButtonUbah = ({setButtonUbah, link}) => {
           <Button onClick={()=>setButtonUbah(false)} className='tiru-overlay-button-batal'>
             <h4>Batal</h4>
           </Button>
-          <Button to={link} className='tiru-overlay-button-ubah'>
+          <Link to={link} className='tiru-overlay-button-ubah'>
             <h4>Ubah</h4>
-          </Button>
+          </Link>
         </div>
       </div>
     </div>

@@ -83,7 +83,6 @@ const DashboardPengelola = () => {
                 </div>
                 <div className="wrapper-table-data-dashutama">
                   <table id="tabel-pengelola-dashutama">
-                    <thead>
                       <tr>
                         <th>No</th>
                         <th>Jenis</th>
@@ -91,8 +90,6 @@ const DashboardPengelola = () => {
                         <th>Judul Pencarian</th>
                         <th>Harga</th>
                       </tr>
-                    </thead>
-                    <tbody>
                       <tr>
                         <td>1</td>
                         <td>Mentahan</td>
@@ -100,7 +97,6 @@ const DashboardPengelola = () => {
                         <td>Saya Mencari Minyak Jelantah Kiloan</td>
                         <td>Rp15.000</td>
                       </tr>
-                    </tbody>
                   </table>
                 </div>
               </div>

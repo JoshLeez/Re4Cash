@@ -52,4 +52,6 @@ table tr:nth-child(odd) {
 .tabel-kolom-aksibutton-edithapus {
     display: flex;
     gap: 4px;
+    justify-content: center;
+    align-items: center;
 }

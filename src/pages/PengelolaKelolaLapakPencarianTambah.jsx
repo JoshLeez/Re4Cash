@@ -133,7 +133,7 @@ const PengelolaKelolaLapakPencarianTambah = () => {
                 </div>
                 <div className="button-formtambah-dashpengelola-kelolalapakpenjualan">
                   <LinkButton type="BUTTON_BATAL" to="/kelola-lapak-pencarian-pengelola">Batal</LinkButton>
-                  <Button onClick={()=>setButtonTambah(!buttontambah)} tipe="BUTTON_TAMBAH">Tambah</Button>
+                  <Button onClick={()=>setButtonTambah(!buttontambah)} tipe="BUTTON_TAMBAH" type="button">Tambah</Button>
                 </div>
               </form>                
             </section>
@@ -141,7 +141,7 @@ const PengelolaKelolaLapakPencarianTambah = () => {
           <Footerdashboardpengelola/>
         </div>
       </div>
-      {buttontambah && <ButtonTambah link='/kelola-lapak-penjualan-pengelola' setButtonTambah={setButtonTambah}/>}
+      {buttontambah && <ButtonTambah link='/kelola-lapak-pencarian-pengelola' setButtonTambah={setButtonTambah}/>}
     </HOCdashboardpengelola>
   );
 };

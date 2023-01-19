@@ -220,13 +220,13 @@ const PengelolaDataTabungan = () => {
                     </div>
                     <div className={aksi ? "wrapper-konten-isikanan-dashboard-datatabungan" : "wrapper-konten-isikanan-dashboard-datatabungan active"}>
                         <h5>Detail Penabung</h5>
-                        {aksi ?  
+                        {/* {aksi ?   */}
                         <div className="card-konten-isikanan-dashboard-datatabungan">
                             <iconify-icon icon="tabler:pig-off"/>
                             <p>Belum Ada Detail Data Penabung</p>
                         </div>
-                        : <DataPenabung setAksi={setAksi}/>
-                        }
+                        {/* : <DataPenabung setAksi={setAksi}/>
+                        } */}
                     </div>
                 </div>
             </section>         
