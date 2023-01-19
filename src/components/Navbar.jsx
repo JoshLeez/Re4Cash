@@ -15,11 +15,12 @@ const Navbar = () => {
   const [register, setRegister] = useState(false);
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const [user, setUser] = useState(false);
+  const [fullname, setFullname] = useState("")
+  
 
   
-  
   const displayButton =
-    undefined !== undefined  ? (
+   undefined !== undefined  ? (
       <div className="wrapper-profile-navbar">
       <div className="profile-navbar" onClick={() => setUser(!user)}>
         <Unicons.UilUserCircle color="#FFAF00" size="32px" />

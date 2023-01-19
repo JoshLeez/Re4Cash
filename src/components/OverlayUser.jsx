@@ -26,21 +26,14 @@ export const OverlayUser = ({ setUser }) => {
   const logout = async () =>{
     try{
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-      // const split = token.split(" ")[1];
-      console.log(token0)
-      const response =  await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`,
-      token);
+      axios.defaults.headers.common['Authorization'] = `${token}`
+      const response =  await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
       localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH)
       console.log(response)}
       catch(error){
           console.log(error.message)
       }
     }
-
-  useEffect(()=>{
-  
-    logout()
-  },[])
 
   return (
     <div ref={menuRef} className="dd-user">
