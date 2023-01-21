@@ -63,7 +63,16 @@ const Beranda = () => {
        <section className="mitra-kerjasama">
         <h2>Mitra Kerjasama</h2>
         <div className="list-mitra-kerjasama">
-          
+            <img src="/mitra/mitra1.png"/>
+            <img src="/mitra/mitra2.png"/>
+            <img src="/mitra/mitra3.png"/>
+            <img src="/mitra/mitra4.png"/>
+            <img src="/mitra/mitra5.png"/>
+            <img src="/mitra/mitra6.png"/>
+            <img src="/mitra/mitra7.png"/>
+            <img src="/mitra/mitra8.png"/>
+            <img src="/mitra/mitra9.png"/>
+            <img src="/mitra/mitra10.png"/>
         </div>
        </section>
        <section className="edukasi-landing-page">

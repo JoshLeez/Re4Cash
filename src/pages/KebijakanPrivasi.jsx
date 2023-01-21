@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import HOC from "../components/HOC";
 import { MdArrowBack} from "react-icons/md"
+import { Link } from "react-router-dom";
 
 const PrivasiDetail = styled.section`
     padding: 160px 240px;
@@ -63,7 +64,7 @@ const BackTo = styled.div`
     flex-direction: row;
     gap: 10px;
     align-items: center;
-
+    
 `;
 const Back = styled.h4`
     font-family: 'Archivo';
@@ -84,8 +85,10 @@ const KebijakanPrivasi = () => {
         <PrivasiDetail>
             <TopPrivasi>
                 <BackTo>
-                    <MdArrowBack style={{color: '#F2A600', width: '20px', height: '20px'}} />
-                    <Back>Kembali</Back>
+                    <Link style={{display:"flex", alignItems:"center",gap:"10px"}} to="/">
+                        <MdArrowBack style={{color: '#F2A600', width: '20px', height: '20px'}} />
+                        <Back>Kembali</Back>
+                    </Link>
                  </BackTo>
                 <TitlePrivasi>
                     Ketentuan & Kebijakan Privasi

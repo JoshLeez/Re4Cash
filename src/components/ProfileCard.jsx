@@ -1,14 +1,42 @@
 import { NavLink } from "react-router-dom";
 import "./styles/profilecard.css";
 import { UilUserCircle } from "@iconscout/react-unicons";
+import jwtDecode from "jwt-decode";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const ProfileCard = () => {
+  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const split = token.split(" ")[1];
+  const { userId } = jwtDecode(split);
+  const [fullname, setFullname] = useState([]);
+
+  const theName = async () => {
+    try {
+      axios.defaults.headers.common["Authorization"] = `${token}`;
+      const response = await axios.get(
+        `${import.meta.env.VITE_REACT_APP_API}/users`
+      );
+      setFullname(response.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    theName();
+  }, [userId]);
+
   return (
     <div className="card-profile-user">
-      <div className="profile-name-picture">
-        <img src="/profile-picture.png" />
-        <h1>Udin</h1>
-      </div>
+      {fullname
+        .filter((fullnames) => fullnames.id_user == userId)
+        .map((fullnames) => (
+          <div key={fullnames.id_user} className="profile-name-picture">
+            <img src="/profile-picture.png" />
+            <h1>{fullnames.fullname}</h1>
+          </div>
+        ))}
       <div className="profile-point">
         <h3>Point</h3>
         <div className="profile-total-point">
@@ -17,7 +45,10 @@ const ProfileCard = () => {
         </div>
       </div>
       <div className="profile-user-menu">
-        <NavLink to="/profile-user" className="profile-left-navigation">
+        <NavLink
+          to={`/profile-user/${userId}`}
+          className="profile-left-navigation"
+        >
           <UilUserCircle />
           <h4>Profile Saya</h4>
         </NavLink>

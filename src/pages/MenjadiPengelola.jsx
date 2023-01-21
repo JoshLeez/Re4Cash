@@ -1,8 +1,14 @@
+import jwtDecode from "jwt-decode";
 import { Link } from "react-router-dom";
 import { LinkButton } from "../components/Button";
 import "./styles/menjadipengelola.css";
 
 const MenjadiPengelola = () => {
+
+  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const split = token.split(" ")[1];
+  const { userId } = jwtDecode(split)
+
   return (
     <div className="menjadi-pengelola-page">
       <div className="left-side">
@@ -12,7 +18,7 @@ const MenjadiPengelola = () => {
 
         <div className="img-logo">
           <div className="navigasi-back">
-            <Link to="/profile-user" className="back-arrow">
+            <Link to={`/profile-user/${userId}`} className="back-arrow">
               <iconify-icon icon="material-symbols:arrow-back" />
             </Link>
             <Link to="/" className="back-text">
@@ -90,7 +96,7 @@ const MenjadiPengelola = () => {
             tersebut sesuai dengan <span>Ketentuan</span> &{" "}
             <span>Kebijakan Privasi.</span>
           </p>
-          <LinkButton to="/dashboard-pengelola">Menjadi Pengelola</LinkButton>
+          <LinkButton to={`/dashboard-pengelola/${userId}`}>Menjadi Pengelola</LinkButton>
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ export default CustomDropDown
 export const LongDropDown = (props) => {
 
     const [toggle,setToggle] = useState(false)
-    const [value, setValue] = useState(props.title)
+    const [value, setValue] = useState(props.gender)
 
     const toggleHandler = () =>{
         setToggle(!toggle);
@@ -47,15 +47,16 @@ export const LongDropDown = (props) => {
     const DdValue = (e) =>{
         setToggle(!toggle)
         setValue(e.target.getAttribute('data-value'))
+        props.setKelamin(e.target.innerText)
     }
 
   return (
         <div className={props.disable ?  "custom-dd-container unactive" : "custom-dd-container"}>
-            <div role="select"  defaultValue={props.title} aria-expanded={toggle} onClick={toggleHandler} className={toggle ? "long-dropdown-custom actived" : "long-dropdown-custom"}>
+            <div role="select" style={{width: `${props.width}px` }}   defaultValue={props.title} aria-expanded={toggle} onClick={toggleHandler} className={toggle ? "long-dropdown-custom actived" : "long-dropdown-custom"}>
                 {value}
                 <UilAngleDown className="arrow-rotation" style={{transform: toggle && "rotate(-180deg)"}} size="24px"/>
             </div>
-            {toggle && <div  style={{width: `${props.width}px` }} className="long-dd-option-custom">
+            {toggle && <div style={{width: `${props.width}px` }}  className="long-dd-option-custom">
                {props.title && <div  data-value={props.title} onClick={(e)=>DdValue(e)}>{props.title}</div>}
                {props.title2 && <div  data-value={props.title2} onClick={(e)=>DdValue(e)}>{props.title2}</div>}
             </div>}

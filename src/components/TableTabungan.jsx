@@ -25,7 +25,7 @@ const TableTabungan = () => {
                 <h3>Metode Menabung :</h3>
                 <div className="metode-tabungan-dd">
                   <span>Bebas</span>
-                  <LongDropDown />
+                  <LongDropDown width="250" title="Seminggu 1x" />
                 </div>
                 <h3>Tanggal Penarikan :</h3>
                 <div className="metode-tabungan-dd">

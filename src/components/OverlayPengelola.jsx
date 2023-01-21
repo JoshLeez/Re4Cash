@@ -1,4 +1,5 @@
 import {UilUserCircle } from '@iconscout/react-unicons';
+import jwtDecode from 'jwt-decode';
 import { useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from './Button';
@@ -20,18 +21,36 @@ export const OverlayPengelola = ({ setPengelola, pengelola }) => {
   }
   })
 
+  const data = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const split = data.split(" ")[1];
+  const { userId } = jwtDecode(split);
+
+  const navigate = useNavigate()
+  const logout = async () =>{
+    try{
+      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+      axios.defaults.headers.common['Authorization'] = `${token}`
+      await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
+      localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH)
+      navigate("/marketplace")
+    }
+      catch(error){
+          console.log(error.message)
+      }
+    }
+
   return (
     <div ref={menuRef} className="dd-pengelola">
         <div className='dd-profile-saya'>       
             <UilUserCircle  />
-            <Link onClick={()=>setPengelola(user)} to="/profile-user" className='nama-poin-user'>
+            <Link onClick={()=>setPengelola(user)} to={`/profile-user/${userId}`} className='nama-poin-user'>
                 <h2>Udin</h2>
                 <h4>Profile Saya</h4>
                 <span>0 Poin</span>
             </Link>
         </div>
         <div className='dd-bot-user'>
-        <Link to="/profile-user"  className='option-bot-user'>
+        <Link to={`/profile-user/${userId}`}  className='option-bot-user'>
                 <iconify-icon icon="mdi:clipboard-user-outline"/>
                 <h4>Menjadi Customer</h4>
             </Link>
@@ -47,10 +66,10 @@ export const OverlayPengelola = ({ setPengelola, pengelola }) => {
                 <iconify-icon icon="mdi:bell-outline"/>
                 <h4>Notifikasi</h4>
             </div>
-            <div className='option-bot-user logout'>
+            <button onClick={()=>logout()} type="button" className='option-bot-user logout'>
                 <iconify-icon icon="mi:log-out"/>
                 <h4>Logout</h4>
-            </div>
+            </button>
       </div>
     </div>
   );

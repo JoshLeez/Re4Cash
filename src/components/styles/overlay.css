@@ -324,7 +324,7 @@
   color: #E40101;
 }
 
-.option-bot-user.logout>button {
+.option-bot-user.logout {
   border: none;
   background: none;
   cursor: pointer;
