@@ -12,14 +12,12 @@ const DetailArticle = () => {
         </div>
         <article className="detail-article-container">
           <div className="detail-article-card">
-            
             <Link to="/edukasi">
             <div className="article-back">
               <iconify-icon icon="material-symbols:arrow-back-ios-rounded" />
               <h3>ke halaman Edukasi</h3>
               </div>  
             </Link>
-            
             <div className="detail-article-card-title">
               <h2>Produk Tersedia</h2>
               <p>lihat semua</p>

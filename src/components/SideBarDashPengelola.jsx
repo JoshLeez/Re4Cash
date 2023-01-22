@@ -1,7 +1,10 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import "./styles/sidebar_dashpengelola.css";
 
 const SideBarDashPengelola = (props) => {
+
+  const {id} = useParams()
+
   return ( 
   <div className="wrapper-sidebar">
     <div>
@@ -10,9 +13,8 @@ const SideBarDashPengelola = (props) => {
           <img src="/Re4CashYW.svg" />
         </Link>
       </div>
-
       <nav className="nav-sidebar">
-        <NavLink to="/dashboard-pengelola" className="nav-sidebar-isi">
+        <NavLink to={`/dashboard-pengelola/${id}`} className="nav-sidebar-isi">
           <iconify-icon icon="material-symbols:space-dashboard-outline"/>
           <span>Dashboard</span>
         </NavLink>

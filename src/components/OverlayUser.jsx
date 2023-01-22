@@ -338,11 +338,17 @@ export const EditAlamat = ({ setEditAlamat, data }) => {
                 type="text"
                 placeholder="Provinsi"
               />
-              <input
-                {...register("kode_pos")}
-                type="text"
+               <input
+                {...register("kode_pos", {
+                  pattern: { value: /^(0|[1-9]\d*)(\.\d+)?$/ },
+                })}
                 placeholder="Kode Pos"
               />
+              {errors.kode_pos && (
+                <span className="error-message">
+                  Invalid Kode Pos (Hanya boleh angka)
+                </span>
+              )}
             </div>
             <Button tipe="PRIMARY" type="submit">
               Simpan

@@ -31,7 +31,6 @@ export const Register = ({ setRegister }) => {
       await axios.post(`${import.meta.env.VITE_REACT_APP_API}/users`, value);
     } catch (error) {
       if (error.response) {
-        console.log(error)
         setErrorMessage(error.response.data.message);
       }
     }

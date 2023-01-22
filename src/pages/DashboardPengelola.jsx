@@ -68,7 +68,7 @@ const DashboardPengelola = () => {
                       <tr>
                         <td>1</td>
                         <td>Daur Ulang</td>
-                        <td><img src="prevtabel-dashuatama-potbunga.png" /></td>
+                        <td><img src="/prevtabel-dashuatama-potbunga.png" /></td>
                         <td>Pot dari bahan daur ulang</td>
                         <td>Rp. 20.000</td>
                       </tr>
@@ -93,7 +93,7 @@ const DashboardPengelola = () => {
                       <tr>
                         <td>1</td>
                         <td>Mentahan</td>
-                        <td><img src="prevtabel-dashuatama-minyakjelantah.png" /></td>
+                        <td><img src="/prevtabel-dashuatama-minyakjelantah.png" /></td>
                         <td>Saya Mencari Minyak Jelantah Kiloan</td>
                         <td>Rp15.000</td>
                       </tr>
