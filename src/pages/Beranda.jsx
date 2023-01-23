@@ -6,8 +6,27 @@ import { Link } from "react-router-dom"
 import MenyiapkanSampah from "../components/MenyiapkanSampah"
 import Artikelcard from "../components/Artikelcard";
 import HOC from "../components/HOC"
+import axios from "axios"
+import { useState, useEffect } from "react"
 
 const Beranda = () => {
+
+  const [data,setData] = useState([])
+
+  const artikelAPI = async() =>{
+    try{
+      const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API}/artikel`);
+      console.log(response.data.data)
+      setData(response.data.data)
+    }catch(error){
+      console.log(error.message)
+    }
+  }
+
+  useEffect(()=>{
+    artikelAPI()
+  },[])
+
   return (
     <HOC>
        <Berandabanner/>
@@ -131,12 +150,24 @@ const Beranda = () => {
        <article className="artikel-hero">
          <h2>Artikel Edukasi</h2>
          <div className="artikel-green-line"/>
-         <div className="artikel-hero-list">
-            <Artikelcard/>
-            <Artikelcard/>
-            <Artikelcard/>
-            <Artikelcard/>
-         </div>
+           <div className="artikel-hero-list">
+      {data.filter((datas, index)=> index < 4).map((datas)=>
+      {
+        const maxLength = 100;
+        const truncatedArtikel = datas.artikel.slice(0, maxLength) + (datas.artikel.length > maxLength ? "..." : "");
+        const maxLengthTitle = 30;
+        const truncatedTitle = datas.judul_artikel.slice(0, maxLengthTitle) + (datas.judul_artikel.length > maxLengthTitle ? "..." : "");
+        return(
+            <Artikelcard key={datas.id_artikel} 
+                        image = {`artikel/${datas.foto_artikel}`}
+                        kategori={datas.kategori}
+                        sub_Kategori={datas.sub_kategori}
+                        judul_Artikel={truncatedTitle}
+                        artikel={truncatedArtikel}
+                        id_Artikel={datas.id_artikel}
+                        />
+                    )})}
+            </div>
        </article>
     </HOC>
   )

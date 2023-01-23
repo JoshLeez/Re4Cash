@@ -126,7 +126,7 @@ export const Navbarmarketplace = () => {
               <Unicons.UilShoppingCart color="#FFAF00" size="32px" />
             </Link>
             <Unicons.UilStore color="#FFAF00" size="32px" />
-            <UserName/>
+            <UserName setLogin={setLogin} setRegister={setRegister}/>
           </div>
         </nav>
         <menu className="bottom-navbar">
@@ -174,7 +174,7 @@ export const NavbarAkunProfile = () => {
         `${import.meta.env.VITE_REACT_APP_API}/users`
       );
 
-      setFullname(response.data.data);
+      setFullname(response.data.data);  
     } catch (error) {
       console.log(error.message);
     }
@@ -183,6 +183,7 @@ export const NavbarAkunProfile = () => {
   useEffect(() => {
     userName();
   }, []);
+
 
   return (
     <header className="container-navbar">
@@ -219,23 +220,24 @@ export const NavbarAkunProfile = () => {
 
 export const Navbardashboardpengelola = () => {
   const [pengelola, setPengelola] = useState(false);
-  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const [fullname, setFullname] = useState([]);
 
   const { id } = useParams();
 
   const userName = async () => {
     try {
+      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common["Authorization"] = `${token}`;
       const response = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/users`
+        `${import.meta.env.VITE_REACT_APP_API}/pengelola`
       );
 
-      setFullname(response.data.data);
+      setFullname(response.data.data)
     } catch (error) {
       console.log(error.message);
     }
   };
+
 
   useEffect(() => {
     userName();
@@ -255,9 +257,9 @@ export const Navbardashboardpengelola = () => {
           >
             <Unicons.UilUserCircle color="#FFAF00" size="32px" />
             {fullname
-              .filter((fullnames) => fullnames.id_user == id)
+              .filter((fullnames) => fullnames.id_pengelola == id)
               .map((fullnames) => (
-                <h6>Hi,{fullnames.fullname}</h6>
+                <h6>Hi,{fullnames.fullname_users}</h6>
               ))}
           </div>
           {pengelola && (

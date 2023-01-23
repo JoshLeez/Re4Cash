@@ -10,7 +10,7 @@ const GrafikCardPengelola = (props) => {
             <p>{props.title}</p>
             <h3>{props.nilai}</h3>
         </div>
-        <img src="grafik-dashboard-pengelola.svg" />
+        <img src="/grafik-dashboard-pengelola.svg" />
     </div>
   );
 };

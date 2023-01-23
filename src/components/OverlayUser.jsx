@@ -39,6 +39,7 @@ export const OverlayUser = ({ setUser, fullname }) => {
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common["Authorization"] = `${token}`;
       await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
+      await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout-pengelola`);
       localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH);
       navigate(0);
     } catch (error) {
@@ -155,7 +156,13 @@ export const EditProfile = ({ setEdit, data }) => {
             width="348"
           />
           <input {...register("tgl_lahir")} type="date" />
-          <input {...register("email")} type="text" />
+          <input   {...register("email", {
+                    required: true,
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "invalid email address",
+                    },
+                  })} type="text" />
           <input {...register("no_hp")} type="text" />
           <Button tipe="PRIMARY" type="submit">
             Simpan

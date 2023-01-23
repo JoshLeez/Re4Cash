@@ -77,7 +77,7 @@
 
 .card-form-dashpengelola-profilakun {
     width: 724px;
-    height: 557px;
+    height: auto;
     background-color: #FFFFFF;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
@@ -114,6 +114,33 @@
     font-weight: 500;
     font-size: 16px;
 
+    border: 1px solid #9C9C9C;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.form-input-container>label {
+    display: flex;
+    width: 207px;
+    height: 44px;
+    justify-content: end;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.form-input-container{
+    width: 472px;
+}
+
+.form-input-container>input {
+    display: flex;
+    width: 472px;
+    height: 44px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
     border: 1px solid #9C9C9C;
     border-radius: 3px;
     padding: 10px;

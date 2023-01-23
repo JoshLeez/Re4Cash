@@ -42,7 +42,7 @@
 
 }
 
-.card-profil-dashboard-utama.edit>iconify-icon {
+.card-profil-dashboard-utama.edit>a {
     position: absolute;
     top: 0;
     right: 0;

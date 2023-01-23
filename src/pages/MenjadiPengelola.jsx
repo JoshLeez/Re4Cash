@@ -16,7 +16,7 @@ const MenjadiPengelola = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const split = token.split(" ")[1];
-  const { userId } = jwtDecode(split)
+  const { pengelolaId } = jwtDecode(split)
   const navigate = useNavigate()
 
 const onSubmit = async (value) =>{
@@ -24,7 +24,7 @@ const onSubmit = async (value) =>{
     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
     axios.defaults.headers.common["Authorization"] = `${token}`;
     await axios.post(`${import.meta.env.VITE_REACT_APP_API}/pengelola`, value)
-    navigate(`/dashboard-pengelola/${userId}`)
+    navigate(`/dashboard-pengelola/${pengelolaId}`)
     console.log(value)
   }catch(error){
     if(error.response){

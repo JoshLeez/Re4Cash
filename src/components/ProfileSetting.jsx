@@ -47,7 +47,6 @@ const ProfileSetting = () => {
 
   useEffect(() => {
     theName();
-    console.log('render')
   }, [id, edit]);
 
   useEffect(() => {

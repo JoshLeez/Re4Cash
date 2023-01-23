@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
 import { Footerdashboardpengelola } from "../components/Footer";
 import GrafikCardPengelola from "../components/GrafikCardPengelola";
 import { HOCdashboardpengelola } from "../components/HOC";
@@ -8,6 +9,9 @@ import SideBarDashPengelola from "../components/SideBarDashPengelola";
 import "./styles/dashboardpengelola.css";
 
 const DashboardPengelola = () => {
+
+  const {id} = useParams()
+
   return (
     <HOCdashboardpengelola title="Dashboard Pengelola">
       <div className="dashboard-page">
@@ -36,7 +40,7 @@ const DashboardPengelola = () => {
                     <h4>08123456123</h4>
                   </div>
                 </div>
-                <iconify-icon icon="material-symbols:edit" />
+                <Link to={`/profil-akun-pengelola/${id}`}><iconify-icon icon="material-symbols:edit" /></Link>
               </div>
               <GrafikCardPengelola icon="icons8:buy" title="Total income penjualan" nilai="Rp12.900.000" />
               <GrafikCardPengelola icon="material-symbols:content-paste-search" title="Data Pencarian" nilai="3 Barang Terbeli" />

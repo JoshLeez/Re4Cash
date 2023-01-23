@@ -458,13 +458,12 @@
 .card-artikel-bottom-judul > h5{
     font-weight: 500;
     font-size: 24px;
-    line-height: 24px;
 }
 
 .card-artikel-bottom-judul > p{
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    text-align: justify;
 }
 
 .artikel-jenis-tipe{

@@ -94,7 +94,6 @@
 .artikel-kategori-tombol{
     width: 925px;
     height: 239px;
-    border:2px solid black;
     margin:0 auto;
     display:flex;
     flex-direction: column;
@@ -118,18 +117,47 @@
 
 .two-btn-kategori > .organik{
     width: 325px;
+    cursor: pointer;
     height: 100%;
     border: 2px solid #0EA601;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding:0 60px;
+    gap:35px;
+}
+
+.organik > span{
+    font-weight: 600;
+    font-size: 32px;
+    color: #0EA601;
+}
+
+.anorganik > span{
+    font-weight: 600;
+    font-size: 32px;
+    color: #F2A600;
 }
 
 .two-btn-kategori > .anorganik{
     width: 325px;
     height: 100%;
+    cursor: pointer;
     border: 2px solid #FFAF00;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding:0 40px;
+    gap:35px;
+}
+
+.two-btn-kategori > .anorganik:hover{
+    opacity:0.6;
+}
+.two-btn-kategori > .organik:hover{
+    opacity:0.6;
 }
 
 .artikel-kategori-tombol > p{
