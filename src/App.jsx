@@ -50,7 +50,7 @@ function App() {
           <Route path='/detailarticle/:id' element={<DetailArticle />}/>
           <Route path="/tabungan" element={<Tabungan/>}/>
           <Route path="/history" element={<History/>}/>
-          <Route path="/profil-akun-pengelola" element={<PengelolaProfilAkun/>}/>
+          <Route path="/profil-akun-pengelola/:id" element={<PengelolaProfilAkun/>}/>
           <Route path="/kebijakanprivasi" element={<KebijakanPrivasi/>}/>
           <Route path="/notifikasi" element={<Notifikasi/>}/>
           <Route path="/data-penjualan-pengelola/" element={<PengelolaDataPenjualan/>}/>

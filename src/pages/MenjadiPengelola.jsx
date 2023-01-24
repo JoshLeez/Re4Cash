@@ -18,14 +18,20 @@ const MenjadiPengelola = () => {
   const split = token.split(" ")[1];
   const { userId } = jwtDecode(split)
   const navigate = useNavigate()
-  console.log(jwtDecode(split))
+  // console.log(jwtDecode(split))
 
 const onSubmit = async (value) =>{
   try{
     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
     axios.defaults.headers.common["Authorization"] = `${token}`;
-    await axios.post(`${import.meta.env.VITE_REACT_APP_API}/pengelola`, value)
-    const split = token.split(" ")[1];
+    const {data} = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/pengelola`, value)
+    localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH)
+    if(data.Authorization) {
+      localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);
+    }
+    console.log(data.Authorization)
+    const tokenPengelola = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+    const split = tokenPengelola.split(" ")[1];
     const { pengelolaId } = jwtDecode(split);
     navigate(`/dashboard-pengelola/${pengelolaId}`)
   }catch(error){

@@ -10,38 +10,26 @@ import "./styles/dashboardpengelola.css";
 import "./styles/pengelolaprofilakun.css";
 
 const PengelolaProfilAkun = () => {
-  const [data, setData] = useState([]);
+  const [userPengelola, setUserPengelola] = useState([]);
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-  const [loading ,setLoading] = useState(true)
-
-
-  useEffect(() => {
-    dataPengelola()
-  },[]);
 
   const dataPengelola = async () => {
     try {
         axios.defaults.headers.common["Authorization"] = `${token}`;
-        const response = await axios.get(
+        const {data} = await axios.get(
             `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
         );
-      setData(response.data);
-      setLoading(false)
-      console.log(response.data.data[0].nama_pengelola)
+      setUserPengelola(data.alamat[0]);
     } catch (error) {
       console.log(error.message);
     }
   };
 
-    // console.log(data.map((pengelolas)=>console.log(pengelolas.nama_pengelola)))
-    // if(data.length < 0)console.log(data.data[0].id_users)
+  console.log(userPengelola.alamat_lengkap)
 
-  
-//  console.log(data.data[0].nama_pengelola)
-
-  if(loading){
-    <div>...Loading</div>
-  }
+  useEffect(() => {
+    dataPengelola()
+  },[]);
 
     const {
         register,
@@ -49,17 +37,19 @@ const PengelolaProfilAkun = () => {
         formState: { errors },
     } = useForm({
         defaultValues :{
-            // nama_pengelola :
+          fullname : userPengelola.fullname_users,
+          nama_pengelola : userPengelola.nama_pengelola
         }
     });
 
 
   const updatePengelola = async (value) => {
     try {
+      console.log(value)
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common["Authorization"] = `${token}`;
       await axios.patch(
-        `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`,
+        `${import.meta.env.VITE_REACT_APP_API}/pengelola`,
         value
       );
     } catch (error) {
@@ -81,6 +71,7 @@ const PengelolaProfilAkun = () => {
                   <div className="profile-nama-dashboard-profilakun">
                     <h1>Zain Pengepul Sampah</h1>
                     <p>Nama Toko</p>
+                    <p>{userPengelola.nama_pengelola}</p>
                   </div>
                   <div className="profile-verif-dashboard-profilakun">
                     <iconify-icon icon="zondicons:checkmark-outline" />
@@ -96,7 +87,7 @@ const PengelolaProfilAkun = () => {
                   <div className="grup-form-dashpengelola-profilakun">
                     <div className="baris-form-dashpengelola-profilakun">
                       <label>Nama Akun</label>
-                      <input {...register("fullname_users")} type="text" />
+                      <input {...register("fullname")} type="text" />
                     </div>
                     <div className="baris-form-dashpengelola-profilakun">
                       <label>Nama Lapak Pengelola</label>
@@ -113,7 +104,7 @@ const PengelolaProfilAkun = () => {
                       <label>Email</label>
                       <div className="form-input-container">
                         <input
-                          {...register("email", {
+                          {...register("email_pengelola", {
                             required: true,
                             pattern: {
                               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,

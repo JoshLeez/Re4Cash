@@ -14,11 +14,11 @@ const SideBarDashPengelola = (props) => {
         </Link>
       </div>
       <nav className="nav-sidebar">
-        <NavLink to={`/dashboard-pengelola`} className="nav-sidebar-isi">
+        <NavLink to={`/dashboard-pengelola/${id}`} className="nav-sidebar-isi">
           <iconify-icon icon="material-symbols:space-dashboard-outline"/>
           <span>Dashboard</span>
         </NavLink>
-        <NavLink to="/profil-akun-pengelola" className="nav-sidebar-isi">
+        <NavLink to={`/profil-akun-pengelola/${id}`} className="nav-sidebar-isi">
         <iconify-icon icon="ph:user"/>
           <span>Profil Akun Pengelola</span>
         </NavLink>
