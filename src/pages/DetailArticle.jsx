@@ -48,16 +48,16 @@ const DetailArticle = () => {
               <p>lihat semua</p>
             </div>
             <div className="detail-article-card-content">
-              <ItemKg/>
+               <ItemKg title="Jual Botol & Plastik Kiloan" subKategori="Plastik" harga="Rp. 10.000" satuan="Kg" lokasi="Bekasi" namaPengelola="Bank sampah Jaya" src="/assets-product/M-botol plastik.png"/>
             </div>
             <div className="detail-article-card-content">
-              <ItemNumber/>
+               <ItemKg title="Jual Botol Bekas Kiloan" subKategori="Botol" harga="Rp. 12.000" satuan="Kg" lokasi="Bogor" namaPengelola="Bank sampah Agen" src="/assets-product/M-botol plastik-1.png"/>
             </div>
             <div className="detail-article-card-content">
-              <ItemKg/>
+              <ItemNumber title="Galon Plastik per Buah" subKategori="Plastik" harga="Rp. 13.000" satuan="Pcs" lokasi="Jakarta" namaPengelola="Kuripan" src="/assets-product/M-Galon.png"/>
             </div>
             <div className="detail-article-card-content">
-              <ItemNumber/>
+               <ItemNumber title="Pot Bunga Ramah Lingkungan Dari Botol..." subKategori="Plastik" harga="Rp. 20.000" satuan="Pcs" lokasi="Jakarta" namaPengelola="Nurhadi" src="/assets-product/P-Pot bunga botol plastik.png"/>   
             </div>
           </div>
           <div className="detail-article-kategori">

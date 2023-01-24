@@ -169,15 +169,14 @@
 }
 
 .penjualan-card{
-    width: 216px;
-    height: 393px;
-    background: #FFFFFF;
-    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+   width: 216px;
+   height: 393px;
+   padding:16px;
+   display:flex;
+   flex-direction: column;
+   background: #FFFFFF;
+   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+   border-radius: 10px;
 }
 
 .penjualan-card:hover{
@@ -188,11 +187,18 @@
     width: 184px;
     height: 169px;
     border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.content-detail-produk {
+   display:flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 186px;
 }
 
 .bottom-detail-card{
     width: 184px;
-    height: 106px;
     display:flex;
     flex-direction: column;
     gap:8px;
@@ -306,7 +312,7 @@
     border-radius: 0 10px 10px 0;
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    padding: 16px 0;
 }
 
 @keyframes opposite{
@@ -342,8 +348,8 @@
 .card-input-nilai{
     width: 178px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin-bottom: 16px;
 }
 
 .card-input-nilai > input{
@@ -353,6 +359,11 @@
     border-radius: 5px;
     outline: none;
     padding:5px;
+    margin-top: 8px;
+}
+
+.card-input-nilai > .card-incre-decre {
+   margin-top: 8px;
 }
 
 .card-input-nilai > h6{
@@ -360,13 +371,14 @@
     font-size: 16px;
     line-height: 12px;
     color: #000000;
+    margin-left: 8px;
 }
 
 .card-total-price{
     display:flex;
     flex-direction: column;
     height: 47px;
-    justify-content: space-between;
+    margin-bottom: 16px;
 }
 
 .card-total-price > h5{
@@ -374,6 +386,7 @@
     font-size: 16px;
     line-height: 17px;
     color: #000000;
+    margin-bottom: 8px;
 }
 
 .card-total-price > h4{
@@ -388,6 +401,7 @@
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 16px;
 }
 
 .card-profile-verifikasi{
@@ -495,50 +509,51 @@
 
 /* Item without button */
 .wrapper-item{
-    width: 216px;
-    padding:16px;
-    display:flex;
-    flex-direction: column;
-    gap:8px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
+   width: 216px;
+   padding:16px;
+   display:flex;
+   flex-direction: column;
+   gap:8px;
+   background: #FFFFFF;
+   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+   border-radius: 10px;
 }
 
 .wrapper-item > img{
-    width: 184px;
-    height: 167px;
-    border-radius: 10px;
+   width: 184px;
+   height: 167px;
+   border-radius: 10px;
 }
 
 .wrapper-item > h6{
-    font-weight: 500;
-    font-size: 16px;
+   font-weight: 500;
+   font-size: 16px;
 }
 
 .wrapper-item > p{
-    width: 59px;
-    height: 30px;
-    border: 1px solid #0EA601;
-    border-radius: 5px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 12px;
-    color: #0EA601;
+   width: 59px;
+   height: 30px;
+   border: 1px solid #0EA601;
+   border-radius: 5px;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: 500;
+   font-size: 12px;
+   color: #0EA601;
 }
 
-.wrapper-item > h4{
+.price-card{
     font-weight: 700;
     font-size: 20px;
 }
 
-.wrapper-item > h4 > span{
+.price-card > span{
     font-weight: 500;
     font-size: 16px;
     color: #606060;
 }
+
 
 /* Card Tabungan */
 .bisa-menabung-status{
@@ -551,7 +566,7 @@
     font-size: 24px;
 }
 
-.bisa-menabung-status > p{
+.content-mid .bisa-menabung-status > span{
     font-weight: 500;
     font-size: 12px;
 }
