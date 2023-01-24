@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {
   Link,
   NavLink,
-  useParams,
+  useNavigate,
 } from "react-router-dom";
 import Button from "./Button";
 import "./styles/navbar.css";
@@ -12,32 +12,23 @@ import "./styles/overlay.css";
 import { OverlayUser } from "./OverlayUser";
 import { UilSearch } from "@iconscout/react-unicons";
 import { OverlayPengelola } from "./OverlayPengelola";
-import jwtDecode from "jwt-decode";
 import axios from "axios";
+import { useCallback } from "react";
 
 
-export const UserName = ({setLogin, setRegister}) => {
+export const UserName = ({setLogin, setRegister, login}) => {
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const [user, setUser] = useState(false);
-  const [fullname, setFullname] = useState([]);
-  const [id, setId] = useState();
-
-  useEffect(() => {
-    if (token !== null) {
-      const split = token.split(" ")[1];
-      const { userId } = jwtDecode(split);
-      setId(userId)
-    }
-  },[token]);
-
-  
+  const [value, setValue] = useState({});
+ 
   const theName = async () => {
     try {
       axios.defaults.headers.common["Authorization"] = `${token}`;
-      const response = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/users`
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_REACT_APP_API}/users-by-id`
       );
-      setFullname(response.data.data);
+      setValue(data.data);
+      console.log("test")
     } catch (error) {
       console.log(error.message);
     }
@@ -45,30 +36,26 @@ export const UserName = ({setLogin, setRegister}) => {
 
   useEffect(() => {
       theName()
-  }, [id]);
+  }, []);
 
   return(
-      id !== undefined ? (
-      <div className="wrapper-profile-navbar">
+    <>
+      {token && <div className="wrapper-profile-navbar">
         <div className="profile-navbar" onClick={() => setUser(!user)}>
           <Unicons.UilUserCircle color="#FFAF00" size="32px" />
-          {fullname
-            .filter((fullnames) => fullnames.id_user == id)
-            .map((fullnames) => (
-              <h6>Hi,{fullnames.fullname}</h6>
-            ))}
+              <h6 key={value.id_user}>Hi,{value.fullname}</h6>
         </div>
-        {user &&  <OverlayUser fullname={fullname} setUser={setUser} user={user} />}
-      </div>
-    ) : (
-      <div className="right-navbar">
+        {user &&  <OverlayUser data={value} setUser={setUser} user={user} />}
+      </div>}
+      {!token && <div className="right-navbar">
         <Button onClick={() => setLogin(true)} tipe="SECONDARY" type="submit">
           Masuk
         </Button>
         <Button tipe="PRIMARY" onClick={() => setRegister(true)} type="button">
           Daftar
         </Button>
-      </div>)
+      </div>}
+      </>
       )
       }
 
@@ -91,7 +78,7 @@ const Navbar = () => {
             <NavLink to="/kontak">Kontak</NavLink>
             <NavLink to="/marketplace">Marketplace</NavLink>
           </div>
-          <UserName setLogin={setLogin} setRegister={setRegister}/>
+          <UserName setLogin={setLogin} login={login} setRegister={setRegister}/>
         </nav>
       </header>
       {login && <Login setLogin={setLogin} />}
@@ -163,18 +150,16 @@ export const Navbarmarketplace = () => {
 export const NavbarAkunProfile = () => {
   const [user, setUser] = useState(false);
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-  const [fullname, setFullname] = useState([]);
+  const [fullname, setFullname] = useState({});
 
-  const { id } = useParams();
 
-  const userName = async () => {
+  const userName =  async () => {
     try {
       axios.defaults.headers.common["Authorization"] = `${token}`;
-      const response = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/users`
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_REACT_APP_API}/users-by-id`
       );
-
-      setFullname(response.data.data);  
+      setFullname(data.data);  
     } catch (error) {
       console.log(error.message);
     }
@@ -182,7 +167,7 @@ export const NavbarAkunProfile = () => {
 
   useEffect(() => {
     userName();
-  }, []);
+  },[fullname]);
 
 
   return (
@@ -205,13 +190,9 @@ export const NavbarAkunProfile = () => {
         <div className="wrapper-profile-navbar">
           <div className="profile-navbar" onClick={() => setUser(!user)}>
             <Unicons.UilUserCircle color="#FFAF00" size="32px" />
-            {fullname
-              .filter((fullnames) => fullnames.id_user == id)
-              .map((fullnames) => (
-                <h6>Hi,{fullnames.fullname}</h6>
-              ))}
+                <h6>Hi,{fullname.fullname}</h6>
           </div>
-          {user && <OverlayUser fullname={fullname} setUser={setUser} user={user} />}
+          {user && <OverlayUser data={fullname} setUser={setUser} user={user} />}
         </div>
       </nav>
     </header>

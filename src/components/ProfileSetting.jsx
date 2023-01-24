@@ -1,4 +1,5 @@
 import axios from "axios";
+import jwtDecode from "jwt-decode";
 import { useEffect, useState, useCallback, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { EditProfile, TambahAlamat, EditAlamat } from "./OverlayUser";
@@ -6,7 +7,6 @@ import { EditProfile, TambahAlamat, EditAlamat } from "./OverlayUser";
 const ProfileSetting = () => {
   const [edit, setEdit] = useState(false);
   const [alamat, setAlamat] = useState(false);
-  const [data, setData] = useState([]);
   const [editAlamat, setEditAlamat] = useState(false);
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const { id } = useParams();
@@ -14,7 +14,6 @@ const ProfileSetting = () => {
   const [selected, setSelected] = useState();
   const [user, setUser] = useState({});
   const genderRef = useRef(user.gender)
-  console.log(genderRef.current)
   const [userSelected, setUserSelected] = useState();
   const birthdate = Object.keys(user).length === 0 ? "" : new Date(user.tgl_lahir).toLocaleDateString();
 
@@ -51,7 +50,8 @@ const ProfileSetting = () => {
 
   useEffect(() => {
     getUserData();
-  }, [id]);
+    console.log(user.listAddress)
+  }, [id, hapus, edit, alamat]);
 
   // useEffect(() => {
   //   if (editAlamat === false || alamat === false) {
@@ -89,7 +89,7 @@ const ProfileSetting = () => {
   };
 
 
-  const deleteAlamat = async (value) => {
+  const deleteAlamat =async (value) => {
     try {
       axios.defaults.headers.common["Authorization"] = `${token}`;
       await axios.delete(
@@ -144,7 +144,7 @@ const ProfileSetting = () => {
               <h1>Tambah Alamat</h1>
             </button>
           </div>
-          { user.listAddress !== undefined && user.listAddress
+          {user.listAddress !== undefined && user.listAddress
             .map((data) => (
               <div key={data.id_alamat_user} className="bottom-profile-alamat">
                 <h1>Alamat Utama</h1>
@@ -166,7 +166,7 @@ const ProfileSetting = () => {
                       id="delete"
                       icon="entypo:squared-cross"
                     />
-                  </div>
+                  </div> 
                 </div>
               </div>
             ))}

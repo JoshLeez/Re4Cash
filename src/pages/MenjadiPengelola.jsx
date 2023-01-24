@@ -16,16 +16,18 @@ const MenjadiPengelola = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const split = token.split(" ")[1];
-  const { pengelolaId } = jwtDecode(split)
+  const { userId } = jwtDecode(split)
   const navigate = useNavigate()
+  console.log(jwtDecode(split))
 
 const onSubmit = async (value) =>{
   try{
     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
     axios.defaults.headers.common["Authorization"] = `${token}`;
     await axios.post(`${import.meta.env.VITE_REACT_APP_API}/pengelola`, value)
-    navigate(`/dashboard-pengelola/`)
-    console.log(value)
+    const split = token.split(" ")[1];
+    const { pengelolaId } = jwtDecode(split);
+    navigate(`/dashboard-pengelola/${pengelolaId}`)
   }catch(error){
     if(error.response){
       setErrorMessage(error.response.data.message);
@@ -41,7 +43,7 @@ const onSubmit = async (value) =>{
         </div>
         <div className="img-logo">
           <div className="navigasi-back">
-            <Link to={`/profile-user`} className="back-arrow">
+            <Link to={`/profile-user/${userId}`} className="back-arrow">
               <iconify-icon icon="material-symbols:arrow-back" />
             </Link>
             <Link to="/" className="back-text">

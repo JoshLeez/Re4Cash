@@ -44,7 +44,7 @@ function App() {
           <Route path="/checkout" element={<Checkout/>}/>
           <Route path="/profile-user/:id" element={<AkunProfile/>}/>
           <Route path="/marketplace-penjualan" element={<MarketplacePenjualan/>}/>
-          <Route path="/dashboard-pengelola" element={<DashboardPengelola/>}/>
+          <Route path="/dashboard-pengelola/:id" element={<DashboardPengelola/>}/>
           <Route path="/kontak" element={<KontakKami/>}/>
           <Route path="/marketplace-pembelian" element={<MarketplacePembelian/>}/>
           <Route path='/detailarticle/:id' element={<DetailArticle />}/>

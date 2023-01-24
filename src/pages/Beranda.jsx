@@ -16,7 +16,6 @@ const Beranda = () => {
   const artikelAPI = async() =>{
     try{
       const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API}/artikel`);
-      console.log(response.data.data)
       setData(response.data.data)
     }catch(error){
       console.log(error.message)

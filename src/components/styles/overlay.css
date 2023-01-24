@@ -307,6 +307,9 @@
   display: flex;
   gap: 16px;
   align-items: center;
+  background: none;
+  border:none;
+  cursor: pointer;
 }
 
 .option-bot-user>iconify-icon {

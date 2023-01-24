@@ -111,7 +111,7 @@ const Edukasi = () => {
         const truncatedTitle = datas.judul_artikel.slice(0, maxLengthTitle) + (datas.judul_artikel.length > maxLengthTitle ? "..." : "");
         return(
             <Artikelcard key={datas.id_artikel} 
-                        image = {`artikel/${datas.foto_artikel}`}
+                        image = {`http://localhost:8008/assets/${datas.foto_artikel}`}
                         kategori={datas.kategori}
                         sub_Kategori={datas.sub_kategori}
                         judul_Artikel={truncatedTitle}

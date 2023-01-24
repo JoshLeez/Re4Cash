@@ -1,6 +1,6 @@
 import { UilUserCircle } from "@iconscout/react-unicons";
 import { useRef, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button, { LinkButton } from "./Button";
 import {
   DDTarikPoint,
@@ -10,29 +10,29 @@ import {
 } from "./CustomDropDown";
 import { UilAngleDown } from "@iconscout/react-unicons";
 import axios from "axios";
-import jwtDecode from "jwt-decode";
 import { useForm } from "react-hook-form";
+import jwtDecode from "jwt-decode";
 
-export const OverlayUser = ({ setUser, fullname }) => {
+export const OverlayUser = ({ setUser, data }) => {
   const menuRef = useRef();
+  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const split = token.split(" ")[1];
+  const { pengelolaId } = jwtDecode(split);
+  const [switchSuccess, setSwitchSuccess ] = useState(false)
 
   useEffect(() => {
     let handler = (event) => {
       if (!menuRef.current.contains(event.target)) {
         setUser(false);
-        console.log(fullname);
       }
     };
-
     document.addEventListener("mousedown", handler);
     return () => {
       document.removeEventListener("mousedown", handler);
     };
   });
-  const data = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-  const split = data.split(" ")[1];
-  const { userId } = jwtDecode(split);
-
+  
+  const location = useLocation()
   const navigate = useNavigate();
   const logout = async () => {
     try {
@@ -40,35 +40,54 @@ export const OverlayUser = ({ setUser, fullname }) => {
       axios.defaults.headers.common["Authorization"] = `${token}`;
       await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
       localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH);
-      navigate(0);
+      if(location.pathname !== "/") {
+        navigate("/");
+      }    
     } catch (error) {
       console.log(error.message);
     }
   };
 
+  const switchToPengelola = async () =>{
+    try{
+    const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+    axios.defaults.headers.common["Authorization"] = `${token}`;
+    const {data} = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/switch-to-pengelola`);
+    if(data.message) setSwitchSuccess(true)
+  }catch(error){
+      console.log(error.message)
+    }
+  }
+
+  useEffect(()=>{
+    if(switchSuccess) navigate(`/dashboard-pengelola/${pengelolaId}`)
+   },[switchSuccess])
+   
   return (
     <div ref={menuRef} className="dd-user">
       <div className="dd-profile-saya">
         <UilUserCircle />
-        {fullname
-          .filter((fullnames) => fullnames.id_user == userId)
-          .map((fullnames) => (
             <Link
-              key={fullnames.id_user}
-              to={`/profile-user/${userId}`}
+              key={data.id_user}
+              to={`/profile-user/${data.id_user}`}
               className="nama-poin-user"
             >
-              <h2>{fullnames.fullname}</h2>
+              <h2>{data.fullname}</h2>
               <h4>Profile Saya</h4>
               <span>0 Poin</span>
             </Link>
-          ))}
       </div>
       <div className="dd-bot-user">
+       {pengelolaId === undefined ?
         <Link to="/menjadi-pengelola" className="option-bot-user">
           <iconify-icon icon="mdi:clipboard-user-outline" />
           <h4>Menjadi Pengelola</h4>
-        </Link>
+        </Link> : 
+          <button onClick={switchToPengelola}  className="option-bot-user">
+            <iconify-icon icon="mdi:clipboard-user-outline" />
+            <h4>Menjadi Pengelola</h4>
+          </button>
+        }
         <Link to="/tabungan" className="option-bot-user">
           <iconify-icon icon="mdi:piggy-bank-outline" />
           <h4>Tabungan</h4>
