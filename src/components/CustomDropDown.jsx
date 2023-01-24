@@ -52,7 +52,7 @@ export const LongDropDown = (props) => {
 
   return (
         <div className={props.disable ?  "custom-dd-container unactive" : "custom-dd-container"}>
-            <div role="select" style={{width: `${props.width}px` }}   defaultValue={props.title} aria-expanded={toggle} onClick={toggleHandler} className={toggle ? "long-dropdown-custom actived" : "long-dropdown-custom"}>
+            <div role="select" style={{width: `${props.width}px` }} value={props.title} aria-expanded={toggle} onClick={toggleHandler} className={toggle ? "long-dropdown-custom actived" : "long-dropdown-custom"}>
                 {value}
                 <UilAngleDown className="arrow-rotation" style={{transform: toggle && "rotate(-180deg)"}} size="24px"/>
             </div>

@@ -44,25 +44,25 @@ function App() {
           <Route path="/checkout" element={<Checkout/>}/>
           <Route path="/profile-user/:id" element={<AkunProfile/>}/>
           <Route path="/marketplace-penjualan" element={<MarketplacePenjualan/>}/>
-          <Route path="/dashboard-pengelola/:id" element={<DashboardPengelola/>}/>
+          <Route path="/dashboard-pengelola" element={<DashboardPengelola/>}/>
           <Route path="/kontak" element={<KontakKami/>}/>
           <Route path="/marketplace-pembelian" element={<MarketplacePembelian/>}/>
           <Route path='/detailarticle/:id' element={<DetailArticle />}/>
           <Route path="/tabungan" element={<Tabungan/>}/>
           <Route path="/history" element={<History/>}/>
-          <Route path="/profil-akun-pengelola/:id" element={<PengelolaProfilAkun/>}/>
+          <Route path="/profil-akun-pengelola" element={<PengelolaProfilAkun/>}/>
           <Route path="/kebijakanprivasi" element={<KebijakanPrivasi/>}/>
           <Route path="/notifikasi" element={<Notifikasi/>}/>
-          <Route path="/data-penjualan-pengelola/:id" element={<PengelolaDataPenjualan/>}/>
+          <Route path="/data-penjualan-pengelola/" element={<PengelolaDataPenjualan/>}/>
           <Route path="/data-penjualan-pengelola/edit" element={<PengelolaDataPenjualanEdit/>}/>
-          <Route path="/data-pencarian-pengelola/:id" element={<PengelolaDataPencarian/>}/>
+          <Route path="/data-pencarian-pengelola/" element={<PengelolaDataPencarian/>}/>
           <Route path="/data-pencarian-pengelola/edit" element={<PengelolaDataPencarianEdit/>}/>
-          <Route path="/data-tabungan-pengelola/:id" element={<PengelolaDataTabungan/>}/>
-          <Route path="/kelola-lapak-penjualan-pengelola/:id" element={<PengelolaKelolaLapakPenjualan/>}/>
+          <Route path="/data-tabungan-pengelola/" element={<PengelolaDataTabungan/>}/>
+          <Route path="/kelola-lapak-penjualan-pengelola/" element={<PengelolaKelolaLapakPenjualan/>}/>
           <Route path="/keranjang" element={<Keranjang/>}/>
           <Route path="/kelola-lapak-penjualan-pengelola/tambah" element={<PengelolaKelolaLapakPenjualanTambah/>}/>
           <Route path="/kelola-lapak-penjualan-pengelola/edit" element={<PengelolaKelolaLapakPenjualanEdit/>}/>
-          <Route path="/kelola-lapak-pencarian-pengelola/:id" element={<PengelolaKelolaLapakPencarian/>}/>
+          <Route path="/kelola-lapak-pencarian-pengelola/" element={<PengelolaKelolaLapakPencarian/>}/>
           <Route path="/kelola-lapak-pencarian-pengelola/tambah" element={<PengelolaKelolaLapakPencarianTambah/>}/>
           <Route path="/kelola-lapak-pencarian-pengelola/edit" element={<PengelolaKelolaLapakPencarianEdit/>}/>
           <Route path="/menjadi-pengelola" element={<MenjadiPengelola/>}/>

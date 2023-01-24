@@ -24,7 +24,7 @@ const onSubmit = async (value) =>{
     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
     axios.defaults.headers.common["Authorization"] = `${token}`;
     await axios.post(`${import.meta.env.VITE_REACT_APP_API}/pengelola`, value)
-    navigate(`/dashboard-pengelola/${pengelolaId}`)
+    navigate(`/dashboard-pengelola/`)
     console.log(value)
   }catch(error){
     if(error.response){
@@ -41,7 +41,7 @@ const onSubmit = async (value) =>{
         </div>
         <div className="img-logo">
           <div className="navigasi-back">
-            <Link to={`/profile-user/${userId}`} className="back-arrow">
+            <Link to={`/profile-user`} className="back-arrow">
               <iconify-icon icon="material-symbols:arrow-back" />
             </Link>
             <Link to="/" className="back-text">

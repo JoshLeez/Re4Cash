@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { EditProfile, TambahAlamat, EditAlamat } from "./OverlayUser";
 
@@ -12,50 +12,81 @@ const ProfileSetting = () => {
   const { id } = useParams();
   const [hapus, setHapus] = useState(true);
   const [selected, setSelected] = useState();
-  const [fullname, setFullname] = useState([]);
+  const [user, setUser] = useState({});
+  const genderRef = useRef(user.gender)
+  console.log(genderRef.current)
   const [userSelected, setUserSelected] = useState();
+  const birthdate = Object.keys(user).length === 0 ? "" : new Date(user.tgl_lahir).toLocaleDateString();
 
-  const theName = async () => {
+  const getUserData = useCallback( async () => {
     try {
       axios.defaults.headers.common["Authorization"] = `${token}`;
-      const response = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/users`
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_REACT_APP_API}/users-by-id`
       );
-      setFullname(response.data.data);
+      genderRef.current = data.data.gender;
+      setUser(data.data);
     } catch (error) {
       console.log(error.message);
     }
-  };
+  },[]);
 
-  const AlamatUser = async () => {
+  // const AlamatUser = async () => {
+    // try {
+  //     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  //     const config = {
+  //       headers: {
+  //         Authorization: `${token}`,
+  //       },
+  //     };
+  //     const response = await axios.get(
+  //       `${import.meta.env.VITE_REACT_APP_API}/alamat-user`,
+  //       config
+  //     );
+  //     setData(response.data.data);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
+
+  useEffect(() => {
+    getUserData();
+  }, [id]);
+
+  // useEffect(() => {
+  //   if (editAlamat === false || alamat === false) {
+  //     AlamatUser();
+  //   }
+  // }, [editAlamat, alamat, hapus, edit])
+
+  const onSelectGender = (gender) =>{
+    genderRef.current = gender;
+  }
+
+  const onSubmit = async (value) => {
     try {
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-      const config = {
-        headers: {
-          Authorization: `${token}`,
-        },
-      };
-      const response = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/alamat-user`,
-        config
-      );
-      setData(response.data.data);
+      axios.defaults.headers.common["Authorization"] = `${token}`;
+      const data = {
+        ...value,
+        gender: genderRef.current
+      }
+      await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users`, data);
+      setUser((prevState) => {
+        return {
+          ...prevState,
+          fullname: value.fullname,
+          email: value.email,
+          no_hp: value.no_hp,
+          tgl_lahir : value.tgl_lahir,
+          gender: genderRef.current
+        }
+      })
+     setEdit(false);
     } catch (error) {
       console.log(error.message);
     }
   };
-
-  useEffect(() => {
-    theName();
-  }, [id, edit]);
-
-  useEffect(() => {
-    if (editAlamat === false || alamat === false) {
-      AlamatUser();
-    }
-  }, [editAlamat, alamat, hapus, edit])
-
-
 
 
   const deleteAlamat = async (value) => {
@@ -74,42 +105,34 @@ const ProfileSetting = () => {
     <section className="profile-setting-wrapper">
       <h1>Profile Setting</h1>
       <div className="content-profile-setting">
-        {fullname
-          .filter((fullnames) => fullnames.id_user == id)
-          .map((fullnames) => {
-            const birthdate = new Date(fullnames.tgl_lahir);
-            const birthdateFormat = birthdate.toLocaleDateString();
-            return (
-              <div key={fullnames.id_user} className="wrapper-personal-data">
-                <div className="top-personal-data">
-                  <h1>Personal Data</h1>
-                  <button
-                    onClick={() =>{ setEdit(!edit), setUserSelected(fullnames)}}
-                    className="edit-personal-data"
-                  >
-                    <iconify-icon icon="material-symbols:edit" />
-                    <h1>Edit Profile</h1>
-                  </button>
-                </div>
-                <div className="personal-data-detail">
-                  <div className="personal-detail">
-                    <h1>Full Name</h1>
-                    <h1>Gender</h1>
-                    <h1>Tanggal Lahir</h1>
-                    <h1>Email</h1>
-                    <h1>No Hp</h1>
-                  </div>
-                  <div className="personal-detail">
-                    <span>{fullnames.fullname}</span>
-                    <span>{fullnames.gender}</span>
-                    <span>{birthdateFormat}</span>
-                    <span>{fullnames.email}</span>
-                    <span>{fullnames.no_hp}</span>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        <div key={user.id_user} className="wrapper-personal-data">
+          <div className="top-personal-data">
+            <h1>Personal Data</h1>
+            <button
+              onClick={() =>{ setEdit(!edit); setUserSelected(user)}}
+              className="edit-personal-data"
+            >
+              <iconify-icon icon="material-symbols:edit" />
+              <h1>Edit Profile</h1>
+            </button>
+          </div>
+          <div className="personal-data-detail">
+            <div className="personal-detail">
+              <h1>Full Name</h1>
+              <h1>Gender</h1>
+              <h1>Tanggal Lahir</h1>
+              <h1>Email</h1>
+              <h1>No Hp</h1>
+            </div>
+            <div className="personal-detail">
+              <span>{user.fullname}</span>
+              <span>{user.gender}</span>
+              <span>{birthdate}</span>
+              <span>{user.email}</span>
+              <span>{user.no_hp}</span>
+            </div>
+          </div>
+        </div>
         <div className="personal-profile-alamat">
           <div className="top-profile-alamat">
             <h1>Alamat</h1>
@@ -121,26 +144,25 @@ const ProfileSetting = () => {
               <h1>Tambah Alamat</h1>
             </button>
           </div>
-          {data
-            .filter((datas) => datas.id_user == id)
-            .map((datas) => (
-              <div key={datas.id_alamat_user} className="bottom-profile-alamat">
+          { user.listAddress !== undefined && user.listAddress
+            .map((data) => (
+              <div key={data.id_alamat_user} className="bottom-profile-alamat">
                 <h1>Alamat Utama</h1>
                 <div className="data-alamat-utama">
                   <p>
-                    {datas.alamat_lengkap}, {datas.kabupaten_kota}, Kec.
-                    {datas.kecamatan}, {datas.provinsi}, {datas.kode_pos}
+                    {data.alamat_lengkap}, {data.kabupaten_kota}, Kec.
+                    {data.kecamatan}, {data.provinsi}, {data.kode_pos}
                   </p>
                   <div className="aksi-btn-alamat">
                     <iconify-icon
                       onClick={() => {
-                        setEditAlamat(!editAlamat), setSelected(datas);
+                        setEditAlamat(!editAlamat), setSelected(data);
                       }}
                       id="edit"
                       icon="material-symbols:edit"
                     />
                     <iconify-icon
-                      onClick={() => deleteAlamat(datas.id_alamat_user)}
+                      onClick={() => deleteAlamat(data.id_alamat_user)}
                       id="delete"
                       icon="entypo:squared-cross"
                     />
@@ -175,7 +197,7 @@ const ProfileSetting = () => {
           </div>
         </div>
       </div>
-      {edit && <EditProfile data={userSelected} setEdit={setEdit} />}
+      {edit && <EditProfile onSubmit={onSubmit} data={userSelected} setEdit={setEdit} setKelamin={onSelectGender} />}
       {alamat && <TambahAlamat setAlamat={setAlamat} />}
       {editAlamat && (
         <EditAlamat data={selected} setEditAlamat={setEditAlamat} />

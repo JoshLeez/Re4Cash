@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
 import Button from "../components/Button";
 import { Footerdashboardpengelola } from "../components/Footer";
 import { HOCdashboardpengelola } from "../components/HOC";
@@ -12,28 +11,37 @@ import "./styles/pengelolaprofilakun.css";
 
 const PengelolaProfilAkun = () => {
   const [data, setData] = useState([]);
-  const { id } = useParams();
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const [loading ,setLoading] = useState(true)
+
+
+  useEffect(() => {
+    dataPengelola()
+  },[]);
 
   const dataPengelola = async () => {
     try {
         axios.defaults.headers.common["Authorization"] = `${token}`;
         const response = await axios.get(
-            `${import.meta.env.VITE_REACT_APP_API}/pengelola`
+            `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
         );
-      setData(response.data.data);
+      setData(response.data);
+      setLoading(false)
+      console.log(response.data.data[0].nama_pengelola)
     } catch (error) {
       console.log(error.message);
     }
   };
 
-    console.log(data[0].nama_pengelola)
     // console.log(data.map((pengelolas)=>console.log(pengelolas.nama_pengelola)))
+    // if(data.length < 0)console.log(data.data[0].id_users)
 
-  useEffect(() => {
-    dataPengelola()
-  },[]);
   
+//  console.log(data.data[0].nama_pengelola)
+
+  if(loading){
+    <div>...Loading</div>
+  }
 
     const {
         register,
@@ -41,7 +49,7 @@ const PengelolaProfilAkun = () => {
         formState: { errors },
     } = useForm({
         defaultValues :{
-            // nama_pengelola : data[0].nama_pengelola
+            // nama_pengelola :
         }
     });
 
@@ -51,7 +59,7 @@ const PengelolaProfilAkun = () => {
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common["Authorization"] = `${token}`;
       await axios.patch(
-        `${import.meta.env.VITE_REACT_APP_API}/pengelola`,
+        `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`,
         value
       );
     } catch (error) {

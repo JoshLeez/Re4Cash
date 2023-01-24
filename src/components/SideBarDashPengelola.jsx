@@ -14,27 +14,27 @@ const SideBarDashPengelola = (props) => {
         </Link>
       </div>
       <nav className="nav-sidebar">
-        <NavLink to={`/dashboard-pengelola/${id}`} className="nav-sidebar-isi">
+        <NavLink to={`/dashboard-pengelola`} className="nav-sidebar-isi">
           <iconify-icon icon="material-symbols:space-dashboard-outline"/>
           <span>Dashboard</span>
         </NavLink>
-        <NavLink to={`/profil-akun-pengelola/${id}`} className="nav-sidebar-isi">
+        <NavLink to="/profil-akun-pengelola" className="nav-sidebar-isi">
         <iconify-icon icon="ph:user"/>
           <span>Profil Akun Pengelola</span>
         </NavLink>
-        <NavLink to={`/data-penjualan-pengelola/${id}`}  className="nav-sidebar-isi">
+        <NavLink to={`/data-penjualan-pengelola`}  className="nav-sidebar-isi">
           <iconify-icon icon="icons8:buy"/>
           <span>Data Penjualan</span>
         </NavLink>
-        <NavLink to={`/data-pencarian-pengelola/${id}`}  className="nav-sidebar-isi">
+        <NavLink to={`/data-pencarian-pengelola`}  className="nav-sidebar-isi">
           <iconify-icon icon="material-symbols:content-paste-search"/>
           <span>Data Pencarian</span>
         </NavLink>
-        <NavLink to={`/data-tabungan-pengelola/${id}`} className="nav-sidebar-isi">
+        <NavLink to={`/data-tabungan-pengelola`} className="nav-sidebar-isi">
           <iconify-icon icon="ic:outline-savings"/>
           <span>Data Tabungan</span>
         </NavLink>
-        <NavLink to={`/kelola-lapak-penjualan-pengelola/${id}`} className="nav-sidebar-isi">
+        <NavLink to={`/kelola-lapak-penjualan-pengelola`} className="nav-sidebar-isi">
           <iconify-icon icon="mdi:shop-edit-outline"/>
           <span>Kelola Lapak Penjualan</span>
         </NavLink>

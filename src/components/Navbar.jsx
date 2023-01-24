@@ -222,14 +222,13 @@ export const Navbardashboardpengelola = () => {
   const [pengelola, setPengelola] = useState(false);
   const [fullname, setFullname] = useState([]);
 
-  const { id } = useParams();
 
   const userName = async () => {
     try {
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common["Authorization"] = `${token}`;
       const response = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/pengelola`
+        `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
       );
 
       setFullname(response.data.data)
@@ -257,7 +256,6 @@ export const Navbardashboardpengelola = () => {
           >
             <Unicons.UilUserCircle color="#FFAF00" size="32px" />
             {fullname
-              .filter((fullnames) => fullnames.id_pengelola == id)
               .map((fullnames) => (
                 <h6>Hi,{fullnames.fullname_users}</h6>
               ))}

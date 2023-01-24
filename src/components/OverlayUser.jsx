@@ -2,7 +2,7 @@ import { UilUserCircle } from "@iconscout/react-unicons";
 import { useRef, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button, { LinkButton } from "./Button";
-import CustomDropDown, {
+import {
   DDTarikPoint,
   LongDropDown,
   SecTarikPoint,
@@ -39,7 +39,6 @@ export const OverlayUser = ({ setUser, fullname }) => {
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common["Authorization"] = `${token}`;
       await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
-      await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout-pengelola`);
       localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH);
       navigate(0);
     } catch (error) {
@@ -95,9 +94,9 @@ export const OverlayUser = ({ setUser, fullname }) => {
   );
 };
 
-export const EditProfile = ({ setEdit, data }) => {
+export const EditProfile = ({ setEdit, data, onSubmit, setKelamin }) => {
   const menuRef = useRef();
-  const [kelamin, setKelamin] = useState();
+
   const birthdate = new Date(data.tgl_lahir);
   const birthdateFormat = birthdate.toISOString().slice(0, 10);
 
@@ -125,22 +124,22 @@ export const EditProfile = ({ setEdit, data }) => {
 
  
 
-  const updataUser = async (value) => {
-    try {
-      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-      axios.defaults.headers.common["Authorization"] = `${token}`;
-      await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users`, {...value, gender: kelamin});
-      setEdit(false);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+  // const onSubmit = async (value) => {
+  //   try {
+  //     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  //     axios.defaults.headers.common["Authorization"] = `${token}`;
+  //     await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users`,{...value, gender : kelamin});
+  //     setEdit(false);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
 
   return (
     <div className="overlay-container">
       <form
         ref={menuRef}
-        onSubmit={handleSubmit(updataUser)}
+        onSubmit={handleSubmit(onSubmit)}
         className="container-edit-profile"
       >
         <iconify-icon onClick={() => setEdit(false)} icon="maki:cross" />
@@ -150,15 +149,13 @@ export const EditProfile = ({ setEdit, data }) => {
           <LongDropDown
             gender={data.gender}
             setKelamin={setKelamin}
-            kelamin={kelamin}
+            // kelamin={kelamin}
             title="Laki-Laki"
             title2="Perempuan"
             width="348"
           />
           <input {...register("tgl_lahir")} type="date" />
-          <input   {...register("email", {
-                    required: true,
-                    pattern: {
+          <input {...register("email",{pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                       message: "invalid email address",
                     },
@@ -277,7 +274,7 @@ export const EditAlamat = ({ setEditAlamat, data }) => {
   };
 
 
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, formState: {errors} } = useForm({
     defaultValues: initialValues,
   });
 
