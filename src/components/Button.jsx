@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./styles/button.css";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 
 const Button = ({ tipe, children, ...props }) => {
   const BUTTON_TYPE = {
@@ -8,19 +8,19 @@ const Button = ({ tipe, children, ...props }) => {
     SECONDARY: "btn-secondary",
     PRIMARY_GREEN: "btn-primary-green",
     SECONDARY_GREEN: "btn-secondary-green",
-    PRIMARY_LONG : "btn-primary-long",
-    SECONDARY_LONG : "btn-secondary-long",
-    BUTTON_TERTIARY : "btn-tertiary",
-    BUTTON_MODEL : "btn-model-product",
+    PRIMARY_LONG: "btn-primary-long",
+    SECONDARY_LONG: "btn-secondary-long",
+    BUTTON_TERTIARY: "btn-tertiary",
+    BUTTON_MODEL: "btn-model-product",
 
-    AKSI_EDIT : "btn-aksi-edit",
-    AKSI_HAPUS : "btn-aksi-hapus",
-    BUTTON_BATAL : "btn-batal",
-    BUTTON_UBAH : "btn-ubah",
+    AKSI_EDIT: "btn-aksi-edit",
+    AKSI_HAPUS: "btn-aksi-hapus",
+    BUTTON_BATAL: "btn-batal",
+    BUTTON_UBAH: "btn-ubah",
 
-    AKSI_DETAIL : "btn-aksi-detail",
-    PRIMARY_LONG_GREEN : "btn-primary-long-green",
-    BUTTON_TAMBAH : "btn-tambah"
+    AKSI_DETAIL: "btn-aksi-detail",
+    PRIMARY_LONG_GREEN: "btn-primary-long-green",
+    BUTTON_TAMBAH: "btn-tambah",
   };
 
   return (
@@ -30,27 +30,27 @@ const Button = ({ tipe, children, ...props }) => {
   );
 };
 
-export const LinkButton = ({type, children, ...props}) => {
-    const BUTTON_TYPE = {
-      PRIMARY: "btn-primary",
-      SECONDARY: "btn-secondary",
-      PRIMARY_GREEN: "btn-primary-green",
-      SECONDARY_GREEN: "btn-secondary-green",
-      PRIMARY_LONG : "btn-primary-long",
-      SECONDARY_LONG : "btn-secondary-long",
-      BUTTON_TERTIARY : "btn-tertiary",
-      BUTTON_MODEL : "btn-model-product",
+export const LinkButton = ({ type, children, ...props }) => {
+  const BUTTON_TYPE = {
+    PRIMARY: "btn-primary",
+    SECONDARY: "btn-secondary",
+    PRIMARY_GREEN: "btn-primary-green",
+    SECONDARY_GREEN: "btn-secondary-green",
+    PRIMARY_LONG: "btn-primary-long",
+    SECONDARY_LONG: "btn-secondary-long",
+    BUTTON_TERTIARY: "btn-tertiary",
+    BUTTON_MODEL: "btn-model-product",
 
-      AKSI_EDIT : "btn-aksi-edit",
-      AKSI_HAPUS : "btn-aksi-hapus",
-      BUTTON_BATAL : "btn-batal",
-      BUTTON_UBAH : "btn-ubah",
+    AKSI_EDIT: "btn-aksi-edit",
+    AKSI_HAPUS: "btn-aksi-hapus",
+    BUTTON_BATAL: "btn-batal",
+    BUTTON_UBAH: "btn-ubah",
 
-      AKSI_DETAIL : "btn-aksi-detail",
-      PRIMARY_LONG_GREEN : "btn-primary-long-green",
-      BUTTON_TAMBAH : "btn-tambah"
-    };
-    return (
+    AKSI_DETAIL: "btn-aksi-detail",
+    PRIMARY_LONG_GREEN: "btn-primary-long-green",
+    BUTTON_TAMBAH: "btn-tambah",
+  };
+  return (
     <Link className={BUTTON_TYPE[type || "PRIMARY"]} {...props}>
       {children}
     </Link>
@@ -58,7 +58,6 @@ export const LinkButton = ({type, children, ...props}) => {
 };
 
 export default Button;
-
 
 export const ButtonNumber = () => {
   const [item, setItem] = useState(1);
@@ -81,7 +80,7 @@ export const ButtonNumber = () => {
     item === 1 ? setDisabled(true) : setDisabled(false);
   }, [item]);
 
-  return (  
+  return (
     <div className="card-incre-decre">
       <button
         disabled={item === 1}

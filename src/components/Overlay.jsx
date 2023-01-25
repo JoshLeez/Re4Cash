@@ -24,10 +24,9 @@ export const Register = ({ setRegister }) => {
     document.addEventListener("mousedown", handler);
   }, []);
 
-
   const onSubmit = async (value) => {
     try {
-      setRegister(false)
+      setRegister(false);
       await axios.post(`${import.meta.env.VITE_REACT_APP_API}/users`, value);
     } catch (error) {
       if (error.response) {
@@ -166,9 +165,15 @@ export const Login = ({ setLogin }) => {
 
   const onSubmit = async (value) => {
     try {
-      const { data } = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/login`, value)
-      if(data.Authorization) {
-        localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);
+      const { data } = await axios.post(
+        `${import.meta.env.VITE_REACT_APP_API}/login`,
+        value
+      );
+      if (data.Authorization) {
+        localStorage.setItem(
+          import.meta.env.VITE_REACT_APP_AUTH,
+          data.Authorization
+        );
       }
       setLogin(false);
     } catch (error) {

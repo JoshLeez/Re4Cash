@@ -12,11 +12,11 @@ const Artikelcard = (props) => {
       </div>
       <div className="card-artikel-bottom-judul">
         <h5>{props.judul_Artikel}</h5>
-        <p>
-          {props.artikel}
-        </p>
+        <p>{props.artikel}</p>
       </div>
-      <LinkButton type="SECONDARY" to={`/detailarticle/${props.id_Artikel}`}>Baca Artikel</LinkButton>
+      <LinkButton type="SECONDARY" to={`/detailarticle/${props.id_Artikel}`}>
+        Baca Artikel
+      </LinkButton>
     </div>
   );
 };

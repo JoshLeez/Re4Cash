@@ -2,6 +2,7 @@ import { UilLocationPoint } from "@iconscout/react-unicons";
 import { UilCheckCircle } from "@iconscout/react-unicons";
 import Button, { ButtonNumber } from "./Button";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemKg = (props) => {
 
@@ -14,7 +15,7 @@ const ItemKg = (props) => {
 
   return (
     <div className="wrapper-penjualan-card">
-      <div className="penjualan-card">
+      <Link to="/detail-product" className="penjualan-card">
         <img src={props.src} />
         <div className="content-detail-produk">
             <div className="bottom-detail-card">
@@ -46,7 +47,7 @@ const ItemKg = (props) => {
                <p>{props.namaPengelola}</p>
             </div>
         </div>
-      </div>
+      </Link>
       <div className="penjualan-hover">
         <h4>Jumlah Pembelian</h4>
         <div className="card-input-nilai">

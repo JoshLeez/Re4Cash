@@ -43,26 +43,24 @@ const CarouselMarket = () => {
 
 export default CarouselMarket;
 
-
-
 export const CarouselMarketPenjual = () => {
-  return (  <Swiper
-    slidesPerView={1}
-    slidesPerGroup={1}
-    loop={true}
-    loopFillGroupWithBlank={false}
-    navigation={true}
-    autoplay={true}
-    modules={[Navigation, Pagination, Autoplay]}
-    className="MySwiper"
-  >
-    <SwiperSlide>
-      <img src="/hero-landing-penjualan.png"/>
-    </SwiperSlide>
-    <SwiperSlide>
-      <img src="/hero-landing-penjualan2.png"/>
-    </SwiperSlide>
-  </Swiper>
-
-  )
-}
+  return (
+    <Swiper
+      slidesPerView={1}
+      slidesPerGroup={1}
+      loop={true}
+      loopFillGroupWithBlank={false}
+      navigation={true}
+      autoplay={true}
+      modules={[Navigation, Pagination, Autoplay]}
+      className="MySwiper"
+    >
+      <SwiperSlide>
+        <img src="/hero-landing-penjualan.png" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="/hero-landing-penjualan2.png" />
+      </SwiperSlide>
+    </Swiper>
+  );
+};

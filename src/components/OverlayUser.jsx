@@ -27,8 +27,8 @@ export const OverlayUser = ({ setUser, data }) => {
       document.removeEventListener("mousedown", handler);
     };
   });
-  
-  const location = useLocation()
+
+  const location = useLocation();
   const navigate = useNavigate();
   const logout = async () => {
     try {
@@ -36,58 +36,63 @@ export const OverlayUser = ({ setUser, data }) => {
       axios.defaults.headers.common["Authorization"] = `${token}`;
       await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
       localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH);
-      if(location.pathname !== "/") {
-       navigate("/");
-      }else if(location.pathname === "/"){
-        navigate(0)
-      }   
+      if (location.pathname !== "/") {
+        navigate("/");
+      } else if (location.pathname === "/") {
+        navigate(0);
+      }
     } catch (error) {
       console.log(error.message);
     }
   };
 
-  const switchToPengelola = async () =>{
-    try{
-    const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-    axios.defaults.headers.common["Authorization"] = `${token}`;
-    const {data} = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/switch-to-pengelola`);
-    if(data.Authorization === undefined){
-      navigate("/menjadi-pengelola")
+  const switchToPengelola = async () => {
+    try {
+      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+      axios.defaults.headers.common["Authorization"] = `${token}`;
+      const { data } = await axios.post(
+        `${import.meta.env.VITE_REACT_APP_API}/switch-to-pengelola`
+      );
+      if (data.Authorization === undefined) {
+        navigate("/menjadi-pengelola");
+      }
+      localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH);
+      if (data.Authorization) {
+        localStorage.setItem(
+          import.meta.env.VITE_REACT_APP_AUTH,
+          data.Authorization
+        );
+      }
+      const tokenPengelola = localStorage.getItem(
+        import.meta.env.VITE_REACT_APP_AUTH
+      );
+      const split = tokenPengelola.split(" ")[1];
+      const { pengelolaId } = jwtDecode(split);
+      if (data.message) navigate(`/dashboard-pengelola/${pengelolaId}`);
+    } catch (error) {
+      console.log(error.message);
     }
-    localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH);
-    if(data.Authorization) {
-      localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);
-    }
-    const tokenPengelola = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-    const split = tokenPengelola.split(" ")[1];
-    const { pengelolaId } = jwtDecode(split);
-    if(data.message)  navigate(`/dashboard-pengelola/${pengelolaId}`)
-  }catch(error){
-      console.log(error.message)
-    }
-  }
-
-
+  };
 
   return (
     <div ref={menuRef} className="dd-user">
       <div className="dd-profile-saya">
         <UilUserCircle />
-            <Link
-              key={data.id_user}
-              to={`/profile-user/${data.id_user}`}
-              className="nama-poin-user"
-            >
-              <h2>{data.fullname}</h2>
-              <h4>Profile Saya</h4>
-              <span>0 Poin</span>
-            </Link>
+        <Link
+          key={data.id_user}
+          to={`/profile-user/${data.id_user}`}
+          className="nama-poin-user"
+        >
+          <h2>{data.fullname}</h2>
+          <h4>Profile Saya</h4>
+          <span>0 Poin</span>
+        </Link>
       </div>
       <div className="dd-bot-user">
-          <button onClick={switchToPengelola}  className="option-bot-user">
-            <iconify-icon icon="mdi:clipboard-user-outline" />
-            <h4>Menjadi Pengelola</h4>
-          </button>
+        <button onClick={switchToPengelola} className="option-bot-user">
+          <iconify-icon icon="mdi:clipboard-user-outline" />
+          <h4>Menjadi Pengelola</h4>
+        </button>
         <Link to="/tabungan" className="option-bot-user">
           <iconify-icon icon="mdi:piggy-bank-outline" />
           <h4>Tabungan</h4>
@@ -141,8 +146,6 @@ export const EditProfile = ({ setEdit, data, onSubmit, setKelamin }) => {
     };
   });
 
- 
-
   // const onSubmit = async (value) => {
   //   try {
   //     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
@@ -174,11 +177,15 @@ export const EditProfile = ({ setEdit, data, onSubmit, setKelamin }) => {
             width="348"
           />
           <input {...register("tgl_lahir")} type="date" />
-          <input {...register("email",{pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "invalid email address",
-                    },
-                  })} type="text" />
+          <input
+            {...register("email", {
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "invalid email address",
+              },
+            })}
+            type="text"
+          />
           <input {...register("no_hp")} type="text" />
           <Button tipe="PRIMARY" type="submit">
             Simpan
@@ -292,8 +299,11 @@ export const EditAlamat = ({ setEditAlamat, data }) => {
     provinsi: data.provinsi,
   };
 
-
-  const { register, handleSubmit, formState: {errors} } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     defaultValues: initialValues,
   });
 
@@ -361,7 +371,7 @@ export const EditAlamat = ({ setEditAlamat, data }) => {
                 type="text"
                 placeholder="Provinsi"
               />
-               <input
+              <input
                 {...register("kode_pos", {
                   pattern: { value: /^(0|[1-9]\d*)(\.\d+)?$/ },
                 })}

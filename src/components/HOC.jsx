@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import Navbar, { NavbarAkunProfile,Navbarmarketplace } from "./Navbar";
+import Navbar, { NavbarAkunProfile, Navbarmarketplace } from "./Navbar";
 import Footer from "./Footer";
 
 const HOC = ({ children, title = "Re4Cash" }) => {
@@ -16,7 +16,6 @@ const HOC = ({ children, title = "Re4Cash" }) => {
 };
 
 export default HOC;
-
 
 export const HOCmarketplace = ({ title, children }) => {
   return (
@@ -44,7 +43,6 @@ export const HOCCheckout = ({ title, children }) => {
     </>
   );
 };
-
 
 export const HOCdashboardpengelola = ({ title, children }) => {
   return (

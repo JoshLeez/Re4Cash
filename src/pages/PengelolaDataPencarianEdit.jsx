@@ -9,13 +9,12 @@ import { useState } from "react";
 import { ButtonUbah } from "../components/OverlayPengelola";
 
 const PengelolaDataPencarianEdit = () => {
-
-  const [buttonubah, setButtonUbah] = useState(false)
+  const [buttonubah, setButtonUbah] = useState(false);
 
   return (
     <HOCdashboardpengelola title="Dashboard Pengelola">
       <div className="dashboard-page">
-        <SideBarDashPengelola/>
+        <SideBarDashPengelola />
         <div className="dashboard-page-right">
           <Navbardashboardpengelola />
           <div className="wrapper-dashboard-utama">
@@ -25,31 +24,31 @@ const PengelolaDataPencarianEdit = () => {
                 <div className="grup-formedit-dashpengelola-datapenjualan">
                   <div className="baris-formedit-dashpengelola-datapenjualan">
                     <label>Nama Barang</label>
-                    <input type="text" placeholder="Serabut Kelapa 1 kilo"/>
+                    <input type="text" placeholder="Serabut Kelapa 1 kilo" />
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
                     <label>Nama Penjual</label>
-                    <input type="text" placeholder="Muhammad Lee"/>
+                    <input type="text" placeholder="Muhammad Lee" />
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
                     <label>Nomor Hp Penjual</label>
-                    <input type="text" placeholder="081123453912"/>
+                    <input type="text" placeholder="081123453912" />
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
                     <label>Tanggal Jual</label>
-                    <input type="date" placeholder="22/12/2022"/>
+                    <input type="date" placeholder="22/12/2022" />
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
                     <label>Harga /pcs</label>
-                    <input type="text" placeholder="Rp 10,000.00"/>
+                    <input type="text" placeholder="Rp 10,000.00" />
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
                     <label>Jumlah</label>
-                    <input type="number" placeholder="2"/>
+                    <input type="number" placeholder="2" />
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
                     <label>Total Harga</label>
-                    <input type="text" placeholder="Rp 20,000.00"/>
+                    <input type="text" placeholder="Rp 20,000.00" />
                   </div>
                   <div className="baris-formedit-dashpengelola-datapenjualan">
                     <label>Status</label>
@@ -60,17 +59,29 @@ const PengelolaDataPencarianEdit = () => {
                     </select>
                   </div>
                 </div>
-              </form>                
+              </form>
               <div className="button-formedit-dashpengelola-datapenjualan">
-                <LinkButton type="BUTTON_BATAL" to="/data-pencarian-pengelola">Batal</LinkButton>
-                <Button onClick={()=>setButtonUbah(!buttonubah)} tipe="BUTTON_UBAH">Ubah</Button>
+                <LinkButton type="BUTTON_BATAL" to="/data-pencarian-pengelola">
+                  Batal
+                </LinkButton>
+                <Button
+                  onClick={() => setButtonUbah(!buttonubah)}
+                  tipe="BUTTON_UBAH"
+                >
+                  Ubah
+                </Button>
               </div>
             </section>
           </div>
-          <Footerdashboardpengelola/>
+          <Footerdashboardpengelola />
         </div>
       </div>
-      {buttonubah && <ButtonUbah link='/data-pencarian-pengelola' setButtonUbah={setButtonUbah}/>}
+      {buttonubah && (
+        <ButtonUbah
+          link="/data-pencarian-pengelola"
+          setButtonUbah={setButtonUbah}
+        />
+      )}
     </HOCdashboardpengelola>
   );
 };

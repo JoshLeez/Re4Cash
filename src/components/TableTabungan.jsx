@@ -41,43 +41,43 @@ const TableTabungan = () => {
               </div>
             </div>
             <table id="tabel-tabungan">
-            <tbody>
-              <tr>
-                <th>No</th>
-                <th>Tanggal</th>
-                <th>Kuantitas</th>
-                <th>Penjualan</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>12-10-2022</td>
-                <td>2 kilo</td>
-                <td>Rp 10.000</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>12-10-2022</td>
-                <td>2 kilo</td>
-                <td>Rp 10.000</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>12-10-2022</td>
-                <td>2 kilo</td>
-                <td>Rp 10.000</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>12-10-2022</td>
-                <td>2 kilo</td>
-                <td>Rp 10.000</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>12-10-2022</td>
-                <td>2 kilo</td>
-                <td>Rp 10.000</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>No</th>
+                  <th>Tanggal</th>
+                  <th>Kuantitas</th>
+                  <th>Penjualan</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>12-10-2022</td>
+                  <td>2 kilo</td>
+                  <td>Rp 10.000</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>12-10-2022</td>
+                  <td>2 kilo</td>
+                  <td>Rp 10.000</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>12-10-2022</td>
+                  <td>2 kilo</td>
+                  <td>Rp 10.000</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>12-10-2022</td>
+                  <td>2 kilo</td>
+                  <td>Rp 10.000</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>12-10-2022</td>
+                  <td>2 kilo</td>
+                  <td>Rp 10.000</td>
+                </tr>
               </tbody>
             </table>
           </div>

@@ -63,24 +63,152 @@ const MarketplacePenjualan = () => {
       </section>
       <section className="kategori-list-item">
         <div className="left-kategori-item">
-         <Link to="/detail-product">
-            <ItemNumber title="Pot Bunga Ramah Lingkungan Dari Botol..." subKategori="Plastik" harga="Rp. 20.000" satuan="Pcs" lokasi="Jakarta" namaPengelola="Nurhadi" src="/assets-product/P-Pot bunga botol plastik.png"/>    
-         </Link>
-         <ItemKg title="Serabut Kelapa Kiloan" subKategori="Kelapa" harga="Rp. 10.000" satuan="Kg" lokasi="Cilacap" namaPengelola="Bank sampah aisyah" src="/assets-product/M-Serabut Kelapa.png"/>
-         <ItemKg title="Tulang Ayam Kiloan" subKategori="Tulang" harga="Rp. 10.000" satuan="Kg" lokasi="Surabaya" namaPengelola="Bank sampah iman" src="/assets-product/M-Tulang.png"/>
-         <ItemNumber title="Plastik Kresek" subKategori="Plastik" harga="Rp. 500" satuan="Pcs" lokasi="Palembang" namaPengelola="Pak Nurhadi" src="/assets-product/M-Kantong Kresek.png"/>
-         <ItemNumber title="Bingkai Foto dari Sedotan Bekas" subKategori="Plastik" harga="Rp. 29.000" satuan="Pcs" lokasi="Jakarta" namaPengelola="Bu Santi" src="/assets-product/P-bingkai sedotan.png"/>
-         <ItemNumber title="Mainan Lego Dari Sterofoam" subKategori="Sterofoam" harga="Rp. 10.000" satuan="Pcs" lokasi="Yogyakarta" namaPengelola="Bank sampah gemilang" src="/assets-product/P-lego sterofom.png"/>
-         <ItemNumber title="Hiasan dinding dari karton" subKategori="Kertas" harga="Rp. 28.000" satuan="Pcs" lokasi="Sukabumi" namaPengelola="felis_catus" src="/assets-product/P-bunga kardus.png"/>
-         <ItemNumber title="Campuran dari Plastik Pave" subKategori="Plastik" harga="Rp. 15.000" satuan="Pcs" lokasi="Pontianak" namaPengelola="Karang Taruna Kuripan" src="/assets-product/P-campuran pave.png"/>
-         <ItemNumber title="Galon Plastik per Buah" subKategori="Plastik" harga="Rp. 13.000" satuan="Pcs" lokasi="Jakarta" namaPengelola="Kuripan" src="/assets-product/M-Galon.png"/>
-         <ItemKg title="Jual Botol Bekas Kiloan" subKategori="Botol" harga="Rp. 12.000" satuan="Kg" lokasi="Bogor" namaPengelola="Bank sampah Agen" src="/assets-product/M-botol plastik-1.png"/>
-         <ItemKg title="Serabut Kelapa Kiloan" subKategori="Kelapa" harga="Rp. 10.000" satuan="Kg" lokasi="Cilacap" namaPengelola="Bank sampah aisyah" src="/assets-product/M-Serabut Kelapa.png"/>
-         <ItemNumber title="Hiasan dinding dari karton" subKategori="Kertas" harga="Rp. 28.000" satuan="Pcs" lokasi="Sukabumi" namaPengelola="felis_catus" src="/assets-product/P-bunga kardus.png"/>
-         <ItemKg title="Jual Botol & Plastik Kiloan" subKategori="Plastik" harga="Rp. 10.000" satuan="Kg" lokasi="Bekasi" namaPengelola="Bank sampah Jaya" src="/assets-product/M-botol plastik.png"/>
-         <ItemNumber title="Campuran dari Plastik Pave" subKategori="Plastik" harga="Rp. 15.000" satuan="Pcs" lokasi="Pontianak" namaPengelola="Karang Taruna Kuripan" src="/assets-product/P-campuran pave.png"/>
-         <ItemNumber title="Bingkai Foto dari Sedotan Bekas" subKategori="Plastik" harga="Rp. 29.000" satuan="Pcs" lokasi="Jakarta" namaPengelola="Bu Santi" src="/assets-product/P-bingkai sedotan.png"/>
-         <ItemNumber title="Mainan Lego Dari Sterofoam" subKategori="Sterofoam" harga="Rp. 10.000" satuan="Pcs" lokasi="Yogyakarta" namaPengelola="Bank sampah gemilang" src="/assets-product/P-lego sterofom.png"/>
+          <Link to="/detail-product">
+            <ItemNumber
+              title="Pot Bunga Ramah Lingkungan Dari Botol..."
+              subKategori="Plastik"
+              harga="Rp. 20.000"
+              satuan="Pcs"
+              lokasi="Jakarta"
+              namaPengelola="Nurhadi"
+              src="/assets-product/P-Pot bunga botol plastik.png"
+            />
+          </Link>
+          <ItemKg
+            title="Serabut Kelapa Kiloan"
+            subKategori="Kelapa"
+            harga="Rp. 10.000"
+            satuan="Kg"
+            lokasi="Cilacap"
+            namaPengelola="Bank sampah aisyah"
+            src="/assets-product/M-Serabut Kelapa.png"
+          />
+          <ItemKg
+            title="Tulang Ayam Kiloan"
+            subKategori="Tulang"
+            harga="Rp. 10.000"
+            satuan="Kg"
+            lokasi="Surabaya"
+            namaPengelola="Bank sampah iman"
+            src="/assets-product/M-Tulang.png"
+          />
+          <ItemNumber
+            title="Plastik Kresek"
+            subKategori="Plastik"
+            harga="Rp. 500"
+            satuan="Pcs"
+            lokasi="Palembang"
+            namaPengelola="Pak Nurhadi"
+            src="/assets-product/M-Kantong Kresek.png"
+          />
+          <ItemNumber
+            title="Bingkai Foto dari Sedotan Bekas"
+            subKategori="Plastik"
+            harga="Rp. 29.000"
+            satuan="Pcs"
+            lokasi="Jakarta"
+            namaPengelola="Bu Santi"
+            src="/assets-product/P-bingkai sedotan.png"
+          />
+          <ItemNumber
+            title="Mainan Lego Dari Sterofoam"
+            subKategori="Sterofoam"
+            harga="Rp. 10.000"
+            satuan="Pcs"
+            lokasi="Yogyakarta"
+            namaPengelola="Bank sampah gemilang"
+            src="/assets-product/P-lego sterofom.png"
+          />
+          <ItemNumber
+            title="Hiasan dinding dari karton"
+            subKategori="Kertas"
+            harga="Rp. 28.000"
+            satuan="Pcs"
+            lokasi="Sukabumi"
+            namaPengelola="felis_catus"
+            src="/assets-product/P-bunga kardus.png"
+          />
+          <ItemNumber
+            title="Campuran dari Plastik Pave"
+            subKategori="Plastik"
+            harga="Rp. 15.000"
+            satuan="Pcs"
+            lokasi="Pontianak"
+            namaPengelola="Karang Taruna Kuripan"
+            src="/assets-product/P-campuran pave.png"
+          />
+          <ItemNumber
+            title="Galon Plastik per Buah"
+            subKategori="Plastik"
+            harga="Rp. 13.000"
+            satuan="Pcs"
+            lokasi="Jakarta"
+            namaPengelola="Kuripan"
+            src="/assets-product/M-Galon.png"
+          />
+          <ItemKg
+            title="Jual Botol Bekas Kiloan"
+            subKategori="Botol"
+            harga="Rp. 12.000"
+            satuan="Kg"
+            lokasi="Bogor"
+            namaPengelola="Bank sampah Agen"
+            src="/assets-product/M-botol plastik-1.png"
+          />
+          <ItemKg
+            title="Serabut Kelapa Kiloan"
+            subKategori="Kelapa"
+            harga="Rp. 10.000"
+            satuan="Kg"
+            lokasi="Cilacap"
+            namaPengelola="Bank sampah aisyah"
+            src="/assets-product/M-Serabut Kelapa.png"
+          />
+          <ItemNumber
+            title="Hiasan dinding dari karton"
+            subKategori="Kertas"
+            harga="Rp. 28.000"
+            satuan="Pcs"
+            lokasi="Sukabumi"
+            namaPengelola="felis_catus"
+            src="/assets-product/P-bunga kardus.png"
+          />
+          <ItemKg
+            title="Jual Botol & Plastik Kiloan"
+            subKategori="Plastik"
+            harga="Rp. 10.000"
+            satuan="Kg"
+            lokasi="Bekasi"
+            namaPengelola="Bank sampah Jaya"
+            src="/assets-product/M-botol plastik.png"
+          />
+          <ItemNumber
+            title="Campuran dari Plastik Pave"
+            subKategori="Plastik"
+            harga="Rp. 15.000"
+            satuan="Pcs"
+            lokasi="Pontianak"
+            namaPengelola="Karang Taruna Kuripan"
+            src="/assets-product/P-campuran pave.png"
+          />
+          <ItemNumber
+            title="Bingkai Foto dari Sedotan Bekas"
+            subKategori="Plastik"
+            harga="Rp. 29.000"
+            satuan="Pcs"
+            lokasi="Jakarta"
+            namaPengelola="Bu Santi"
+            src="/assets-product/P-bingkai sedotan.png"
+          />
+          <ItemNumber
+            title="Mainan Lego Dari Sterofoam"
+            subKategori="Sterofoam"
+            harga="Rp. 10.000"
+            satuan="Pcs"
+            lokasi="Yogyakarta"
+            namaPengelola="Bank sampah gemilang"
+            src="/assets-product/P-lego sterofom.png"
+          />
         </div>
         <aside className="container-right-kategori-item">
           <div className="right-kategori-item">

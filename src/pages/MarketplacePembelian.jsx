@@ -1,12 +1,11 @@
 import { CarouselMarketPenjual } from "../components/CarouselMarket";
 import { HOCmarketplace } from "../components/HOC";
 import "./styles/penjualan.css";
-import {  ItemNumberTabung,ItemKgTabung } from "../components/ItemKg";
+import { ItemNumberTabung, ItemKgTabung } from "../components/ItemKg";
 import { UilSearchAlt } from "@iconscout/react-unicons";
 import Button from "../components/Button";
 
 const MarketplacePembelian = () => {
- 
   return (
     <HOCmarketplace title="Marketplace Pembelian | Re4Cash">
       <section className="hero-penjualan">
@@ -39,22 +38,150 @@ const MarketplacePembelian = () => {
       </section>
       <section className="kategori-list-item">
         <div className="left-kategori-item">
-          <ItemKgTabung title="Saya mencari minyak jelantah kiloan" subKategori="Minyak" harga="Rp. 15.000" satuan="Kg" lokasi="Surabaya" namaPengelola="Pengelolaan sampah katsuri" src="/assets-product/pencarian-minyakBekas.png"/>
-          <ItemKgTabung title="Butuh sampah kantong plastik dalam kiloan" subKategori="Plastik" harga="Rp. 10.000" satuan="Kg" lokasi="Cilacap" namaPengelola="Bank Sampah Tlogomas" src="/assets-product/pencarian-kantong-1.png"/>
-          <ItemNumberTabung title="Saya mencari Asap Cair Perbotol" subKategori="Asap-Cair" harga="Rp. 95.000" satuan="Pcs" lokasi="Malang" namaPengelola="Pak Amir" src="/assets-product/pencarian-asap cair.png"/>
-          <ItemKgTabung title="Mencari sampah sayur sisa makanan kiloan" subKategori="Sayuran" harga="Rp. 10.000" satuan="Kg" lokasi="Palembang" namaPengelola="Bu Fani" src="/assets-product/pencarian-sayuran.png"/>
-          <ItemKgTabung title="Saya mencari sampah tembaga perkilo" subKategori="Kawat" harga="Rp. 100.000" satuan="Kg" lokasi="Bandung" namaPengelola="Bank Sampah Melati" src="/assets-product/pencarian-tembaga.png"/>
-          <ItemNumberTabung title="Saya mencari Kerajinan Tas Plastik Satuan" subKategori="Plastik" harga="Rp. 50.000" satuan="Pcs" lokasi="Badui" namaPengelola="Ibu-ibu PKK" src="/assets-product/pencarian-kerajinan tas plastik.png"/>
-          <ItemKgTabung title="Butuh Limbah Sekam Padi Dalam Kiloan" subKategori="Padi" harga="Rp. 10.000" satuan="Kg" lokasi="Cilacap" namaPengelola="Pak Waluyo" src="/assets-product/pencarian-sekam.png"/>
-          <ItemKgTabung title="Saya mencari Biochar Kiloan" subKategori="Minyak" harga="Rp. 15.000" satuan="Kg" lokasi="Surabaya" namaPengelola="Pengelola Limbah Organik" src="/assets-product/pencarian-biochar.png"/>
-          <ItemKgTabung title="Mencari Limbah Batok Kelapa" subKategori="Buahan" harga="Rp. 10.000" satuan="Kg" lokasi="Palembang" namaPengelola="Pak Parsetyo" src="/assets-product/pencarian-batok kelapa.png"/>
-          <ItemKgTabung title="Saya mencari Bichomat Perkilo" subKategori="Buahan" harga="Rp. 100.000" satuan="Kg" lokasi="Bandung" namaPengelola="Pak Taufik" src="/assets-product/pencarian-biochomat.png"/>
-          <ItemKgTabung title="Butuh Limbah Bonggol Jagung Kiloan" subKategori="Buahan" harga="Rp. 6.000" satuan="Kg" lokasi="Jember" namaPengelola="PKK desa Tritih Wetan" src="/assets-product/pencarian-bonggol jagung.png"/>
-          <ItemKgTabung title="Saya mencari Tutup Botol kaleng kiloan" subKategori="Botol" harga="Rp. 5.000" satuan="Kg" lokasi="Malang" namaPengelola="TPA" src="/assets-product/pencarian-tutup botol.png"/>
-          <ItemKgTabung title="Mencari Arang Sekam Kiloan" subKategori="Kayu" harga="Rp. 8.000" satuan="Kg" lokasi="Madura" namaPengelola="Bu Faridah" src="/assets-product/pencarian-arang sekam.png"/>
-          <ItemKgTabung title="Saya mencari sampah Kardus Kiloan" subKategori="Kardus" harga="Rp. 2.000" satuan="Kg" lokasi="Sleman" namaPengelola="Bank Sampah Klojen" src="/assets-product/pencarian-kardus.png"/>
-          <ItemKgTabung title="Butuh sampah Besi Tua Dalam Satuan" subKategori="Besi" harga="Rp. 6.500" satuan="Kg" lokasi="Ciamis" namaPengelola="Bank Sampah Joyograndc" src="/assets-product/pencarian-besi tua.png"/>
-          <ItemKgTabung title="Mencari sampah Koran Kiloan" subKategori="Kertas" harga="Rp. 2.000" satuan="Kg" lokasi="Jakarta" namaPengelola="Bu Lia" src="/assets-product/pencarian-koran bekas.png"/>
+          <ItemKgTabung
+            title="Saya mencari minyak jelantah kiloan"
+            subKategori="Minyak"
+            harga="Rp. 15.000"
+            satuan="Kg"
+            lokasi="Surabaya"
+            namaPengelola="Pengelolaan sampah katsuri"
+            src="/assets-product/pencarian-minyakBekas.png"
+          />
+          <ItemKgTabung
+            title="Butuh sampah kantong plastik dalam kiloan"
+            subKategori="Plastik"
+            harga="Rp. 10.000"
+            satuan="Kg"
+            lokasi="Cilacap"
+            namaPengelola="Bank Sampah Tlogomas"
+            src="/assets-product/pencarian-kantong-1.png"
+          />
+          <ItemNumberTabung
+            title="Saya mencari Asap Cair Perbotol"
+            subKategori="Asap-Cair"
+            harga="Rp. 95.000"
+            satuan="Pcs"
+            lokasi="Malang"
+            namaPengelola="Pak Amir"
+            src="/assets-product/pencarian-asap cair.png"
+          />
+          <ItemKgTabung
+            title="Mencari sampah sayur sisa makanan kiloan"
+            subKategori="Sayuran"
+            harga="Rp. 10.000"
+            satuan="Kg"
+            lokasi="Palembang"
+            namaPengelola="Bu Fani"
+            src="/assets-product/pencarian-sayuran.png"
+          />
+          <ItemKgTabung
+            title="Saya mencari sampah tembaga perkilo"
+            subKategori="Kawat"
+            harga="Rp. 100.000"
+            satuan="Kg"
+            lokasi="Bandung"
+            namaPengelola="Bank Sampah Melati"
+            src="/assets-product/pencarian-tembaga.png"
+          />
+          <ItemNumberTabung
+            title="Saya mencari Kerajinan Tas Plastik Satuan"
+            subKategori="Plastik"
+            harga="Rp. 50.000"
+            satuan="Pcs"
+            lokasi="Badui"
+            namaPengelola="Ibu-ibu PKK"
+            src="/assets-product/pencarian-kerajinan tas plastik.png"
+          />
+          <ItemKgTabung
+            title="Butuh Limbah Sekam Padi Dalam Kiloan"
+            subKategori="Padi"
+            harga="Rp. 10.000"
+            satuan="Kg"
+            lokasi="Cilacap"
+            namaPengelola="Pak Waluyo"
+            src="/assets-product/pencarian-sekam.png"
+          />
+          <ItemKgTabung
+            title="Saya mencari Biochar Kiloan"
+            subKategori="Minyak"
+            harga="Rp. 15.000"
+            satuan="Kg"
+            lokasi="Surabaya"
+            namaPengelola="Pengelola Limbah Organik"
+            src="/assets-product/pencarian-biochar.png"
+          />
+          <ItemKgTabung
+            title="Mencari Limbah Batok Kelapa"
+            subKategori="Buahan"
+            harga="Rp. 10.000"
+            satuan="Kg"
+            lokasi="Palembang"
+            namaPengelola="Pak Parsetyo"
+            src="/assets-product/pencarian-batok kelapa.png"
+          />
+          <ItemKgTabung
+            title="Saya mencari Bichomat Perkilo"
+            subKategori="Buahan"
+            harga="Rp. 100.000"
+            satuan="Kg"
+            lokasi="Bandung"
+            namaPengelola="Pak Taufik"
+            src="/assets-product/pencarian-biochomat.png"
+          />
+          <ItemKgTabung
+            title="Butuh Limbah Bonggol Jagung Kiloan"
+            subKategori="Buahan"
+            harga="Rp. 6.000"
+            satuan="Kg"
+            lokasi="Jember"
+            namaPengelola="PKK desa Tritih Wetan"
+            src="/assets-product/pencarian-bonggol jagung.png"
+          />
+          <ItemKgTabung
+            title="Saya mencari Tutup Botol kaleng kiloan"
+            subKategori="Botol"
+            harga="Rp. 5.000"
+            satuan="Kg"
+            lokasi="Malang"
+            namaPengelola="TPA"
+            src="/assets-product/pencarian-tutup botol.png"
+          />
+          <ItemKgTabung
+            title="Mencari Arang Sekam Kiloan"
+            subKategori="Kayu"
+            harga="Rp. 8.000"
+            satuan="Kg"
+            lokasi="Madura"
+            namaPengelola="Bu Faridah"
+            src="/assets-product/pencarian-arang sekam.png"
+          />
+          <ItemKgTabung
+            title="Saya mencari sampah Kardus Kiloan"
+            subKategori="Kardus"
+            harga="Rp. 2.000"
+            satuan="Kg"
+            lokasi="Sleman"
+            namaPengelola="Bank Sampah Klojen"
+            src="/assets-product/pencarian-kardus.png"
+          />
+          <ItemKgTabung
+            title="Butuh sampah Besi Tua Dalam Satuan"
+            subKategori="Besi"
+            harga="Rp. 6.500"
+            satuan="Kg"
+            lokasi="Ciamis"
+            namaPengelola="Bank Sampah Joyograndc"
+            src="/assets-product/pencarian-besi tua.png"
+          />
+          <ItemKgTabung
+            title="Mencari sampah Koran Kiloan"
+            subKategori="Kertas"
+            harga="Rp. 2.000"
+            satuan="Kg"
+            lokasi="Jakarta"
+            namaPengelola="Bu Lia"
+            src="/assets-product/pencarian-koran bekas.png"
+          />
         </div>
         <aside className="container-right-kategori-item">
           <div className="right-kategori-item">

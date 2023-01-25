@@ -15,32 +15,45 @@ const PengelolaProfilAkun = () => {
     handleSubmit,
     setValue,
     formState: { errors },
-} = useForm();
-  const [userPengelola, setUserPengelola] = useState([]);
+  } = useForm();
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
 
-  const getPengelola = useCallback( async () => {
+  const getPengelola = useCallback(async () => {
     try {
-        axios.defaults.headers.common["Authorization"] = `${token}`;
-        const {data} = await axios.get(
-            `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
-        );
-      const {fullname_users} = data.data[0];
-      setValue('fullname', fullname_users);
-      setUserPengelola(data.alamat[0]);
-
+      axios.defaults.headers.common["Authorization"] = `${token}`;
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
+      );
+      const {
+        fullname_users,
+        nama_pengelola,
+        email_pengelola,
+        no_hp_pengelola,
+        no_rekening,
+      } = data.data[0];
+      const { provinsi, kabupaten_kota, kecamatan, kode_pos, alamat_lengkap } =
+        data.alamat[0];
+      setValue("fullname", fullname_users);
+      setValue("nama_pengelola", nama_pengelola);
+      setValue("no_hp_pengelola", no_hp_pengelola);
+      setValue("email_pengelola", email_pengelola);
+      setValue("no_rekening", no_rekening);
+      setValue("provinsi", provinsi);
+      setValue("alamat_lengkap", alamat_lengkap);
+      setValue("kabupaten_kota", kabupaten_kota);
+      setValue("kecamatan", kecamatan);
+      setValue("kode_pos", kode_pos);
     } catch (error) {
       console.log(error.message);
     }
-  },[setValue]);
+  }, [setValue]);
 
   useEffect(() => {
-    getPengelola()
-  },[getPengelola]);
+    getPengelola();
+  }, []);
 
   const updatePengelola = async (value) => {
     try {
-      console.log(value)
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common["Authorization"] = `${token}`;
       await axios.patch(
@@ -51,6 +64,19 @@ const PengelolaProfilAkun = () => {
       console.log(error.message);
     }
   };
+
+  const updateAlamatPengelola = useCallback(async (value) => {
+    try {
+      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+      axios.defaults.headers.common["Authorization"] = `${token}`;
+      await axios.patch(
+        `${import.meta.env.VITE_REACT_APP_API}/pengelola-alamat`,
+        value
+      );
+    } catch (error) {
+      console.log(error.message);
+    }
+  }, []);
 
   return (
     <HOCdashboardpengelola title="Dashboard Pengelola">
@@ -66,7 +92,6 @@ const PengelolaProfilAkun = () => {
                   <div className="profile-nama-dashboard-profilakun">
                     <h1>Zain Pengepul Sampah</h1>
                     <p>Nama Toko</p>
-                    <p>{userPengelola.nama_pengelola}</p>
                   </div>
                   <div className="profile-verif-dashboard-profilakun">
                     <iconify-icon icon="zondicons:checkmark-outline" />
@@ -90,10 +115,7 @@ const PengelolaProfilAkun = () => {
                     </div>
                     <div className="baris-form-dashpengelola-profilakun">
                       <label>Nomor Hp</label>
-                      <input
-                        {...register("no_hp_pengelola")}
-                        type="text"
-                      />
+                      <input {...register("no_hp_pengelola")} type="text" />
                     </div>
                     <div className="baris-form-dashpengelola-profilakun">
                       <label>Email</label>
@@ -119,8 +141,10 @@ const PengelolaProfilAkun = () => {
                       <label>No Rekening</label>
                       <div className="form-input-container">
                         <input
-                           {...register("no_rekening", {required : true,   
-                            pattern: { value: /^(0|[1-9]\d*)(\.\d+)?$/ }})}
+                          {...register("no_rekening", {
+                            required: true,
+                            pattern: { value: /^(0|[1-9]\d*)(\.\d+)?$/ },
+                          })}
                           type="text"
                         />
                         {errors.no_rekening && (
@@ -137,33 +161,30 @@ const PengelolaProfilAkun = () => {
                     </div>
                   </div>
                 </form>
-                <form className="card-form-dashpengelola-profilakun">
+                <form
+                  onSubmit={handleSubmit(updateAlamatPengelola)}
+                  className="card-form-dashpengelola-profilakun"
+                >
                   <div className="grup-form-dashpengelola-profilakun">
                     <div className="baris-form-dashpengelola-profilakun">
                       <label>Provinsi</label>
-                      <input
-                        type="text"
-                        placeholder="Zainuddin Putra Siregar"
-                      />
+                      <input type="text" {...register("provinsi")} />
                     </div>
                     <div className="baris-form-dashpengelola-profilakun">
                       <label>Kabupaten/Kota</label>
-                      <input type="text" placeholder="Zain Pengepul Sampah" />
+                      <input type="text" {...register("kabupaten_kota")} />
                     </div>
                     <div className="baris-form-dashpengelola-profilakun">
                       <label>Kecamatan</label>
-                      <input type="text" placeholder="0881 1234 4321" />
+                      <input type="text" {...register("kecamatan")} />
                     </div>
                     <div className="baris-form-dashpengelola-profilakun">
                       <label>Kode Pos</label>
-                      <input
-                        type="email"
-                        placeholder="zainuddinputra11@gmail.com"
-                      />
+                      <input type="text" {...register("kode_pos")} />
                     </div>
                     <div className="baris-form-dashpengelola-profilakun">
                       <label>Alamat Lengkap</label>
-                      <input type="text" placeholder="6751 3341 9863 12 1" />
+                      <input type="text" {...register("alamat_lengkap")} />
                     </div>
                     <div className="button-form-dashpengelola-profilakun">
                       <Button tipe="PRIMARY" type="submit">

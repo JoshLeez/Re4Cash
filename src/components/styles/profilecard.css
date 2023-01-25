@@ -18,6 +18,65 @@
     align-items: center;
 }
 
+.edit-img-profile{
+    width:176px;
+    height:175px;
+}
+
+.edit-img-profile > img{
+    width:176px;
+    height:175px;
+}
+
+.edit-img-profile > button{
+    display: flex;
+    align-items: center;
+    font-size:15px;
+    cursor:pointer;
+    padding:5px 5px;
+    border:grey solid 1px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    gap:5px;
+    position: relative;
+    top:-23%;
+    left:63%;
+}
+
+.edit-img-button{
+    width:158.4px;
+    height:29px;
+    padding:4px 8px 4px 16px;
+    border: 1px solid #D6D6D6;
+    position: absolute;
+    top:39%;
+    left:20.5%;
+    z-index: 10;
+    border-radius: 5px;
+    background-color:#FFFFFF;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+.edit-img-button > input{
+    position: absolute;
+    opacity: 0;
+    width:158.4px;
+    height:29px;
+}
+
+.edit-img-button > input{
+    cursor: pointer;
+}
+
+.edit-img-button:hover{
+    background-color: #fbba2f;
+    border:1px solid #fbba2f
+}
+
 .profile-name-picture > h1{
     font-weight: 700;
     font-size: 24px;

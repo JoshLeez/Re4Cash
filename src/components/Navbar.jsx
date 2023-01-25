@@ -210,7 +210,6 @@ export const Navbardashboardpengelola = () => {
       const {data} = await axios.get(
         `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
       );
-      console.log(data.data[0])
       setUserPengelola(data.data[0])
     } catch (error) {
       console.log(error.message);

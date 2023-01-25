@@ -50,7 +50,6 @@ const ProfileSetting = () => {
 
   useEffect(() => {
     getUserData();
-    console.log(user.listAddress)
   }, [id, hapus, edit, alamat]);
 
   // useEffect(() => {

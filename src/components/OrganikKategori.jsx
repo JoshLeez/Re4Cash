@@ -1,4 +1,4 @@
-const OrganikKategori = ({img, title}) => {
+const OrganikKategori = ({ img, title }) => {
   return (
     <div className="organik-item-wrapper">
       <div className="organik-item">
