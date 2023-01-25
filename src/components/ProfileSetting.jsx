@@ -50,7 +50,7 @@ const ProfileSetting = () => {
 
   useEffect(() => {
     getUserData();
-  }, [id, hapus, edit, alamat]);
+  }, [id, hapus, edit,editAlamat,alamat]);
 
   // useEffect(() => {
   //   if (editAlamat === false || alamat === false) {
