@@ -15,10 +15,6 @@ import jwtDecode from "jwt-decode";
 
 export const OverlayUser = ({ setUser, data }) => {
   const menuRef = useRef();
-  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-  const split = token.split(" ")[1];
-  const { pengelolaId } = jwtDecode(split);
-  const [switchSuccess, setSwitchSuccess ] = useState(false)
 
   useEffect(() => {
     let handler = (event) => {
@@ -41,8 +37,10 @@ export const OverlayUser = ({ setUser, data }) => {
       await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
       localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH);
       if(location.pathname !== "/") {
-        navigate("/");
-      }    
+       navigate("/");
+      }else if(location.pathname === "/"){
+        navigate(0)
+      }   
     } catch (error) {
       console.log(error.message);
     }
@@ -53,16 +51,24 @@ export const OverlayUser = ({ setUser, data }) => {
     const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
     axios.defaults.headers.common["Authorization"] = `${token}`;
     const {data} = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/switch-to-pengelola`);
-    if(data.message) setSwitchSuccess(true)
+    if(data.Authorization === undefined){
+      navigate("/menjadi-pengelola")
+    }
+    localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH);
+    if(data.Authorization) {
+      localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);
+    }
+    const tokenPengelola = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+    const split = tokenPengelola.split(" ")[1];
+    const { pengelolaId } = jwtDecode(split);
+    if(data.message)  navigate(`/dashboard-pengelola/${pengelolaId}`)
   }catch(error){
       console.log(error.message)
     }
   }
 
-  useEffect(()=>{
-    if(switchSuccess) navigate(`/dashboard-pengelola/${pengelolaId}`)
-   },[switchSuccess])
-   
+
+
   return (
     <div ref={menuRef} className="dd-user">
       <div className="dd-profile-saya">
@@ -78,16 +84,10 @@ export const OverlayUser = ({ setUser, data }) => {
             </Link>
       </div>
       <div className="dd-bot-user">
-       {pengelolaId === undefined ?
-        <Link to="/menjadi-pengelola" className="option-bot-user">
-          <iconify-icon icon="mdi:clipboard-user-outline" />
-          <h4>Menjadi Pengelola</h4>
-        </Link> : 
           <button onClick={switchToPengelola}  className="option-bot-user">
             <iconify-icon icon="mdi:clipboard-user-outline" />
             <h4>Menjadi Pengelola</h4>
           </button>
-        }
         <Link to="/tabungan" className="option-bot-user">
           <iconify-icon icon="mdi:piggy-bank-outline" />
           <h4>Tabungan</h4>

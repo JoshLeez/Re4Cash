@@ -29,7 +29,6 @@ const onSubmit = async (value) =>{
     if(data.Authorization) {
       localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);
     }
-    console.log(data.Authorization)
     const tokenPengelola = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
     const split = tokenPengelola.split(" ")[1];
     const { pengelolaId } = jwtDecode(split);

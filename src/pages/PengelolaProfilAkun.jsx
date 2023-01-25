@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../components/Button";
 import { Footerdashboardpengelola } from "../components/Footer";
@@ -10,38 +10,33 @@ import "./styles/dashboardpengelola.css";
 import "./styles/pengelolaprofilakun.css";
 
 const PengelolaProfilAkun = () => {
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+} = useForm();
   const [userPengelola, setUserPengelola] = useState([]);
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
 
-  const dataPengelola = async () => {
+  const getPengelola = useCallback( async () => {
     try {
         axios.defaults.headers.common["Authorization"] = `${token}`;
         const {data} = await axios.get(
             `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
         );
+      const {fullname_users} = data.data[0];
+      setValue('fullname', fullname_users);
       setUserPengelola(data.alamat[0]);
+
     } catch (error) {
       console.log(error.message);
     }
-  };
-
-  console.log(userPengelola.alamat_lengkap)
+  },[setValue]);
 
   useEffect(() => {
-    dataPengelola()
-  },[]);
-
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm({
-        defaultValues :{
-          fullname : userPengelola.fullname_users,
-          nama_pengelola : userPengelola.nama_pengelola
-        }
-    });
-
+    getPengelola()
+  },[getPengelola]);
 
   const updatePengelola = async (value) => {
     try {

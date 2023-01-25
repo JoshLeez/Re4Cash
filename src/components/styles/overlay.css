@@ -276,6 +276,9 @@
 .nama-poin-user {
   display: flex;
   flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .nama-poin-user>h2 {

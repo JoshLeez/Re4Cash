@@ -1,11 +1,12 @@
 import {UilUserCircle } from '@iconscout/react-unicons';
+import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from './Button';
 
 
-export const OverlayPengelola = ({ setPengelola, pengelola }) => {
+export const OverlayPengelola = ({ setPengelola, userPengelola}) => {
   const menuRef = useRef();
 
   useEffect(()=>{
@@ -21,21 +22,39 @@ export const OverlayPengelola = ({ setPengelola, pengelola }) => {
   }
   })
 
-  const data = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-  const split = data.split(" ")[1];
-  const { userId } = jwtDecode(split);
 
   const navigate = useNavigate()
   const logout = async () =>{
     try{
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common['Authorization'] = `${token}`
-      await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout`);
+      await axios.delete(`${import.meta.env.VITE_REACT_APP_API}/logout-pengelola`); 
       localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH)
-      navigate("/marketplace")
+      navigate("/")
     }
       catch(error){
           console.log(error.message)
+      }
+    } 
+
+    const switchToUser = async () =>{
+      try{
+      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+      axios.defaults.headers.common["Authorization"] = `${token}`;
+      const {data} = await axios.post(`${import.meta.env.VITE_REACT_APP_API}/switch-to-user`);
+      localStorage.removeItem(import.meta.env.VITE_REACT_APP_AUTH);
+      if(data.Authorization === undefined){
+        navigate("/profile-user")
+      }
+      if(data.Authorization) {
+        localStorage.setItem(import.meta.env.VITE_REACT_APP_AUTH, data.Authorization);
+      }    
+     const tokenUser = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+     const split = tokenUser.split(" ")[1];
+     const { userId } = jwtDecode(split);
+    if(data.message) navigate(`/profile-user/${userId}}`)
+    }catch(error){
+        console.log(error.message)
       }
     }
 
@@ -43,17 +62,17 @@ export const OverlayPengelola = ({ setPengelola, pengelola }) => {
     <div ref={menuRef} className="dd-pengelola">
         <div className='dd-profile-saya'>       
             <UilUserCircle  />
-            <Link onClick={()=>setPengelola(user)} to={`/profile-user/${userId}`} className='nama-poin-user'>
-                <h2>Udin</h2>
+            <button onClick={switchToUser} className='nama-poin-user'>
+                <h2>{userPengelola.fullname_users}</h2>
                 <h4>Profile Saya</h4>
                 <span>0 Poin</span>
-            </Link>
+            </button>
         </div>
         <div className='dd-bot-user'>
-        <Link to={`/profile-user/${userId}`}  className='option-bot-user'>
+        <button onClick={switchToUser} className='option-bot-user'>
                 <iconify-icon icon="mdi:clipboard-user-outline"/>
                 <h4>Menjadi Customer</h4>
-            </Link>
+            </button>
             <div className='option-bot-user'>
                 <iconify-icon icon="mdi:piggy-bank-outline"/>
                 <h4>Tabungan</h4>

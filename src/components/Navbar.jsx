@@ -28,7 +28,6 @@ export const UserName = ({setLogin, setRegister, login}) => {
         `${import.meta.env.VITE_REACT_APP_API}/users-by-id`
       );
       setValue(data.data);
-      console.log("test")
     } catch (error) {
       console.log(error.message);
     }
@@ -36,7 +35,7 @@ export const UserName = ({setLogin, setRegister, login}) => {
 
   useEffect(() => {
       theName()
-  }, []);
+  }, [token]);
 
   return(
     <>
@@ -201,18 +200,18 @@ export const NavbarAkunProfile = () => {
 
 export const Navbardashboardpengelola = () => {
   const [pengelola, setPengelola] = useState(false);
-  const [fullname, setFullname] = useState([]);
-
+  const [userPengelola, setUserPengelola] = useState([]);
+  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
 
   const userName = async () => {
     try {
       const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
       axios.defaults.headers.common["Authorization"] = `${token}`;
-      const response = await axios.get(
+      const {data} = await axios.get(
         `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
       );
-
-      setFullname(response.data.data)
+      console.log(data.data[0])
+      setUserPengelola(data.data[0])
     } catch (error) {
       console.log(error.message);
     }
@@ -221,7 +220,7 @@ export const Navbardashboardpengelola = () => {
 
   useEffect(() => {
     userName();
-  }, []);
+  }, [token]);
 
   return (
     <header className="navbar-dashboard">
@@ -236,15 +235,12 @@ export const Navbardashboardpengelola = () => {
             onClick={() => setPengelola(!pengelola)}
           >
             <Unicons.UilUserCircle color="#FFAF00" size="32px" />
-            {fullname
-              .map((fullnames) => (
-                <h6>Hi,{fullnames.fullname_users}</h6>
-              ))}
+                <h6>Hi,{userPengelola.fullname_users}</h6>
           </div>
           {pengelola && (
             <OverlayPengelola
               setPengelola={setPengelola}
-              pengelola={pengelola}
+              userPengelola = {userPengelola}
             />
           )}
         </div>
