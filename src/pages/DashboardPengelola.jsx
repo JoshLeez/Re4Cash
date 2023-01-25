@@ -1,4 +1,6 @@
-import React from "react";
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Footerdashboardpengelola } from "../components/Footer";
 import GrafikCardPengelola from "../components/GrafikCardPengelola";
@@ -10,6 +12,27 @@ import "./styles/dashboardpengelola.css";
 
 const DashboardPengelola = () => {
   const { id } = useParams();
+  const [pengelola, setPengelola] = useState({});
+  const [alamatPengelola, setAlamatPengelola] = useState({});
+
+  const getPengelola = async () => {
+    try {
+      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+      axios.defaults.headers.common["Authorization"] = `${token}`;
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
+      );
+      console.log(data.data[0]);
+      setPengelola(data.data[0]);
+      setAlamatPengelola(data.alamat[0]);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    getPengelola();
+  }, []);
 
   return (
     <HOCdashboardpengelola title="Dashboard Pengelola">
@@ -22,25 +45,27 @@ const DashboardPengelola = () => {
               <div className="card-profil-dashboard-utama edit">
                 <div className="profile-picture-dashboard-utama">
                   <img src="/profile-picture-pengelola.png" />
-                  <h1>Zain Pengepul Sampah</h1>
+                  <h1>{pengelola.nama_pengelola}</h1>
                   <p>Nama Toko</p>
                 </div>
                 <div className="profile-desc-dashboard-utama">
                   <div className="profile-desc-dashboard-utama-detail">
                     <iconify-icon icon="gg:profile" />
-                    <h4>Zainuddin</h4>
+                    <h4>{pengelola.fullname_users}</h4>
                   </div>
                   <div className="profile-desc-dashboard-utama-detail">
                     <iconify-icon icon="material-symbols:location-on-outline-rounded" />
                     <h4>
-                      Jl. Nangka Utara Raya No 60, RT 6/RW 5, Tanjung Barat,
-                      Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus
-                      Ibukota Jakarta 12530.
+                      Jl. {alamatPengelola.alamat_lengkap},{" "}
+                      {alamatPengelola.provinsi}, Kec.{" "}
+                      {alamatPengelola.kecamatan}, Kota{" "}
+                      {alamatPengelola.kabupaten_kota}{" "}
+                      {alamatPengelola.kode_pos}.
                     </h4>
                   </div>
                   <div className="profile-desc-dashboard-utama-detail">
                     <iconify-icon icon="ic:baseline-phone-iphone" />
-                    <h4>08123456123</h4>
+                    <h4>{pengelola.no_hp_pengelola}</h4>
                   </div>
                 </div>
                 <Link to={`/profil-akun-pengelola/${id}`}>
