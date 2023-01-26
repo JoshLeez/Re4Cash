@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { Footerdashboardpengelola } from "../components/Footer";
 import { HOCdashboardpengelola } from "../components/HOC";
@@ -17,6 +18,7 @@ const PengelolaProfilAkun = () => {
     formState: { errors },
   } = useForm();
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const [user, setUser] = useState({})
 
   const getPengelola = useCallback(async () => {
     try {
@@ -33,6 +35,7 @@ const PengelolaProfilAkun = () => {
       } = data.data[0];
       const { provinsi, kabupaten_kota, kecamatan, kode_pos, alamat_lengkap } =
         data.alamat[0];
+      setUser(data.data[0])
       setValue("fullname", fullname_users);
       setValue("nama_pengelola", nama_pengelola);
       setValue("no_hp_pengelola", no_hp_pengelola);
@@ -60,10 +63,13 @@ const PengelolaProfilAkun = () => {
         `${import.meta.env.VITE_REACT_APP_API}/pengelola`,
         value
       );
+      navigate(0)
     } catch (error) {
       console.log(error.message);
     }
   };
+
+  const navigate = useNavigate()
 
   const updateAlamatPengelola = useCallback(async (value) => {
     try {
@@ -73,6 +79,7 @@ const PengelolaProfilAkun = () => {
         `${import.meta.env.VITE_REACT_APP_API}/pengelola-alamat`,
         value
       );
+      navigate(0)
     } catch (error) {
       console.log(error.message);
     }
@@ -90,7 +97,7 @@ const PengelolaProfilAkun = () => {
                 <img src="/profile-picture-pengelola.png" />
                 <div className="profile-detail-dashboard-profilakun">
                   <div className="profile-nama-dashboard-profilakun">
-                    <h1>Zain Pengepul Sampah</h1>
+                    <h1>{user.nama_pengelola}</h1>
                     <p>Nama Toko</p>
                   </div>
                   <div className="profile-verif-dashboard-profilakun">
