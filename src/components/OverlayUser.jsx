@@ -89,10 +89,10 @@ export const OverlayUser = ({ setUser, data }) => {
         </Link>
       </div>
       <div className="dd-bot-user">
-        <button onClick={switchToPengelola} className="option-bot-user">
+        <Link to="/menjadi-pengelola" className="option-bot-user">
           <iconify-icon icon="mdi:clipboard-user-outline" />
           <h4>Menjadi Pengelola</h4>
-        </button>
+        </Link>
         <Link to="/tabungan" className="option-bot-user">
           <iconify-icon icon="mdi:piggy-bank-outline" />
           <h4>Tabungan</h4>
