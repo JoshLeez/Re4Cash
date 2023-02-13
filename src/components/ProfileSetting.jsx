@@ -2,6 +2,7 @@ import axios from "axios";
 import jwtDecode from "jwt-decode";
 import { useEffect, useState, useCallback, useRef } from "react";
 import { useParams } from "react-router-dom";
+import axiosInstance from "../utils/axios";
 import { EditProfile, TambahAlamat, EditAlamat } from "./OverlayUser";
 
 const ProfileSetting = () => {
@@ -19,10 +20,7 @@ const ProfileSetting = () => {
 
   const getUserData = useCallback( async () => {
     try {
-      axios.defaults.headers.common["Authorization"] = `${token}`;
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/users-by-id`
-      );
+      const {data} = await axiosInstance.get('/users-by-id');
       genderRef.current = data.data.gender;
       setUser(data.data);
     } catch (error) {
@@ -64,13 +62,12 @@ const ProfileSetting = () => {
 
   const onSubmit = async (value) => {
     try {
-      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-      axios.defaults.headers.common["Authorization"] = `${token}`;
       const data = {
         ...value,
         gender: genderRef.current
       }
-      await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users`, data);
+      await axiosInstance.patch('/users', data);
+      // await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users`, data);
       setUser((prevState) => {
         return {
           ...prevState,
@@ -90,10 +87,7 @@ const ProfileSetting = () => {
 
   const deleteAlamat =async (value) => {
     try {
-      axios.defaults.headers.common["Authorization"] = `${token}`;
-      await axios.delete(
-        `${import.meta.env.VITE_REACT_APP_API}/alamat-user/${value}`
-      );
+      await axiosInstance.delete(`/alamat-user/${value}`);
       setHapus(!hapus);
     } catch (error) {
       console.log(error.message);

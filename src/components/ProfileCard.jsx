@@ -13,10 +13,7 @@ const ProfileCard = () => {
 
   const userData = async () => {
     try {
-      axios.defaults.headers.common["Authorization"] = `${token}`;
-      const {data} = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/users-by-id`
-      );
+      const {data} = await axiosInstance.get('/users-by-id');
       setUser(data.data);
     } catch (error) {
       console.log(error.message);

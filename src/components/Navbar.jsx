@@ -4,6 +4,7 @@ import {
   NavLink,
   useNavigate,
 } from "react-router-dom";
+import axiosInstance from "../utils/axios";
 import Button from "./Button";
 import "./styles/navbar.css";
 import * as Unicons from "@iconscout/react-unicons";
@@ -13,20 +14,17 @@ import { OverlayUser } from "./OverlayUser";
 import { UilSearch } from "@iconscout/react-unicons";
 import { OverlayPengelola } from "./OverlayPengelola";
 import axios from "axios";
-import { useCallback } from "react";
+import jwtDecode from "jwt-decode";
 
 
-export const UserName = ({setLogin, setRegister, login}) => {
+export const UserName = ({setLogin, setRegister}) => {
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const [user, setUser] = useState(false);
   const [value, setValue] = useState({});
  
   const theName = async () => {
     try {
-      axios.defaults.headers.common["Authorization"] = `${token}`;
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/users-by-id`
-      );
+      const {data} = await axiosInstance.get('/users-by-id');
       setValue(data.data);
     } catch (error) {
       console.log(error.message);
@@ -148,17 +146,18 @@ export const Navbarmarketplace = () => {
 
 export const NavbarAkunProfile = () => {
   const [user, setUser] = useState(false);
-  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
   const [fullname, setFullname] = useState({});
-
+  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+  const split = token.split(" ")[1]
+  const cons = jwtDecode(split)
+  console.log(cons)
 
   const userName =  async () => {
     try {
-      axios.defaults.headers.common["Authorization"] = `${token}`;
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/users-by-id`
-      );
+      const {data} = await axiosInstance.get('/users-by-id');
+      if(data.message){
       setFullname(data.data);  
+      }
     } catch (error) {
       console.log(error.message);
     }
@@ -166,7 +165,7 @@ export const NavbarAkunProfile = () => {
 
   useEffect(() => {
     userName();
-  },[fullname]);
+  },[token]);
 
 
   return (
@@ -194,56 +193,6 @@ export const NavbarAkunProfile = () => {
           {user && <OverlayUser data={fullname} setUser={setUser} user={user} />}
         </div>
       </nav>
-    </header>
-  );
-};
-
-export const Navbardashboardpengelola = () => {
-  const [pengelola, setPengelola] = useState(false);
-  const [userPengelola, setUserPengelola] = useState([]);
-  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-
-  const userName = async () => {
-    try {
-      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-      axios.defaults.headers.common["Authorization"] = `${token}`;
-      const {data} = await axios.get(
-        `${import.meta.env.VITE_REACT_APP_API}/pengelola-by-id`
-      );
-      setUserPengelola(data.data[0])
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
-
-  useEffect(() => {
-    userName();
-  }, [token]);
-
-  return (
-    <header className="navbar-dashboard">
-      <label className="navbar-dashboard-search">
-        <UilSearch size="24px" color="#FFAF00" />
-        <input placeholder="Search" />
-      </label>
-      <div>
-        <div className="wrapper-profile-navbar">
-          <div
-            className="profile-navbar"
-            onClick={() => setPengelola(!pengelola)}
-          >
-            <Unicons.UilUserCircle color="#FFAF00" size="32px" />
-                <h6>Hi,{userPengelola.fullname_users}</h6>
-          </div>
-          {pengelola && (
-            <OverlayPengelola
-              setPengelola={setPengelola}
-              userPengelola = {userPengelola}
-            />
-          )}
-        </div>
-      </div>
     </header>
   );
 };
