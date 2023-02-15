@@ -27,7 +27,7 @@ const DetailArticle = () => {
   }, []);
 
   return data
-    .filter((datas) => datas.id_artikel == id)
+    .filter((datas, index) => datas.id_artikel == id)
     .map((datas) => {
       const date = new Date(datas.tanggal_artikel);
       const options = {
@@ -38,7 +38,7 @@ const DetailArticle = () => {
       };
       const formattedDate = date.toLocaleDateString("id", options);
       return (
-        <HOC title="Edukasi | Article">
+        <HOC key={index} title="Edukasi | Article">
           <div className="detailarticle-hero">
             <img src="article-hero.png" alt="img" />
           </div>
