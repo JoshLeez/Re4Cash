@@ -4,6 +4,7 @@ import "./styles/profilecard.css";
 import { UilUserCircle } from "@iconscout/react-unicons";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import axiosInstance from "../utils/axios";
 
 const ProfileCard = () => {
   const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
@@ -20,11 +21,11 @@ const ProfileCard = () => {
     }
   };
 
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setEditModal(false);
       }
     };
@@ -32,13 +33,13 @@ const ProfileCard = () => {
     return () => {
       document.removeEventListener("mousedown", handler);
     };
-  });
+  },[]);
 
   // const onSubmit = (value) => {
   //   console.log(value);
   // }
 
-  console.log(editModal)
+  // console.log(editModal)
 
   // const handleFileChange = (e) => {
   //   const file = e.target.files[0];
@@ -77,7 +78,7 @@ const ProfileCard = () => {
            {editModal && 
            <form  className="edit-img-button"> 
            <input  ref={menuRef}  type="file"/>
-            <labe>Upload a photo...</labe>
+            <label>Upload a photo...</label>
            </form>}
           </div>
             <h1>{user.fullname}</h1>

@@ -62,12 +62,13 @@ const ProfileSetting = () => {
 
   const onSubmit = async (value) => {
     try {
+      const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
+      axios.defaults.headers.common["Authorization"] = `${token}`;
       const data = {
         ...value,
         gender: genderRef.current
       }
-      await axiosInstance.patch('/users', data);
-      // await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users`, data);
+      await axios.patch(`${import.meta.env.VITE_REACT_APP_API}/users`, data);
       setUser((prevState) => {
         return {
           ...prevState,
@@ -87,7 +88,10 @@ const ProfileSetting = () => {
 
   const deleteAlamat =async (value) => {
     try {
-      await axiosInstance.delete(`/alamat-user/${value}`);
+      axios.defaults.headers.common["Authorization"] = `${token}`;
+      await axios.delete(
+        `${import.meta.env.VITE_REACT_APP_API}/alamat-user/${value}`
+      );
       setHapus(!hapus);
     } catch (error) {
       console.log(error.message);

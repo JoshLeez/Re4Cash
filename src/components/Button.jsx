@@ -90,7 +90,7 @@ export const ButtonNumber = () => {
         -
       </button>
       <input
-        disable={item === 1}
+        disabled={item === 1}
         type="text"
         value={item}
         onChange={inputHandler}

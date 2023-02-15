@@ -11,16 +11,15 @@ export const Register = ({ setRegister }) => {
     formState: { errors },
     watch,
   } = useForm();
-  const menuRef = useRef();
+  const menuRef = useRef(null);
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setRegister(false);
       }
     };
-
     document.addEventListener("mousedown", handler);
   }, []);
 
@@ -155,11 +154,10 @@ export const Login = ({ setLogin }) => {
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setLogin(false);
       }
     };
-
     document.addEventListener("mousedown", handler);
   }, []);
 

@@ -88,16 +88,16 @@ const MarketPlaceUtama = () => {
       <div className="kategori-sampah">
         <h4>Kategori Sampah</h4>
         <div className="anorganik-kategori">
-          {kategoriAnorganik.map((kategoris) => {
+          {kategoriAnorganik.map((kategoris, index) => {
             return (
-              <AnorganikKategori img={kategoris.img} title={kategoris.title} />
+              <AnorganikKategori key={index} img={kategoris.img} title={kategoris.title} />
             );
           })}
         </div>
         <div className="organik-kategori">
-          {kategoriOrganik.map((kategoris) => {
+          {kategoriOrganik.map((kategoris, index) => {
             return (
-              <OrganikKategori img={kategoris.img} title={kategoris.title} />
+              <OrganikKategori key={index} img={kategoris.img} title={kategoris.title} />
             );
           })}
         </div>

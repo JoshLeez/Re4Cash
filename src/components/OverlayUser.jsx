@@ -14,7 +14,7 @@ import { useForm } from "react-hook-form";
 import jwtDecode from "jwt-decode";
 
 export const OverlayUser = ({ setUser, data }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let handler = (event) => {
@@ -119,7 +119,7 @@ export const OverlayUser = ({ setUser, data }) => {
 };
 
 export const EditProfile = ({ setEdit, data, onSubmit, setKelamin }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   const birthdate = new Date(data.tgl_lahir);
   const birthdateFormat = birthdate.toISOString().slice(0, 10);
@@ -135,7 +135,7 @@ export const EditProfile = ({ setEdit, data, onSubmit, setKelamin }) => {
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setEdit(false);
       }
     };
@@ -197,7 +197,7 @@ export const EditProfile = ({ setEdit, data, onSubmit, setKelamin }) => {
 };
 
 export const TambahAlamat = ({ setAlamat }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   const {
     register,
@@ -207,7 +207,7 @@ export const TambahAlamat = ({ setAlamat }) => {
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setAlamat(false);
       }
     };
@@ -290,7 +290,7 @@ export const TambahAlamat = ({ setAlamat }) => {
 };
 
 export const EditAlamat = ({ setEditAlamat, data }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
   const initialValues = {
     alamat_lengkap: data.alamat_lengkap,
     kabupaten_kota: data.kabupaten_kota,
@@ -309,7 +309,7 @@ export const EditAlamat = ({ setEditAlamat, data }) => {
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setEditAlamat(false);
       }
     };
@@ -394,11 +394,11 @@ export const EditAlamat = ({ setEditAlamat, data }) => {
 };
 
 export const MetodeTarik = ({ setModel }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setModel(false);
       }
     };
@@ -426,11 +426,11 @@ export const MetodeTarik = ({ setModel }) => {
 };
 
 export const GantiAlamat = ({ setModelAlamat }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setModelAlamat(false);
       }
     };
@@ -482,11 +482,11 @@ export const GantiAlamat = ({ setModelAlamat }) => {
 };
 
 export const LengkapDataDiri = ({ setLengkapData, setPaymentSuccess }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setLengkapData(false);
       }
     };
@@ -582,11 +582,11 @@ export const PaymentSuccess = () => {
 };
 
 export const JasaKurir = ({ setKurir }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setKurir(false);
       }
     };

@@ -6,11 +6,11 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 export const OverlayPengelola = ({ setPengelola, userPengelola }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setPengelola(false);
       }
     };
@@ -19,7 +19,7 @@ export const OverlayPengelola = ({ setPengelola, userPengelola }) => {
     return () => {
       document.removeEventListener("mousedown", handler);
     };
-  });
+  },[]);
 
   const navigate = useNavigate();
   
@@ -106,12 +106,11 @@ export const OverlayPengelola = ({ setPengelola, userPengelola }) => {
 };
 
 export const ButtonUbah = ({ setButtonUbah, link }) => {
-  const menuRef = useRef();
-  const navigate = useNavigate();
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setButtonUbah(false);
       }
     };
@@ -143,11 +142,11 @@ export const ButtonUbah = ({ setButtonUbah, link }) => {
 };
 
 export const ButtonTambah = ({ setButtonTambah, link }) => {
-  const menuRef = useRef();
+  const menuRef = useRef(null);
 
   useEffect(() => {
     let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
+      if (menuRef.current != null && !menuRef.current.contains(event.target)) {
         setButtonTambah(false);
       }
     };

@@ -147,10 +147,7 @@ export const Navbarmarketplace = () => {
 export const NavbarAkunProfile = () => {
   const [user, setUser] = useState(false);
   const [fullname, setFullname] = useState({});
-  const token = localStorage.getItem(import.meta.env.VITE_REACT_APP_AUTH);
-  const split = token.split(" ")[1]
-  const cons = jwtDecode(split)
-  console.log(cons)
+
 
   const userName =  async () => {
     try {
@@ -165,7 +162,7 @@ export const NavbarAkunProfile = () => {
 
   useEffect(() => {
     userName();
-  },[token]);
+  },[]);
 
 
   return (
