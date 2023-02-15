@@ -42,7 +42,6 @@ export const ProductByNumber = () => {
                   disable={item === 1}
                   type="text"
                   value={item}
-                  defaultValue={0}
                   onChange={inputHandler}
                 />
                 <button className="posit" onClick={Increment}>
